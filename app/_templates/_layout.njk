@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="{{ head.lang }}" class="no-js">
 	<head>
-		{% include "_head.nunjucks" %}
+		{% include "_head.njk" %}
 	</head>
 <body>
 	<template id="template-webview">
-		{% include "_site.nunjucks" %}
+		{% include "_site.njk" %}
 	</template>
 
 	<div id="main-container"></div>
 
 	<div id="loading-page">
-		{% include "extra/_loading-banner.nunjucks" %}
+		{% include "extra/_loading-banner.njk" %}
 	</div>
 	<div id="debug-layer" class="debug"></div>
 </body>

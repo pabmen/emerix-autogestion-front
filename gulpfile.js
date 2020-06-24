@@ -400,7 +400,7 @@ function _manageEnvironment(environment) {
 function _renderTemplateFor(lang) {
 	renderLang = lang;
 
-	return gulp.src([CONFIG.srcPath + `_pages/${lang}/*.nunjucks`, CONFIG.srcPath + `_pages/${lang}/*.html`])
+	return gulp.src([CONFIG.srcPath + `_pages/${lang}/*.njk`, CONFIG.srcPath + `_pages/${lang}/*.html`])
 	.pipe(print())
 
 	// The gulp-data plugin encapsulate a data source into a single data property attached to the file object.
@@ -673,8 +673,8 @@ function watchFiles() {
 
 	// Watch changes in template files
 	gulp.watch([
-		CONFIG.srcPath + '_templates/**/*.nunjucks',
-		CONFIG.srcPath + '_pages/**/*.nunjucks',
+		CONFIG.srcPath + '_templates/**/*.njk',
+		CONFIG.srcPath + '_pages/**/*.njk',
 		CONFIG.srcPath + '_pages/**/*.html',
 		CONFIG.srcPath + '_data/**/*.json',
 	], renderTemplates);
@@ -688,7 +688,6 @@ function watchFiles() {
 	// Watch changes in js / json / glsl
 	gulp.watch([
 		CONFIG.srcPath + 'js/**/*.js',
-		CONFIG.srcPath + 'js/**/*.glsl',
 		CONFIG.srcPath + 'js/**/*.json',
 	], webpackDev); // gulp.series(webpackDev, browserSyncReload)
 

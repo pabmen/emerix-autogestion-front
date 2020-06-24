@@ -1,8 +1,0 @@
-<main id="main-container" class="main-container">
-	{#{% include "structure/_navigation.nunjucks" %}
-	{% include "structure/_sidebar.nunjucks" %}
-
-	{% include "pages/_login.nunjucks" %}#}
-	{% include "pages/_home.nunjucks" %}
-	
-</main>
