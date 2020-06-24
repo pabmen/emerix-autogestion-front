@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ head.lang }}" class="no-js">
+	<head>
+		{% include "_head.nunjucks" %}
+	</head>
+<body>
+	<template id="template-webview">
+		{% include "_site.nunjucks" %}
+	</template>
+
+	<div id="main-container"></div>
+
+	<div id="loading-page">
+		{% include "extra/_loading-banner.nunjucks" %}
+	</div>
+	<div id="debug-layer" class="debug"></div>
+</body>
+</html>

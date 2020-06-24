@@ -1,28 +1,139 @@
 {
-    "head": {
-        "lang": "es",
-        "title": "",
-        "description": "",
-        "keywords": "",
+	"head": {
+		"lang": "es",
+		"title": "",
+		"description": "",
+		"keywords": "",
 
-        "apple_mobile_web_app_title": "",
+		"apple_mobile_web_app_title": "",
 
-        "theme": {
-            "color": "#ec2844"
-        },
+		"theme": {
+			"color": "#ec2844"
+		},
 
-        "facebook": {
-            "app_id": "",
-            "title": "",
-            "description": "",
-            "image": "assets/images/share_img_fb.png"
-        },
+		"facebook": {
+			"app_id": "",
+			"title": "",
+			"description": "",
+			"image": "assets/images/share_img_fb.png"
+		},
 
-        "twitter": {
-            "title": "",
-            "description": "",
-            "image": "assets/images/share_img_tw.png"
-        }
+		"twitter": {
+			"title": "",
+			"description": "",
+			"image": "assets/images/share_img_tw.png"
+		}
 
-    }
+	},
+	"common": {
+		"loading": "Cargando"
+	},
+	"sidebar": {
+		"logo": {
+			"src": "https://placekitten.com/g/300/100",
+			"alt": ""
+		},
+		"links": [
+			{
+				"title": "Inicio",
+				"url": "#home"
+			},
+			{
+				"title": "-"
+			},
+			{
+				"title": "Mis Cuentas",
+				"url": "#myaccounts"
+			},
+			{
+				"title": "Pagos",
+				"dropdown": [
+					{
+						"title": "Pagar",
+						"url": "#"
+					},
+					{
+						"title": "Registrar Pago",
+						"url": "#"
+					},
+					{
+						"title": "Comprobantes",
+						"url": "#"
+					}
+				]
+			},
+			{
+				"title": "Acuerdos",
+				"dropdown": [
+					{
+						"title": "Promesas de pago",
+						"url": "#"
+					},
+					{
+						"title": "Plan de pago",
+						"url": "#"
+					},
+					{
+						"title": "Estado de solicitudes",
+						"url": "#"
+					}
+				]
+			},
+			{
+				"title": "-"
+			},
+			{
+				"title": "Tu Perfil",
+				"url": "#profile"
+			},
+			{
+				"title": "Preguntas frecuentes",
+				"url": "#faqs"
+			},
+			{
+				"title": "Salir",
+				"url": "#logout"
+			}
+		]
+	},
+
+
+	"login": {
+		"id_placeholder": "Tu DNI",
+		"method_call": "https://via.placeholder.com/150",
+		"method_sms": "https://via.placeholder.com/150",
+		"title": "Elegí dónde recibir el Código de autenticación:",
+		"notes": "Enviamos un códgo de autenticación a <span>123456789</span>, ingresalo a continuación:",
+		"help": "Tengo inconveninentes con el código.",
+		"accept": "Acepto los <a href='#'>Términos y condiciones.</a>",
+		"submit": "Ingresar"
+	},
+
+
+	"pages": {
+		"home": {
+			"status": {
+				"title": "Tu deuda actual es:",
+				"count": "Cantidad de productos",
+				"date": "Fecha de inicio de mora",
+				"btn": "Pagar"
+			},
+			"plans": {
+				"title": "Últimos planes de pago",
+				"type_approved": "Aprobado",
+				"type_disapproved": "Desaprobado",
+				"view": "Ver todos los planes de pago"
+			},
+			"promotions": {
+				"src": "https://placekitten.com/g/100/100",
+				"view": "¡Accedé a este beneficio ahora!"
+			},
+			"promises": {
+				"title": "Últimas promesas de pago",
+				"type_product": "producto",
+				"type_products": "productos",
+				"view": "Ver todas las promesas"
+			}
+		}
+	}
 }

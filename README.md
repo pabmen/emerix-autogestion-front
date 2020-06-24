@@ -15,7 +15,7 @@ Use build folder /build
 
 * Package Manager: npm
 * CSS Pre processor: SASS with include-media plugin for media queries
-* Template Engine: Twig.
+* Template Engine: nunjucks.
 * Task Manager: gulp v3
 * Module Bundler: webpack 4
 * Dev server: gulp-connect

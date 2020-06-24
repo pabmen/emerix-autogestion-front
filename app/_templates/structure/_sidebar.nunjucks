@@ -1,0 +1,23 @@
+<nav>
+	<img src="{{ sidebar.logo.src }}" alt="{{ sidebar.logo.alt }}">
+	<ul>
+		{% for item in sidebar.links %}
+		<li>
+			{% if item.title == "-" %}
+			<hr>
+			{% else %}
+				<a href="{{ item.url }}">{{ item.title }}</a>
+				{% if item.dropdown %}
+				<ul>
+					{% for dropdown in item.dropdown %}
+						<li>
+							<a href="{{ dropdown.url }}">{{ dropdown.title }}</li>
+						</li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+			{% endif %}
+		</li>
+		{% endfor %}
+	</ul>
+</nav>

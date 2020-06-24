@@ -1,0 +1,28 @@
+<section>
+	<div class="box">
+		<form class="form flex-column">
+			<input type="text" placeholder="{{ login.id_placeholder }}">
+
+			<div class="flex-row flex-center">
+				<div class="flex-column">
+					<label for="login-method-call"><img src="{{ login.method_call }}"></label>
+					<input type="radio" value="call" name="login-method" id="login-method-call">
+				</div>
+				<div class="flex-column">
+					<label for="login-method-sms"><img src="{{ login.method_sms }}"></label>
+					<input type="radio" value="sms" name="login-method" id="login-method-sms">
+				</div>
+			</div>
+
+			<p>{{ login.notes }}</p>
+
+			<input type="text" >
+			<p class="text-right"><a href="#">{{ login.help }}</a></p>
+
+			<input type="checkbox" id="login-accept">
+			<label for="login-accept">{{ login.accept }}</label>
+
+			<button class="btn">{{ login.submit }}</button>
+		</form>
+	</div>
+</section>

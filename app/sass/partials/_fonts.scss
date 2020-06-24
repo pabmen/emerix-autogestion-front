@@ -1,12 +1,12 @@
 /*@font-face {
-    font-family: '...';
-    src: url($assetsPath + 'fonts/...woff2') format('woff2'),
-        url($assetsPath + 'fonts/...woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+	font-family: '...';
+	src: url($assetsPath + 'fonts/...woff2') format('woff2'),
+		url($assetsPath + 'fonts/...woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
 
-    // Ensure text remains visible during webfont load
-    // @see https://web.dev/font-display/
-    font-display: swap;
+	// Ensure text remains visible during webfont load
+	// @see https://web.dev/font-display/
+	font-display: swap;
 }
 */ 

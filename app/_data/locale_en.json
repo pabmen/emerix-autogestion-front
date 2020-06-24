@@ -24,5 +24,8 @@
             "image": "assets/images/share_img_tw.png"
         }
 
+    },
+    "common": {
+        "loading": "Loading"
     }
 }

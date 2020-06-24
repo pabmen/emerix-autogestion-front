@@ -82,28 +82,28 @@ const CONFIG = {
 		buildPath: 'build/es/',
 
 		prod: {
-			url: 'https://portusojos.com/',
-			gtag: 'UA-27849636-32',
+			url: 'https://prod.com/es',
+			gtag: 'UA-00000000-00',
 		},
 
 		stage: {
-			url: 'https://stage.portusojos.com/',
-			gtag: 'UA-27849636-33',
+			url: 'https://stage.com/es',
+			gtag: 'UA-00000000-00',
 		},
 	},
-
+	
 	// English
 	en: {
 		buildPath: 'build/en/',
-
+		
 		prod: {
-			url: 'https://throughyoureyes.site/',
-			gtag: 'UA-27849636-35',
+			url: 'https://stage.com/en',
+			gtag: 'UA-00000000-00',
 		},
-
+		
 		stage: {
-			url: 'https://stage.throughyoureyes.site/',
-			gtag: 'UA-27849636-34',
+			url: 'https://stage.com/en',
+			gtag: 'UA-00000000-00',
 		},
 	},
 };
@@ -400,7 +400,7 @@ function _manageEnvironment(environment) {
 function _renderTemplateFor(lang) {
 	renderLang = lang;
 
-	return gulp.src([CONFIG.srcPath + `_pages/${lang}/*.twig`, CONFIG.srcPath + `_pages/${lang}/*.html`])
+	return gulp.src([CONFIG.srcPath + `_pages/${lang}/*.nunjucks`, CONFIG.srcPath + `_pages/${lang}/*.html`])
 	.pipe(print())
 
 	// The gulp-data plugin encapsulate a data source into a single data property attached to the file object.
@@ -673,8 +673,8 @@ function watchFiles() {
 
 	// Watch changes in template files
 	gulp.watch([
-		CONFIG.srcPath + '_templates/**/*.twig',
-		CONFIG.srcPath + '_pages/**/*.twig',
+		CONFIG.srcPath + '_templates/**/*.nunjucks',
+		CONFIG.srcPath + '_pages/**/*.nunjucks',
 		CONFIG.srcPath + '_pages/**/*.html',
 		CONFIG.srcPath + '_data/**/*.json',
 	], renderTemplates);
