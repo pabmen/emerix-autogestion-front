@@ -1,0 +1,42 @@
+/**
+* This is the critical css of the app. It will be automatically INLINE into the html to improve performance.
+*/
+
+// https://sass-lang.com/documentation/at-rules/import#importing-css
+@import '../../node_modules/normalize.css/normalize';
+
+@import './vars';
+
+// The assets path is different than main.scss, cause inline will be inside the html
+$assetsPath: './assets/'; //../assets/
+
+@import './partials/fonts';
+
+
+// common styles (works with normalize), general styles
+@import './partials/common';
+
+
+// low-priority styles, here we put debug css, mobile console styles, etc
+@import './partials/debug';
+
+@import 'components/preloader';
+
+
+
+button {
+  padding: 0;
+  border:none;
+
+  // Be careful with this. In some iPhones the text inside some buttons were selectable
+  // and prevented the button from being clicked
+  user-select: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+
+// Accessibility styles
+@import './partials/accessibility';

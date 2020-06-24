@@ -1,0 +1,136 @@
+// Box-sizing reset. Best for responsive and sizing in general! The old one is content-box.
+html {
+	box-sizing: border-box;
+
+	// todo: all these fixed font sizes
+	font-size: 14px;
+}
+
+@media screen and (max-height: 768px) {
+	html.desktop {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-height: 640px) {
+	html.desktop {
+		font-size: 10px;
+	}
+}
+
+@media all and (max-width: 320px) {
+	html, body {
+		// todo: review fixed font size
+		font-size: 12px;
+	}
+}
+
+
+*, *:before, *:after {
+	box-sizing: inherit; //box-sizing : border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+/*
+* {
+	-webkit-overflow-scrolling: auto;
+}
+*/
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+body {
+	position: relative;
+
+	font-family: 'Gotham', sans-serif;
+	font-weight: bold;
+	font-style: normal;
+
+	//overscroll-behavior: none;
+
+	background-color: black;
+}
+
+a, span, p {
+	font-size: 1rem;
+}
+
+// Remove bullets from ul li
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+}
+
+img {
+	vertical-align: top;
+}
+
+button::-moz-focus-inner{
+	padding : 0;
+	border  : 0;
+}
+
+strong {
+	font-weight: 500;
+}
+
+svg {
+	//max-width: 100%;
+	width: 100%;
+	height: 100%;
+
+	fill: currentColor;
+	display: block; // Eliminates strange space below the element because it's inline by default
+
+	path {
+		fill: inherit;
+	}
+}
+
+
+.relative {
+	position: relative;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.hidden {
+	display:none !important;
+}
