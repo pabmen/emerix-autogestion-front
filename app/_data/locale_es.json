@@ -115,7 +115,7 @@
 			"status": {
 				"title": "Tu deuda actual es:",
 				"count": "Cantidad de productos",
-				"date": "Fecha de inicio de mora",
+				"due": "Fecha de inicio de mora",
 				"btn": "Pagar"
 			},
 			"plans": {
@@ -125,7 +125,7 @@
 				"view": "Ver todos los planes de pago"
 			},
 			"promotions": {
-				"src": "https://placekitten.com/g/100/100",
+				"src": "https://placekitten.com/g/150/150",
 				"view": "¡Accedé a este beneficio ahora!"
 			},
 			"promises": {

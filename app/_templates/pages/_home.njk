@@ -1,16 +1,33 @@
+{% set page = pages.home %}
 <section>
-	<div class="flex-column">
-		<div class="box">
-			<p>{{ page.status }}
-			</p>
+	<div class="flex-row">
+		<div class="flex-column flex-grow">
+			<div class="box">
+				<p>{{ page.status.title }}</p>
+				<p class="text-xxlarge text-nowrap">$ 10590,57</p>
+				<p>{{ page.status.count }}</p>
+				<p class="text-large">6</p>
+				<p>{{ page.status.due }}</p>
+				<p><strong>10/06/19</strong></p>
+				<button class="btn">{{ page.status.btn }}</button>
+			</div>
+			<div class="box">
+				<p>{{ page.plans.title }}</p>
+				<hr>
+				<p>{{ page.plans.view }}</p>
+			</div>
 		</div>
-		<div class="box">
-		</div>
-	</div>
-	<div class="flex-column">
-		<div class="box">
-		</div>
-		<div class="box">
+		<div class="flex-column flex-grow">
+			<div class="box">
+				<p class="text-center"><img src="{{ page.promotions.src }}" alt=""></p>
+				<hr>
+				<p>{{ page.promotions.view }}</p>
+			</div>
+			<div class="box">
+				<p>{{ page.promises.title }}</p>
+				<hr>
+				<p>{{ page.promises.view }}</p>
+			</div>
 		</div>
 	</div>
 </section>
