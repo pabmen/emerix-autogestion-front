@@ -3,25 +3,25 @@ html {
 	box-sizing: border-box;
 
 	// todo: all these fixed font sizes
-	font-size: 14px;
+	font-size: 16px;
 }
 
 @media screen and (max-height: 768px) {
 	html.desktop {
-		font-size: 12px;
+		font-size: 16px;
 	}
 }
 
 @media screen and (max-height: 640px) {
 	html.desktop {
-		font-size: 10px;
+		font-size: 16px;
 	}
 }
 
 @media all and (max-width: 320px) {
 	html, body {
 		// todo: review fixed font size
-		font-size: 12px;
+		font-size: 16px;
 	}
 }
 
@@ -48,13 +48,11 @@ html, body {
 body {
 	position: relative;
 
-	font-family: 'Gotham', sans-serif;
-	font-weight: bold;
+	font-family: sans-serif;
+	font-weight: normal;
 	font-style: normal;
 
 	//overscroll-behavior: none;
-
-	background-color: black;
 }
 
 a, span, p {
@@ -81,10 +79,6 @@ img {
 button::-moz-focus-inner{
 	padding : 0;
 	border  : 0;
-}
-
-strong {
-	font-weight: 500;
 }
 
 svg {
@@ -129,6 +123,11 @@ svg {
 .flex-row {
 	display: flex;
 	flex-direction: row;
+}
+
+.flex-center {
+	justify-content: center;
+	align-items: center;
 }
 
 .hidden {
