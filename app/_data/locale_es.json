@@ -97,20 +97,17 @@
 		]
 	},
 
-
-	"login": {
-		"id_placeholder": "Tu DNI",
-		"method_call": "https://via.placeholder.com/150",
-		"method_sms": "https://via.placeholder.com/150",
-		"title": "Elegí dónde recibir el Código de autenticación:",
-		"notes": "Enviamos un códgo de autenticación a <span>123456789</span>, ingresalo a continuación:",
-		"help": "Tengo inconveninentes con el código.",
-		"accept": "Acepto los <a href='#'>Términos y condiciones.</a>",
-		"submit": "Ingresar"
-	},
-
-
 	"pages": {
+		"login": {
+			"id_placeholder": "Tu DNI",
+			"method_call": "https://via.placeholder.com/150",
+			"method_sms": "https://via.placeholder.com/150",
+			"choose": "Elegí dónde recibir el Código de autenticación:",
+			"notes": "Enviamos un códgo de autenticación a <span>123456789</span>, ingresalo a continuación:",
+			"help": "Tengo inconveninentes con el código.",
+			"accept": "Acepto los <a href='#'>Términos y condiciones.</a>",
+			"submit": "Ingresar"
+		},
 		"home": {
 			"status": {
 				"title": "Tu deuda actual es:",
@@ -134,6 +131,11 @@
 				"type_products": "productos",
 				"view": "Ver todas las promesas"
 			}
+		},
+		"invoice": {
+			"title": "Tus productos",
+			"src": "https://placekitten.com/g/150/150",
+			"debt_free": "Libre deuda"
 		}
 	}
 }

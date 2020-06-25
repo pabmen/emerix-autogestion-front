@@ -5,10 +5,17 @@
 	</head>
 <body>
 	<template id="template-webview">
-		{% include "_site.njk" %}
+		{#{% include "structure/_navigation.njk" %}
+		{% include "structure/_sidebar.njk" %}#}
+
+		<div class="pages-container">
+			{#{% include "pages/_login.njk" %}
+			{% include "pages/_home.njk" %}#}
+			{% include "pages/_invoice.njk" %}
+		</div>
 	</template>
 
-	<div id="main-container"></div>
+	<div id="main-container" class="main-container"></div>
 
 	<div id="loading-page">
 		{% include "extra/_site-loader.njk" %}

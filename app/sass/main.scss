@@ -1,5 +1,18 @@
 @import './vars';
 
-@import './components';
-@import './mobile';
-@import './desktop';
+@import './components/box';
+@import './components/forms';
+@import './components/buttons';
+@import './components/typography';
+
+.pages-container {
+	background-color: $lightgray;
+
+	& > * {
+		padding: 1rem;
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+}
+
+@import './pages/login';

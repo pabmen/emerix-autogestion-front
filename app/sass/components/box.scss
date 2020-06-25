@@ -4,9 +4,9 @@
 	background-color: $white;
 	border: 1px solid transparentize($silver, .85);
 	padding: 1rem;
-	margin: 1rem;
+	margin: .5rem;
 	border-radius: 10px;
-	box-shadow: 10px 10px 15px transparentize($black, .85);
+	box-shadow: 5px 5px 10px transparentize($black, .95);
 
 	hr {
 		border: 0;

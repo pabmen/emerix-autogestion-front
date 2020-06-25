@@ -1,6 +1,6 @@
 /**
  * WebviewFlow class
- * @author Pablo Mendoza & Javier Alejandro Corra
+ * @author Pablo Mendoza
  * @date 2020-01-13
  */
 
@@ -21,7 +21,6 @@ import Metric from '../utils/metrics';
 // ::: CONSTANTS
 //------------------------------------------------------------------------------------------------------------------
 
-const WEBVIEW_CONTAINER_ID = '#webview-container';
 
 
 //------------------------------------------------------------------------------------------------------------------

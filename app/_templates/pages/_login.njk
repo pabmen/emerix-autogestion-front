@@ -1,28 +1,38 @@
-<section>
+{% set page = pages.login %}
+<section class="page-login">
 	<div class="box">
 		<form class="form flex-column">
-			<input type="text" placeholder="{{ login.id_placeholder }}">
+			<div class="form-group">
+				<input type="text" placeholder="{{ page.id_placeholder }}">
+			</div>
 
-			<div class="flex-row flex-center">
-				<div class="flex-column">
-					<label for="login-method-call"><img src="{{ login.method_call }}"></label>
-					<input type="radio" value="call" name="login-method" id="login-method-call">
-				</div>
-				<div class="flex-column">
-					<label for="login-method-sms"><img src="{{ login.method_sms }}"></label>
-					<input type="radio" value="sms" name="login-method" id="login-method-sms">
+			<div class="form-group">
+				<p>{{ page.choose }}</p>
+				<div class="flex-row flex-center">
+					<div class="flex-column">
+						<label for="login-method-call"><img src="{{ page.method_call }}"></label>
+						<input type="radio" value="call" name="login-method" id="login-method-call">
+					</div>
+					<div class="flex-column">
+						<label for="login-method-sms"><img src="{{ page.method_sms }}"></label>
+						<input type="radio" value="sms" name="login-method" id="login-method-sms">
+					</div>
 				</div>
 			</div>
 
-			<p>{{ login.notes }}</p>
+			<div class="form-group">
+				<p>{{ page.notes }}</p>
 
-			<input type="text" >
-			<p class="text-right"><a href="#">{{ login.help }}</a></p>
+				<input type="text" >
+				<p class="text-right"><a href="#">{{ page.help }}</a></p>
+			</p>
 
-			<input type="checkbox" id="login-accept">
-			<label for="login-accept">{{ login.accept }}</label>
+			<div class="form-group">
+				<input type="checkbox" id="login-accept">
+				<label for="login-accept">{{ page.accept }}</label>
+			</div>
 
-			<button class="btn">{{ login.submit }}</button>
+			<button class="btn">{{ page.submit }}</button>
 		</form>
 	</div>
 </section>

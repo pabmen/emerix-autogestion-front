@@ -1,12 +1,23 @@
 @import '../vars';
 
 .form {
-	input {
+	input[type=text],
+	input[type=email],
+	input[type=search],
+	input[type=tel],
+	input[type=url] {
+		border: 0;
+		border-bottom: 1px solid $silver;
+		line-height: 1.5rem;
+		width: 100%;
+	}
 
+	.form-group {
+		margin-bottom: 1rem;
 	}
 
 	button {
-
+		
 	}
 
 	textarea {
