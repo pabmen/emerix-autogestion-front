@@ -4,7 +4,7 @@
 	<img src="{{ sidebar.logo.src }}" alt="{{ sidebar.logo.alt }}">
 	<ul>
 		{% for item in sidebar.links %}
-		<li>
+		<li class="navigation-item" style="--icon: url('{{ item.icon }}');">
 			{% if item.title == "-" %}
 				<hr>
 			{% else %}

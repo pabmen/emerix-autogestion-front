@@ -1,0 +1,23 @@
+@import '../vars';
+
+.main-navigation {
+    padding: 1rem;
+
+    .navigation-item {
+        padding-left: 1.5rem;
+        position: relative;
+
+        &:before {
+        	content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+        	width: 1rem;
+        	height: 1rem;
+        	background-image: var(--icon);
+        	background-size: contain;
+        	background-repeat: no-repeat;
+        }
+    }
+}

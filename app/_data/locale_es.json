@@ -28,25 +28,33 @@
 	"common": {
 		"loading": "Cargando"
 	},
+
+	"topbar": {
+		"notificationSrc": "/assets/images/ui/tmp/notificaciones.svg"
+	},
+
 	"sidebar": {
 		"logo": {
-			"src": "https://placekitten.com/g/300/100",
+			"src": "/assets/images/logos/tmp/emerix.png",
 			"alt": ""
 		},
 		"links": [
 			{
 				"title": "Inicio",
-				"url": "#home"
+				"url": "#home",
+				"icon": "/assets/images/ui/tmp/icono-home.svg"
 			},
 			{
 				"title": "-"
 			},
 			{
 				"title": "Mis Cuentas",
-				"url": "#myaccounts"
+				"url": "#myaccounts",
+				"icon": "/assets/images/ui/tmp/icono-info.svg"
 			},
 			{
 				"title": "Pagos",
+				"icon": "/assets/images/ui/tmp/icono-pagar.svg",
 				"dropdown": [
 					{
 						"title": "Pagar",
@@ -77,22 +85,26 @@
 						"title": "Estado de solicitudes",
 						"url": "#"
 					}
-				]
+				],
+				"icon": "/assets/images/ui/tmp/icono-acuerdo.svg"
 			},
 			{
 				"title": "-"
 			},
 			{
 				"title": "Tu Perfil",
-				"url": "#profile"
+				"url": "#profile",
+				"icon": "/assets/images/ui/tmp/icono-perfil.svg"
 			},
 			{
 				"title": "Preguntas frecuentes",
-				"url": "#faqs"
+				"url": "#faqs",
+				"icon": "/assets/images/ui/tmp/icono-faq.svg"
 			},
 			{
 				"title": "Salir",
-				"url": "#logout"
+				"url": "#logout",
+				"icon": "/assets/images/ui/tmp/icono-salir.svg"
 			}
 		]
 	},

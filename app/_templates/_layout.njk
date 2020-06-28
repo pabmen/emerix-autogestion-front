@@ -7,7 +7,10 @@
 	<template id="template-webview">
 		<div class="flex-row">
 			{% include "structure/_sidebar.njk" %}
-			{% include "structure/_page.njk" %}
+			<div class="flex-column flex-grow">
+				{% include "structure/_topbar.njk" %}
+				{% include "structure/_page.njk" %}
+			</div>
 		</div>
 	</template>
 
