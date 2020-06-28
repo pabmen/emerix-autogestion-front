@@ -3,6 +3,15 @@
 .page-login {
     max-width: 30rem;
 
+    .login-method {
+        label {
+            border-radius: $border-radius;
+            border: 1px solid $black;
+            padding: 2rem;
+            margin: 1rem;
+        }
+    }
+
     .btn {
         width: 100%;
     }

@@ -4,10 +4,6 @@
  * @date 2020-06-23
  */
 
-// These two have sideEffects! See package.json
-import './polyfills/EventListenerOptions.polyfill';
-
-
 import {
     DEBUG,
     HTML, LANG,

@@ -112,8 +112,8 @@
 	"pages": {
 		"login": {
 			"id_placeholder": "Tu DNI",
-			"method_call": "https://via.placeholder.com/150",
-			"method_sms": "https://via.placeholder.com/150",
+			"method_call": "/assets/images/ui/tmp/phone.svg",
+			"method_sms": "/assets/images/ui/tmp/mail.svg",
 			"choose": "Elegí dónde recibir el Código de autenticación:",
 			"notes": "Enviamos un códgo de autenticación a <span>123456789</span>, ingresalo a continuación:",
 			"help": "Tengo inconveninentes con el código.",

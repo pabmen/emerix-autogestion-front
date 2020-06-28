@@ -60,7 +60,5 @@
 		"Android >= 4.4"
 	],
 	"sideEffects": [
-		"./app/js/polyfills/EventListenerOptions.polyfill.js",
-		"./app/js/libs/fullpage.parallax.min.js"
 	]
 }
