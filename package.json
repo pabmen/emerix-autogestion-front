@@ -56,7 +56,7 @@
 		"Chrome >= 57",
 		"Firefox >= 52",
 		"Opera >= 40",
-		"Edge >= 15",
+		"Edge >= 16",
 		"Android >= 4.4"
 	],
 	"sideEffects": [
