@@ -4,15 +4,6 @@
 @import './components/forms';
 @import './components/buttons';
 @import './components/typography';
-
-.pages-container {
-	background-color: $lightgray;
-
-	& > * {
-		padding: 1rem;
-		max-width: 60rem;
-		margin: 0 auto;
-	}
-}
+@import './components/dropdown';
 
 @import './pages/login';

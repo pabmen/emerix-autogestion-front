@@ -137,3 +137,24 @@ svg {
 .hidden {
 	display:none !important;
 }
+
+
+
+.main-container {
+	hr {
+		border: 0;
+		height: 1px;
+		background: $silver;
+		background-image: linear-gradient(to right, lighten($silver, 50), $silver, lighten($silver, 50));
+	}
+}
+
+.pages-container {
+	background-color: $lightgray;
+
+	&>* {
+		padding: 1rem;
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+}

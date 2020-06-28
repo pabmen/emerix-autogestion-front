@@ -1,0 +1,42 @@
+@import '../vars';
+
+.dropdown-trigger {
+    clip: rect(1px 1px 1px 1px);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+}
+
+.dropdown-trigger:checked ~ .dropdown-target {
+    display: block;
+    max-height: 100vh;
+}
+
+.dropdown-target {
+    max-height: 0;
+    overflow: hidden;
+    transition: all $transition-normal;
+}
+
+.dropdown-title {
+	display: inline-block;
+	width: 100%;
+    position: relative;
+    cursor: pointer;
+
+	&:after {
+		content: '↓';
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+}
+
+.dropdown-trigger:checked + .dropdown-title {
+    &:after {
+        content: '↑';
+    }
+}
+

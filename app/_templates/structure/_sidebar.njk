@@ -1,20 +1,25 @@
-<nav>
+{% from "../components/_dropdown.njk" import dropdown %}
+
+<nav class="main-navigation">
 	<img src="{{ sidebar.logo.src }}" alt="{{ sidebar.logo.alt }}">
 	<ul>
 		{% for item in sidebar.links %}
 		<li>
 			{% if item.title == "-" %}
-			<hr>
+				<hr>
 			{% else %}
-				<a href="{{ item.url }}">{{ item.title }}</a>
 				{% if item.dropdown %}
-				<ul>
-					{% for dropdown in item.dropdown %}
-						<li>
-							<a href="{{ dropdown.url }}">{{ dropdown.title }}</li>
-						</li>
-					{% endfor %}
-				</ul>
+					{% call dropdown(item.title) %}
+						<ul>
+						{% for dropdown in item.dropdown %}
+							<li>
+								<a href="{{ dropdown.url }}">{{ dropdown.title }}</a>
+							</li>
+						{% endfor %}
+						</ul>
+					{% endcall %}
+				{% else %}
+					<a href="{{ item.url }}">{{ item.title }}</a>
 				{% endif %}
 			{% endif %}
 		</li>

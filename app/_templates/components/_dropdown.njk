@@ -1,0 +1,8 @@
+{% macro dropdown(title) %}
+
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-{% filter replace(' ', '-') %}{{ title | lower }}{% endfilter %}">
+    <label class="dropdown-title" for="dropdown-trigger-{% filter replace(' ', '-') %}{{ title | lower }}{% endfilter %}">{{ title }}</label>
+    <div class="dropdown-target">
+        {{ caller() }}
+    </div>
+{% endmacro %}

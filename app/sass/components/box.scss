@@ -7,11 +7,4 @@
 	margin: .5rem;
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px transparentize($black, .95);
-
-	hr {
-		border: 0;
-		height: 1px;
-		background: $silver;
-		background-image: linear-gradient(to right, lighten($silver, 50), $silver, lighten($silver, 50));
-	}
 }

@@ -7,17 +7,7 @@
 	<template id="template-webview">
 		<div class="flex-row">
 			{% include "structure/_sidebar.njk" %}
-
-			<div class="flex-column flex-grow">
-				<nav>
-					{% include "structure/_navigation.njk" %}
-				</nav>
-				<div class="pages-container">
-					{#{% include "pages/_login.njk" %}
-					{% include "pages/_home.njk" %}#}
-					{% include "pages/_invoice.njk" %}
-				</div>
-			</div>
+			{% include "structure/_page.njk" %}
 		</div>
 	</template>
 
