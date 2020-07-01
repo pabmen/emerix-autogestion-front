@@ -1,3 +1,4 @@
+// default colors
 $white: #fff;
 $black: #000;
 $silver: #aaa;
@@ -6,3 +7,12 @@ $lightgray: #eee;
 
 $transition-normal: .5s ease;
 $border-radius: 10px;
+
+
+// theme colors
+$btn-text:$white;
+$btn-color: #8569b4;
+$btn-color-hover: #A388D1;
+$btn-color-active: #4D2378;
+$btn-radius: 28px;
+$btn-border-color: transparent;

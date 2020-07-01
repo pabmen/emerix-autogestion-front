@@ -111,14 +111,61 @@
 
 	"pages": {
 		"login": {
-			"id_placeholder": "Tu DNI",
-			"method_call": "/assets/images/ui/tmp/phone.svg",
-			"method_sms": "/assets/images/ui/tmp/mail.svg",
-			"choose": "Elegí dónde recibir el Código de autenticación:",
-			"notes": "Enviamos un códgo de autenticación a <span>123456789</span>, ingresalo a continuación:",
-			"help": "Tengo inconveninentes con el código.",
-			"accept": "Acepto los <a href='#'>Términos y condiciones.</a>",
-			"submit": "Ingresar"
+			"page_1": {
+				"dni_type_placeholder": "Documento",
+				"dni_types": [
+					"DNI",
+					"LC",
+					"Otro"
+				],
+				"dni_placeholder": "Número",
+				"genre_placeholder": "Género",
+				"genres": [
+					"Masculino",
+					"Femenino",
+					"Otro"
+				],
+				"method_sms": "SMS",
+				"method_sms_icon": "/assets/images/ui/sms.svg",
+				"method_mail": "Mail",
+				"method_mail_icon": "/assets/images/ui/mail.svg",
+				"choose": "Elegí cómo recibir <strong>la clave de acceso instantáneo</strong>",
+	
+				"submit": "Siguiente"
+			},
+			"page_2": {
+				"notes": "¿Dónde querés recibir la clave?",
+				"phone_list": [
+					{
+						"label": "11 3333 3333",
+						"id": "p1"
+					},
+					{
+						"label": "11 3535 3535",
+						"id": "p2"
+					},
+					{
+						"label": "11 6075 1111",
+						"id": "p3"
+					},
+					{
+						"label": "11 3333 1111",
+						"id": "p4"
+					}
+				],
+				"other": "Quiero recibilo en otro teléfono",
+				"submit": "Enviar",
+				"back": "Volver"
+			},
+			"page_3": {
+				"key_title": "<strong>Ingresá la clave de acceso instantáneo",
+				"key_problem": "Tengo inconvenientes con la clave",
+				"tyc": "Acepto los <a href='#'>términos y condiciones.</a>",
+				"back": "Volver",
+				"submit": "Acceder"
+			}
+
+
 		},
 		"home": {
 			"status": {

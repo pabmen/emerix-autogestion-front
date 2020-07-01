@@ -32,15 +32,12 @@ module.exports = {
     module: {
         rules: [
             {
-                // Allows importing glsl files as a String
-                test: /\.(glsl|vs|fs|vert|frag)$/,
-                //exclude: /node_modules/,
-                use: [
-                    'raw-loader',
-                    'glslify-loader',
+            	test: /\.css$/,
+            	use: [
+                    'style-loader',
+                    'css-loader'
                 ]
             },
-
             {
                 test: /\.s[ac]ss$/i,
                 use: [

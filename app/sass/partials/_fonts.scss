@@ -1,7 +1,7 @@
-/*@font-face {
-	font-family: '...';
-	src: url($assetsPath + 'fonts/...woff2') format('woff2'),
-		url($assetsPath + 'fonts/...woff') format('woff');
+@font-face {
+	font-family: 'Maven Pro';
+	src: url($assetsPath + 'fonts/MavenPro-Bold.woff2') format('woff2'),
+		url($assetsPath + 'fonts/MavenPro-Bold.woff') format('woff');
 	font-weight: bold;
 	font-style: normal;
 
@@ -9,4 +9,27 @@
 	// @see https://web.dev/font-display/
 	font-display: swap;
 }
-*/ 
+
+@font-face {
+	font-family: 'Maven Pro';
+	src: url($assetsPath + 'fonts/MavenPro-Black.woff2') format('woff2'),
+		url($assetsPath + 'fonts/MavenPro-Black.woff') format('woff');
+	font-weight: bolder;
+	font-style: normal;
+
+	// Ensure text remains visible during webfont load
+	// @see https://web.dev/font-display/
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Maven Pro';
+	src: url($assetsPath + 'fonts/MavenPro-Regular.woff2') format('woff2'),
+		url($assetsPath + 'fonts/MavenPro-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+	// Ensure text remains visible during webfont load
+	// @see https://web.dev/font-display/
+	font-display: swap;
+}

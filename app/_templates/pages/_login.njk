@@ -1,38 +1,90 @@
 {% set page = pages.login %}
 <section class="page-login">
 	<div class="box">
-		<form class="form flex-column">
-			<div class="form-group">
-				<input type="text" placeholder="{{ page.id_placeholder }}">
-			</div>
-
-			<div class="form-group">
-				<p>{{ page.choose }}</p>
-				<div class="flex-row flex-center login-method">
-					<div class="flex-column flex-center">
-						<label for="login-method-call"><img src="{{ page.method_call }}"></label>
-						<input type="radio" value="call" name="login-method" id="login-method-call">
+		<div class="flex-row flex-center">
+			<img class="logo" src="/assets/images/logos/tmp/emerix.png" alt="">
+		</div>
+		<form class="form flex-column" id="slider_tmp">
+			<div>
+				<div class="form-group flex-row">
+					<div class="login-dnitype-container">
+						<select>
+							<option selected>{{ page.page_1.dni_type_placeholder }}</option>
+							{% for item in page.page_1.dni_types %}
+							<option value="{{ item }}">{{ item }}</option>
+							{% endfor %}
+						</select>
 					</div>
-					<div class="flex-column flex-center">
-						<label for="login-method-sms"><img src="{{ page.method_sms }}"></label>
-						<input type="radio" value="sms" name="login-method" id="login-method-sms">
+					<div class="flex-grow">
+						<input type="text" placeholder="{{ page.page_1.dni_placeholder }}">
 					</div>
+				</div>
+				<div class="form-group">
+					<select>
+						<option selected>{{ page.page_1.genre_placeholder }}</option>
+						{% for item in page.page_1.genres %}
+						<option value="{{ item }}">{{ item }}</option>
+						{% endfor %}
+					</select>
+				</div>
+				<div class="form-group">
+					<p>{{ page.page_1.choose | safe }}</p>
+					<div class="flex-row flex-center login-method">
+						<div class="flex-column flex-center">
+							<label for="login-method-call"><img src="{{ page.page_1.method_sms_icon }}">{{ page.page_1.method_sms }}</label>
+							<input type="radio" value="call" name="login-method" id="login-method-call">
+						</div>
+						<div class="flex-column flex-center">
+							<label for="login-method-sms"><img src="{{ page.page_1.method_mail_icon }}">{{ page.page_1.method_mail }}</label>
+							<input type="radio" value="sms" name="login-method" id="login-method-sms">
+						</div>
+					</div>
+				</div>
+				<div class="flex-row flex-center">
+					<button class="btn" data-direction="next">{{ page.page_1.submit }}</button>
 				</div>
 			</div>
 
-			<div class="form-group">
-				<p>{{ page.notes }}</p>
+			<div>
+				<div class="form-group">
+					<p>{{ page.page_2.notes }}</p>
+				</div>
 
-				<input type="text" >
-				<p class="text-right"><a href="#">{{ page.help }}</a></p>
-			</p>
+				<div class="form-group flex-column">
+					{% for item in page.page_2.phone_list %}
+					<div>
+						<input type="radio" name="login_phone" id="{{ item.id }}"><label for="{{ item.id }}">{{ item.label }}</label>
+					</div>
+					{% endfor %}
+				</div>
 
-			<div class="form-group">
-				<input type="checkbox" id="login-accept">
-				<label for="login-accept">{{ page.accept }}</label>
+				<div class="flex-row flex-center">
+					<button class="btn secondary" data-direction="back">{{ page.page_2.back }}</button>
+					<button class="btn" data-direction="next">{{ page.page_2.submit }}</button>
+				</div>
+				<a href="#">{{ page.page_2.other }}</a>
 			</div>
 
-			<button class="btn">{{ page.submit }}</button>
+			<div>
+				<div class="form-group">
+					<p>{{ page.page_3.key_title }}</p>
+					<input type="text" placeholder="{{ page.page_3.key }}"">
+					<div class="text-right">
+						<a href="#">{{ page.page_3.key_problem }}</a>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<input type="checkbox" id="tyc"><label for="tyc">{{ page.page_3.tyc }}</label>
+
+				</div>
+
+				<div class="flex-row flex-center">
+					<button class="btn secondary" data-direction="back">{{ page.page_3.back }}</button>
+					<button class="btn" data-direction="next">{{ page.page_3.submit }}</button>
+				</div>
+			</div>
+	
 		</form>
 	</div>
 </section>

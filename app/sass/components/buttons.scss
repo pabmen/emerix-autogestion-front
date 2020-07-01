@@ -1,9 +1,42 @@
 @import '../vars';
 
+
+$btn-color: #8569b4;
+$btn-color-hover: #A388D1;
+$btn-color-active: #4D2378;
+$btn-radius: 28px;
+$btn-border-color: transparent;
+
+
 .btn {
-	border-radius: 5px;
-	background: $silver;
-	color: $black;
+	background: $btn-color;
+	border-radius: $btn-radius;
+	color: $btn-text;
 	display: inline-block;
 	padding: 1rem 3rem;
+	text-transform: uppercase;
+
+	&:hover {
+		background-color: $btn-color-hover;
+	}
+
+	&:active {
+		background-color: $btn-color-active;
+	}
+
+	&.secondary {
+		background: transparent;
+		color: $btn-color;
+
+		&:hover {
+			border-color: $btn-color-hover;
+			color: $btn-color-hover;
+		}
+
+		&:active {
+			background-color: $btn-color-active;
+			border-color: $btn-color-active;
+			color: $btn-text;
+		}
+	}
 }

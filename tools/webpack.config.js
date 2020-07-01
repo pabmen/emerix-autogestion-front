@@ -21,9 +21,6 @@ module.exports = webpackMergeSmart(commonConfig, {
 				// This takes the NODE_ENV and passes it to webpack
 				//'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
 				'NODE_ENV': JSON.stringify('development'),
-				'FULLPAGE_LICENSE': JSON.stringify(''),
-
-				'FULLPAGE_PARALLAX_KEY': JSON.stringify('')
 			},
 		}),
 	],

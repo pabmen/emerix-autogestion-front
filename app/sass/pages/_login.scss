@@ -1,18 +1,27 @@
 @import '../vars';
 
 .page-login {
-    max-width: 30rem;
+    max-width: 40rem;
+
+    .logo {
+        padding: 2rem;;
+	}
+	
+	.login-dnitype-container {
+		width: 33.33%;
+		margin-right: 2rem;
+	}
 
     .login-method {
         label {
             border-radius: $border-radius;
-            border: 1px solid $black;
+            border: 1px solid $btn-color;
             padding: 2rem;
             margin: 1rem;
         }
     }
 
-    .btn {
+    select {
         width: 100%;
     }
 }

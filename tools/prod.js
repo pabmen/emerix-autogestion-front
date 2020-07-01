@@ -40,10 +40,6 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production'),
-                'FULLPAGE_LICENSE': JSON.stringify('32A63C86-F77D4C71-B3F07B9C-D1854E7F'),
-
-                // [portusojos.com, throughyoureyes.site]
-                'FULLPAGE_PARALLAX_KEY': JSON.stringify(['cG9ydHVzb2pvcy5jb21fRUVqY0dGeVlXeHNZWGc9M25y', 'dGhyb3VnaHlvdXJleWVzLnNpdGVfTWJuY0dGeVlXeHNZWGc9SzFJ']),
             },
         }),
     ],

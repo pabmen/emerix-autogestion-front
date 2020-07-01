@@ -16,6 +16,7 @@ import {
     removeAllTemplates
 } from '../utils/templates';
 import Metric from '../utils/metrics';
+import Slider from '../components/slider/slider';
 
 //------------------------------------------------------------------------------------------------------------------
 // ::: CONSTANTS
@@ -26,7 +27,6 @@ import Metric from '../utils/metrics';
 //------------------------------------------------------------------------------------------------------------------
 // ::: CLASS
 //------------------------------------------------------------------------------------------------------------------
-
 
 class WebviewFlow {
 
@@ -54,6 +54,27 @@ class WebviewFlow {
 
         // Create Webview
         this._createStructure();
+
+
+        const login_slider = new Slider({
+            el: document.querySelector("#slider_tmp"),
+            slides: document.querySelectorAll("#slider_tmp > div"),
+            createControls: false,
+        })
+
+        document.querySelectorAll("[data-direction=next]").forEach((elem) => {
+            elem.addEventListener("click", (e) => {
+            	e.preventDefault()
+            	login_slider.next()
+            })
+        })
+        document.querySelectorAll("[data-direction=back]").forEach((elem) => {
+            elem.addEventListener("click", (e) => {
+                e.preventDefault()
+                login_slider.prev()
+            })
+        })
+
         this._removeLoadingPage();
     }
 
@@ -71,11 +92,12 @@ class WebviewFlow {
         console.log('WebviewFlow::_createStructure');
 
         const webviewNodes = createFromTemplate(DOM_TEMPLATE_WEBVIEW);
+        
 
         // Add to main container
         DOM_MAIN_CONTAINER.appendChild(webviewNodes);
 
-        removeAllTemplates();
+        //removeAllTemplates();
     }
 
 

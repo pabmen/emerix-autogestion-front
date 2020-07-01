@@ -152,9 +152,8 @@ svg {
 .pages-container {
 	background-color: $lightgray;
 
-	&>* {
+	& > * {
 		padding: 1rem;
-		max-width: 60rem;
 		margin: 0 auto;
 	}
 }

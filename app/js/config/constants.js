@@ -1,9 +1,9 @@
 import {parameter} from '../utils/utils'
 
-// Set to true to force debug mode
-const FORCE_DEBUG = false;
+export const NAME_REGEX = /^[a-zA-Z áéíóúÁÉÍÓÚñÑäëïöüÄËÏÖÜ`'".-]+$/;
+export const MAIL_REGEX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-export const DEBUG = FORCE_DEBUG || ((parameter('debug') !== undefined) ? parameter('debug') : false);
+export const DEBUG = ((parameter('debug') !== undefined) ? parameter('debug') : false);
 
 // Set to true to debug analytics
 export const DEBUG_METRICS = false;

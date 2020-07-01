@@ -59,6 +59,5 @@
 		"Edge >= 16",
 		"Android >= 4.4"
 	],
-	"sideEffects": [
-	]
+	"sideEffects": []
 }

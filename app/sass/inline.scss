@@ -22,6 +22,9 @@ $assetsPath: './assets/'; //../assets/
 
 @import './preloader';
 
+html, body {
+	font-family: 'Maven Pro';
+}
 
 
 button {
