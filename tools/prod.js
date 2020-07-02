@@ -51,8 +51,6 @@ module.exports = {
 
 
     optimization: {
-        // This is important to make @yushijinhun/three-minifier-webpack work
-        concatenateModules: false,
 
         minimize: true,
 

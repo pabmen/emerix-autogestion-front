@@ -3,6 +3,18 @@
 .page-login {
     max-width: 28rem;
 
+    .login-content {
+        height: calc(100% - 2rem);
+
+        & > :first-child {
+            margin-bottom: auto;
+        }
+    }
+
+    .slide-page {
+        overflow: hidden;
+    }
+
     .logo {
         padding: 2rem;
 	}

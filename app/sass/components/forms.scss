@@ -7,6 +7,7 @@ form {
 }
 
 .input-wrapper {
+	position: relative;
 
 	&.select {
 		position: relative;
@@ -49,10 +50,48 @@ form {
 		-webkit-appearance: none;
 	}
 
-	.error-popup {
+	.input-error-icon {
+		opacity: 0;
+		transition: all $transition-fast;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(0, -50%);
+		width: .9rem;
+		height: .9rem;
+		background-image: url('/assets/images/ui/icono_error.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.input-error-popup {
+		opacity: 0;
+		transition: all $transition-fast;
 		position: absolute;
 		bottom: 100%;
 		right: 0;
-		background-color: $orange;
+		margin-bottom: .25rem;
+		color: $white;
+		padding: 0.625rem;
+		background-color: transparentize($orange, .23);
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 100%;
+			right: .625rem;
+			width: 0;
+			height: 0;
+			border-top: .625rem solid transparentize($orange, .23);
+			border-left: .625rem solid transparent;
+		}
 	}
+
+	&.error {
+		.input-error-icon,
+		.input-error-popup {
+			opacity: 1;
+		}
+	}
+	
 }

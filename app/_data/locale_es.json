@@ -1,7 +1,7 @@
 {
 	"head": {
 		"lang": "es",
-		"title": "Emerix",
+		"title": "Émerix",
 		"description": "",
 		"keywords": "",
 
@@ -35,7 +35,7 @@
 
 	"sidebar": {
 		"logo": {
-			"src": "/assets/images/logos/tmp/emerix.png",
+			"src": "/assets/images/logos/emerix.png",
 			"alt": ""
 		},
 		"links": [

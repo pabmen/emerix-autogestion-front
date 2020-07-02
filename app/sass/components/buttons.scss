@@ -4,7 +4,7 @@
 $btn-color: #8569b4;
 $btn-color-hover: #A388D1;
 $btn-color-active: #4D2378;
-$btn-radius: 28px;
+$btn-radius: 1.750rem;
 $btn-border-color: transparent;
 
 
@@ -12,10 +12,13 @@ $btn-border-color: transparent;
 	background: $btn-color;
 	border-radius: $btn-radius;
 	border: 1px solid transparent;
+	box-shadow: 0px .25rem .5rem transparentize($black, 0.8);
+	margin: .5rem;
 	color: $btn-text;
 	display: inline-block;
 	padding: 1rem 3rem;
 	text-transform: uppercase;
+
 
 	&:hover {
 		background-color: $btn-color-hover;
@@ -27,6 +30,7 @@ $btn-border-color: transparent;
 
 	&.secondary {
 		background: transparent;
+		box-shadow: none;
 		color: $btn-color;
 
 		&:hover {

@@ -4,106 +4,122 @@
 {% set page = pages.login %}
 <section class="page-login">
 	<div class="box">
-		<div class="flex-row flex-center">
-			<h1 class="visually-hidden">{{ page.title }}</h1>
-			<img class="logo" src="/assets/images/logos/tmp/emerix.png" alt="">
-		</div>
-		<form class="form flex-column" id="slider_tmp">
-			<div>
-				<div class="form-group flex-row">
-					<div class="login-dnitype-container">
-						{{ select({
-							'id': 'login_dni_type',
-							'items': page.page_1.dni_types,
-							'placeholder': page.page_1.dni_type_placeholder
-					}) }}
-					</div>
-					<div class="flex-grow">
-						{{ input({
-							'id': 'login_dni',
-							'placeholder': page.page_1.dni_placeholder,
-							'minlength': page.page_1.dni_min,
-							'maxlength': page.page_1.dni_max,
-							'pattern': '\d*'})
-						}}
-					</div>
-				</div>
-				<div class="form-group">
-					{{ select({
-						'id': 'login_genre',
-						'items': page.page_1.genres,
-						'placeholder': page.page_1.genre_placeholder
-					}) }}
-				</div>
-				<div class="form-group">
-					<p>{{ page.page_1.choose | safe }}</p>
-					<div class="flex-row flex-center login-method">
-						<div class="flex-column flex-center">
-							<label for="login-method-call"><img src="{{ page.page_1.method_sms_icon }}">{{ page.page_1.method_sms }}</label>
-							<input type="radio" value="call" name="login-method" id="login-method-call">
-						</div>
-						<div class="flex-column flex-center">
-							<label for="login-method-sms"><img src="{{ page.page_1.method_mail_icon }}">{{ page.page_1.method_mail }}</label>
-							<input type="radio" value="sms" name="login-method" id="login-method-sms">
-						</div>
-					</div>
-				</div>
-				<div class="flex-row flex-center">
-					<button class="btn" data-direction="next">{{ page.page_1.submit }}</button>
-				</div>
-			</div>
-
-			<div>
-				<div class="form-group">
-					<p>{{ page.page_2.notes }}</p>
-				</div>
-
-				<div class="form-group flex-column">
-					{% for item in page.page_2.phone_list %}
+		<form class="form flex-column" id="login-slider">
+			<div class="slide-page">
+				<div class="login-content flex flex-column">
 					<div>
-						{{ input({
-							'type': "radio",
-							'id': item.id,
-							'name': 'login_phone',
-							'label': item.label
-							})
-						}}
+						<div class="flex-row flex-center">
+							<h1 class="visually-hidden">{{ page.title }}</h1>
+							<img class="logo" src="/assets/images/logos/tmp/emerix.png" alt="">
+						</div>
+						<div class="form-group flex-row">
+							<div class="login-dnitype-container">
+								{{ select({
+									'id': 'login_dni_type',
+									'items': page.page_1.dni_types,
+									'placeholder': page.page_1.dni_type_placeholder
+							}) }}
+							</div>
+							<div class="flex-grow">
+								{{ input({
+									'id': 'login_dni',
+									'placeholder': page.page_1.dni_placeholder,
+									'minlength': page.page_1.dni_min,
+									'maxlength': page.page_1.dni_max,
+									'pattern': '\d*'})
+								}}
+							</div>
+						</div>
+						<div class="form-group">
+							{{ select({
+								'id': 'login_genre',
+								'items': page.page_1.genres,
+								'placeholder': page.page_1.genre_placeholder
+							}) }}
+						</div>
+						<div class="form-group">
+							<p>{{ page.page_1.choose | safe }}</p>
+							<div class="flex-row flex-center login-method">
+								<div class="flex-column flex-center">
+									<label for="login-method-call"><img src="{{ page.page_1.method_sms_icon }}">{{ page.page_1.method_sms }}</label>
+									<input type="radio" value="call" name="login-method" id="login-method-call">
+								</div>
+								<div class="flex-column flex-center">
+									<label for="login-method-sms"><img src="{{ page.page_1.method_mail_icon }}">{{ page.page_1.method_mail }}</label>
+									<input type="radio" value="sms" name="login-method" id="login-method-sms">
+								</div>
+							</div>
+						</div>
 					</div>
-					{% endfor %}
+					<div class="flex-row flex-center">
+						<button class="btn" data-direction="next">{{ page.page_1.submit }}</button>
+					</div>
 				</div>
-
-				<div class="form-group flex-row flex-center">
-					<button class="btn secondary" data-direction="back">{{ page.page_2.back }}</button>
-					<button class="btn" data-direction="next">{{ page.page_2.submit }}</button>
-				</div>
-				<a href="#">{{ page.page_2.other }}</a>
 			</div>
+			<div class="slide-page">
+				<div class="login-content flex flex-column">
+					<div>
+						<div class="flex-row flex-center">
+							<h1 class="visually-hidden">{{ page.title }}</h1>
+							<img class="logo" src="/assets/images/logos/tmp/emerix.png" alt="">
+						</div>
+						<div class="form-group">
+							<p>{{ page.page_2.notes }}</p>
+						</div>
 
-			<div>
-				<div class="form-group">
-					<p>{{ page.page_3.key_title }}</p>
-					{{ input({
-						'id': "login_key"
-						})
-					}}
-				</div>
-				<div class="form-group">
-					<div class="text-right">
-						<a href="#">{{ page.page_3.key_problem }}</a>
+						<div class="form-group flex-column">
+							{% for item in page.page_2.phone_list %}
+							<div>
+								{{ input({
+									'type': "radio",
+									'id': item.id,
+									'name': 'login_phone',
+									'label': item.label
+									})
+								}}
+							</div>
+							{% endfor %}
+						</div>
 					</div>
+					<div class="form-group flex-row flex-center">
+						<button class="btn secondary" data-direction="back">{{ page.page_2.back }}</button>
+						<button class="btn" data-direction="next">{{ page.page_2.submit }}</button>
+					</div>
+					<a href="#">{{ page.page_2.other }}</a>
 				</div>
-				<div class="form-group">
-					{{ input({
-						'type': "checkbox",
-						'id': "login_tyc",
-						'label': page.page_3.tyc
-						})
-					}}
-				</div>
-
-				<div class="flex-row flex-center">
-					<button class="btn secondary" data-direction="back">{{ page.page_3.back }}</button>
-					<button class="btn">{{ page.page_3.submit }}</button>
+			</div>
+			<div class="slide-page">
+				<div class="login-content flex flex-column">
+					<div>
+						<div class="flex-row flex-center">
+							<h1 class="visually-hidden">{{ page.title }}</h1>
+							<img class="logo" src="/assets/images/logos/tmp/emerix.png" alt="">
+						</div>
+						<div class="form-group">
+							<p>{{ page.page_3.key_title }}</p>
+							{{ input({
+								'id': "login_key"
+								})
+							}}
+						</div>
+						<div class="form-group">
+							<div class="text-right">
+								<a href="#">{{ page.page_3.key_problem }}</a>
+							</div>
+						</div>
+						<div class="form-group">
+							{{ input({
+								'type': "checkbox",
+								'id': "login_tyc",
+								'label': page.page_3.tyc
+								})
+							}}
+						</div>
+					</div>
+					<div class="flex-row flex-center">
+						<button class="btn secondary" data-direction="back">{{ page.page_3.back }}</button>
+						<button class="btn" data-direction="next">{{ page.page_3.submit }}</button>
+					</div>
 				</div>
 			</div>
 	

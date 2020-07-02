@@ -56,28 +56,51 @@ class WebviewFlow {
         // Create Webview
         this._createStructure()
 
+        let activeIndex = 0;
 
-        new Form()
+        const slides = document.querySelectorAll('.page-login .slide-page')
+
+        function inputErr(input) {
+            input.closest('.input-wrapper').classList.add('error')
+        }
+
+        function inputValid(input) {
+            input.closest('.input-wrapper').classList.remove('error')
+        }
+        
+        const form = new Form({
+            elem: document.querySelector('.page-login form'),
+            onValidation: (input) => inputValid(input),
+            onError: (input) => inputErr(input),
+        })
 
         const login_slider = new Slider({
-            el: document.querySelector("#slider_tmp"),
-            slides: document.querySelectorAll("#slider_tmp > div"),
+            el: document.querySelector("#login-slider"),
+            slides: document.querySelectorAll("#login-slider > div"),
             createControls: false,
             animateSpeed: 150,
-            initialPage: 2,
+            initialPage: 0,
+            slideCallback: (index) => activeIndex = index,
         })
+
 
         document.querySelectorAll("[data-direction=next]").forEach((elem) => {
             elem.addEventListener("click", (e) => {
-            	e.preventDefault()
-            	login_slider.next()
+                e.preventDefault()
+                
+                if (form.validateElements(slides[activeIndex].querySelectorAll('.input-wrapper input, select, textarea'), (input) => {
+                    inputErr(input)
+                })) {
+                    login_slider.next()
+                }
             })
         })
+
         document.querySelectorAll("[data-direction=back]").forEach((elem) => {
-            elem.addEventListener("click", (e) => {
-                e.preventDefault()
+        	elem.addEventListener("click", (e) => {
+        		e.preventDefault()
                 login_slider.prev()
-            })
+        	})
         })
 
         this._removeLoadingPage()

@@ -5,8 +5,6 @@
  * 
  */
 
-import './slider.css';
-
 class Slider {
 	constructor(options) {
 		this.DOM_slider = options.el;
@@ -140,7 +138,7 @@ class Slider {
 		this.bindings();
 		this.slideTo(this.initialPage);
 
-		this.DOM_slider.setAttribute("data-enabled", true);
+		this.DOM_slider.setAttribute("data-enabled", "true");
 
 		if (this.animate) {
 			this.DOM_slider.classList.add("slider", "animated");
