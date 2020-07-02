@@ -119,6 +119,8 @@
 					"Otro"
 				],
 				"dni_placeholder": "Número",
+				"dni_max": "Número",
+				"dni_min": "Número",
 				"genre_placeholder": "Género",
 				"genres": [
 					"Masculino",
@@ -153,16 +155,16 @@
 						"id": "p4"
 					}
 				],
-				"other": "Quiero recibilo en otro teléfono",
+				"other": "Quiero recibirlo en otro teléfono",
 				"submit": "Enviar",
 				"back": "Volver"
 			},
 			"page_3": {
 				"key_title": "<strong>Ingresá la clave de acceso instantáneo",
 				"key_problem": "Tengo inconvenientes con la clave",
-				"tyc": "Acepto los <a href='#'>términos y condiciones.</a>",
+				"tyc": "Acepto los <a href='#'>Términos y condiciones.</a>",
 				"back": "Volver",
-				"submit": "Acceder"
+				"submit": "Ingresar"
 			}
 
 
@@ -195,6 +197,14 @@
 			"title": "Tus productos",
 			"src": "https://placekitten.com/g/150/150",
 			"debt_free": "Libre deuda"
+		}
+	},
+
+	"form": {
+		"errors": {
+			"generic": "Requerido.",
+			"dni_number_error": "El número ingresado es incorrecto.",
+			"key_error": "La clave ingresada es incorrecta."
 		}
 	}
 }

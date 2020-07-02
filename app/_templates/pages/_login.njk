@@ -1,3 +1,6 @@
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+
 {% set page = pages.login %}
 <section class="page-login">
 	<div class="box">
@@ -8,24 +11,28 @@
 			<div>
 				<div class="form-group flex-row">
 					<div class="login-dnitype-container">
-						<select>
-							<option selected>{{ page.page_1.dni_type_placeholder }}</option>
-							{% for item in page.page_1.dni_types %}
-							<option value="{{ item }}">{{ item }}</option>
-							{% endfor %}
-						</select>
+						{{ select({
+							'id': 'login_dni_type',
+							'items': page.page_1.dni_types,
+							'placeholder': page.page_1.dni_type_placeholder
+					}) }}
 					</div>
 					<div class="flex-grow">
-						<input type="text" placeholder="{{ page.page_1.dni_placeholder }}">
+						{{ input({
+							'id': 'login_dni',
+							'placeholder': page.page_1.dni_placeholder,
+							'minlength': page.page_1.dni_min,
+							'maxlength': page.page_1.dni_max,
+							'pattern': '\d*'})
+						}}
 					</div>
 				</div>
 				<div class="form-group">
-					<select>
-						<option selected>{{ page.page_1.genre_placeholder }}</option>
-						{% for item in page.page_1.genres %}
-						<option value="{{ item }}">{{ item }}</option>
-						{% endfor %}
-					</select>
+					{{ select({
+						'id': 'login_genre',
+						'items': page.page_1.genres,
+						'placeholder': page.page_1.genre_placeholder
+					}) }}
 				</div>
 				<div class="form-group">
 					<p>{{ page.page_1.choose | safe }}</p>
@@ -53,12 +60,18 @@
 				<div class="form-group flex-column">
 					{% for item in page.page_2.phone_list %}
 					<div>
-						<input type="radio" name="login_phone" id="{{ item.id }}"><label for="{{ item.id }}">{{ item.label }}</label>
+						{{ input({
+							'type': "radio",
+							'id': item.id,
+							'name': 'login_phone',
+							'label': item.label
+							})
+						}}
 					</div>
 					{% endfor %}
 				</div>
 
-				<div class="flex-row flex-center">
+				<div class="form-group flex-row flex-center">
 					<button class="btn secondary" data-direction="back">{{ page.page_2.back }}</button>
 					<button class="btn" data-direction="next">{{ page.page_2.submit }}</button>
 				</div>
@@ -68,20 +81,28 @@
 			<div>
 				<div class="form-group">
 					<p>{{ page.page_3.key_title }}</p>
-					<input type="text" placeholder="{{ page.page_3.key }}"">
+					{{ input({
+						'id': "login_key"
+						})
+					}}
+				</div>
+				<div class="form-group">
 					<div class="text-right">
 						<a href="#">{{ page.page_3.key_problem }}</a>
 					</div>
 				</div>
-
 				<div class="form-group">
-					<input type="checkbox" id="tyc"><label for="tyc">{{ page.page_3.tyc }}</label>
-
+					{{ input({
+						'type': "checkbox",
+						'id': "login_tyc",
+						'label': page.page_3.tyc
+						})
+					}}
 				</div>
 
 				<div class="flex-row flex-center">
 					<button class="btn secondary" data-direction="back">{{ page.page_3.back }}</button>
-					<button class="btn" data-direction="next">{{ page.page_3.submit }}</button>
+					<button class="btn">{{ page.page_3.submit }}</button>
 				</div>
 			</div>
 	

@@ -1,10 +1,10 @@
 @import '../vars';
 
 .page-login {
-    max-width: 40rem;
+    max-width: 28rem;
 
     .logo {
-        padding: 2rem;;
+        padding: 2rem;
 	}
 	
 	.login-dnitype-container {
@@ -23,5 +23,14 @@
 
     select {
         width: 100%;
+    }
+
+    .input-wrapper.radio {
+        margin-left: 1rem;;
+        margin-bottom: 1rem;
+    }
+
+    button + button {
+        margin-left: 1rem;
     }
 }

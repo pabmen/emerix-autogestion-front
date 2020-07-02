@@ -1,0 +1,41 @@
+{#{% macro input(type, id, name, value, placeholder, options) %}#}
+{% macro input(options) %}
+
+    {% set type -%}{% if options.type%}{{ options.type }}{%else%}text{%endif%}{%- endset %}
+
+
+    <div class="input-wrapper {{ type }}">
+        <input
+            id="{{ options.id }}"
+            type="{{ type }}"
+            {% if options.type == "checkbox" %} class="visually-hidden" {% endif %}
+            {% if options.name %} name="{{ options.name }}" {% endif %}
+            {% if options.value %} value="{{ options.value }}" {% endif %}
+            {% if options.pattern %} pattern="{{ options.pattern }}" {% endif %}
+            {% if options.minlength %} minlength="{{ options.minlength }}" {% endif %}
+            {% if options.maxlength %} maxlength="{{ options.maxlength }}" {% endif %}
+            {% if options.placeholder %} placeholder="{{ options.placeholder }}" {% endif%}
+        >
+        {% if options.type == "checkbox" %}
+            <div class="input-checkbox">
+                <span class="input-checkbox-caret"></span>
+            </div>
+            <label for="{{ options.id }}">{{ options.label }}</label>
+        {% elseif options.type == "radio" %}
+            <label for="{{ options.id }}">{{ options.label }}</label>
+        {% endif %}
+    </div>
+{% endmacro %}
+
+{% macro select(options) %}
+    <div class="input-wrapper select">
+        <select id="{{ options.id }}">
+            {% if options.placeholder %}
+            <option selected class="placeholder" value="-">{{ options.placeholder }}</option>
+            {% endif %}
+            {% for item in options.items %}
+            <option value="{{ item }}">{{ item }}</option>
+            {% endfor %}
+        </select>
+    </div>
+{% endmacro %}

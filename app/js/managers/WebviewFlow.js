@@ -9,14 +9,15 @@ import {
     LOADING_PAGE_ID,
     DOM_MAIN_CONTAINER, METRIC_DEFAULT_CATEGORY,
     VIDEO_DATA
-} from '../config/constants';
+} from '../config/constants'
 
 import {
     createFromTemplate, DOM_TEMPLATE_WEBVIEW,
     removeAllTemplates
-} from '../utils/templates';
-import Metric from '../utils/metrics';
-import Slider from '../components/slider/slider';
+} from '../utils/templates'
+import Metric from '../utils/metrics'
+import Slider from '../components/slider'
+import Form from '../components/forms'
 
 //------------------------------------------------------------------------------------------------------------------
 // ::: CONSTANTS
@@ -53,13 +54,17 @@ class WebviewFlow {
 
 
         // Create Webview
-        this._createStructure();
+        this._createStructure()
 
+
+        new Form()
 
         const login_slider = new Slider({
             el: document.querySelector("#slider_tmp"),
             slides: document.querySelectorAll("#slider_tmp > div"),
             createControls: false,
+            animateSpeed: 150,
+            initialPage: 2,
         })
 
         document.querySelectorAll("[data-direction=next]").forEach((elem) => {
@@ -75,7 +80,7 @@ class WebviewFlow {
             })
         })
 
-        this._removeLoadingPage();
+        this._removeLoadingPage()
     }
 
 
@@ -91,11 +96,11 @@ class WebviewFlow {
     _createStructure() {
         console.log('WebviewFlow::_createStructure');
 
-        const webviewNodes = createFromTemplate(DOM_TEMPLATE_WEBVIEW);
+        const webviewNodes = createFromTemplate(DOM_TEMPLATE_WEBVIEW)
         
 
         // Add to main container
-        DOM_MAIN_CONTAINER.appendChild(webviewNodes);
+        DOM_MAIN_CONTAINER.appendChild(webviewNodes)
 
         //removeAllTemplates();
     }
@@ -106,8 +111,8 @@ class WebviewFlow {
      * @private
      */
     _removeLoadingPage() {
-        console.log('WebviewFlow::_removeLoadingPage');
-        document.querySelector(LOADING_PAGE_ID).remove();
+        console.log('WebviewFlow::_removeLoadingPage')
+        document.querySelector(LOADING_PAGE_ID).remove()
     }
 
 
@@ -118,4 +123,4 @@ class WebviewFlow {
 
 }
 
-export { WebviewFlow };
+export { WebviewFlow }

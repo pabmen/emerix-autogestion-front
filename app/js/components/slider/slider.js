@@ -1,3 +1,10 @@
+/**
+ * 
+ * @author Pablo Mendoza
+ * @date 2019
+ * 
+ */
+
 import './slider.css';
 
 class Slider {

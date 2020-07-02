@@ -11,6 +11,7 @@ $btn-border-color: transparent;
 .btn {
 	background: $btn-color;
 	border-radius: $btn-radius;
+	border: 1px solid transparent;
 	color: $btn-text;
 	display: inline-block;
 	padding: 1rem 3rem;
@@ -29,7 +30,7 @@ $btn-border-color: transparent;
 		color: $btn-color;
 
 		&:hover {
-			border-color: $btn-color-hover;
+			border: 1px solid $btn-color-hover;
 			color: $btn-color-hover;
 		}
 

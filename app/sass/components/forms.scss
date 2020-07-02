@@ -1,6 +1,25 @@
 @import '../vars';
 
-.form {
+form {
+	.form-group {
+		margin-bottom: 1rem;
+	}
+}
+
+.input-wrapper {
+
+	&.select {
+		position: relative;
+
+		&:after {
+			content: url("/assets/images/ui/dropdown.svg");
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+		}
+	}
+
 	input[type=text],
 	input[type=email],
 	input[type=search],
@@ -12,15 +31,21 @@
 		width: 100%;
 	}
 
-	.form-group {
-		margin-bottom: 1rem;
+	textarea,
+	input[type=text],
+	input[type=url],
+	input[type=mail],
+	input[type=textarea],
+	select {
+		background-color: transparent;
+		border: none;
+		border-bottom: 1px solid $violet;
+		line-height: 1.625em;
 	}
 
-	button {
-		
-	}
-
-	textarea {
-
+	select {
+		line-height: 1.25em;
+		padding: calc((1.625em - 1em) / 2) 0;
+		-webkit-appearance: none;
 	}
 }
