@@ -48,4 +48,11 @@ form {
 		padding: calc((1.625em - 1em) / 2) 0;
 		-webkit-appearance: none;
 	}
+
+	.error-popup {
+		position: absolute;
+		bottom: 100%;
+		right: 0;
+		background-color: $orange;
+	}
 }

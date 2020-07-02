@@ -8,11 +8,11 @@ class Form {
     }
 
     validator() {
-
+        
     }
 
     error() {
-        
+
     }
 }
 

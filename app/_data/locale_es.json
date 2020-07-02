@@ -1,7 +1,7 @@
 {
 	"head": {
 		"lang": "es",
-		"title": "",
+		"title": "Emerix",
 		"description": "",
 		"keywords": "",
 
@@ -111,6 +111,7 @@
 
 	"pages": {
 		"login": {
+			"title": "Emerix Login",
 			"page_1": {
 				"dni_type_placeholder": "Documento",
 				"dni_types": [

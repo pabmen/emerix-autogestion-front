@@ -8,7 +8,7 @@
         <input
             id="{{ options.id }}"
             type="{{ type }}"
-            {% if options.type == "checkbox" %} class="visually-hidden" {% endif %}
+            class="input-elem {% if options.type == 'checkbox' %}visually-hidden{% endif %}"
             {% if options.name %} name="{{ options.name }}" {% endif %}
             {% if options.value %} value="{{ options.value }}" {% endif %}
             {% if options.pattern %} pattern="{{ options.pattern }}" {% endif %}
