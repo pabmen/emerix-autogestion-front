@@ -8,7 +8,7 @@ class Form {
     }
 
     validator() {
-        
+        console.log(test)
     }
 
     error() {
