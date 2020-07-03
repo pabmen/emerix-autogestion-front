@@ -73,7 +73,22 @@ class LoginFlow {
 			animateSpeed: 150,
 			initialPage: 0,
 			slideCallback: (index) => activeIndex = index,
-		})
+        })
+        
+        // temporal, only to show login / home pages
+        function showLogin() {
+            document.querySelectorAll('.main-navigation, .topbar, .page-home').forEach((elem) => {
+                elem.style.display = 'none'
+            })
+        }
+
+        function showHome() {
+        	document.querySelectorAll('.main-navigation, .topbar, .page-home').forEach((elem) => {
+        		elem.style.display = 'block'
+            })
+            
+            document.querySelector('.page-login').style.display = 'none'
+        }
 
 
 		document.querySelectorAll("[data-direction=next]").forEach((elem) => {
@@ -89,7 +104,14 @@ class LoginFlow {
 					}
 				})
 
-				ready && login_slider.next() // check if page validated then go to next page
+                if (ready) {
+                    if (activeIndex === 2) {
+                        showHome()
+                    } else {
+                        login_slider.next() // check if page validated then go to next page
+                    }
+                } 
+                
 			})
 		})
 
@@ -98,7 +120,9 @@ class LoginFlow {
 				e.preventDefault()
 				login_slider.prev()
 			})
-		})
+        })
+        
+        showLogin()
 	}
 
 
