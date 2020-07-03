@@ -16,6 +16,7 @@ import {
     removeAllTemplates
 } from '../utils/templates'
 
+import Sidebar from './Sidebar'
 import LoginFlow from './pages/login'
 
 //------------------------------------------------------------------------------------------------------------------

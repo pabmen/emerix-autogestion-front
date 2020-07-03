@@ -181,20 +181,45 @@
 				"due": "Fecha de inicio de mora",
 				"btn": "¡Pagar ahora!"
 			},
-			"plans": {
+			"payments": {
 				"title": "Últimos planes de pago",
-				"type_approved": "Aprobado",
-				"type_disapproved": "Desaprobado",
-				"view": "Ver todos los planes de pago"
+				"plans": [
+					{
+						"text": "REFI - MC3111223",
+						"date": "17/10/20",
+						"status": "approved"
+					},
+					{
+						"text": "REFI - MC3111223",
+						"date": "17/10/20",
+						"status": "waiting"
+					}
+				],
+				"view": "Ver todos los planes"
 			},
 			"promotions": {
-				"src": "https://placekitten.com/g/150/150",
+				"src": "https://placekitten.com/g/450/150",
 				"view": "¡Accedé a este beneficio ahora!"
 			},
 			"promises": {
 				"title": "Últimas promesas de pago",
-				"type_product": "producto",
-				"type_products": "productos",
+				"latest": [
+					{
+						"price": "$17,900",
+						"cant": "1 producto",
+						"date": "17/08/20"
+					},
+					{
+						"price": "$37,600",
+						"cant": "3 productos",
+						"date": "17/08/20"
+					},
+					{
+						"price": "$17,900",
+						"cant": "1 producto",
+						"date": "17/08/20"
+					}
+				],
 				"view": "Ver todas las promesas"
 			}
 		},

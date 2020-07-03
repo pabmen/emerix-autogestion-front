@@ -3,7 +3,7 @@
 	<div class="flex-row">
 		<div class="flex-column flex-grow">
 			<div class="box">
-				<p>{{ page.status.title }}</p>
+				<h2>{{ page.status.title }}</h2>
 				<p class="text-xxlarge text-nowrap">$ 10590,57</p>
 				<p>{{ page.status.count }}</p>
 				<p class="text-large">6</p>
@@ -12,9 +12,27 @@
 				<button class="btn">{{ page.status.btn }}</button>
 			</div>
 			<div class="box">
-				<p>{{ page.plans.title }}</p>
-				<hr>
-				<p>{{ page.plans.view }}</p>
+				<div class="list-view">
+					<div class="list-view-title">
+						<h2>{{ page.payments.title }}</h2>
+						<div class="list-view-add"><img src="/assets/images/ui/btn-agregar.svg"></div>
+					</div>
+					<hr>
+					<ul class="list-view-content">
+						{% for plan in page.payments.plans %}
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="plan-text">{{ plan.text }}</p>
+								<p class="plan-date">{{ plan.date }}</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>{{ plan.status }}</p>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+					<p>{{ page.payments.view }}</p>
+				</div>
 			</div>
 		</div>
 		<div class="flex-column flex-grow">
@@ -24,9 +42,27 @@
 				<p>{{ page.promotions.view }}</p>
 			</div>
 			<div class="box">
-				<p>{{ page.promises.title }}</p>
-				<hr>
-				<p>{{ page.promises.view }}</p>
+				<div class="list-view">
+					<div class="list-view-title">
+						<h2>{{ page.promises.title }}</h2>
+						<div class="list-view-add"><img src="/assets/images/ui/btn-agregar.svg"></div>
+					</div>
+					<hr>
+					<ul class="list-view-content">
+						{% for promise in page.promises.latest %}
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="promise-price">{{ promise.price}}</p>
+								<p class="promise-date">{{ promise.cant}}</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>{{ promise.date }}</p>
+							</div>
+						</li>
+						{% endfor %}
+					</ul>
+					<p>{{ page.promises.view }}</p>
+				</div>
 			</div>
 		</div>
 	</div>

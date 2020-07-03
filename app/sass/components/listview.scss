@@ -1,0 +1,16 @@
+@import '../vars';
+
+.list-view {
+    .list-view-title {
+        position: relative;
+    
+        .list-view-add {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+    
+}

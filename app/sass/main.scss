@@ -1,12 +1,17 @@
 @import './vars';
 
-@import './components/box';
-@import './components/forms';
-@import './components/buttons';
-@import './components/typography';
-@import './components/dropdown';
-@import './components/sidebar';
-@import './components/topbar';
-@import './components/slider';
+.emerix-page {
+    @import './components/box';
+    @import './components/forms';
+    @import './components/buttons';
+    @import './components/typography';
+    @import './components/dropdown';
+    @import './components/sidebar';
+    @import './components/topbar';
+    @import './components/slider';
+    @import './components/listview';
+    
+    @import './pages/login';
+    @import './pages/home';
 
-@import './pages/login';
+}
