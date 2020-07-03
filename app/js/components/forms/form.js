@@ -16,7 +16,7 @@ class Form {
 
         elements.forEach((elem) => {
             elem.addEventListener('blur', () => {
-                !elem.value ? this.onError(elem) : this.onValidation(elem)
+                this.validateElement(elem)
             })
         })
 
@@ -30,17 +30,36 @@ class Form {
         
     }
 
-    validateElements(elems, onError) {
-        let allValid = true
+    validateElement(elem) {
+        let valid = true
 
-        elems.forEach((elem) => {
-            if (!elem.value) {
-                typeof onError === 'function' && onError(elem)
-                allValid = false
-            }
-        })
+        if (elem.required) {
+        	if (elem.type === 'checkbox') {
+        		if (!elem.checked) {
+                    valid = false
+                    this.onError(elem)
+                } else {
+                    this.onValidation(elem)
+                }
+        	} else if (elem.type === 'radio') {
+                
+                if (!document.querySelector('input[name="' + elem.name + '"]:checked')) {
+                    valid = false
+                    this.onError(document.querySelector('input[name="' + elem.name + '"]'))
+                } else {
+                    this.onValidation(elem)
+                }
+        	} else {
+        		if (!elem.value) {
+                    valid = false
+                    this.onError(elem)
+                } else {
+                    this.onValidation(elem)
+                }
+        	}
+        }
 
-        return allValid
+        return valid
     }
 
     error() {

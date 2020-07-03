@@ -154,6 +154,10 @@
 					{
 						"label": "11 3333 1111",
 						"id": "p4"
+					},
+					{
+						"label": "11 1111 1111",
+						"id": "p5"
 					}
 				],
 				"other": "Quiero recibirlo en otro teléfono",
@@ -175,7 +179,7 @@
 				"title": "Tu deuda actual es:",
 				"count": "Cantidad de productos",
 				"due": "Fecha de inicio de mora",
-				"btn": "Pagar"
+				"btn": "¡Pagar ahora!"
 			},
 			"plans": {
 				"title": "Últimos planes de pago",

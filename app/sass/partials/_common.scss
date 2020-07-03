@@ -144,8 +144,7 @@ svg {
 	hr {
 		border: 0;
 		height: 1px;
-		background: $silver;
-		background-image: linear-gradient(to right, lighten($silver, 50), $silver, lighten($silver, 50));
+		background: $lightgray;
 	}
 }
 

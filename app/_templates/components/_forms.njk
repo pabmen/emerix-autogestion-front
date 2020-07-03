@@ -15,10 +15,11 @@
 			{% if options.minlength %} minlength="{{ options.minlength }}" {% endif %}
 			{% if options.maxlength %} maxlength="{{ options.maxlength }}" {% endif %}
 			{% if options.placeholder %} placeholder="{{ options.placeholder }}" {% endif%}
+			{% if options.required == false %}{% else %}required {% endif %}
 		>
 		{% if options.type == "checkbox" %}
-			<div class="input-checkbox">
-				<span class="input-checkbox-caret"></span>
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
 			</div>
 			<label for="{{ options.id }}">{{ options.label }}</label>
 		{% elseif options.type == "radio" %}
@@ -31,7 +32,10 @@
 
 {% macro select(options) %}
 	<div class="input-wrapper select">
-		<select id="{{ options.id }}">
+		<select
+			id="{{ options.id }}"
+			{% if options.required == false %}{% else %}required {% endif %}
+		>
 			{% if options.placeholder %}
 			<option selected class="placeholder" value="">{{ options.placeholder }}</option>
 			{% endif %}
