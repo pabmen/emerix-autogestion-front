@@ -1,0 +1,33 @@
+.table-container {
+	background-color: $white;
+	border: 1px solid transparentize($silver, .85);
+	margin: .5rem;
+	border-radius: $border-radius;
+	box-shadow: 0px 2px 4px transparentize($black, .8);
+    width: 100%;
+    
+    .table {
+        display: flex;
+        
+        tbody {
+            width: 100%;
+        }
+        
+        tr {
+            display: flex;
+            padding: 1rem;
+            flex-direction: row;
+        }
+        
+        td {
+            flex-grow: 1;
+        }
+    }
+    
+    .table-header {
+        padding: 1rem;
+        font-weight: bold;
+        color: $violet;
+        background-color: $smoke;
+    }
+}

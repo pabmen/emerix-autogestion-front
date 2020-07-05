@@ -6,12 +6,15 @@
 <body class="emerix-page">
 	<template id="template-webview">
 		<div class="flex-row">
-			{% include "structure/_sidebar.njk" %}
+			{% include "structure/_navigation.njk" %}
 			<div class="flex-column flex-grow">
 				{% include "structure/_topbar.njk" %}
 				{% include "structure/_page.njk" %}
 			</div>
 		</div>
+
+
+		{% include "structure/_sidebar.njk" %}
 	</template>
 
 	<main id="main-container" class="main-container"></main>

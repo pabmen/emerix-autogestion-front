@@ -1,7 +1,7 @@
 
 
 /**
- * WebviewFlow class
+ * Login Page class
  * @author Pablo Mendoza
  * @date 2020-07-02
  */
@@ -24,13 +24,13 @@ import Form from '../../components/forms'
 // ::: CLASS
 //------------------------------------------------------------------------------------------------------------------
 
-class LoginFlow {
+class LoginPage {
 
 	/**
 	 *
 	 */
 	constructor() {
-		console.log('LoginFlow::constructor');
+		console.log('LoginPage::constructor');
 
 		//------------------------------------------------------------------------------------------------------------------
 		// ::: PUBLIC PROPERTIES
@@ -138,4 +138,4 @@ class LoginFlow {
 
 }
 
-export default LoginFlow
+export default LoginPage

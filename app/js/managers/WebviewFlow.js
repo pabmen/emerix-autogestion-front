@@ -16,8 +16,10 @@ import {
     removeAllTemplates
 } from '../utils/templates'
 
-import Sidebar from './Sidebar'
-import LoginFlow from './pages/login'
+import Navigation from './Navigation'
+import LoginPage from './pages/login'
+import HomePage from './pages/home'
+import InvoicePage from './pages/invoice'
 
 //------------------------------------------------------------------------------------------------------------------
 // ::: CONSTANTS
@@ -67,7 +69,8 @@ class WebviewFlow {
     //------------------------------------------------------------------------------------------------------------------
 
     _checkPage() {
-        new LoginFlow()
+        //new LoginPage()
+        new InvoicePage();
     }
 
     /**

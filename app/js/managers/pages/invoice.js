@@ -1,14 +1,15 @@
 /**
- * WebviewFlow class
+ * Login Page class
  * @author Pablo Mendoza
- * @date 2020-07-03
+ * @date 2020-07-02
  */
 
 import {
 	HTML,
-} from '../config/constants'
+} from '../../config/constants'
 
 
+import Sidebar from '../../components/sidebar'
 
 //------------------------------------------------------------------------------------------------------------------
 // ::: CONSTANTS
@@ -20,13 +21,13 @@ import {
 // ::: CLASS
 //------------------------------------------------------------------------------------------------------------------
 
-class Sidebar {
+class InvoicePage {
 
 	/**
 	 *
 	 */
 	constructor() {
-		console.log('Sidebar::constructor');
+		console.log('InvoicePage::constructor');
 
 		//------------------------------------------------------------------------------------------------------------------
 		// ::: PUBLIC PROPERTIES
@@ -37,14 +38,19 @@ class Sidebar {
 		// ::: PRIVATE PROPERTIES
 		//------------------------------------------------------------------------------------------------------------------
 
-
+        const sidebar = new Sidebar({
+            elem: document.querySelector('.sidebar')
+        })
 
 		//------------------------------------------------------------------------------------------------------------------
 		// ::: INIT
 		//------------------------------------------------------------------------------------------------------------------
-
-
-		
+        document.querySelectorAll(".page-invoice .table tr").forEach((elem) => {
+        	elem.addEventListener("click", (e) => {
+                sidebar.fill()
+                sidebar.open()
+            })
+        })
 	}
 
 
@@ -60,4 +66,4 @@ class Sidebar {
 
 }
 
-export default Sidebar
+export default InvoicePage

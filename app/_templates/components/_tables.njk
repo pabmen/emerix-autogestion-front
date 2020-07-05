@@ -1,0 +1,25 @@
+{% macro table(content) %}
+	<div class="table-container">
+        <table class="table" width="100%" border="0">
+            {% if content.header %}
+            <tr class="table-header">
+                {% for headItem in content.header%}
+                <td style="width: {{ 100 / content.header.length }}%">
+                    {{headItem}}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endif %}
+            {% for row in content.data %}
+            <tr>
+                {% for column in row %}
+                <td style="width: {{ 100 / row.length }}%">
+                    {{ column }}
+                </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+{% endmacro %}

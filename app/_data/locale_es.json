@@ -30,7 +30,7 @@
 	},
 
 	"topbar": {
-		"notificationSrc": "/assets/images/ui/tmp/notificaciones.svg"
+		"notificationSrc": "/assets/images/ui/navigation/notificaciones.svg"
 	},
 
 	"sidebar": {
@@ -42,7 +42,7 @@
 			{
 				"title": "Inicio",
 				"url": "#home",
-				"icon": "/assets/images/ui/tmp/icono-home.svg"
+				"icon": "/assets/images/ui/navigation/icono-home.svg"
 			},
 			{
 				"title": "-"
@@ -50,11 +50,11 @@
 			{
 				"title": "Mis Cuentas",
 				"url": "#myaccounts",
-				"icon": "/assets/images/ui/tmp/icono-info.svg"
+				"icon": "/assets/images/ui/navigation/icono-info.svg"
 			},
 			{
 				"title": "Pagos",
-				"icon": "/assets/images/ui/tmp/icono-pagar.svg",
+				"icon": "/assets/images/ui/navigation/icono-pagar.svg",
 				"dropdown": [
 					{
 						"title": "Pagar",
@@ -86,7 +86,7 @@
 						"url": "#"
 					}
 				],
-				"icon": "/assets/images/ui/tmp/icono-acuerdo.svg"
+				"icon": "/assets/images/ui/navigation/icono-acuerdo.svg"
 			},
 			{
 				"title": "-"
@@ -94,17 +94,17 @@
 			{
 				"title": "Tu Perfil",
 				"url": "#profile",
-				"icon": "/assets/images/ui/tmp/icono-perfil.svg"
+				"icon": "/assets/images/ui/navigation/icono-perfil.svg"
 			},
 			{
 				"title": "Preguntas frecuentes",
 				"url": "#faqs",
-				"icon": "/assets/images/ui/tmp/icono-faq.svg"
+				"icon": "/assets/images/ui/navigation/icono-faq.svg"
 			},
 			{
 				"title": "Salir",
 				"url": "#logout",
-				"icon": "/assets/images/ui/tmp/icono-salir.svg"
+				"icon": "/assets/images/ui/navigation/icono-salir.svg"
 			}
 		]
 	},
@@ -225,8 +225,24 @@
 		},
 		"invoice": {
 			"title": "Tus productos",
-			"src": "https://placekitten.com/g/150/150",
-			"debt_free": "Libre deuda"
+			"table": {
+				"header": [
+					"Producto",
+					"Ejemplo",
+					"Ejemplo",
+					"Vencimiento",
+					"Días de atraso",
+					"Monto adeudado"
+				],
+				"data": [
+					["PRÉSTAMO 36 cuotas", "MC3111223", "1234", "01/10/20", "0", "$19450,87"],
+					["PRÉSTAMO 12 cuotas", "MC3111223", "1234", "12/10/20", "0", "$19450,87"],
+					["TC VISA 5400", "MC3111223", "1234", "08/10/20", "2", "$19450,87"],
+					["TC MASTER 2431", "MC3111223", "5434534", "08/10/20", "4", "$19450,87"],
+					["TC MASTER 2431", "MC3111223", "5345", "08/10/206", "20", "$19450,87"],
+					["TC MASTER 2431", "MC3111223", "543", "08/10/20", "17", "$2308,50"]
+				]
+			}
 		}
 	},
 

@@ -1,22 +1,9 @@
+{% from "../components/_tables.njk" import table %}
+
 {% set page = pages.invoice %}
 <section class="page-invoice">
+	<h1 class="flex-row">{{ page.title }}</h1>
 	<div class="flex-row">
-		<div class="flex-column flex-grow">
-			<p>{{ page.title }}</p>
-			<div class="box">
-				<table class="table">
-                    <thead>
-                        <td></td>
-                    </thead>
-                </ul>
-			</div>
-		</div>
-		<aside class="flex-column flex-grow">
-            <div>
-			    <img src="{{ page.src }}" alt="">
-            </div>
-            <hr>
-            <p>{{ page.debt_free}}</p>
-		</aside>
+	{{ table(page.table) }}
 	</div>
 </section>

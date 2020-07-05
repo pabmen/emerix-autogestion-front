@@ -1,0 +1,13 @@
+@import '../vars';
+
+.page-invoice {
+    .table {
+        tr {
+            cursor: pointer;
+            
+            &:hover * {
+                color: $violet;
+            }
+        }
+    }
+}
