@@ -1,25 +1,14 @@
 @import '../vars';
 
 .main-navigation {
-    padding: 1rem;
     width: 17.5em;
 
     .navigation-item {
-        padding: 1rem 1rem 1rem 1.5rem;
         position: relative;
-
-        &:before {
-        	content: "";
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 0;
-        	width: 1rem;
-        	height: 1rem;
-        	background-image: var(--icon);
-        	background-size: contain;
-            background-repeat: no-repeat;
-            transform: translate(0 , -50%);
+        
+        a {
+            text-decoration: none;
+            color: $black;
         }
 
         &.active:after {
@@ -31,5 +20,55 @@
             width: 4px;
             background-color: $violet;
         }
+
+        .item {
+            padding: 1rem;
+            padding-left: 0;
+            position: relative;
+            padding-left: 2.5rem;
+
+            &:hover {
+                background-color: $smoke;
+            }
+        }
+        
+        & > .item {
+            display: block;
+            &:before {
+            	content: "";
+            	display: block;
+            	position: absolute;
+            	top: 1.25rem;
+            	left: 1rem;
+            	width: 1rem;
+            	height: 1rem;
+            	background-image: var(--icon);
+            	background-size: contain;
+            	background-repeat: no-repeat;
+            }
+        }
+
+        .dropdown-title {
+            width: auto;
+        }
+        
+        .dropdown-trigger {
+            & + .dropdown-title:after {
+                content: "";
+                background-image: url(/assets/images/ui/dropdown.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 1rem;
+                height: .75rem;
+                top: 50%;
+                right: 2rem;
+                transform: translate(0, -50%);
+                display: block;
+            }
+            &:checked + .dropdown-title:after {
+            	transform: translate(0, -50%) scale(-1);
+            }
+        }
+
     }
 }

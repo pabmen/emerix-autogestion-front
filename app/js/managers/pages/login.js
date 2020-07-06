@@ -13,6 +13,7 @@ import {
 import Metric from '../../utils/metrics'
 import Slider from '../../components/slider'
 import Form from '../../components/forms'
+import Dialog from '../../components/dialogs'
 
 //------------------------------------------------------------------------------------------------------------------
 // ::: CONSTANTS
@@ -73,24 +74,18 @@ class LoginPage {
 			animateSpeed: 150,
 			initialPage: 0,
 			slideCallback: (index) => activeIndex = index,
-        })
-        
-        // temporal, only to show login / home pages
-        function showLogin() {
-            document.querySelectorAll('.main-navigation, .topbar, .page-home').forEach((elem) => {
-                elem.style.display = 'none'
-            })
-        }
+		})	
+		
+		document.querySelectorAll('[data-dialog-target]').forEach((elem) => {
+			const thisDialog = new Dialog({
+				elem: document.querySelector('#' + elem.getAttribute('data-dialog-target'))
+			})
 
-        function showHome() {
-        	document.querySelectorAll('.main-navigation, .topbar, .page-home').forEach((elem) => {
-        		elem.style.display = 'block'
-            })
-            
-            document.querySelector('.page-login').style.display = 'none'
-        }
-
-
+			elem.addEventListener('click', () => {
+				thisDialog.open()
+			})
+		})
+		
 		document.querySelectorAll("[data-direction=next]").forEach((elem) => {
 			elem.addEventListener("click", (e) => {
 				const elements = slides[activeIndex].querySelectorAll('.input-wrapper input, select, textarea')
@@ -106,7 +101,7 @@ class LoginPage {
 
                 if (ready) {
                     if (activeIndex === 2) {
-                        showHome()
+                        location.href = location.href + '?page=home' //TODO temporal
                     } else {
                         login_slider.next() // check if page validated then go to next page
                     }
@@ -121,8 +116,7 @@ class LoginPage {
 				login_slider.prev()
 			})
         })
-        
-        showLogin()
+
 	}
 
 

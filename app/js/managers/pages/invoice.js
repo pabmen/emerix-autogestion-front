@@ -9,7 +9,7 @@ import {
 } from '../../config/constants'
 
 
-import Sidebar from '../../components/sidebar'
+import Dialog from '../../components/dialogs'
 
 //------------------------------------------------------------------------------------------------------------------
 // ::: CONSTANTS
@@ -38,19 +38,19 @@ class InvoicePage {
 		// ::: PRIVATE PROPERTIES
 		//------------------------------------------------------------------------------------------------------------------
 
-        const sidebar = new Sidebar({
-            elem: document.querySelector('.sidebar')
-        })
+		const sidebar = new Dialog({
+			elem: document.querySelector('#invoice-sidebar')
+		})
 
 		//------------------------------------------------------------------------------------------------------------------
 		// ::: INIT
 		//------------------------------------------------------------------------------------------------------------------
-        document.querySelectorAll(".page-invoice .table tr").forEach((elem) => {
-        	elem.addEventListener("click", (e) => {
-                sidebar.fill()
-                sidebar.open()
-            })
-        })
+		document.querySelectorAll(".page-invoice .table tr:not(.table-header)").forEach((elem) => {
+			elem.addEventListener("click", (e) => {
+				//sidebar.fill('test')
+				sidebar.open()
+			})
+		})
 	}
 
 

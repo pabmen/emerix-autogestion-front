@@ -59,6 +59,10 @@ a, span, p {
 	font-size: 1rem;
 }
 
+a:visited {
+	color: inherit;
+}
+
 // Remove bullets from ul li
 ul {
 	margin: 0;
@@ -79,6 +83,15 @@ img {
 button::-moz-focus-inner{
 	padding : 0;
 	border  : 0;
+}
+
+button {
+	padding: 0;
+	border: none;
+
+	// Be careful with this. In some iPhones the text inside some buttons were selectable
+	// and prevented the button from being clicked
+	user-select: none;
 }
 
 svg {
@@ -137,8 +150,6 @@ svg {
 .hidden {
 	display:none !important;
 }
-
-
 
 .main-container {
 	hr {

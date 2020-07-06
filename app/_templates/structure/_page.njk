@@ -1,12 +1,7 @@
-{#{% set pageLogin = pages.login %}
-{% set pageHome = pages.home %}
-{% set pageInvoice = pages.invoice %}
-{% set pageFaqs = pages.faqs %}#}
-
 <div class="flex-column flex-grow">
     <div class="pages-container">
-        {#{% include "../pages/_login.njk" %}
-        {% include "../pages/_home.njk" %}#}
+        {% include "../pages/_login.njk" %}
+        {% include "../pages/_home.njk" %}
         {% include "../pages/_invoice.njk" %}
     </div>
 </div>

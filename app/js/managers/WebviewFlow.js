@@ -16,7 +16,10 @@ import {
     removeAllTemplates
 } from '../utils/templates'
 
-import Navigation from './Navigation'
+import { parameter } from '../utils/utils'
+
+import Navigation from '../components/navigation'
+
 import LoginPage from './pages/login'
 import HomePage from './pages/home'
 import InvoicePage from './pages/invoice'
@@ -68,11 +71,59 @@ class WebviewFlow {
     // ::: PRIVATE METHODS
     //------------------------------------------------------------------------------------------------------------------
 
+     //TODO this is temporal
     _checkPage() {
-        //new LoginPage()
-        new InvoicePage();
-    }
 
+        //TODO everything is temporal
+        const pageParam = parameter('page')
+        const mainNav = document.querySelector('.main-navigation')
+        const mainNavItems = mainNav.querySelectorAll('.navigation-item')
+        const topbar = document.querySelector('.topbar')
+        
+        const pageLogin = document.querySelector('.page-login')
+        const pageHome = document.querySelector('.page-home')
+        const pageInvoice = document.querySelector('.page-invoice')
+        
+        //TODO everything is temporal
+        new Navigation({
+            elem: mainNav,
+        	items: mainNavItems,
+        	onSelect: (selectedItem) => {
+                mainNavItems.forEach((item) => {
+                    item === selectedItem ? item.classList.add('active') : item.classList.remove('active')
+        		})
+        	}
+        })
+        
+        /*if (pageParam === 'login') {
+            
+            
+        //TODO everything is temporal
+        } else */if (pageParam === 'home') {
+            pageLogin.style.display = 'none'
+            pageInvoice.style.display = 'none'
+            mainNavItems[0].classList.add('active')
+            new HomePage();
+            
+        //TODO everything is temporal
+        } else if (pageParam === 'invoice') {
+            pageHome.style.display = 'none'
+            pageLogin.style.display = 'none'
+            mainNavItems[2].classList.add('active')
+            new InvoicePage();
+            
+        //TODO everything is temporal
+        } else {
+            pageHome.style.display = 'none'
+            pageInvoice.style.display = 'none'
+            mainNav.style.display = 'none'
+            topbar.style.display = 'none'
+            new LoginPage()
+            
+        }
+        
+    }
+    
     /**
      * Create structure with minimal video tutorials on Instagram webView
      * @private

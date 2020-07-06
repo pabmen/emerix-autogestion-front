@@ -1,6 +1,10 @@
 {% from "../components/_tables.njk" import table %}
+{% from "../components/_dialogs.njk" import dialog %}
 
 {% set page = pages.invoice %}
+
+{{ dialog(page.sidebar) }}
+
 <section class="page-invoice">
 	<h1 class="flex-row">{{ page.title }}</h1>
 	<div class="flex-row">

@@ -41,7 +41,7 @@
 		"links": [
 			{
 				"title": "Inicio",
-				"url": "#home",
+				"url": "/?page=home",
 				"icon": "/assets/images/ui/navigation/icono-home.svg"
 			},
 			{
@@ -49,7 +49,7 @@
 			},
 			{
 				"title": "Mis Cuentas",
-				"url": "#myaccounts",
+				"url": "/?page=invoice",
 				"icon": "/assets/images/ui/navigation/icono-info.svg"
 			},
 			{
@@ -161,17 +161,45 @@
 					}
 				],
 				"other": "Quiero recibirlo en otro teléfono",
+				"dialog": "login-1",
 				"submit": "Enviar",
 				"back": "Volver"
 			},
 			"page_3": {
 				"key_title": "<strong>Ingresá la clave de acceso instantáneo",
 				"key_problem": "Tengo inconvenientes con la clave",
-				"tyc": "Acepto los <a href='#'>Términos y condiciones.</a>",
+				"key_dialog": "login-2",
+				"tyc": "Acepto los <a href='#' data-dialog-target='login-tyc'>Términos y condiciones.</a>",
 				"back": "Volver",
 				"submit": "Ingresar"
-			}
+			},
 
+			"dialogs": [
+				{
+					"id": "login-0",
+					"class": "login-dialog",
+					"title": "",
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1>¡Lo sentimos!, no tenemos registro de tu teléfono móvil.</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+				},
+				{
+					"id": "login-1",
+					"class": "login-dialog",
+					"title": "",
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1>¡Registrá tu contacto!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+				},
+				{
+					"id": "login-2",
+					"class": "login-dialog",
+					"title": "",
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1>¡Hay un error con la clave de acceso instatáneo!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+				},
+				{
+					"id": "login-tyc",
+					"class": "login-dialog login-tyc",
+					"title": "Términos y Condiciones",
+					"content": "<h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+				}
+			]
 
 		},
 		"home": {
@@ -242,6 +270,11 @@
 					["TC MASTER 2431", "MC3111223", "5345", "08/10/206", "20", "$19450,87"],
 					["TC MASTER 2431", "MC3111223", "543", "08/10/20", "17", "$2308,50"]
 				]
+			},
+			"sidebar": {
+				"id": "invoice-sidebar",
+				"class": "sidebar",
+				"content": "<div class='flex-column'><h1>Detalle de producto</h1><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class='btn secondary hover'><img src='/assets/images/ui/buttons/download.svg' alt=''> Libre deuda</button></div>"
 			}
 		}
 	},

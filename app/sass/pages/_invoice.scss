@@ -2,7 +2,7 @@
 
 .page-invoice {
     .table {
-        tr {
+        tr:not(.table-header) {
             cursor: pointer;
             
             &:hover * {
@@ -10,4 +10,49 @@
             }
         }
     }
+}
+
+
+
+#invoice-sidebar {
+    padding: 0;
+
+	&.active .sidebar {
+		width: 320px;
+		padding: 1rem;
+    }
+    
+    .dialog-container {
+        position: static;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .close-btn {
+        top: 0;
+        right: 0;
+        bottom: auto;
+
+        img {
+            display: block;
+            width: 1.188rem;
+            height: 1.188rem;
+        }
+    }
+
+	.sidebar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		background-color: $smoke;
+		width: 0;
+		overflow: hidden;
+		transition: all $transition-normal;
+	}
 }

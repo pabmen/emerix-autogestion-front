@@ -5,7 +5,7 @@
  * 
  */
 
-class Sidebar {
+class Navigation {
 	constructor(options) {
         this.elem = options.elem
         this.items = this.elem.querySelectorAll('.navigation-item')
@@ -16,11 +16,11 @@ class Sidebar {
 
 	}
 
-	setActive(index) {
+	onSelect(index) {
         this.items.forEach((item, itemIndex) => {
             itemIndex === index ? item.classList.add('active') : item.classList.remove('active')
         })
     }
 }
 
-export default Sidebar;
+export default Navigation;

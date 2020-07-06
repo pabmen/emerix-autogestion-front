@@ -1,7 +1,9 @@
 {% from "../components/_dropdown.njk" import dropdown %}
 
 <nav class="main-navigation">
-	<img src="{{ sidebar.logo.src }}" alt="{{ sidebar.logo.alt }}">
+	<div class="text-center">
+		<img class="logo" src="{{ sidebar.logo.src }}" alt="{{ sidebar.logo.alt }}">
+	</div>
 	<ul>
 		{% for item in sidebar.links %}
 		<li class="navigation-item" style="--icon: url('{{ item.icon }}');">
@@ -9,17 +11,17 @@
 				<hr>
 			{% else %}
 				{% if item.dropdown %}
-					{% call dropdown(item.title) %}
+					{% call dropdown({'title': item.title, 'class': 'item'}) %}
 						<ul>
 						{% for dropdown in item.dropdown %}
-							<li>
+							<li class="item">
 								<a href="{{ dropdown.url }}">{{ dropdown.title }}</a>
 							</li>
 						{% endfor %}
 						</ul>
 					{% endcall %}
 				{% else %}
-					<a href="{{ item.url }}">{{ item.title }}</a>
+					<a class="item" href="{{ item.url }}">{{ item.title }}</a>
 				{% endif %}
 			{% endif %}
 		</li>
