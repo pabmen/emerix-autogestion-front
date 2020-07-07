@@ -4,11 +4,11 @@
 	{% set type -%}{% if options.type%}{{ options.type }}{%else%}text{%endif%}{%- endset %}
 
 
-	<div class="input-wrapper {{ type }}">
+	<div class="input-wrapper {{ type }} {{ options.class }}">
 		<input
 			id="{{ options.id }}"
 			type="{{ type }}"
-			class="input-elem {% if options.type == 'checkbox' %}visually-hidden{% endif %}"
+			class="input-elem {% if (options.type == 'checkbox') or (options.type == 'radio') %}visually-hidden{% endif %}"
 			{% if options.name %} name="{{ options.name }}" {% endif %}
 			{% if options.value %} value="{{ options.value }}" {% endif %}
 			{% if options.pattern %} pattern="{{ options.pattern }}" {% endif %}
@@ -21,9 +21,12 @@
 			<div class="input-fake-checkbox">
 				<span class="input-caret"></span>
 			</div>
-			<label for="{{ options.id }}">{{ options.label }}</label>
+			{%if options.label %}<label for="{{ options.id }}">{{ options.label | safe }}</label>{% endif %}
 		{% elseif options.type == "radio" %}
-			<label for="{{ options.id }}">{{ options.label }}</label>
+			<div class="input-fake-radio">
+				<span class="input-caret"></span>
+			</div>
+			{%if options.label %}<label for="{{ options.id }}">{{ options.label | safe }}</label>{% endif %}
 		{% endif %}
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>
@@ -31,7 +34,7 @@
 {% endmacro %}
 
 {% macro select(options) %}
-	<div class="input-wrapper select">
+	<div class="input-wrapper select {{ options.class }}">
 		<select
 			id="{{ options.id }}"
 			{% if options.required == false %}{% else %}required {% endif %}

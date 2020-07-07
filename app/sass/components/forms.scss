@@ -50,6 +50,39 @@ form {
 		-webkit-appearance: none;
 	}
 
+	input[type=radio]:checked  ~.input-fake-radio .input-caret {
+		opacity: 1;
+	}
+
+	.input-fake-radio {
+		display: inline-block;
+		width: .85rem;
+		height: .85rem;
+		border: 1px solid $black;
+		border-radius: .85rem;
+		vertical-align: middle;
+		position: relative;
+		margin-right: .5rem;
+		pointer-events: none;
+
+		.input-caret {
+			opacity: 0;
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			width: calc(100% - 4px);
+			height: calc(100% - 4px);
+			border-radius: 1rem;
+			background-color: $violet;
+			transition: opacity $transition-fast;
+		}
+
+		+ label {
+			padding-left: 2rem;
+			margin-left: -2rem;
+		}
+	}
+
 	input[type=checkbox]:checked ~ .input-fake-checkbox .input-caret {
 		opacity: 1;
 	}
@@ -63,6 +96,7 @@ form {
 		vertical-align: middle;
 		position: relative;
 		margin-right: .5rem;
+		pointer-events:  none;
 
 		.input-caret {
 			opacity: 0;
@@ -73,6 +107,11 @@ form {
 			height: calc(100% - 4px);
 			background-color: $violet;
 			transition: opacity $transition-fast;
+		}
+
+		+ label {
+			padding-left: 2rem;
+			margin-left: -2rem;
 		}
 	}
 
@@ -100,6 +139,7 @@ form {
 		color: $white;
 		padding: 0.625rem;
 		background-color: transparentize($orange, .23);
+		white-space: nowrap;
 
 		&:after {
 			content: "";

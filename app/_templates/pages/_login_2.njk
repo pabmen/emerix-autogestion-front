@@ -1,0 +1,43 @@
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+
+{% set page = pages.login %}
+
+
+<section class="page-login">
+	<form class="form flex-column box">
+		<div class="login-content flex flex-column">
+			<div>
+				<div class="flex-row flex-center">
+					<h1 class="visually-hidden">{{ page.title }}</h1>
+					<img class="logo" src="/assets/images/logos/emerix.png" alt="">
+				</div>
+				<div class="form-group">
+					<p>{{ page.page_3.key_title }}</p>
+					{{ input({
+						'id': "login_key",
+						'error': 'La clave ingresada es incorrecta.'
+						})
+					}}
+				</div>
+				<div class="form-group">
+					<div class="text-right">
+						<a href="#" class="text-silver" data-dialog-target="{{ page.page_3.key_dialog }}">{{ page.page_3.key_problem }}</a>
+					</div>
+				</div>
+				<div class="form-group">
+					{{ input({
+						'type': "checkbox",
+						'id': "login_tyc",
+						'label': page.page_3.tyc
+						})
+					}}
+				</div>
+			</div>
+			<div class="flex-row flex-center">
+				<button class="btn secondary" data-direction="back">{{ page.page_3.back }}</button>
+				<button class="btn" data-direction="next">{{ page.page_3.submit }}</button>
+			</div>
+		</div>
+	</form>
+</section>

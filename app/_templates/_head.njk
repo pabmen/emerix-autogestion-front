@@ -55,17 +55,10 @@
 <script>
     window.buildDate = '{{ BUILD_DATE }}';
     console.warn('Build date: ', window.buildDate);
-
-    {#
-    // https://javascript.info/onload-ondomcontentloaded
-    window.addEventListener('load', function(e) {
-        console.log('loaded');
-    }, false);
-    #}
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_TRACKING_ID }}"></script>
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id={{ GA_TRACKING_ID }}"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -78,7 +71,7 @@
 </script>
 
 {# IMPORTANT: Our main file must go AFTER we declare gtag() and dataLayer #}
-<script defer type="text/javascript" src="js/main.bundle.js"></script>
+<script defer type="text/javascript" src="js/main.bundle.js"></script>-->
 
 {# This CSS file will be inlined HERE. @see https://github.com/fmal/gulp-inline-source #}
 <link rel="stylesheet" type="text/css" href="css/inline.css" inline >

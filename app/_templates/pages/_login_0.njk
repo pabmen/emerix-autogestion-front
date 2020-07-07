@@ -1,0 +1,75 @@
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+
+{% set page = pages.login %}
+
+
+<section class="page-login">
+	<form class="form flex-column box">
+		<div class="login-content flex flex-column">
+			<div>
+				<div class="flex-row flex-center">
+					<h1 class="visually-hidden">{{ page.title }}</h1>
+					<img class="logo" src="/assets/images/logos/emerix.png" alt="">
+				</div>
+				<div class="form-group flex-row">
+					<div class="login-dnitype-container">
+						{{ select({
+							'id': 'login_dni_type',
+							'items': page.page_1.dni_types,
+							'placeholder': page.page_1.dni_type_placeholder
+					}) }}
+					</div>
+					<div class="flex-grow">
+						{{ input({
+							'id': 'login_dni',
+							'placeholder': page.page_1.dni_placeholder,
+							'minlength': page.page_1.dni_min,
+							'maxlength': page.page_1.dni_max,
+							'error': 'El número ingresado es incorrecto.',
+							'pattern': '\d*'})
+						}}
+					</div>
+				</div>
+				<div class="form-group">
+					{{ select({
+						'id': 'login_genre',
+						'items': page.page_1.genres,
+						'placeholder': page.page_1.genre_placeholder
+					}) }}
+				</div>
+				<div class="form-group">
+					<p>{{ page.page_1.choose | safe }}</p>
+					<div class="flex-row flex-center login-method">
+						<div class="flex-column flex-center">
+							{{ input({
+								'id': 'login-method-call',
+								'name': 'login-method',
+								'class': 'flex-center flex-column',
+								'error': 'El número ingresado es incorrecto.',
+								'type': 'radio',
+								'label': '<img src="/assets/images/ui/sms.svg"> Sms'
+								})
+							}}
+						</div>
+						<div class="flex-column flex-center">
+							{{ input({
+								'id': 'login-method-sms',
+								'name': 'login-method',
+								'class': 'flex-center flex-column',
+								'error': 'El número ingresado es incorrecto.',
+								'type': 'radio',
+								'label': '<img src="/assets/images/ui/mail.svg"> Mail'
+								})
+							}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flex-row flex-center">
+				<button class="btn" data-direction="next">{{ page.page_1.submit }}</button>
+			</div>
+		</div>
+
+	</form>
+</section>

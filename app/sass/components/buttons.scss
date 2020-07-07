@@ -47,3 +47,9 @@ $btn-border-color: transparent;
 		}
 	}
 }
+
+@media all and (max-width: 598px) {
+	.btn {
+		padding: 1rem 1.5rem;
+	}
+}

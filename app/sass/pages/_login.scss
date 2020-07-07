@@ -21,11 +21,23 @@
 	}
 
     .login-method {
-        label {
-            border-radius: $border-radius;
+        input:checked ~ label {
             border: 1px solid $btn-color;
-            padding: 2rem;
+        }
+        
+        label {
+            order: -1;
+            border: 1px solid transparent;
+            border-radius: $border-radius;
+            padding: 1.5rem 2rem;
             margin: 1rem;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            img {
+                vertical-align: middle;
+                margin-right: .5rem;
+            }
         }
     }
 
@@ -34,7 +46,7 @@
     }
 
     .input-wrapper.radio {
-        margin-left: 1rem;;
+        //margin-left: 1rem;
         margin-bottom: 1rem;
     }
 

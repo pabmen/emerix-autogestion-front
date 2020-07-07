@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="{{ head.lang }}" class="no-js">
+	<head>
+		{% include "_head.njk" %}
+	</head>
+<body class="emerix-page">
+    <div class="flex-column flex-grow">
+    	<div class="pages-container">
+            {% include "pages/_login_2.njk" %}
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.input-wrapper')[0].classList.add("error")
+    </script>
+</body>
+</html>

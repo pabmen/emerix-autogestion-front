@@ -8,3 +8,11 @@
 	border-radius: $border-radius;
 	box-shadow: 0px 2px 4px transparentize($black, .8);
 }
+
+@media all and (max-width: 598px) {
+	.box {
+		margin: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+}

@@ -167,3 +167,11 @@ svg {
 		margin: 0 auto;
 	}
 }
+
+@media all and (max-width: 598px) {
+.pages-container {
+	& > * {
+		padding: 0;
+	}
+}
+}

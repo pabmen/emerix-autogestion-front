@@ -1,0 +1,40 @@
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+
+{% set page = pages.login %}
+
+
+<section class="page-login">
+	<form class="form flex-column box">
+		<div class="login-content flex flex-column">
+			<div>
+				<div class="flex-row flex-center">
+					<h1 class="visually-hidden">{{ page.title }}</h1>
+					<img class="logo" src="/assets/images/logos/emerix.png" alt="">
+				</div>
+				<div class="form-group">
+					<p><strong>{{ page.page_2.notes }}</strong></p>
+				</div>
+
+				<div class="form-group flex-column">
+					{% for item in page.page_2.phone_list %}
+					<div>
+						{{ input({
+							'type': "radio",
+							'id': item.id,
+							'name': 'login_phone',
+							'label': item.label
+							})
+						}}
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="form-group flex-row flex-center">
+				<button class="btn secondary" data-direction="back">{{ page.page_2.back }}</button>
+				<button class="btn" data-direction="next">{{ page.page_2.submit }}</button>
+			</div>
+			<a href="#" class="text-silver" data-dialog-target="{{ page.page_2.dialog }}">{{ page.page_2.other }}</a>
+		</div>
+	</form>
+</section>
