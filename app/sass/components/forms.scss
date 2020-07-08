@@ -42,6 +42,12 @@ form {
 		border: none;
 		border-bottom: 1px solid $violet;
 		line-height: 1.625em;
+
+		&,
+		&:active,
+		&:active {
+			outline: none;
+		}
 	}
 
 	select {
