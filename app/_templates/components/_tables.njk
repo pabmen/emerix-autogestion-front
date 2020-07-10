@@ -1,23 +1,49 @@
-{% macro table(content) %}
+{% from "../components/_forms.njk" import input %}
+
+{% macro table(content, options) %}
 	<div class="table-container">
-        <table class="table" width="100%" border="0">
+        <table class="table {{options.class}}" width="100%" border="0">
             {% if content.header %}
             <tr class="table-header">
                 {% for headItem in content.header%}
                 <td style="width: {{ 100 / content.header.length }}%">
-                    {{headItem}}
+                    {% if loop.first and options.specialType == 'checkbox' %}
+                    {{ input({
+                        'type': 'checkbox',
+                        'id': 'table-select-all',
+                        'label': headItem
+                    }) }}
+                    {% else %}
+                        {{headItem}}
+                    {% endif %}
+                    
                 </td>
                 {% endfor %}
             </tr>
             {% endif %}
             {% for row in content.data %}
-            <tr>
-                {% for column in row %}
-                <td style="width: {{ 100 / row.length }}%">
-                    {{ column }}
-                </td>
-                {% endfor %}
-            </tr>
+                {% set outeridx = loop %}
+                <tr>
+                    {% for column in row %}
+                    <td style="width: {{ 100 / row.length }}%">
+                        {% if loop.first and options.specialType == 'checkbox' %}
+                            {{ input({
+                                'type': 'checkbox',
+                                'id': 'table-select-' + outeridx.index,
+                                'label': column
+                            }) }}
+                        {% else %}
+                            {% if column.values %}
+                                {% for items in column.value %}
+                                    <div class="{{ item.class }}">{{ item.content }}</div>
+                                {% endfor %}
+                            {% else %}
+                                {{ column }}
+                            {% endif %}
+                        {% endif %}
+                    </td>
+                    {% endfor %}
+                </tr>
             {% endfor %}
 
         </table>

@@ -276,6 +276,86 @@
 				"class": "sidebar",
 				"content": "<div class='flex-column'><h1>Detalle de producto</h1><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class='btn secondary hover'><img src='/assets/images/ui/buttons/download.svg' alt=''> Libre deuda</button></div>"
 			}
+		},
+		"deals_0": {
+			"title": "Promesa de pago",
+			"table": {
+				"header": [
+					"Producto",
+					"Vencimiento",
+					"Pago mínimo",
+					"Importe adeudado",
+					"Importe a pagar"
+				],
+				"data": [
+					[
+						"TC Visa 5400",
+						"-",
+						"5 días",
+						"$19450,87",
+						"$19450,87"
+					],
+					[
+						"PRÉSTAMO",
+						"-",
+						"5 días",
+						"$19450,87",
+						"$19450,87"
+					],
+					[
+						"TC Visa 5400",
+						"-",
+						"5 días",
+						"$19450,87",
+						"$19450,87"
+					]
+				]
+			},
+			"sidebar": {
+				"id": "deals-sidebar",
+				"class": "sidebar",
+				"content": "<div class='flex-column'><h1>Detalle de producto</h1><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class='btn secondary hover'><img src='/assets/images/ui/buttons/download.svg' alt=''> Libre deuda</button></div>"
+			}
+		},
+		"deals_1": {
+			"title": "Promesa de pago",
+			"table": {
+				"header": [
+					"Producto",
+					"Vencimiento",
+					"Atraso",
+					"Importe adeudado",
+					"Importe a pagar"
+				],
+				"data": [
+					[
+						"TC Visa 5400",
+						"-",
+						"5 días",
+						"$19450,87",
+						"<div class='flex-row'><div class='text-uppercase flex-grow text-small'>TOTAL</div><div class='flex-grow text-right'>$19450,87</div></div>"
+					],
+					[
+						"PRÉSTAMO",
+						"-",
+						"5 días",
+						"$19450,87",
+						"<div class='flex-row'><div class='text-uppercase flex-grow text-small'>PARCIAL</div><div class='flex-grow text-right'>$19450,87</div></div>"
+					],
+					[
+						"TC Visa 5400",
+						"-",
+						"5 días",
+						"$19450,87",
+						"<div class='flex-row'><div class='text-uppercase flex-grow text-small'>TOTAL</div><div class='flex-grow text-right'>$19450,87</div></div>"
+					]
+				]
+			},
+			"sidebar": {
+				"id": "deals-sidebar",
+				"class": "sidebar",
+				"content": "<div class='flex-column'><img src='https://placekitten.com/g/165/165' alt=''><h1>¡Promesa de pago generada con éxito!</h1><p>Ingresando a la opción Pagos del menú podés saldar la Promesa en cualquier momento a través del pago electrónico o un medio físico, y luego registrar el pago.</p><button class='btn'>Pagar ahora</button><button class='btn secondary'>Continuar navegando</button></div>"
+			}
 		}
 	},
 

@@ -1,0 +1,56 @@
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_dialogs.njk" import dialog %}
+{% from "../components/_forms.njk" import input %}
+
+{% set page = pages.deals_0 %}
+
+{{ dialog(page.sidebar) }}
+
+<section class="page-deals">
+	<div class="flex-row">
+		<h1 class="flex-grow">{{ page.title }}</h1>
+		<div>sadsadsa</div>
+	</div>
+	<div class="flex-row">
+	{{ table(page.table, {'specialType': 'checkbox'}) }}
+	</div>
+	<div class="flex-column deal-mini"> 
+		<div>
+			{% call input({
+				'type': 'radio',
+				'id': 'payment-total',
+				'name': 'payment-type',
+				'specialLabel': 1
+			}) %}
+				<div class="box flex-row flex-center">
+					<div class="payment-title">IMPORTE FINAL</div>
+					<div class="text-right flex-grow"><strong>$0,00</strong></div>
+				</div>
+			{% endcall %}
+		</div>
+		<div>
+			{% call input({
+				'type': 'radio',
+				'id': 'payment-parcial',
+				'name': 'payment-type',
+				'specialLabel': 1
+			}) %}
+				<div class="box flex-row flex-center">
+					<div class="payment-title">OTRO IMPORTE</div>
+					<div class="text-right flex-grow">
+						{{ input({}) }}
+					</div>
+				</div>
+			{% endcall %}
+		</div>
+		<div>
+			<div class="box flex-row flex-center">
+				<div class="payment-title">PERIODO</div>
+				<div class="text-right flex-grow">
+					{{ input({'type': 'date'}) }}
+				</div>
+			</div>
+		</div>
+		<button class="btn">Generar promesa</button>
+	</div>
+</section>

@@ -16,17 +16,26 @@
 			{% if options.maxlength %} maxlength="{{ options.maxlength }}" {% endif %}
 			{% if options.placeholder %} placeholder="{{ options.placeholder }}" {% endif%}
 			{% if options.required == false %}{% else %}required {% endif %}
+			{% if options.checked %}checked{% endif %}
 		>
 		{% if options.type == "checkbox" %}
 			<div class="input-fake-checkbox">
 				<span class="input-caret"></span>
 			</div>
-			{%if options.label %}<label for="{{ options.id }}">{{ options.label | safe }}</label>{% endif %}
+			{% if options.label %}
+				<label for="{{ options.id }}">{{ options.label | safe }}</label>
+			{% elseif  options.specialLabel %}
+				<label for="{{ options.id }}">{{ caller() }}</label>
+			{% endif %}
 		{% elseif options.type == "radio" %}
 			<div class="input-fake-radio">
 				<span class="input-caret"></span>
 			</div>
-			{%if options.label %}<label for="{{ options.id }}">{{ options.label | safe }}</label>{% endif %}
+			{% if options.label %}
+				<label for="{{ options.id }}">{{ options.label | safe }}</label>
+			{% elseif  options.specialLabel %}
+				<label for="{{ options.id }}">{{ caller() }}</label>
+			{% endif %}
 		{% endif %}
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>

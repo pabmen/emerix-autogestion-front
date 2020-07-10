@@ -1,5 +1,31 @@
 @import './vars';
 
+// https://sass-lang.com/documentation/at-rules/import#importing-css
+@import '../../node_modules/normalize.css/normalize';
+
+
+// The assets path is different than main.scss, cause inline will be inside the html
+$assetsPath: './assets/'; //../assets/
+
+@import './partials/fonts';
+
+.emerix-page {
+	font-family: 'Maven Pro';
+
+	// common styles (works with normalize), general styles
+	@import './partials/common';
+
+
+	// low-priority styles, here we put debug css, mobile console styles, etc
+	@import './partials/debug';
+
+	@import './preloader';
+
+	// Accessibility styles
+	@import './partials/accessibility';
+}
+
+
 .emerix-page {
     @import './components/box';
     @import './components/forms';
@@ -17,5 +43,6 @@
     @import './pages/login';
     @import './pages/home';
     @import './pages/invoice';
+    @import './pages/deals';
 
 }

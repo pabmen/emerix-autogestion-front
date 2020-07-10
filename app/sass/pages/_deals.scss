@@ -1,0 +1,102 @@
+@import '../vars';
+
+.page-deals {
+	.table {
+        &.disabled {
+            color: $silver;
+
+            tr.table-header {
+                color: $silver;
+                background-color: transparent;
+            }
+        }
+		tr:not(.table-header) {
+			/*cursor: pointer;
+
+			&:hover * {
+				color: $violet;
+            }*/
+        }
+        
+        tr {
+            td {
+
+                &:nth-child(4),
+                &:nth-child(5) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+    
+    .deal-mini {
+        max-width: 25em;
+        margin-left: auto;
+
+
+        input:checked ~ label .box {
+            border: 1px solid $violet;
+        }
+
+        .input-fake-radio {
+            position: absolute;
+            top: 50%;
+            right: 100%;
+            transform: translate(0, -50%);
+        }
+
+        .payment-title {
+            max-width: 5.375em;
+        }
+
+        label {
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+
+
+#deals-sidebar {
+	padding: 0;
+
+	&.active .sidebar {
+		width: 320px;
+		padding: 1rem;
+	}
+
+	.dialog-container {
+		position: static;
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		margin: 0;
+		border-radius: 0;
+		box-shadow: none;
+		transform: none;
+	}
+
+	.close-btn {
+		top: 0;
+		right: 0;
+		bottom: auto;
+
+		img {
+			display: block;
+			width: 1.188rem;
+			height: 1.188rem;
+		}
+	}
+
+	.sidebar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		background-color: $smoke;
+		width: 0;
+		overflow: hidden;
+		transition: all $transition-normal;
+	}
+}
