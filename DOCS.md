@@ -104,7 +104,8 @@ Tambi√©n existe un estado seleccionado dentro de cada dropdown, igualmente se a√
 			<li class="item"><a href="#">Pagar</a></li>	
 			<li class="item active"><a href="#">Registrar Pago</a></li>
 		</ul>
-	</div>
+    </div>
+```
 
 ```html
 <nav class="main-navigation">
