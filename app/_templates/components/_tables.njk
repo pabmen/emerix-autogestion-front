@@ -50,13 +50,18 @@
     </div>
 
 
-    <div class="mobile-only flex-column flex-grow">
+    <div class="mobile-only flex-column flex-grow table-container">
         {% for row in content.data %}
-        <div class="box">
+        <table class="box table flex-row">
             {% for column in row %}
-            <p>{{ column }}</p>
+                <tr {% if loop.first %} class="table-header"{% endif %}>
+                    <td>
+                        {% if loop.first == false %}<p><strong>{{ content.header[(loop.index - 1)] }}</strong></p>{% endif %}
+                        <p>{{ column }}</p>
+                    </td>
+                </tr>
             {% endfor %}
-        </div>
+        </table>
         {% endfor %}
     </div>
 {% endmacro %}

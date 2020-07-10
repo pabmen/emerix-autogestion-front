@@ -8,6 +8,7 @@
     
     .table {
         display: flex;
+        padding: 0;
         
         tbody {
             width: 100%;
@@ -29,5 +30,14 @@
         font-weight: bold;
         color: $violet;
         background-color: $smoke;
+    }
+
+    @media all and (max-width: 598px) {
+        .table {
+            tr:not(.table-header) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
     }
 }

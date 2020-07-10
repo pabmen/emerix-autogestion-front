@@ -341,7 +341,7 @@ template {
 
 @font-face {
   font-family: 'Maven Pro';
-  src: url("./assets/fonts/MavenPro-Bold.woff2") format("woff2"), url("./assets/fonts/MavenPro-Bold.woff") format("woff");
+  src: url("../assets/fonts/MavenPro-Bold.woff2") format("woff2"), url("../assets/fonts/MavenPro-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -349,7 +349,7 @@ template {
 
 @font-face {
   font-family: 'Maven Pro';
-  src: url("./assets/fonts/MavenPro-Black.woff2") format("woff2"), url("./assets/fonts/MavenPro-Black.woff") format("woff");
+  src: url("../assets/fonts/MavenPro-Black.woff2") format("woff2"), url("../assets/fonts/MavenPro-Black.woff") format("woff");
   font-weight: bolder;
   font-style: normal;
   font-display: swap;
@@ -357,7 +357,7 @@ template {
 
 @font-face {
   font-family: 'Maven Pro';
-  src: url("./assets/fonts/MavenPro-Regular.woff2") format("woff2"), url("./assets/fonts/MavenPro-Regular.woff") format("woff");
+  src: url("../assets/fonts/MavenPro-Regular.woff2") format("woff2"), url("../assets/fonts/MavenPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -1172,6 +1172,7 @@ template {
 
 .emerix-page .table-container .table {
   display: flex;
+  padding: 0;
 }
 
 .emerix-page .table-container .table tbody {
@@ -1193,6 +1194,13 @@ template {
   font-weight: bold;
   color: #8569b4;
   background-color: #F6F6F5;
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .table-container .table tr:not(.table-header) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .emerix-page .slider-container {
