@@ -6,13 +6,13 @@ html {
 	font-size: 16px;
 }
 
-@media screen and (max-height: 768px) {
+@media screen and (max-width: 768px) {
 	html.desktop {
 		font-size: 16px;
 	}
 }
 
-@media screen and (max-height: 640px) {
+@media screen and (max-width: 598px) {
 	html.desktop {
 		font-size: 16px;
 	}
@@ -78,6 +78,7 @@ ul {
 
 img {
 	vertical-align: top;
+	max-width: 100%;
 }
 
 button::-moz-focus-inner{
@@ -168,10 +169,24 @@ svg {
 	}
 }
 
-@media all and (max-width: 598px) {
-.pages-container {
-	& > * {
-		padding: 0;
+@media all and (min-width: 599px) {
+	.mobile-only {
+		display: none;
 	}
 }
+
+@media all and (max-width: 598px) {
+	.pages-container {
+		&>* {
+			padding: 0;
+		}
+	}
+	
+	.desktop-only {
+		display: none;
+	}
+
+	.flex-column-on-mobile {
+		flex-direction: column;
+	}
 }

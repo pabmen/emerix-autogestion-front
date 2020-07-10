@@ -1,2 +1,184 @@
-<!DOCTYPE html> <html lang="es" class="no-js"> <head> <title>Émerix</title> <meta charset="UTF-8"> <meta name="description" content=""> <meta name="keywords" content=""> <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,shrink-to-fit=no"> <meta http-equiv="x-ua-compatible" content="ie=edge"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <meta name="apple-mobile-web-app-title" content=""> <meta property="og:title" content=""> <meta property="og:description" content=""> <meta property="og:image" content="https://prod.com/esassets/images/share_img_fb.png"> <meta property="og:image:width" content="2048"> <meta property="og:image:height" content="1072"> <meta property="og:type" content="website"> <meta property="og:url" content="https://prod.com/es"> <meta property="fb:app_id" content=""> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content=""> <meta name="twitter:description" content=""> <meta name="twitter:image" content="https://prod.com/esassets/images/share_img_tw.png"> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="manifest" href="/site.webmanifest"> <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ec2844"> <meta name="msapplication-TileColor" content="#ec2844"> <meta name="theme-color" content="#ec2844"> <link rel="preconnect" href="https://www.google-analytics.com"> <link rel="stylesheet" type="text/css" href="css/main.css"> <script> window.buildDate = '2020-07-10 02:52:19';
-    console.warn('Build date: ', window.buildDate); </script> </head> <body class="emerix-page"> <div class="flex-column flex-grow"> <div class="pages-container"> <section class="page-home"> <div class="flex-row"> <div class="flex-column flex-grow"> <div class="box"> <h2>Tu deuda actual es:</h2> <p class="text-xxlarge text-nowrap">$ 10590,57</p> <p>Cantidad de productos</p> <p class="text-large">6</p> <p>Fecha de inicio de mora</p> <p><strong>10/06/19</strong></p> <button class="btn">¡Pagar ahora!</button> </div> <div class="box"> <div class="list-view"> <div class="list-view-title"> <h2>Últimos planes de pago</h2> <div class="list-view-add"><img src="/assets/images/ui/btn-agregar.svg"></div> </div> <hr> <ul class="list-view-content"> <li class="flex-row promises-latest"> <div class="flex-column flex-grow"> <p class="plan-text">REFI - MC3111223</p> <p class="plan-date">17/10/20</p> </div> <div class="flex-column flex-center"> <p>approved</p> </div> </li> <li class="flex-row promises-latest"> <div class="flex-column flex-grow"> <p class="plan-text">REFI - MC3111223</p> <p class="plan-date">17/10/20</p> </div> <div class="flex-column flex-center"> <p>waiting</p> </div> </li> </ul> <p>Ver todos los planes</p> </div> </div> </div> <div class="flex-column flex-grow"> <div class="box"> <p class="text-center"><img src="https://placekitten.com/g/450/150" alt=""></p> <hr> <p>¡Accedé a este beneficio ahora!</p> </div> <div class="box"> <div class="list-view"> <div class="list-view-title"> <h2>Últimas promesas de pago</h2> <div class="list-view-add"><img src="/assets/images/ui/btn-agregar.svg"></div> </div> <hr> <ul class="list-view-content"> <li class="flex-row promises-latest"> <div class="flex-column flex-grow"> <p class="promise-price">$17,900</p> <p class="promise-date">1 producto</p> </div> <div class="flex-column flex-center"> <p>17/08/20</p> </div> </li> <li class="flex-row promises-latest"> <div class="flex-column flex-grow"> <p class="promise-price">$37,600</p> <p class="promise-date">3 productos</p> </div> <div class="flex-column flex-center"> <p>17/08/20</p> </div> </li> <li class="flex-row promises-latest"> <div class="flex-column flex-grow"> <p class="promise-price">$17,900</p> <p class="promise-date">1 producto</p> </div> <div class="flex-column flex-center"> <p>17/08/20</p> </div> </li> </ul> <p>Ver todas las promesas</p> </div> </div> </div> </div> </section> </div> </div> </body> </html>
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+	<head>
+		<title>Émerix</title>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<!-- https://a11yproject.com/posts/never-use-maximum-scale/ -->
+<!-- Never user maximum-scale=1 -->
+<!-- Avoid using user-scalable="no" -->
+
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="">
+
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://stage.com/esassets/images/share_img_fb.png">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1072">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stage.com/es">
+<meta property="fb:app_id" content="">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://stage.com/esassets/images/share_img_tw.png">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ec2844">
+<meta name="msapplication-TileColor" content="#ec2844">
+<meta name="theme-color" content="#ec2844">
+
+<!-- @see https://web.dev/uses-rel-preconnect/?utm_source=lighthouse&utm_medium=devtools -->
+<!-- @see https://developers.google.com/web/fundamentals/performance/resource-prioritization#use-case_knowing_where_from_but_not_what_youre_fetching -->
+<link rel="preconnect" href="https://www.google-analytics.com">
+
+<!-- @see https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content -->
+<!--<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="./assets/fonts/....woff2">-->
+
+<!-- @see https://web.dev/defer-non-critical-css/ -->
+<!--<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" type="text/css" href="css/main.css"></noscript>-->
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<script>
+    window.buildDate = '2020-07-10 14:04:46';
+    console.warn('Build date: ', window.buildDate);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-00"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-00000000-00');
+</script>
+
+
+<script defer type="text/javascript" src="js/main.bundle.js"></script>-->
+
+	</head>
+<body class="emerix-page">
+	<div class="flex-column flex-grow">
+    	<div class="pages-container">
+    		
+<section class="page-home">
+	<div class="flex-row flex-column-on-mobile">
+		<div class="flex-column flex-grow">
+			<div class="box">
+				<h2>Tu deuda actual es:</h2>
+				<p class="text-xxlarge text-nowrap">$ 10590,57</p>
+				<p>Cantidad de productos</p>
+				<p class="text-large">6</p>
+				<p>Fecha de inicio de mora</p>
+				<p><strong>10/06/19</strong></p>
+				<button class="btn">¡Pagar ahora!</button>
+			</div>
+			<div class="box">
+				<div class="list-view">
+					<div class="list-view-title">
+						<h2>Últimos planes de pago</h2>
+						<div class="list-view-add"><img src="/assets/images/ui/btn-agregar.svg"></div>
+					</div>
+					<hr>
+					<ul class="list-view-content">
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="plan-text">REFI - MC3111223</p>
+								<p class="plan-date">17/10/20</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>approved</p>
+							</div>
+						</li>
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="plan-text">REFI - MC3111223</p>
+								<p class="plan-date">17/10/20</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>waiting</p>
+							</div>
+						</li>
+						
+					</ul>
+					<p>Ver todos los planes</p>
+				</div>
+			</div>
+		</div>
+		<div class="flex-column flex-grow">
+			<div class="box">
+				<p class="text-center"><img src="https://placekitten.com/g/450/150" alt=""></p>
+				<hr>
+				<p>¡Accedé a este beneficio ahora!</p>
+			</div>
+			<div class="box">
+				<div class="list-view">
+					<div class="list-view-title">
+						<h2>Últimas promesas de pago</h2>
+						<div class="list-view-add"><img src="/assets/images/ui/btn-agregar.svg"></div>
+					</div>
+					<hr>
+					<ul class="list-view-content">
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="promise-price">$17,900</p>
+								<p class="promise-date">1 producto</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>17/08/20</p>
+							</div>
+						</li>
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="promise-price">$37,600</p>
+								<p class="promise-date">3 productos</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>17/08/20</p>
+							</div>
+						</li>
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="promise-price">$17,900</p>
+								<p class="promise-date">1 producto</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>17/08/20</p>
+							</div>
+						</li>
+						
+					</ul>
+					<p>Ver todas las promesas</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+		</div>
+	</div>
+</body>
+</html>

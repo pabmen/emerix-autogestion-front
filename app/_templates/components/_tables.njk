@@ -1,7 +1,7 @@
 {% from "../components/_forms.njk" import input %}
 
 {% macro table(content, options) %}
-	<div class="table-container">
+	<div class="table-container desktop-only">
         <table class="table {{options.class}}" width="100%" border="0">
             {% if content.header %}
             <tr class="table-header">
@@ -47,5 +47,16 @@
             {% endfor %}
 
         </table>
+    </div>
+
+
+    <div class="mobile-only flex-column flex-grow">
+        {% for row in content.data %}
+        <div class="box">
+            {% for column in row %}
+            <p>{{ column }}</p>
+            {% endfor %}
+        </div>
+        {% endfor %}
     </div>
 {% endmacro %}

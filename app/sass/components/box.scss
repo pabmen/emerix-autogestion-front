@@ -11,8 +11,16 @@
 
 @media all and (max-width: 598px) {
 	.box {
+		margin: 1.5rem;
+
+		&:first-child,
+		+ .box {
+			margin-top: 0;
+		}
+	}
+	/*.box {
 		margin: 0;
 		border-radius: 0;
 		box-shadow: none;
-	}
+	}*/
 }
