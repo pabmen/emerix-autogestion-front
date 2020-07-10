@@ -478,7 +478,7 @@ function webpackBundle(webpackConfig) {
 	// Uncomment to debug and see the content of the webpack config
 	//fancyLog(JSON.stringify(webpackConfig, undefined, 4));
 
-	return gulp.src(CONFIG.entryPoint)
+	return gulp.src(CONFIG.entryPoint, { allowEmpty: true })
 		.pipe(webpackStream(webpackConfig, webpack, function(err, stats) {
 			if(err) {
 				fancyLog(chalk.red('WEBPACK ' + err) );
