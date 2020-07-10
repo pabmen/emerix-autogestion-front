@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-10 00:52:15';
+    window.buildDate = '2020-07-10 01:57:41';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -80,126 +80,132 @@
     
 
 <nav class="main-navigation">
-	<div class="text-center">
-		<img class="logo" src="/assets/images/logos/emerix.png" alt="">
-	</div>
-	<ul>
-		
-		<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-home.svg');">
+	<input type="checkbox" class="visually-hidden mobile-menu-toggle" id="mobile-menu-toggle">
+	<label class="mobile-menu-toggle-label" for="mobile-menu-toggle">
+		<img src="/assets/images/ui/menu.svg" alt="">
+	</label>
+	<div class="navigation-container">
+		<div class="text-center">
+			<img class="logo" src="/assets/images/logos/emerix.png" alt="">
+		</div>
+		<ul>
 			
-				
-					<a class="item" href="/?page=home">Inicio</a>
-				
-			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('');">
-			
-				<hr>
-			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-info.svg');">
-			
-				
-					<a class="item" href="/?page=invoice">Mis Cuentas</a>
-				
-			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-pagar.svg');">
-			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-home.svg');">
 				
 					
+						<a class="item" href="/?page=home">Inicio</a>
+					
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('');">
+				
+					<hr>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-info.svg');">
+				
+					
+						<a class="item" href="/?page=invoice">Mis Cuentas</a>
+					
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-pagar.svg');">
+				
+					
+						
     <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-pagos">
     
     <label class="dropdown-title item" for="dropdown-trigger-pagos">Pagos</label>
     <div class="dropdown-target">
         
-						<ul>
+							<ul>
+							
+								<li class="item">
+									<a href="#">Pagar</a>
+								</li>
+							
+								<li class="item">
+									<a href="#">Registrar Pago</a>
+								</li>
+							
+								<li class="item">
+									<a href="#">Comprobantes</a>
+								</li>
+							
+							</ul>
 						
-							<li class="item">
-								<a href="#">Pagar</a>
-							</li>
-						
-							<li class="item">
-								<a href="#">Registrar Pago</a>
-							</li>
-						
-							<li class="item">
-								<a href="#">Comprobantes</a>
-							</li>
-						
-						</ul>
-					
     </div>
 
+					
 				
+			</li>
 			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-acuerdo.svg');">
-			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-acuerdo.svg');">
 				
 					
+						
     <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-acuerdos">
     
     <label class="dropdown-title item" for="dropdown-trigger-acuerdos">Acuerdos</label>
     <div class="dropdown-target">
         
-						<ul>
+							<ul>
+							
+								<li class="item">
+									<a href="#">Promesas de pago</a>
+								</li>
+							
+								<li class="item">
+									<a href="#">Plan de pago</a>
+								</li>
+							
+								<li class="item">
+									<a href="#">Estado de solicitudes</a>
+								</li>
+							
+							</ul>
 						
-							<li class="item">
-								<a href="#">Promesas de pago</a>
-							</li>
-						
-							<li class="item">
-								<a href="#">Plan de pago</a>
-							</li>
-						
-							<li class="item">
-								<a href="#">Estado de solicitudes</a>
-							</li>
-						
-						</ul>
-					
     </div>
 
+					
 				
+			</li>
 			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('');">
-			
-				<hr>
-			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-perfil.svg');">
-			
+			<li class="navigation-item" style="--icon: url('');">
 				
-					<a class="item" href="#profile">Tu Perfil</a>
+					<hr>
 				
+			</li>
 			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-faq.svg');">
-			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-perfil.svg');">
 				
-					<a class="item" href="#faqs">Preguntas frecuentes</a>
+					
+						<a class="item" href="#profile">Tu Perfil</a>
+					
 				
+			</li>
 			
-		</li>
-		
-		<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-salir.svg');">
-			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-faq.svg');">
 				
-					<a class="item" href="#logout">Salir</a>
+					
+						<a class="item" href="#faqs">Preguntas frecuentes</a>
+					
 				
+			</li>
 			
-		</li>
-		
-	</ul>
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-salir.svg');">
+				
+					
+						<a class="item" href="#logout">Salir</a>
+					
+				
+			</li>
+			
+		</ul>
+	</div>
 </nav>
 
     <script>

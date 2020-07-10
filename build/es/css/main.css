@@ -1244,6 +1244,11 @@ template {
   width: 17.5em;
 }
 
+.emerix-page .main-navigation .mobile-menu-toggle,
+.emerix-page .main-navigation .mobile-menu-toggle-label {
+  display: none;
+}
+
 .emerix-page .main-navigation .navigation-item {
   position: relative;
 }
@@ -1312,6 +1317,32 @@ template {
 .emerix-page .main-navigation .navigation-item .dropdown-trigger:checked + .dropdown-title:after {
   -webkit-transform: translate(0, -50%) scale(-1);
           transform: translate(0, -50%) scale(-1);
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .main-navigation {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+  }
+  .emerix-page .main-navigation .mobile-menu-toggle,
+  .emerix-page .main-navigation .mobile-menu-toggle-label {
+    display: block;
+  }
+  .emerix-page .main-navigation .mobile-menu-toggle-label {
+    cursor: pointer;
+  }
+  .emerix-page .main-navigation .mobile-menu-toggle-label img {
+    width: 20px;
+  }
+  .emerix-page .main-navigation .navigation-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+  }
+  .emerix-page .main-navigation .mobile-menu-toggle:checked ~ .navigation-container {
+    max-height: 100vh;
+  }
 }
 
 .emerix-page .logo {

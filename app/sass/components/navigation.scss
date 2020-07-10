@@ -3,6 +3,11 @@
 .main-navigation {
     width: 17.5em;
 
+    .mobile-menu-toggle,
+    .mobile-menu-toggle-label {
+        display: none;
+    }
+
     .navigation-item {
         position: relative;
         
@@ -70,5 +75,36 @@
             }
         }
 
+    }
+}
+
+@media all and (max-width: 598px) {
+    .main-navigation {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+
+        .mobile-menu-toggle,
+        .mobile-menu-toggle-label {
+            display: block;
+        }
+
+        .mobile-menu-toggle-label {
+            cursor: pointer;
+
+            img {
+                width: 20px;
+            }
+        }
+
+        .navigation-container {
+            max-height: 0;
+            overflow: hidden;
+            transition: all $transition-normal;
+        }
+
+        .mobile-menu-toggle:checked ~ .navigation-container {
+            max-height: 100vh;
+        }
     }
 }
