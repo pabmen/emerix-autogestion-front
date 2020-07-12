@@ -1,0 +1,39 @@
+@import '../vars';
+
+.breadcrumb-container {
+    background-color: $lightgray;
+    height: 2px;
+
+    font-size: 0;
+    color: transparent;
+
+    .breadcrumb {
+        background-color: $lightgray;
+        margin: 0 1rem;
+        border-radius: 1rem;
+        position: relative;
+        overflow: hidden;
+
+        width: .75rem;
+        height: .75rem;
+
+        top: -.3rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &.active {
+            background-color: $orange;
+        }
+    }
+
+}
+
+@media all and (max-width: 598px) {
+
+}
