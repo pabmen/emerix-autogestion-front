@@ -795,11 +795,12 @@ body {
 }
 
 .emerix-page form .form-group {
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .emerix-page .input-wrapper {
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .emerix-page .input-wrapper.select {
@@ -1013,14 +1014,17 @@ body {
   padding: 1rem 3rem;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 }
 
 .emerix-page .btn:hover {
   background-color: #A388D1;
+  outline: none;
 }
 
 .emerix-page .btn:active {
   background-color: #4D2378;
+  outline: none;
 }
 
 .emerix-page .btn.secondary {
@@ -1564,6 +1568,8 @@ body {
   margin: 1rem;
   text-transform: uppercase;
   white-space: nowrap;
+  width: 100%;
+  text-align: center;
 }
 
 .emerix-page .page-login .login-method label img {

@@ -43,7 +43,7 @@
 						<div class="form-group">
 							<p>{{ page.page_1.choose | safe }}</p>
 							<div class="flex-row flex-center login-method">
-								<div class="flex-column flex-center">
+								<div class="flex-column flex-center flex-grow">
 									{{ input({
 										'id': 'login-method-call',
 										'name': 'login-method',
@@ -54,7 +54,7 @@
 										})
 									}}
 								</div>
-								<div class="flex-column flex-center">
+								<div class="flex-column flex-center flex-grow">
 									{{ input({
 										'id': 'login-method-sms',
 										'name': 'login-method',

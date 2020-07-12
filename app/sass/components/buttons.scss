@@ -19,14 +19,17 @@ $btn-border-color: transparent;
 	padding: 1rem 3rem;
 	text-transform: uppercase;
 	cursor: pointer;
+	outline: none;
 
 
 	&:hover {
 		background-color: $btn-color-hover;
+		outline: none;
 	}
 
 	&:active {
 		background-color: $btn-color-active;
+		outline: none;
 	}
 
 	&.secondary {

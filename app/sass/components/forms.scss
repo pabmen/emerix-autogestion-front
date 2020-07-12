@@ -2,12 +2,13 @@
 
 form {
 	.form-group {
-		margin-bottom: 1rem;
+		padding-bottom: 1rem;
 	}
 }
 
 .input-wrapper {
 	position: relative;
+	margin-bottom: 1rem;
 
 	&.select {
 		position: relative;
