@@ -3,7 +3,7 @@
 	<div class="flex-row flex-column-on-mobile">
 		<div class="flex-column flex-grow">
 			<div class="box">
-				<h2>{{ page.status.title }}</h2>
+				<p>{{ page.status.title }}</p>
 				<p class="text-xxlarge text-nowrap">$ 10590,57</p>
 				<p>{{ page.status.count }}</p>
 				<p class="text-large">6</p>
@@ -31,7 +31,7 @@
 						</li>
 						{% endfor %}
 					</ul>
-					<p>{{ page.payments.view }}</p>
+					<p><a href="#" class="wide-link">{{ page.payments.view }}</a></p>
 				</div>
 			</div>
 		</div>
@@ -39,7 +39,7 @@
 			<div class="box">
 				<p class="text-center"><img src="{{ page.promotions.src }}" alt=""></p>
 				<hr>
-				<p>{{ page.promotions.view }}</p>
+				<p><a href="#" class="wide-link">{{ page.promotions.view }}</a></p>
 			</div>
 			<div class="box">
 				<div class="list-view">
@@ -61,7 +61,7 @@
 						</li>
 						{% endfor %}
 					</ul>
-					<p>{{ page.promises.view }}</p>
+					<p><a href="#" class="wide-link">{{ page.promises.view }}</a></p>
 				</div>
 			</div>
 		</div>

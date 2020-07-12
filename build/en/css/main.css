@@ -511,7 +511,7 @@ template {
   display: none !important;
 }
 
-.emerix-page .main-container hr {
+.emerix-page hr {
   border: 0;
   height: 1px;
   background: #c1c1c1;
@@ -533,9 +533,6 @@ template {
 }
 
 @media all and (max-width: 598px) {
-  .emerix-page .pages-container > * {
-    padding: 0;
-  }
   .emerix-page .desktop-only {
     display: none;
   }
@@ -759,6 +756,12 @@ template {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.emerix-page .box hr, .emerix-page .overlay .dialog-container hr {
+  background-color: #989898;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
 @media all and (max-width: 598px) {
   .emerix-page {
     /*.box {
@@ -769,6 +772,8 @@ template {
   }
   .emerix-page .box, .emerix-page .overlay .dialog-container {
     margin: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
   .emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child,
   .emerix-page .box + .box,
@@ -1004,16 +1009,22 @@ template {
 .emerix-page .text-xxlarge {
   font-size: 2.5rem;
   font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emerix-page .text-xlarge {
   font-size: 2rem;
   font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emerix-page .text-large {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emerix-page .text-nowrap {
@@ -1030,6 +1041,7 @@ template {
 
 .emerix-page h2, .emerix-page h3, .emerix-page h4, .emerix-page h5 {
   color: #8569b4;
+  padding-bottom: 1rem;
 }
 
 .emerix-page h2 {
@@ -1084,6 +1096,12 @@ template {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.emerix-page .box hr, .emerix-page .overlay .dialog-container hr {
+  background-color: #989898;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
 @media all and (max-width: 598px) {
   .emerix-page {
     /*.box {
@@ -1094,6 +1112,8 @@ template {
   }
   .emerix-page .box, .emerix-page .overlay .dialog-container {
     margin: 1.5rem;
+    margin-left: 0;
+    margin-right: 0;
   }
   .emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child,
   .emerix-page .box + .box,
@@ -1162,12 +1182,17 @@ template {
 }
 
 .emerix-page .table-container {
-  background-color: #fff;
-  border: 1px solid rgba(152, 152, 152, 0.15);
-  margin: .5rem;
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   width: 100%;
+}
+
+@media all and (min-width: 599px) {
+  .emerix-page .table-container {
+    background-color: #fff;
+    border: 1px solid rgba(152, 152, 152, 0.15);
+    margin: .5rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .emerix-page .table-container .table {
@@ -1450,13 +1475,56 @@ template {
 .emerix-page .page-home .promises-latest {
   margin: 1rem 0;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #c1c1c1;
+  border-bottom: 1px solid #F6F6F5;
 }
 
 .emerix-page .page-home .payment-plans p,
 .emerix-page .page-home .promises-latest p {
   margin-top: 0.25;
   margin-bottom: 0;
+}
+
+.emerix-page .page-home hr {
+  background-color: #F6F6F5;
+}
+
+.emerix-page .page-home .bullet {
+  display: inline-block;
+  vertical-align: middle;
+  width: .25rem;
+  height: .25rem;
+  border-radius: 1rem;
+  border: .4rem solid;
+  margin-right: .5rem;
+}
+
+.emerix-page .page-home .bullet.green {
+  border-color: #83DF63;
+}
+
+.emerix-page .page-home .bullet.yellow {
+  border-color: #FFE600;
+}
+
+.emerix-page .page-home .bullet.red {
+  border-color: #83DF63;
+}
+
+.emerix-page .page-home .wide-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  padding-top: .5rem;
+}
+
+.emerix-page .page-home .wide-link:after {
+  content: '>';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .emerix-page .page-invoice .table tr:not(.table-header) {
@@ -1469,10 +1537,16 @@ template {
 
 .emerix-page #invoice-sidebar {
   padding: 0;
+  max-width: 320px;
+  left: auto;
+  right: 0;
 }
 
 .emerix-page #invoice-sidebar.active .sidebar {
-  width: 320px;
+  width: 100%;
+}
+
+.emerix-page #invoice-sidebar.active .sidebar > div {
   padding: 1rem;
 }
 

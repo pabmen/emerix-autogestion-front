@@ -7,11 +7,19 @@
 	margin: .5rem;
 	border-radius: $border-radius;
 	box-shadow: 0px 2px 4px transparentize($black, .8);
+
+	hr {
+		background-color: $silver;
+		margin-left: -1rem;
+		margin-right: -1rem;
+	}
 }
 
 @media all and (max-width: 598px) {
 	.box {
 		margin: 1.5rem;
+		margin-left: 0;
+		margin-right: 0;
 
 		&:first-child,
 		+ .box {

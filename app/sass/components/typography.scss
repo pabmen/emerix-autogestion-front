@@ -3,16 +3,22 @@
 .text-xxlarge {
     font-size: 2.5rem;
     font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom:  1rem;
 }
 
 .text-xlarge {
     font-size: 2rem;
     font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom:  1rem;
 }
 
 .text-large {
     font-size: 1.5rem;
     font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom:  1rem;
 }
 
 .text-nowrap {
@@ -30,6 +36,7 @@ h1 {
 
 h2, h3, h4, h5 {
     color: $violet;
+    padding-bottom: 1rem;
 }
 
 h2 {

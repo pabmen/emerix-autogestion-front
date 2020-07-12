@@ -152,12 +152,10 @@ svg {
 	display:none !important;
 }
 
-.main-container {
-	hr {
-		border: 0;
-		height: 1px;
-		background: $lightgray;
-	}
+hr {
+	border: 0;
+	height: 1px;
+	background: $lightgray;
 }
 
 .pages-container {
@@ -177,11 +175,11 @@ svg {
 
 @media all and (max-width: 598px) {
 	.pages-container {
-		&>* {
-			padding: 0;
+		& > * {
+			//padding: 0;
 		}
 	}
-	
+
 	.desktop-only {
 		display: none;
 	}

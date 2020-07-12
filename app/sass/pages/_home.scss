@@ -1,15 +1,51 @@
+@import '../vars';
+
 .page-home {
     .payment-plans,
     .promises-latest {
     
         margin: 1rem 0;
         padding-bottom: 1rem;
-        border-bottom: 1px solid $lightgray;
+        border-bottom: 1px solid $smoke;
     
         p  {
             margin-top: 0.25;
             margin-bottom: 0;
         }
     
+    }
+
+    hr {
+        background-color: $smoke;
+    }
+
+    .bullet {
+        display: inline-block;
+        vertical-align: middle;
+        width: .25rem;
+        height: .25rem;
+        border-radius: 1rem;
+        border: .4rem solid;
+        margin-right: .5rem;
+
+        &.green {border-color: $green;}
+        &.yellow {border-color: $yellow;}
+        &.red {border-color: $red;}
+    }
+
+    .wide-link {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        position: relative;
+        padding-top: .5rem;
+        
+        &:after {
+            content: '>';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+        }
     }
 }
