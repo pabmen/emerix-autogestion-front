@@ -29,16 +29,17 @@ $assetsPath: '../assets/'; //../assets/
 .emerix-page {
     @import './components/box';
     @import './components/forms';
+    @import './components/breadcrumbs';
     @import './components/buttons';
-    @import './components/typography';
     @import './components/dropdown';
     @import './components/dialogs';
-    @import './components/topbar';
-    @import './components/tables';
-    @import './components/slider';
+    @import './components/images';
     @import './components/listview';
     @import './components/navigation';
-    @import './components/images';
+    @import './components/slider';
+    @import './components/tables';
+    @import './components/topbar';
+    @import './components/typography';
 
     @import './pages/login';
     @import './pages/home';

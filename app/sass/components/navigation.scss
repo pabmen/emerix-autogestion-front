@@ -32,6 +32,10 @@
             position: relative;
             padding-left: 2.5rem;
 
+            &.active * {
+                color: $violet;
+            }
+
             &:hover {
                 background-color: $smoke;
             }

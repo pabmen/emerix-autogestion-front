@@ -57,7 +57,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-10 19:22:25';
+    window.buildDate = '2020-07-12 15:13:06';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -79,16 +79,35 @@
 
 	</head>
 <body class="emerix-page">
-    <nav class="topbar">
-    <ul class="flex-row">
+    
+
+<nav class="topbar">
+    <ul class="flex-row flex-center">
         <li class="flex-grow"><h1 class="page-name">Inicio</h1></li>
-        <li></li>
-        <li></li>
-        <li><img src="/assets/images/ui/navigation/notificaciones.svg" alt=""></li>
+        <li class="username">
+            <p>¡Hola <strong>Usuario</strong>!</p>
+        </li>
+        <li class="notifications-menu">
+            
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-topbar-dropdown">
+    
+    
+    <label class="dropdown-title item" for="dropdown-trigger-topbar-dropdown">
+         <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
+    </label>
+    <div class="dropdown-target">
+        
+                <ul>
+                    <li><strong>Notificaciones</strong></li>
+                    <li><hr></li>
+                    <li>Una promesa de pago está por vencer, podés pagar ahora.</li>
+                    <li>Tu solicitud de plan de pago fue aprobada.</li>
+                </ul>
+            
+    </div>
+
+        </li>
     </ul>
 </nav>
-
-    <script>
-    </script>
 </body>
 </html>

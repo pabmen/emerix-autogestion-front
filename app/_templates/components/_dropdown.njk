@@ -1,7 +1,10 @@
 {% macro dropdown(options) %}
     <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-{% filter replace(' ', '-') %}{{ options.title | lower }}{% endfilter %}">
     
-    <label class="dropdown-title {% if options.class %}{{options.class}}{% endif %}" for="dropdown-trigger-{% filter replace(' ', '-') %}{{ options.title | lower }}{% endfilter %}">{{ options.title }}</label>
+    
+    <label class="dropdown-title {% if options.class %}{{options.class}}{% endif %}" for="dropdown-trigger-{% filter replace(' ', '-') %}{{ options.title | lower }}{% endfilter %}">
+        {% if options.html %} {{ options.html | safe }} {% else %} {{ options.title }} {% endif %}
+    </label>
     <div class="dropdown-target">
         {{ caller() }}
     </div>

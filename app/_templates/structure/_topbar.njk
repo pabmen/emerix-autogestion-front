@@ -1,8 +1,24 @@
+{% from "../components/_dropdown.njk" import dropdown %}
+
 <nav class="topbar">
-    <ul class="flex-row">
+    <ul class="flex-row flex-center">
         <li class="flex-grow"><h1 class="page-name">Inicio</h1></li>
-        <li>{{ topbar.avatar }}</li>
-        <li>{{ topbar.avatar }}</li>
-        <li><img src="{{ topbar.notificationSrc }}" alt=""></li>
+        <li class="username">
+            <p>¡Hola <strong>Usuario</strong>!</p>
+        </li>
+        <li class="notifications-menu">
+            {% call dropdown({
+                'title': 'topbar-dropdown',
+                'html': '<img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div>',
+                'class': 'item'
+            }) %}
+                <ul>
+                    <li><strong>Notificaciones</strong></li>
+                    <li><hr></li>
+                    <li>Una promesa de pago está por vencer, podés pagar ahora.</li>
+                    <li>Tu solicitud de plan de pago fue aprobada.</li>
+                </ul>
+            {% endcall %}
+        </li>
     </ul>
 </nav>
