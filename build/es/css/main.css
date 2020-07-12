@@ -363,6 +363,27 @@ template {
   font-display: swap;
 }
 
+#__bs_notify__ {
+  display: none !important;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  position: relative;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
 .emerix-page {
   font-family: 'Maven Pro';
   /*
@@ -373,6 +394,10 @@ template {
   /*
 	https://loading.io/css/
 */
+}
+
+.emerix-page > * {
+  height: 100%;
 }
 
 .emerix-page html {
@@ -401,21 +426,6 @@ template {
 .emerix-page *, .emerix-page *:before, .emerix-page *:after {
   box-sizing: inherit;
   -webkit-tap-highlight-color: transparent;
-}
-
-.emerix-page html, .emerix-page body {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-
-.emerix-page body {
-  position: relative;
-  font-family: sans-serif;
-  font-weight: normal;
-  font-style: normal;
 }
 
 .emerix-page a, .emerix-page span, .emerix-page p {
@@ -519,10 +529,10 @@ template {
 
 .emerix-page .pages-container {
   background-color: #F6F6F5;
+  height: 100%;
 }
 
 .emerix-page .pages-container > * {
-  padding: 1rem;
   margin: 0 auto;
 }
 
@@ -1499,7 +1509,30 @@ template {
 }
 
 .emerix-page .page-login {
+  height: 100%;
+  /*.phone-list {
+        max-height: 10rem;
+        overflow: scroll;
+    }*/
+}
+
+.emerix-page .page-login .form-container {
+  width: 55%;
+}
+
+.emerix-page .page-login .form {
   max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emerix-page .page-login .bg-container {
+  width: 45%;
+  height: 100%;
+  background-image: url("https://www.emerix.com.ar/wp-content/uploads/2020/07/solucion-eficaz.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: -1rem;
 }
 
 .emerix-page .page-login .login-content {
@@ -1548,6 +1581,15 @@ template {
 
 .emerix-page .page-login button + button {
   margin-left: 1rem;
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .page-login .form-container {
+    width: 100%;
+  }
+  .emerix-page .page-login .bg-container {
+    display: none;
+  }
 }
 
 .emerix-page .page-home .payment-plans,

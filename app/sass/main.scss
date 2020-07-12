@@ -9,8 +9,37 @@ $assetsPath: '../assets/'; //../assets/
 
 @import './partials/fonts';
 
+#__bs_notify__ {
+    display: none !important;
+}
+
+html,
+body {
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	position: relative;
+
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+
+	//overscroll-behavior: none;
+}
+
+
 .emerix-page {
-	font-family: 'Maven Pro';
+    font-family: 'Maven Pro';
+    
+    > * {
+        height: 100%;
+    }
 
 	// common styles (works with normalize), general styles
 	@import './partials/common';

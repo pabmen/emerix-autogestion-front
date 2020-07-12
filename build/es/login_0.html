@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-12 15:15:48';
+    window.buildDate = '2020-07-12 19:59:24';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -86,16 +86,18 @@
 
 
 <section class="page-login">
-	<form class="form flex-column box">
-		<div class="login-content flex flex-column">
-			<div>
-				<div class="flex-row flex-center">
-					<h1 class="visually-hidden">Emerix Login</h1>
-					<img class="logo" src="/assets/images/logos/emerix.png" alt="">
-				</div>
-				<div class="form-group flex-row">
-					<div class="login-dnitype-container">
-						
+	<div class="flex-row flex-center flex-grow" style="height: 100%">
+		<div class="form-container">
+			<form class="form flex-column box">
+				<div class="login-content flex flex-column">
+					<div>
+						<div class="flex-row flex-center">
+							<h1 class="visually-hidden">Emerix Login</h1>
+							<img class="logo" src="/assets/images/logos/emerix.png" alt="">
+						</div>
+						<div class="form-group flex-row">
+							<div class="login-dnitype-container">
+								
 	<div class="input-wrapper select">
 		<select id="login_dni_type" required>
 			
@@ -113,9 +115,9 @@
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-					</div>
-					<div class="flex-grow">
-						
+							</div>
+							<div class="flex-grow">
+								
 
 	
 
@@ -127,10 +129,10 @@
 		<div class="input-error-popup" role="alert">El número ingresado es incorrecto. </div>
 	</div>
 
-					</div>
-				</div>
-				<div class="form-group">
-					
+							</div>
+						</div>
+						<div class="form-group">
+							
 	<div class="input-wrapper select">
 		<select id="login_genre" required>
 			
@@ -148,12 +150,12 @@
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-				</div>
-				<div class="form-group">
-					<p>Elegí cómo recibir <strong>la clave de acceso instantáneo</strong></p>
-					<div class="flex-row flex-center login-method">
-						<div class="flex-column flex-center">
-							
+						</div>
+						<div class="form-group">
+							<p>Elegí cómo recibir <strong>la clave de acceso instantáneo</strong></p>
+							<div class="flex-row flex-center login-method">
+								<div class="flex-column flex-center">
+									
 
 	
 
@@ -172,9 +174,9 @@
 		<div class="input-error-popup" role="alert">El número ingresado es incorrecto. </div>
 	</div>
 
-						</div>
-						<div class="flex-column flex-center">
-							
+								</div>
+								<div class="flex-column flex-center">
+									
 
 	
 
@@ -193,16 +195,20 @@
 		<div class="input-error-popup" role="alert">El número ingresado es incorrecto. </div>
 	</div>
 
+								</div>
+							</div>
 						</div>
 					</div>
+					<div class="flex-row flex-center">
+						<button class="btn" data-direction="next">Siguiente</button>
+					</div>
 				</div>
-			</div>
-			<div class="flex-row flex-center">
-				<button class="btn" data-direction="next">Siguiente</button>
-			</div>
-		</div>
 
-	</form>
+			</form>
+		</div>
+		<div class="bg-container">
+		</div>
+	</div>
 </section>
         </div>
     </div>
