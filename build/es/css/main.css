@@ -760,7 +760,7 @@ body {
 .emerix-page .box, .emerix-page .overlay .dialog-container {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
-  padding: 1rem;
+  padding: 2rem;
   margin: .5rem;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -1091,7 +1091,7 @@ body {
 .emerix-page .box, .emerix-page .overlay .dialog-container {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
-  padding: 1rem;
+  padding: 2rem;
   margin: .5rem;
   border-radius: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
@@ -1528,6 +1528,7 @@ body {
   max-width: 28rem;
   margin-left: auto;
   margin-right: auto;
+  padding: 2rem;
 }
 
 .emerix-page .page-login .bg-container {
@@ -1600,7 +1601,9 @@ body {
 
 .emerix-page .page-home .payment-plans,
 .emerix-page .page-home .promises-latest {
-  margin: 1rem 0;
+  margin: 1rem -2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #F6F6F5;
 }
@@ -1609,6 +1612,16 @@ body {
 .emerix-page .page-home .promises-latest p {
   margin-top: 0.25;
   margin-bottom: 0;
+}
+
+.emerix-page .page-home .plan-date,
+.emerix-page .page-home .promise-date {
+  color: #989898;
+}
+
+.emerix-page .page-home .promises-latest:hover {
+  background-color: #F6F6F5;
+  color: #8569b4;
 }
 
 .emerix-page .page-home hr {

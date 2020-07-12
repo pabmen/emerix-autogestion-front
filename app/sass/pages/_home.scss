@@ -4,7 +4,9 @@
     .payment-plans,
     .promises-latest {
     
-        margin: 1rem 0;
+        margin: 1rem -2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid $smoke;
     
@@ -13,6 +15,19 @@
             margin-bottom: 0;
         }
     
+    }
+
+    .plan-date,
+    .promise-date {
+        color: $silver;
+    }
+
+    .promises-latest {
+        &:hover {
+            background-color: $smoke;
+            color: $violet;
+            
+        }
     }
 
     hr {
