@@ -1162,6 +1162,7 @@ body {
 
 .emerix-page .logo {
   padding: 2rem;
+  padding-top: 0;
 }
 
 .emerix-page .list-view .list-view-title {
