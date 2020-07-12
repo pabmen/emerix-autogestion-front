@@ -1668,6 +1668,19 @@ body {
           transform: translate(0, -50%);
 }
 
+.emerix-page .page-home .list-view-add {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("/assets/images/ui/btn-agregar.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.emerix-page .page-home .list-view-add:hover {
+  background-image: url("/assets/images/ui/btn-agregar-active.svg");
+}
+
 .emerix-page .page-invoice .table tr:not(.table-header) {
   cursor: pointer;
 }

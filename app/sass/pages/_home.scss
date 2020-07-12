@@ -63,4 +63,17 @@
             transform: translate(0, -50%);
         }
     }
+
+    .list-view-add {
+        width: 2rem;
+        height: 2rem;
+        background-image: url("/assets/images/ui/btn-agregar.svg");
+        background-repeat:  no-repeat;
+        background-size: contain;
+        cursor: pointer;
+        
+        &:hover {
+            background-image: url("/assets/images/ui/btn-agregar-active.svg");
+        }
+    }
 }
