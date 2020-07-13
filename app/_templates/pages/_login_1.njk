@@ -38,3 +38,17 @@
 		</div>
 	</form>
 </section>
+
+{% from "components/_dialogs.njk" import dialog %}
+
+{{ dialog(page.dialogs[1]) }}
+
+<script>
+	document.querySelector('[data-dialog-target]').addEventListener('click', () => {
+		document.querySelector('.overlay').classList.add('active')
+	})
+
+	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		document.querySelector('.overlay').classList.remove('active')
+	})
+</script>

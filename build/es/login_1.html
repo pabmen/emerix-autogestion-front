@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-12 23:53:47';
+    window.buildDate = '2020-07-13 00:25:20';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -209,116 +209,6 @@
 
 					</div>
 					
-					<div>
-						
-
-	
-
-
-	<div class="input-wrapper radio">
-		<input id="p1" type="radio" class="input-elem visually-hidden" name="login_phone" required>
-		
-			<div class="input-fake-radio">
-				<span class="input-caret"></span>
-			</div>
-			
-				<label for="p1">11 3333 3333</label>
-			
-		
-		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">Required</div>
-	</div>
-
-					</div>
-					
-					<div>
-						
-
-	
-
-
-	<div class="input-wrapper radio">
-		<input id="p2" type="radio" class="input-elem visually-hidden" name="login_phone" required>
-		
-			<div class="input-fake-radio">
-				<span class="input-caret"></span>
-			</div>
-			
-				<label for="p2">11 3535 3535</label>
-			
-		
-		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">Required</div>
-	</div>
-
-					</div>
-					
-					<div>
-						
-
-	
-
-
-	<div class="input-wrapper radio">
-		<input id="p3" type="radio" class="input-elem visually-hidden" name="login_phone" required>
-		
-			<div class="input-fake-radio">
-				<span class="input-caret"></span>
-			</div>
-			
-				<label for="p3">11 6075 1111</label>
-			
-		
-		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">Required</div>
-	</div>
-
-					</div>
-					
-					<div>
-						
-
-	
-
-
-	<div class="input-wrapper radio">
-		<input id="p4" type="radio" class="input-elem visually-hidden" name="login_phone" required>
-		
-			<div class="input-fake-radio">
-				<span class="input-caret"></span>
-			</div>
-			
-				<label for="p4">11 3333 1111</label>
-			
-		
-		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">Required</div>
-	</div>
-
-					</div>
-					
-					<div>
-						
-
-	
-
-
-	<div class="input-wrapper radio">
-		<input id="p5" type="radio" class="input-elem visually-hidden" name="login_phone" required>
-		
-			<div class="input-fake-radio">
-				<span class="input-caret"></span>
-			</div>
-			
-				<label for="p5">11 1111 1111</label>
-			
-		
-		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">Required</div>
-	</div>
-
-					</div>
-					
 				</div>
 			</div>
 			<div class="form-group flex-row flex-center">
@@ -329,6 +219,32 @@
 		</div>
 	</form>
 </section>
+
+
+
+
+<div class="overlay" id="login-1">
+    <div class="dialog-container" role="dialog">
+        <a class="close-btn">
+            <img src="/assets/images/ui/close-btn.svg" alt="Close">
+        </a>
+        <div class="dialog-content login-dialog">
+            
+            <div><div class="flex-column flex-center"><div><img src="/assets/images/ui/dialogs/login-dialog.svg" alt=""></div><div class="text-center"><h1>¡Registrá tu contacto!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	document.querySelector('[data-dialog-target]').addEventListener('click', () => {
+		document.querySelector('.overlay').classList.add('active')
+	})
+
+	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		document.querySelector('.overlay').classList.remove('active')
+	})
+</script>
         </div>
     </div>
     <script>

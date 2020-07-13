@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-12 23:53:47';
+    window.buildDate = '2020-07-13 00:25:20';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -142,6 +142,52 @@
 		</div>
 	</form>
 </section>
+
+
+
+
+<div class="overlay" id="login-2">
+    <div class="dialog-container" role="dialog">
+        <a class="close-btn">
+            <img src="/assets/images/ui/close-btn.svg" alt="Close">
+        </a>
+        <div class="dialog-content login-dialog">
+            
+            <div><div class="flex-column flex-center"><div><img src="/assets/images/ui/dialogs/login-dialog.svg" alt=""></div><div class="text-center"><h1>¡Hay un error con la clave de acceso instatáneo!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="overlay" id="login-tyc">
+    <div class="dialog-container" role="dialog">
+        <a class="close-btn">
+            <img src="/assets/images/ui/close-btn.svg" alt="Close">
+        </a>
+        <div class="dialog-content login-dialog login-tyc">
+            <h2>Términos y Condiciones</h2>
+            <div><h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	document.querySelector('[data-dialog-target="login-2"]').addEventListener('click', () => {
+		document.querySelectorAll('.overlay')[0].classList.add('active')
+	})
+	document.querySelector('[data-dialog-target="login-tyc"]').addEventListener('click', () => {
+		document.querySelectorAll('.overlay')[1].classList.add('active')
+	})
+
+	document.querySelectorAll('.overlay .close-btn').forEach((item) => {
+		item.addEventListener('click', () => {
+			document.querySelectorAll('.overlay').forEach((overlays) => {
+				overlays.classList.remove('active')
+			})
+		})
+	})
+</script>
         </div>
     </div>
     <script>

@@ -41,3 +41,25 @@
 		</div>
 	</form>
 </section>
+
+{% from "components/_dialogs.njk" import dialog %}
+
+{{ dialog(page.dialogs[2]) }}
+{{ dialog(page.dialogs[3]) }}
+
+<script>
+	document.querySelector('[data-dialog-target="login-2"]').addEventListener('click', () => {
+		document.querySelectorAll('.overlay')[0].classList.add('active')
+	})
+	document.querySelector('[data-dialog-target="login-tyc"]').addEventListener('click', () => {
+		document.querySelectorAll('.overlay')[1].classList.add('active')
+	})
+
+	document.querySelectorAll('.overlay .close-btn').forEach((item) => {
+		item.addEventListener('click', () => {
+			document.querySelectorAll('.overlay').forEach((overlays) => {
+				overlays.classList.remove('active')
+			})
+		})
+	})
+</script>
