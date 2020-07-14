@@ -85,8 +85,9 @@
 @media all and (max-width: 598px) {
     .main-navigation {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
+        top: 2.4rem;
+        left: 2rem;
+        z-index: 1000;
 
         .mobile-menu-toggle,
         .mobile-menu-toggle-label {

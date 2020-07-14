@@ -65,3 +65,11 @@
 		}
 	}
 }
+
+@media all and (max-width: 598px) {
+	.topbar {
+		& > * {
+			margin-left: 3rem;
+		} 
+	}
+}

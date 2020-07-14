@@ -1293,8 +1293,9 @@ body {
 @media all and (max-width: 598px) {
   .emerix-page .main-navigation {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 2.4rem;
+    left: 2rem;
+    z-index: 1000;
   }
   .emerix-page .main-navigation .mobile-menu-toggle,
   .emerix-page .main-navigation .mobile-menu-toggle-label {
@@ -1498,6 +1499,12 @@ body {
 
 .emerix-page .topbar .notifications-menu .dropdown-target ul li {
   margin: 1rem 0;
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .topbar > * {
+    margin-left: 3rem;
+  }
 }
 
 .emerix-page .text-xxlarge {
