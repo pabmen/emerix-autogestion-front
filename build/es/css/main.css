@@ -838,7 +838,7 @@ body {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #8569b4;
-  line-height: 1.625em;
+  line-height: 1.625rem;
 }
 
 .emerix-page .input-wrapper textarea, .emerix-page .input-wrapper textarea:active, .emerix-page .input-wrapper textarea:active,
@@ -861,8 +861,8 @@ body {
 }
 
 .emerix-page .input-wrapper select {
-  line-height: 1.25em;
-  padding: calc((1.625em - 1em) / 2) 0;
+  height: 1.25rem;
+  padding: calc((1.5rem - 1rem) / 2) 0;
   -webkit-appearance: none;
 }
 
@@ -973,6 +973,14 @@ body {
 .emerix-page .input-wrapper.error .input-error-icon,
 .emerix-page .input-wrapper.error .input-error-popup {
   opacity: 1;
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .input-wrapper select {
+    height: 1.5rem;
+    padding: .35rem 0;
+    -webkit-appearance: none;
+  }
 }
 
 .emerix-page .breadcrumb-container {

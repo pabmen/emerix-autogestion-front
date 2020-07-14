@@ -43,7 +43,7 @@ form {
 		border: none;
 		border-radius: 0;
 		border-bottom: 1px solid $violet;
-		line-height: 1.625em;
+		line-height: 1.625rem;
 
 		&,
 		&:active,
@@ -53,8 +53,8 @@ form {
 	}
 
 	select {
-		line-height: 1.25em;
-		padding: calc((1.625em - 1em) / 2) 0;
+		height: 1.25rem;
+		padding: calc((1.5rem - 1rem) / 2) 0;
 		-webkit-appearance: none;
 	}
 
@@ -168,4 +168,14 @@ form {
 		}
 	}
 	
+}
+
+@media all and (max-width: 598px) {
+	.input-wrapper {
+		select {
+			height: 1.5rem;
+			padding: .35rem 0;
+			-webkit-appearance: none;
+		}
+	}
 }
