@@ -93,16 +93,17 @@
         .mobile-menu-toggle-label {
             display: block;
         }
-
+        
         .mobile-menu-toggle-label {
             cursor: pointer;
-
+            
             img {
                 width: 20px;
             }
         }
-
+                
         .navigation-container {
+            background-color: $smoke;
             max-height: 0;
             overflow: hidden;
             transition: all $transition-normal;

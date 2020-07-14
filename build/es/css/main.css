@@ -1308,6 +1308,7 @@ body {
     width: 20px;
   }
   .emerix-page .main-navigation .navigation-container {
+    background-color: #F6F6F5;
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s ease;
