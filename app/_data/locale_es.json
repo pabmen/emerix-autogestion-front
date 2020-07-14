@@ -41,7 +41,7 @@
 		"links": [
 			{
 				"title": "Inicio",
-				"url": "/?page=home",
+				"url": "/home.html",
 				"icon": "/assets/images/ui/navigation/icono-home.svg"
 			},
 			{
@@ -49,7 +49,7 @@
 			},
 			{
 				"title": "Mis Cuentas",
-				"url": "/?page=invoice",
+				"url": "/invoice.html",
 				"icon": "/assets/images/ui/navigation/icono-info.svg"
 			},
 			{
@@ -58,7 +58,7 @@
 				"dropdown": [
 					{
 						"title": "Pagar",
-						"url": "#"
+						"url": "/pay_0.html"
 					},
 					{
 						"title": "Registrar Pago",
@@ -75,7 +75,7 @@
 				"dropdown": [
 					{
 						"title": "Promesas de pago",
-						"url": "#"
+						"url": "/promises.html"
 					},
 					{
 						"title": "Plan de pago",
