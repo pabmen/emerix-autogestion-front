@@ -1,25 +1,16 @@
-{#<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ head.lang }}" class="no-js">
 	<head>
 		{% include "_head.njk" %}
 	</head>
 <body class="emerix-page">
-	<template id="template-webview">
-		<div class="flex-row">
-			{% include "structure/_navigation.njk" %}
-			<div class="flex-column flex-grow">
-				{% include "structure/_topbar.njk" %}
-				{% include "structure/_page.njk" %}
-			</div>
+
+	<div class="flex-row">
+		{% include "structure/_navigation.njk" %}
+		<div class="flex-column flex-grow">
+			{% include "structure/_topbar.njk" %}
+			{% include "pages/_home.njk" %}
 		</div>
-	</template>
-
-	<main id="main-container" class="main-container"></main>
-
-	<div id="loading-page">
-		{% include "extra/_site-loader.njk" %}
 	</div>
-	<div id="debug-layer" class="debug"></div>
 </body>
 </html>
-#}

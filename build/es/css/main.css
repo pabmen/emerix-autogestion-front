@@ -974,21 +974,39 @@ body {
 }
 
 .emerix-page .breadcrumb-container {
-  background-color: #c1c1c1;
   height: 2px;
   font-size: 0;
   color: transparent;
 }
 
 .emerix-page .breadcrumb-container .breadcrumb {
+  position: relative;
   background-color: #c1c1c1;
   margin: 0 1rem;
   border-radius: 1rem;
   position: relative;
-  overflow: hidden;
   width: .75rem;
   height: .75rem;
   top: -.3rem;
+}
+
+.emerix-page .breadcrumb-container .breadcrumb:not(:first-child):before, .emerix-page .breadcrumb-container .breadcrumb:not(:last-child):after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 1rem;
+  height: 2px;
+  background-color: #c1c1c1;
+}
+
+.emerix-page .breadcrumb-container .breadcrumb:before {
+  right: 100%;
+}
+
+.emerix-page .breadcrumb-container .breadcrumb:after {
+  left: 100%;
 }
 
 .emerix-page .breadcrumb-container .breadcrumb:first-child {
@@ -1001,6 +1019,18 @@ body {
 
 .emerix-page .breadcrumb-container .breadcrumb.active {
   background-color: #FF6A29;
+}
+
+.emerix-page .breadcrumb-container .breadcrumb.active:before, .emerix-page .breadcrumb-container .breadcrumb.active:after {
+  background-color: #FF6A29;
+}
+
+.emerix-page .breadcrumb-container .breadcrumb.active + .active:after {
+  background-color: #c1c1c1;
+}
+
+.emerix-page .breadcrumb-container .breadcrumb.active + :not(.active):before, .emerix-page .breadcrumb-container .breadcrumb.active + :not(.active):after {
+  background-color: #c1c1c1;
 }
 
 .emerix-page .btn {

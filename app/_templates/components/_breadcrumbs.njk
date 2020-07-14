@@ -7,7 +7,7 @@
     {% endif %}
     <ul class="flex-row">
     {% for item in options.items %}
-        <li class="{% if loop.index == activeIndex + 1 %}active{% endif %} breadcrumb">
+        <li class="{% if loop.index <= activeIndex + 1 %}active{% endif %} breadcrumb">
             {{ item }}
         </li>
     {% endfor %}
