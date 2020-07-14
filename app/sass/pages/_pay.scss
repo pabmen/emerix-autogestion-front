@@ -1,6 +1,8 @@
 @import '../vars';
 
 .page-pay {
+    padding: 1rem;
+    
 	.table {
 		&.disabled {
 			color: $silver;

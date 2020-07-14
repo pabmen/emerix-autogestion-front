@@ -53,10 +53,7 @@ body {
 
 	// Accessibility styles
 	@import './partials/accessibility';
-}
 
-
-.emerix-page {
     @import './components/box';
     @import './components/forms';
     @import './components/breadcrumbs';

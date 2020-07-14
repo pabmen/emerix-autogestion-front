@@ -1656,6 +1656,7 @@ body {
   }
   .emerix-page .page-login .form-container {
     width: 100%;
+    padding: 1rem;
   }
   .emerix-page .page-login .bg-container {
     display: none;
@@ -1669,7 +1670,8 @@ body {
 }
 
 .emerix-page .page-home {
-  margin-top: 2rem;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .emerix-page .page-home .payment-plans,
@@ -1754,6 +1756,10 @@ body {
   background-image: url("/assets/images/ui/btn-agregar-active.svg");
 }
 
+.emerix-page .page-invoice {
+  padding: 1rem;
+}
+
 .emerix-page .page-invoice .table tr:not(.table-header) {
   cursor: pointer;
 }
@@ -1822,6 +1828,10 @@ body {
   width: 0;
   overflow: hidden;
   transition: all 0.5s ease;
+}
+
+.emerix-page .page-deals {
+  padding: 1rem;
 }
 
 .emerix-page .page-deals .table.disabled {
@@ -1914,6 +1924,10 @@ body {
   width: 0;
   overflow: hidden;
   transition: all 0.5s ease;
+}
+
+.emerix-page .page-pay {
+  padding: 1rem;
 }
 
 .emerix-page .page-pay .table.disabled {

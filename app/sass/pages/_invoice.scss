@@ -1,6 +1,8 @@
 @import '../vars';
 
 .page-invoice {
+    padding: 1rem;
+    
     .table {
         tr:not(.table-header) {
             cursor: pointer;
