@@ -1516,6 +1516,12 @@ body {
   .emerix-page .topbar > * {
     margin-left: 3rem;
   }
+  .emerix-page .topbar:before {
+    display: none;
+  }
+  .emerix-page .topbar .username {
+    display: none;
+  }
 }
 
 .emerix-page .text-xxlarge {
@@ -1660,6 +1666,10 @@ body {
   .emerix-page .page-login .login-content {
     overflow: hidden;
   }
+}
+
+.emerix-page .page-home {
+  margin-top: 2rem;
 }
 
 .emerix-page .page-home .payment-plans,
