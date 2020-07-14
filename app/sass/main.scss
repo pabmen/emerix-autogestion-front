@@ -38,7 +38,7 @@ body {
     font-family: 'Maven Pro';
     
     > * {
-        height: 100%;
+        min-height: 100%;
     }
 
 	// common styles (works with normalize), general styles
@@ -74,5 +74,6 @@ body {
     @import './pages/home';
     @import './pages/invoice';
     @import './pages/deals';
+    @import './pages/pay';
 
 }

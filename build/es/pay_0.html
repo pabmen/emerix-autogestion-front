@@ -77,31 +77,51 @@
 
 	</head>
 <body class="emerix-page">
-	<div class="flex-column flex-grow">
+    <div class="flex-column flex-grow">
     	<div class="pages-container">
-    		
-
-
-
-
-
-<div class="overlay" id="invoice-sidebar">
-    <div class="dialog-container" role="dialog">
-        <a class="close-btn">
-            <img src="/assets/images/ui/close-btn.svg" alt="Close">
-        </a>
-        <div class="dialog-content sidebar">
             
-            <div><div class="flex-column"><h1>Detalle de producto</h1><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class="btn secondary hover"><img src="/assets/images/ui/buttons/download.svg" alt=""> Libre deuda</button></div></div>
-        </div>
-    </div>
+
+
+
+
+
+
+<section class="page-pay">
+	<div class="flex-row flex-center">
+		<h1 class="flex-grow">Pagar</h1>
+		<div class="flex-row flex-center">
+            <div>Seleccionar deudas a pagar</div>
+            
+<div class="breadcrumb-container" id="">
+    
+        
+    
+    <ul class="flex-row">
+    
+        <li class="active breadcrumb">
+            item1
+        </li>
+    
+        <li class="breadcrumb">
+            item2
+        </li>
+    
+        <li class="breadcrumb">
+            item3
+        </li>
+    
+        <li class="breadcrumb">
+            item4
+        </li>
+    
+    </ul>
 </div>
 
-
-<section class="page-invoice">
-	<h1 class="flex-row">Tus productos</h1>
-	<div class="flex-row">
-	
+        </div>
+	</div>
+	<div class="flex-column">
+        
+	        
 	<div class="table-container desktop-only">
         <table class="table" width="100%" border="0">
             
@@ -109,21 +129,25 @@
                 
                 <td style="width: 16.666666666666668%">
                     
-                        Producto
                     
-                    
-                </td>
-                
-                <td style="width: 16.666666666666668%">
-                    
-                        Ejemplo
-                    
-                    
-                </td>
-                
-                <td style="width: 16.666666666666668%">
-                    
-                        Ejemplo
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-all" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-all">Producto</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
                     
                     
                 </td>
@@ -137,14 +161,28 @@
                 
                 <td style="width: 16.666666666666668%">
                     
-                        Días de atraso
+                        Atraso
                     
                     
                 </td>
                 
                 <td style="width: 16.666666666666668%">
                     
-                        Monto adeudado
+                        Importe adeudado
+                    
+                    
+                </td>
+                
+                <td style="width: 16.666666666666668%">
+                    
+                        Pago mínimo
+                    
+                    
+                </td>
+                
+                <td style="width: 16.666666666666668%">
+                    
+                        Importe a pagar
                     
                     
                 </td>
@@ -158,130 +196,24 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                PRÉSTAMO 36 cuotas
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                MC3111223
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                1234
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                01/10/20
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                0
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                $19450,87
-                            
-                        
-                    </td>
-                    
-                </tr>
-            
-                
-                <tr>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                PRÉSTAMO 12 cuotas
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                MC3111223
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                1234
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                12/10/20
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                0
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                $19450,87
-                            
-                        
-                    </td>
-                    
-                </tr>
-            
-                
-                <tr>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                TC VISA 5400
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                MC3111223
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                1234
-                            
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-1">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
                         
                     </td>
                     
@@ -296,7 +228,23 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                2
+                                5 días
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 16.666666666666668%">
+                        
+                            
+                                $19450,87
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 16.666666666666668%">
+                        
+                            
+                                $19450,87
                             
                         
                     </td>
@@ -317,24 +265,24 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                TC MASTER 2431
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                MC3111223
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                5434534
-                            
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-2" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-2">PRÉSTAMO</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
                         
                     </td>
                     
@@ -349,7 +297,7 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                4
+                                5 días
                             
                         
                     </td>
@@ -362,15 +310,10 @@
                         
                     </td>
                     
-                </tr>
-            
-                
-                <tr>
-                    
                     <td style="width: 16.666666666666668%">
                         
                             
-                                TC MASTER 2431
+                                <div>fsadfasfas</div>
                             
                         
                     </td>
@@ -378,39 +321,7 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                MC3111223
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                5345
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                08/10/206
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                20
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                $19450,87
+                                <div>fsadfasfas</div>
                             
                         
                     </td>
@@ -423,24 +334,24 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                TC MASTER 2431
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                MC3111223
-                            
-                        
-                    </td>
-                    
-                    <td style="width: 16.666666666666668%">
-                        
-                            
-                                543
-                            
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-3" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-3">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
                         
                     </td>
                     
@@ -455,7 +366,7 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                17
+                                5 días
                             
                         
                     </td>
@@ -463,7 +374,23 @@
                     <td style="width: 16.666666666666668%">
                         
                             
-                                $2308,50
+                                $19450,87
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 16.666666666666668%">
+                        
+                            
+                                $19450,87
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 16.666666666666668%">
+                        
+                            
+                                $19450,87
                             
                         
                     </td>
@@ -483,168 +410,25 @@
                 <tr class="table-header">
                     <td>
                         
-                            
-                            <p>PRÉSTAMO 36 cuotas</p>
                         
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>MC3111223</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>1234</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Vencimiento</strong></p>
-                            
-                            <p>01/10/20</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Días de atraso</strong></p>
-                            
-                            <p>0</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Monto adeudado</strong></p>
-                            
-                            <p>$19450,87</p>
-                        
-                    </td>
-                </tr>
-            
-        </table>
-        
-        
-        <table class="box table flex-row">
-            
-                <tr class="table-header">
-                    <td>
-                        
-                            
-                            <p>PRÉSTAMO 12 cuotas</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>MC3111223</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>1234</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Vencimiento</strong></p>
-                            
-                            <p>12/10/20</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Días de atraso</strong></p>
-                            
-                            <p>0</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Monto adeudado</strong></p>
-                            
-                            <p>$19450,87</p>
-                        
-                    </td>
-                </tr>
-            
-        </table>
-        
-        
-        <table class="box table flex-row">
-            
-                <tr class="table-header">
-                    <td>
-                        
-                            
-                            <p>TC VISA 5400</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>MC3111223</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>1234</p>
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-m1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-m1">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
                         
                     </td>
                 </tr>
@@ -664,9 +448,9 @@
                     <td>
                         
                             
-                                <p><strong>Días de atraso</strong></p>
+                                <p><strong>Atraso</strong></p>
                             
-                            <p>2</p>
+                            <p>5 días</p>
                         
                     </td>
                 </tr>
@@ -675,7 +459,29 @@
                     <td>
                         
                             
-                                <p><strong>Monto adeudado</strong></p>
+                                <p><strong>Importe adeudado</strong></p>
+                            
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Pago mínimo</strong></p>
+                            
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Importe a pagar</strong></p>
                             
                             <p>$19450,87</p>
                         
@@ -690,30 +496,25 @@
                 <tr class="table-header">
                     <td>
                         
-                            
-                            <p>TC MASTER 2431</p>
                         
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>MC3111223</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>5434534</p>
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-m2" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-m2">PRÉSTAMO</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
                         
                     </td>
                 </tr>
@@ -733,9 +534,9 @@
                     <td>
                         
                             
-                                <p><strong>Días de atraso</strong></p>
+                                <p><strong>Atraso</strong></p>
                             
-                            <p>4</p>
+                            <p>5 días</p>
                         
                     </td>
                 </tr>
@@ -744,9 +545,31 @@
                     <td>
                         
                             
-                                <p><strong>Monto adeudado</strong></p>
+                                <p><strong>Importe adeudado</strong></p>
                             
                             <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Pago mínimo</strong></p>
+                            
+                            <p></p><div>fsadfasfas</div><p></p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Importe a pagar</strong></p>
+                            
+                            <p></p><div>fsadfasfas</div><p></p>
                         
                     </td>
                 </tr>
@@ -759,99 +582,25 @@
                 <tr class="table-header">
                     <td>
                         
-                            
-                            <p>TC MASTER 2431</p>
                         
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>MC3111223</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>5345</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Vencimiento</strong></p>
-                            
-                            <p>08/10/206</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Días de atraso</strong></p>
-                            
-                            <p>20</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Monto adeudado</strong></p>
-                            
-                            <p>$19450,87</p>
-                        
-                    </td>
-                </tr>
-            
-        </table>
-        
-        
-        <table class="box table flex-row">
-            
-                <tr class="table-header">
-                    <td>
-                        
-                            
-                            <p>TC MASTER 2431</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>MC3111223</p>
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>
-                        
-                            
-                                <p><strong>Ejemplo</strong></p>
-                            
-                            <p>543</p>
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-m3" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-m3">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
                         
                     </td>
                 </tr>
@@ -871,9 +620,9 @@
                     <td>
                         
                             
-                                <p><strong>Días de atraso</strong></p>
+                                <p><strong>Atraso</strong></p>
                             
-                            <p>17</p>
+                            <p>5 días</p>
                         
                     </td>
                 </tr>
@@ -882,9 +631,31 @@
                     <td>
                         
                             
-                                <p><strong>Monto adeudado</strong></p>
+                                <p><strong>Importe adeudado</strong></p>
                             
-                            <p>$2308,50</p>
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Pago mínimo</strong></p>
+                            
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Importe a pagar</strong></p>
+                            
+                            <p>$19450,87</p>
                         
                     </td>
                 </tr>
@@ -893,21 +664,462 @@
         
     </div>
 
+        
+	        
+	<div class="table-container desktop-only">
+        <table class="table" width="100%" border="0">
+            
+            <tr class="table-header">
+                
+                <td style="width: 25%">
+                    
+                    
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-all" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-all">Promesa de pago</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+                    
+                    
+                </td>
+                
+                <td style="width: 25%">
+                    
+                        Vencimiento
+                    
+                    
+                </td>
+                
+                <td style="width: 25%">
+                    
+                        Importe adeudado
+                    
+                    
+                </td>
+                
+                <td style="width: 25%">
+                    
+                        Importe a pagar
+                    
+                    
+                </td>
+                
+            </tr>
+            
+            
+                
+                <tr>
+                    
+                    <td style="width: 25%">
+                        
+                            
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-1">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+                        
+                    </td>
+                    
+                    <td style="width: 25%">
+                        
+                            
+                                08/10/20
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 25%">
+                        
+                            
+                                $19450,87
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 25%">
+                        
+                            
+                                $19450,87
+                            
+                        
+                    </td>
+                    
+                </tr>
+            
+
+        </table>
+    </div>
+
+
+    <div class="mobile-only flex-column flex-grow table-container">
+        
+        
+        <table class="box table flex-row">
+            
+                <tr class="table-header">
+                    <td>
+                        
+                        
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-m1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-m1">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Vencimiento</strong></p>
+                            
+                            <p>08/10/20</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Importe adeudado</strong></p>
+                            
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Importe a pagar</strong></p>
+                            
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+        </table>
+        
+    </div>
+
+        
+	        
+	<div class="table-container desktop-only">
+        <table class="table" width="100%" border="0">
+            
+            <tr class="table-header">
+                
+                <td style="width: 25%">
+                    
+                    
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-all" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-all">Plan de pago</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+                    
+                    
+                </td>
+                
+                <td style="width: 25%">
+                    
+                        Vencimiento
+                    
+                    
+                </td>
+                
+                <td style="width: 25%">
+                    
+                        Importe adeudado
+                    
+                    
+                </td>
+                
+                <td style="width: 25%">
+                    
+                        Importe a pagar
+                    
+                    
+                </td>
+                
+            </tr>
+            
+            
+                
+                <tr>
+                    
+                    <td style="width: 25%">
+                        
+                            
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-1">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+                        
+                    </td>
+                    
+                    <td style="width: 25%">
+                        
+                            
+                                08/10/20
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 25%">
+                        
+                            
+                                $19450,87
+                            
+                        
+                    </td>
+                    
+                    <td style="width: 25%">
+                        
+                            
+                                $19450,87
+                            
+                        
+                    </td>
+                    
+                </tr>
+            
+
+        </table>
+    </div>
+
+
+    <div class="mobile-only flex-column flex-grow table-container">
+        
+        
+        <table class="box table flex-row">
+            
+                <tr class="table-header">
+                    <td>
+                        
+                        
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="table-select-m1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="table-select-m1">TC Visa 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Vencimiento</strong></p>
+                            
+                            <p>08/10/20</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Importe adeudado</strong></p>
+                            
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>
+                        
+                            
+                                <p><strong>Importe a pagar</strong></p>
+                            
+                            <p>$19450,87</p>
+                        
+                    </td>
+                </tr>
+            
+        </table>
+        
+    </div>
+
+        
+	</div>
+	<div class="flex-column pay-mini"> 
+		<div>
+			
+
+	
+
+
+	<div class="input-wrapper radio">
+		<input id="payment-total" type="radio" class="input-elem visually-hidden" name="payment-type" required>
+		
+			<div class="input-fake-radio">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="payment-total">
+				<div class="box flex-row flex-center">
+					<div class="payment-title">IMPORTE FINAL</div>
+					<div class="text-right flex-grow"><strong>$0,00</strong></div>
+				</div>
+			</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+		</div>
+		<div>
+			
+
+	
+
+
+	<div class="input-wrapper radio">
+		<input id="payment-parcial" type="radio" class="input-elem visually-hidden" name="payment-type" required>
+		
+			<div class="input-fake-radio">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="payment-parcial">
+				<div class="box flex-row flex-center">
+					<div class="payment-title">OTRO IMPORTE</div>
+					<div class="text-right flex-grow">
+						
+
+	
+
+
+	<div class="input-wrapper text">
+		<input id="" type="text" class="input-elem" required>
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+					</div>
+				</div>
+			</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+		</div>
+		<div>
+			<div class="box flex-row flex-center">
+				<div class="payment-title">PERIODO</div>
+				<div class="text-right flex-grow">
+					
+
+	
+
+
+	<div class="input-wrapper date">
+		<input id="" type="date" class="input-elem" required>
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+				</div>
+			</div>
+		</div>
+		<button class="btn">Generar promesa</button>
 	</div>
 </section>
+        </div>
+    </div>
 
-<script>
-	document.querySelectorAll('.table tr:not(.table-header)').forEach((tr) => {
-		tr.addEventListener('click', () => {
-			document.querySelector('#invoice-sidebar').classList.add('active')
-		})
-	})
-
-	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
-		document.querySelector('.overlay').classList.remove('active')
-	})
-</script>
-		</div>
-	</div>
 </body>
 </html>

@@ -86,12 +86,32 @@
 @media all and (max-width: 598px) {
     .page-login {
 
+        .box {
+            box-shadow: none;
+            border-radius: 0;
+            border: 0;
+        }
+
+        .form {
+            margin-bottom: 0;
+        }
+
         .form-container {
             width: 100%;
         }
     
         .bg-container {
             display: none;
+        }
+
+        .login-method {
+        	label {
+                padding: 1.5rem .5rem;
+            }
+        }
+
+        .login-content {
+            overflow: hidden;
         }
     }
 }

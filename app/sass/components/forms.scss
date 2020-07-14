@@ -32,7 +32,7 @@ form {
 		line-height: 1.5rem;
 		width: 100%;
 	}
-
+	
 	textarea,
 	input[type=text],
 	input[type=url],
@@ -41,6 +41,7 @@ form {
 	select {
 		background-color: transparent;
 		border: none;
+		border-radius: 0;
 		border-bottom: 1px solid $violet;
 		line-height: 1.625em;
 
