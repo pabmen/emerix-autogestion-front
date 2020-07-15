@@ -429,44 +429,68 @@
 			}]
 		},
 		"pay_1": {
-			"title": "Promesa de pago",
-			"table": {
+			"title": "Pagar",
+			"tables": [{
 				"header": [
 					"Producto",
 					"Vencimiento",
+					"Atraso",
+					"Importe adeudado",
 					"Pago mínimo",
+					"Importe a pagar"
+				],
+				"data": [
+					[
+						"TC VISA 5400",
+						"10/08/20",
+						"5 días",
+						"$19450,87",
+						"$19450,87",
+						"$19450,87"
+					],
+					[
+						"TC MASTER 2431",
+						"10/08/20",
+						"95 días",
+						"$2038,87",
+						"$2038,87",
+						"$2038,87"
+					]
+				]
+			},
+			{
+				"header": [
+					"Promesa de pago",
+					"Vencimiento",
 					"Importe adeudado",
 					"Importe a pagar"
 				],
 				"data": [
 					[
-						"TC Visa 5400",
-						"-",
-						"5 días",
-						"$19450,87",
-						"$19450,87"
-					],
-					[
-						"PRÉSTAMO",
-						"-",
-						"5 días",
-						"$19450,87",
-						"$19450,87"
-					],
-					[
-						"TC Visa 5400",
-						"-",
-						"5 días",
+						"PROM 222wwww",
+						"08/10/20",
 						"$19450,87",
 						"$19450,87"
 					]
 				]
 			},
-			"sidebar": {
-				"id": "deals-sidebar",
-				"class": "sidebar",
-				"content": "<div class='flex-column'><h1>Detalle de producto</h1><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class='btn secondary hover'><img src='/assets/images/ui/buttons/download.svg' alt=''> Libre deuda</button></div>"
+			{
+				"header": [
+					"Plan de pago",
+					"Vencimiento",
+					"Importe adeudado",
+					"Importe a pagar"
+				],
+				"data": [
+					[
+						"REFI TC VISA 5400 - 1/12",
+						"08/10/20",
+						"$19450,87",
+						"$19450,87"
+					]
+				]
 			}
+			]
 		}
 	},
 

@@ -53,7 +53,7 @@
     <div class="mobile-only flex-column flex-grow table-container">
         {% for row in content.data %}
         {% set outeridx = loop %}
-        <table class="box table flex-row">
+        <table class="box table flex-row {{options.class}}">
             {% for column in row %}
                 <tr {% if loop.first %} class="table-header"{% endif %}>
                     <td>

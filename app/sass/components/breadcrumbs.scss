@@ -1,10 +1,14 @@
 @import '../vars';
 
 .breadcrumb-container {
-    height: 2px;
+    .title {
+        margin-right: 1rem;
+    }
 
-    font-size: 0;
-    color: transparent;
+    ul {
+        position: relative;
+        top: 6px;
+    }
 
     .breadcrumb {
         position: relative;
@@ -15,6 +19,8 @@
         width: .75rem;
         height: .75rem;
         top: -.3rem;
+        font-size: 0;
+        color: transparent;
 
         &:not(:first-child):before,
         &:not(:last-child):after {
@@ -45,20 +51,14 @@
 
         &.active {
             background-color: $orange;
+
             &:before,
             &:after {
             	background-color: $orange;
             }
         }
 
-        &.active + .active {
-            &:after {
-            	background-color: $lightgray;
-            }
-        }
-
-        &.active + :not(.active) {
-            &:before,
+        &.last-of-type {
             &:after {
                 background-color: $lightgray;
             }

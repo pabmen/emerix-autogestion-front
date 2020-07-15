@@ -4,6 +4,10 @@
 	padding: 1rem;
 
 	.table {
+		.input-wrapper {
+			margin-bottom: 0;
+		}
+		
         &.disabled {
             color: $silver;
 
@@ -39,7 +43,11 @@
 
         input:checked ~ label .box {
             border: 1px solid $violet;
-        }
+		}
+		
+		.text-right input {
+			text-align: right;
+		}
 
         .input-fake-radio {
             position: absolute;

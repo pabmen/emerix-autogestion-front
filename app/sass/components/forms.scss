@@ -26,6 +26,7 @@ form {
 	input[type=email],
 	input[type=search],
 	input[type=tel],
+	input[type=number],
 	input[type=url] {
 		border: 0;
 		border-bottom: 1px solid $silver;
@@ -38,6 +39,7 @@ form {
 	input[type=url],
 	input[type=mail],
 	input[type=textarea],
+	input[type=number],
 	select {
 		background-color: transparent;
 		border: none;
@@ -52,10 +54,32 @@ form {
 		}
 	}
 
+	input[type=number] {
+		-moz-appearance: textfield;
+		/* Firefox */
+	}
+
+	input[type=number]:-moz-inner-spin-button,
+	input[type=number]:-moz-outer-spin-button,
+	input[type=number]:-webkit-inner-spin-button,
+	input[type=number]:-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		margin: 0;
+	}
+
 	select {
 		height: 1.25rem;
 		padding: calc((1.5rem - 1rem) / 2) 0;
+		padding-right: 1rem;
 		-webkit-appearance: none;
+
+		font-family: inherit;
+
+		option {
+			font-family: sans-serif;;
+		}
 	}
 
 	input[type=radio]:checked  ~.input-fake-radio .input-caret {

@@ -1,13 +1,16 @@
 {% macro breadcrumb(options) %}
-<div class="breadcrumb-container" id="{{ options.id }}">
+<div class="breadcrumb-container flex-row flex-center" id="{{ options.id }}" class="flex-row flex-center">
     {% if options.index %}
         {% set activeIndex = options.index %}
     {% else %}
         {% set activeIndex = 0 %}
     {% endif %}
+    {% if options.title %}
+    <div class="title">{{ options.title }}</div>
+    {% endif %}
     <ul class="flex-row">
     {% for item in options.items %}
-        <li class="{% if loop.index <= activeIndex + 1 %}active{% endif %} breadcrumb">
+        <li class="{% if loop.index <= activeIndex + 1 %}active{% endif %} {% if loop.index == activeIndex + 1 %}last-of-type{% endif %} breadcrumb">
             {{ item }}
         </li>
     {% endfor %}

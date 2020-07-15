@@ -49,6 +49,13 @@ $btn-border-color: transparent;
 			color: $btn-text;
 		}
 	}
+
+	a,
+	a:visited,
+	a:active {
+		text-decoration: none;
+		color: inherit;
+	}
 }
 
 @media all and (max-width: 598px) {

@@ -821,6 +821,7 @@ body {
 .emerix-page .input-wrapper input[type=email],
 .emerix-page .input-wrapper input[type=search],
 .emerix-page .input-wrapper input[type=tel],
+.emerix-page .input-wrapper input[type=number],
 .emerix-page .input-wrapper input[type=url] {
   border: 0;
   border-bottom: 1px solid #989898;
@@ -833,6 +834,7 @@ body {
 .emerix-page .input-wrapper input[type=url],
 .emerix-page .input-wrapper input[type=mail],
 .emerix-page .input-wrapper input[type=textarea],
+.emerix-page .input-wrapper input[type=number],
 .emerix-page .input-wrapper select {
   background-color: transparent;
   border: none;
@@ -854,16 +856,40 @@ body {
 .emerix-page .input-wrapper input[type=textarea],
 .emerix-page .input-wrapper input[type=textarea]:active,
 .emerix-page .input-wrapper input[type=textarea]:active,
+.emerix-page .input-wrapper input[type=number],
+.emerix-page .input-wrapper input[type=number]:active,
+.emerix-page .input-wrapper input[type=number]:active,
 .emerix-page .input-wrapper select,
 .emerix-page .input-wrapper select:active,
 .emerix-page .input-wrapper select:active {
   outline: none;
 }
 
+.emerix-page .input-wrapper input[type=number] {
+  -moz-appearance: textfield;
+  /* Firefox */
+}
+
+.emerix-page .input-wrapper input[type=number]:-moz-inner-spin-button,
+.emerix-page .input-wrapper input[type=number]:-moz-outer-spin-button,
+.emerix-page .input-wrapper input[type=number]:-webkit-inner-spin-button,
+.emerix-page .input-wrapper input[type=number]:-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .emerix-page .input-wrapper select {
   height: 1.25rem;
   padding: calc((1.5rem - 1rem) / 2) 0;
+  padding-right: 1rem;
   -webkit-appearance: none;
+  font-family: inherit;
+}
+
+.emerix-page .input-wrapper select option {
+  font-family: sans-serif;
 }
 
 .emerix-page .input-wrapper input[type=radio]:checked ~ .input-fake-radio .input-caret {
@@ -983,10 +1009,13 @@ body {
   }
 }
 
-.emerix-page .breadcrumb-container {
-  height: 2px;
-  font-size: 0;
-  color: transparent;
+.emerix-page .breadcrumb-container .title {
+  margin-right: 1rem;
+}
+
+.emerix-page .breadcrumb-container ul {
+  position: relative;
+  top: 6px;
 }
 
 .emerix-page .breadcrumb-container .breadcrumb {
@@ -998,6 +1027,8 @@ body {
   width: .75rem;
   height: .75rem;
   top: -.3rem;
+  font-size: 0;
+  color: transparent;
 }
 
 .emerix-page .breadcrumb-container .breadcrumb:not(:first-child):before, .emerix-page .breadcrumb-container .breadcrumb:not(:last-child):after {
@@ -1035,11 +1066,7 @@ body {
   background-color: #FF6A29;
 }
 
-.emerix-page .breadcrumb-container .breadcrumb.active + .active:after {
-  background-color: #c1c1c1;
-}
-
-.emerix-page .breadcrumb-container .breadcrumb.active + :not(.active):before, .emerix-page .breadcrumb-container .breadcrumb.active + :not(.active):after {
+.emerix-page .breadcrumb-container .breadcrumb.last-of-type:after {
   background-color: #c1c1c1;
 }
 
@@ -1082,6 +1109,13 @@ body {
   background-color: #4D2378;
   border-color: #4D2378;
   color: #fff;
+}
+
+.emerix-page .btn a,
+.emerix-page .btn a:visited,
+.emerix-page .btn a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 @media all and (max-width: 598px) {
@@ -1399,7 +1433,7 @@ body {
 }
 
 .emerix-page .table-container {
-  width: 100%;
+  width: calc(100% - 1.25rem);
 }
 
 @media all and (min-width: 599px) {
@@ -1834,6 +1868,10 @@ body {
   padding: 1rem;
 }
 
+.emerix-page .page-deals .table .input-wrapper {
+  margin-bottom: 0;
+}
+
 .emerix-page .page-deals .table.disabled {
   color: #989898;
 }
@@ -1863,6 +1901,10 @@ body {
 
 .emerix-page .page-deals .deal-mini input:checked ~ label .box, .emerix-page .page-deals .deal-mini input:checked ~ label .overlay .dialog-container, .emerix-page .overlay .page-deals .deal-mini input:checked ~ label .dialog-container {
   border: 1px solid #8569b4;
+}
+
+.emerix-page .page-deals .deal-mini .text-right input {
+  text-align: right;
 }
 
 .emerix-page .page-deals .deal-mini .input-fake-radio {
@@ -1930,6 +1972,10 @@ body {
   padding: 1rem;
 }
 
+.emerix-page .page-pay .table .input-wrapper {
+  margin-bottom: 0;
+}
+
 .emerix-page .page-pay .table.disabled {
   color: #989898;
 }
@@ -1945,13 +1991,6 @@ body {
 			&:hover * {
 				color: $violet;
             }*/
-}
-
-.emerix-page .page-pay .table tr td {
-  /*&:nth-child(4),
-				&:nth-child(5) {
-					text-align: right;
-				}*/
 }
 
 .emerix-page .page-pay .pay-mini {
@@ -1979,4 +2018,26 @@ body {
 .emerix-page .page-pay .pay-mini label {
   padding: 0;
   margin: 0;
+}
+
+.emerix-page .page-pay.pay-first .table-1 tr td:nth-child(2), .emerix-page .page-pay.pay-first .table-1 tr td:nth-child(3), .emerix-page .page-pay.pay-first .table-1 tr td:nth-child(4), .emerix-page .page-pay.pay-first .table-1 tr td:nth-child(5), .emerix-page .page-pay.pay-first .table-1 tr td:nth-child(6) {
+  text-align: right;
+}
+
+.emerix-page .page-pay.pay-first .table-2 tr td:nth-child(2), .emerix-page .page-pay.pay-first .table-2 tr td:nth-child(3), .emerix-page .page-pay.pay-first .table-2 tr td:nth-child(4),
+.emerix-page .page-pay.pay-first .table-3 tr td:nth-child(2),
+.emerix-page .page-pay.pay-first .table-3 tr td:nth-child(3),
+.emerix-page .page-pay.pay-first .table-3 tr td:nth-child(4) {
+  text-align: right;
+}
+
+.emerix-page .page-pay.pay-second .table-1 tr td:nth-child(2), .emerix-page .page-pay.pay-second .table-1 tr td:nth-child(3), .emerix-page .page-pay.pay-second .table-1 tr td:nth-child(4), .emerix-page .page-pay.pay-second .table-1 tr td:nth-child(5), .emerix-page .page-pay.pay-second .table-1 tr td:nth-child(6) {
+  text-align: right;
+}
+
+.emerix-page .page-pay.pay-second .table-2 tr td:nth-child(2), .emerix-page .page-pay.pay-second .table-2 tr td:nth-child(3), .emerix-page .page-pay.pay-second .table-2 tr td:nth-child(4),
+.emerix-page .page-pay.pay-second .table-3 tr td:nth-child(2),
+.emerix-page .page-pay.pay-second .table-3 tr td:nth-child(3),
+.emerix-page .page-pay.pay-second .table-3 tr td:nth-child(4) {
+  text-align: right;
 }

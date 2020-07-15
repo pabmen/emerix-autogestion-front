@@ -5,20 +5,18 @@
 
 {% set page = pages.pay_0 %}
 
-<section class="page-pay">
+<section class="page-pay pay-first">
 	<div class="flex-row flex-center">
 		<h1 class="flex-grow">{{ page.title }}</h1>
-		<div class="flex-row flex-center">
-            <div>Seleccionar deudas a pagar</div>
-            {{ breadcrumb({
-                'items': ['item1', 'item2', 'item3', 'item4'],
-                'index': 0
-            }) }}
-        </div>
+        {{ breadcrumb({
+            'title': 'Seleccionar deudas a pagar',
+            'items': ['item1', 'item2', 'item3', 'item4'],
+            'index': 0
+        }) }}
 	</div>
 	<div class="flex-column">
-        {% for item in page.tables%}
-	        {{ table(item, {'specialType': 'checkbox'}) }}
+        {% for item in page.tables %}
+	        {{ table(item, {'specialType': 'checkbox', 'class': 'table-' + loop.index}) }}
         {% endfor %}
 	</div>
 	<div class="flex-column pay-mini"> 
@@ -50,14 +48,8 @@
 				</div>
 			{% endcall %}
 		</div>
-		<div>
-			<div class="box flex-row flex-center">
-				<div class="payment-title">PERIODO</div>
-				<div class="text-right flex-grow">
-					{{ input({'type': 'date'}) }}
-				</div>
-			</div>
-		</div>
-		<button class="btn">Generar promesa</button>
+        <div class="text-right">
+		    <button class="btn"><a href="/pay_1.html">Siguiente</a></button>
+        </div>
 	</div>
 </section>

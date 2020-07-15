@@ -2,8 +2,12 @@
 
 .page-pay {
     padding: 1rem;
-    
+
 	.table {
+        .input-wrapper {
+            margin-bottom: 0;
+        }
+        
 		&.disabled {
 			color: $silver;
 
@@ -19,16 +23,6 @@
 			&:hover * {
 				color: $violet;
             }*/
-		}
-
-		tr {
-			td {
-
-				/*&:nth-child(4),
-				&:nth-child(5) {
-					text-align: right;
-				}*/
-			}
 		}
 	}
 
@@ -56,6 +50,67 @@
 		label {
 			padding: 0;
 			margin: 0;
+		}
+	}
+
+	&.pay-first {
+		.table-1 {
+			tr {
+				td {
+
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4),
+					&:nth-child(5),
+					&:nth-child(6) {
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		.table-2,
+		.table-3 {
+			tr {
+				td {
+
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4) {
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+
+	&.pay-second {
+		.table-1 {
+			tr {
+				td {
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4),
+					&:nth-child(5),
+					&:nth-child(6) {
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		.table-2,
+		.table-3 {
+			tr {
+				td {
+
+					&:nth-child(2),
+					&:nth-child(3),
+					&:nth-child(4) {
+						text-align: right;
+					}
+				}
+			}
 		}
 	}
 }
