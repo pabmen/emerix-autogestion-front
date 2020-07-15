@@ -40,6 +40,9 @@
 		margin-left: auto;
 		padding-left: 1.5rem;
 
+		input:checked ~ label {
+			color: $violet;
+		}
 
         input:checked ~ label .box {
             border: 1px solid $violet;

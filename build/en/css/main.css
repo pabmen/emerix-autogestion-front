@@ -1899,6 +1899,10 @@ body {
   padding-left: 1.5rem;
 }
 
+.emerix-page .page-deals .deal-mini input:checked ~ label {
+  color: #8569b4;
+}
+
 .emerix-page .page-deals .deal-mini input:checked ~ label .box, .emerix-page .page-deals .deal-mini input:checked ~ label .overlay .dialog-container, .emerix-page .overlay .page-deals .deal-mini input:checked ~ label .dialog-container {
   border: 1px solid #8569b4;
 }
@@ -1997,6 +2001,10 @@ body {
   max-width: 25em;
   margin-left: auto;
   padding-left: 1.5rem;
+}
+
+.emerix-page .page-pay .pay-mini input:checked ~ label {
+  color: #8569b4;
 }
 
 .emerix-page .page-pay .pay-mini input:checked ~ label .box, .emerix-page .page-pay .pay-mini input:checked ~ label .overlay .dialog-container, .emerix-page .overlay .page-pay .pay-mini input:checked ~ label .dialog-container {
