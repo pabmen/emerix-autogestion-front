@@ -38,7 +38,7 @@
                                     <div class="{{ item.class }}">{{ item.content }}</div>
                                 {% endfor %}
                             {% else %}
-                                {{ column }}
+                                {{ column | safe }}
                             {% endif %}
                         {% endif %}
                     </td>

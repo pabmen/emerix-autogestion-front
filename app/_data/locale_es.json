@@ -300,7 +300,7 @@
 						"-",
 						"5 días",
 						"$19450,87",
-						"$19450,87"
+						"<div class='table-input input-wrapper number'><input type='text' class='input-elem' placeholder='$19450,87'><div class='input-error-icon' role='alert'></div><div class='input-error-popup' role='alert'>Required</div></div>"
 					],
 					[
 						"TC Visa 5400",

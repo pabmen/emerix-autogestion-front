@@ -32,7 +32,12 @@
                     text-align: right;
                 }
             }
-        }
+		}
+		
+		.table-input input {
+			text-align: right;
+			width: auto;
+		}
     }
     
     .deal-mini {

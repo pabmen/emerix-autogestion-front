@@ -1893,6 +1893,11 @@ body {
   text-align: right;
 }
 
+.emerix-page .page-deals .table .table-input input {
+  text-align: right;
+  width: auto;
+}
+
 .emerix-page .page-deals .deal-mini {
   max-width: 25em;
   margin-left: auto;
