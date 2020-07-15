@@ -16,7 +16,11 @@
 	</div>
 	<div class="flex-column">
         {% for item in page.tables %}
-	        {{ table(item, {'specialType': 'checkbox', 'class': 'table-' + loop.index}) }}
+	        {{ table(item, {
+                'specialType': 'checkbox',
+                'idPrepend': 'table-' + loop.index,
+                'class': 'table-' + loop.index
+            }) }}
         {% endfor %}
 	</div>
 	<div class="flex-column pay-mini"> 

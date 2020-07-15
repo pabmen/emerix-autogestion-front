@@ -10,7 +10,7 @@
                     {% if loop.first and options.specialType == 'checkbox' %}
                     {{ input({
                         'type': 'checkbox',
-                        'id': 'table-select-all',
+                        'id': options.idPrepend + 'table-select-all',
                         'label': headItem
                     }) }}
                     {% else %}
@@ -29,7 +29,7 @@
                         {% if loop.first and options.specialType == 'checkbox' %}
                             {{ input({
                                 'type': 'checkbox',
-                                'id': 'table-select-' + outeridx.index,
+                                'id': options.idPrepend + 'table-select-' + outeridx.index,
                                 'label': column
                             }) }}
                         {% else %}
@@ -60,7 +60,7 @@
                         {% if loop.first and options.specialType == 'checkbox' %}
                         {{ input({
                             'type': 'checkbox',
-                            'id': 'table-select-m' + outeridx.index,
+                            'id': options.idPrepend + 'table-select-m' + outeridx.index,
                             'label': column
                         }) }}
                         {% else %}

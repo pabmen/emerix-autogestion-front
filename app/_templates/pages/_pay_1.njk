@@ -26,7 +26,9 @@
 	</div>
 	<div class="flex-column">
         {% for item in page.tables%}
-	        {{ table(item, {'class': 'disabled table-' + loop.index}) }}
+	        {{ table(item, {
+                'class': 'disabled table-' + loop.index
+            }) }}
         {% endfor %}
 	</div>
 	<p><img src="/assets/images/ui/icono_info.svg" alt=""> La distribución del importe se hace por productos en base los días de mora, una vez cubierto el monto automaticamente contempla el siguiente producto hasta cubrir el importe ingresado.</p>
