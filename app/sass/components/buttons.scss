@@ -58,7 +58,7 @@ $btn-border-color: transparent;
 	}
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: $mobileWidth) {
 	.btn {
 		padding: 1rem 1.5rem;
 	}

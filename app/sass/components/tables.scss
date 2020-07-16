@@ -35,7 +35,7 @@
         background-color: $smoke;
     }
 
-    @media all and (max-width: 598px) {
+    @media all and (max-width: $mobileWidth) {
         .table {
             tr:not(.table-header) {
                 padding-top: 0;

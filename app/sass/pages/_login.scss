@@ -93,11 +93,28 @@
 		max-height: 10rem;
 		overflow: scroll;
 	}*/
+
+
+	.phone-list {
+		padding-left: .5rem;
+	}
+
+}
+
+.overlay .login-dialog {
+	margin: 0;
+	width: 28.125rem - 4rem;
+
+	h1, h2 {
+		color: $black;
+	}
+
 }
 
 
-@media all and (max-width: 598px) {
+@media all and (max-width: $mobileWidth) {
 	.page-login {
+		height: 100vh;
 
 		.box {
 			box-shadow: none;
@@ -107,11 +124,14 @@
 
 		.form {
 			margin-bottom: 0;
+			padding: 1rem;
+			height: calc(100vh - 2rem);
 		}
 
 		.form-container {
 			width: 100%;
 			padding: 1rem;
+			padding: 0;
 		}
 	
 		.bg-container {
@@ -128,15 +148,27 @@
 			overflow: hidden;
 		}
 	}
-}
 
-@media all and (max-width: 598px) {
-	.page-login {
-		.form {
-			padding: 1rem;
+
+	.overlay {
+		.dialog-container {
+			width: calc(100vw - 4rem);
+
 		}
-		.form-container {
-			padding: 0;
+
+		.login-dialog {
+			margin: 0;
+			top: 1rem;
+			left: 1rem;
+			left: 1rem;
+			bottom: 1rem;
+			transform: none;
+	
+			h1,
+			h2 {
+				color: $black;
+			}
+	
 		}
 	}
 }

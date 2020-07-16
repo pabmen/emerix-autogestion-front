@@ -87,7 +87,7 @@
     }
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: $mobileWidth) {
     .main-navigation {
         position: absolute;
         top: 2rem;

@@ -69,7 +69,7 @@
 	}
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: $mobileWidth) {
 	.topbar {
 		& > * {
 			margin-left: 2rem;

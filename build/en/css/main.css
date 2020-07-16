@@ -412,7 +412,7 @@ body {
   }
 }
 
-@media screen and (max-width: 598px) {
+@media screen and (max-width: 600px) {
   .emerix-page html.desktop {
     font-size: 16px;
   }
@@ -543,7 +543,7 @@ body {
   }
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page .desktop-only {
     display: none;
   }
@@ -773,7 +773,7 @@ body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1002,7 +1002,7 @@ body {
   opacity: 1;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page .input-wrapper select {
     height: 1.5rem;
     padding: .35rem 0;
@@ -1119,7 +1119,7 @@ body {
   color: inherit;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page .btn {
     padding: 1rem 1.5rem;
   }
@@ -1178,7 +1178,7 @@ body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1343,7 +1343,7 @@ body {
           transform: translate(0, -50%) scale(-1);
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page .main-navigation {
     position: absolute;
     top: 2rem;
@@ -1487,7 +1487,7 @@ body {
   background-color: #F6F6F5;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page .table-container .table tr:not(.table-header) {
     padding-top: 0;
     padding-bottom: 0;
@@ -1564,7 +1564,7 @@ body {
   margin: 1rem 0;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 600px) {
   .emerix-page .topbar > * {
     margin-left: 2rem;
   }
@@ -1591,7 +1591,7 @@ body {
 }
 
 .emerix-page .text-large {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1710,7 +1710,23 @@ body {
   margin-left: 1rem;
 }
 
-@media all and (max-width: 598px) {
+.emerix-page .page-login .phone-list {
+  padding-left: .5rem;
+}
+
+.emerix-page .overlay .login-dialog {
+  margin: 0;
+  width: 24.125rem;
+}
+
+.emerix-page .overlay .login-dialog h1, .emerix-page .overlay .login-dialog h2 {
+  color: #000;
+}
+
+@media all and (max-width: 600px) {
+  .emerix-page .page-login {
+    height: 100vh;
+  }
   .emerix-page .page-login .box, .emerix-page .page-login .overlay .dialog-container, .emerix-page .overlay .page-login .dialog-container {
     box-shadow: none;
     border-radius: 0;
@@ -1718,10 +1734,13 @@ body {
   }
   .emerix-page .page-login .form {
     margin-bottom: 0;
+    padding: 1rem;
+    height: calc(100vh - 2rem);
   }
   .emerix-page .page-login .form-container {
     width: 100%;
     padding: 1rem;
+    padding: 0;
   }
   .emerix-page .page-login .bg-container {
     display: none;
@@ -1732,14 +1751,20 @@ body {
   .emerix-page .page-login .login-content {
     overflow: hidden;
   }
-}
-
-@media all and (max-width: 598px) {
-  .emerix-page .page-login .form {
-    padding: 1rem;
+  .emerix-page .overlay .dialog-container {
+    width: calc(100vw - 4rem);
   }
-  .emerix-page .page-login .form-container {
-    padding: 0;
+  .emerix-page .overlay .login-dialog {
+    margin: 0;
+    top: 1rem;
+    left: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+    -webkit-transform: none;
+            transform: none;
+  }
+  .emerix-page .overlay .login-dialog h1, .emerix-page .overlay .login-dialog h2 {
+    color: #000;
   }
 }
 

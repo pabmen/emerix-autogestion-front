@@ -15,7 +15,7 @@
 	}
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: $mobileWidth) {
 	.box {
 		margin: 1.5rem;
 		margin-left: 0;

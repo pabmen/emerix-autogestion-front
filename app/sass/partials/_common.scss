@@ -12,7 +12,7 @@ html {
 	}
 }
 
-@media screen and (max-width: 598px) {
+@media screen and (max-width: $mobileWidth) {
 	html.desktop {
 		font-size: 16px;
 	}
@@ -155,7 +155,7 @@ hr {
 	}
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: $mobileWidth) {
 	.pages-container {
 		& > * {
 			//padding: 0;

@@ -196,7 +196,7 @@ form {
 	
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: $mobileWidth) {
 	.input-wrapper {
 		select {
 			height: 1.5rem;

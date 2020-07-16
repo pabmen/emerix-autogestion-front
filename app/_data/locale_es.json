@@ -177,27 +177,27 @@
 			"dialogs": [
 				{
 					"id": "login-0",
-					"class": "login-dialog",
+					"class": "login-dialog login-dialog-1",
 					"title": "",
-					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1>¡Lo sentimos!, no tenemos registro de tu teléfono móvil.</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1 class='text-large'>¡Lo sentimos!, no tenemos registro de tu teléfono móvil.</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
 				},
 				{
 					"id": "login-1",
-					"class": "login-dialog",
+					"class": "login-dialog login-dialog-2",
 					"title": "",
-					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1>¡Registrá tu contacto!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1 class='text-large'>¡Registrá tu contacto!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
 				},
 				{
 					"id": "login-2",
-					"class": "login-dialog",
+					"class": "login-dialog login-dialog-3",
 					"title": "",
-					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1>¡Hay un error con la clave de acceso instatáneo!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1 class='text-large'>¡Hay un error con la clave de acceso instatáneo!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
 				},
 				{
 					"id": "login-tyc",
 					"class": "login-dialog login-tyc",
 					"title": "Términos y Condiciones",
-					"content": "<h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
+					"content": "<h1 class='text-large'>What is Lorem Ipsum?</h1><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><h2>What is Lorem Ipsum?</h2><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>"
 				}
 			]
 
