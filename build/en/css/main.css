@@ -1622,9 +1622,9 @@ body {
 .emerix-page .page-login {
   height: 100%;
   /*.phone-list {
-        max-height: 10rem;
-        overflow: scroll;
-    }*/
+		max-height: 10rem;
+		overflow: scroll;
+	}*/
 }
 
 .emerix-page .page-login .form-container {
@@ -1632,10 +1632,10 @@ body {
 }
 
 .emerix-page .page-login .form {
-  max-width: 28rem;
+  max-width: 22rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
+  padding: 3rem;
 }
 
 .emerix-page .page-login .bg-container {
@@ -1673,7 +1673,7 @@ body {
   order: -1;
   border: 1px solid transparent;
   border-radius: 10px;
-  padding: 1.5rem 2rem;
+  padding: 1.5rem 1rem;
   margin: 1rem;
   text-transform: uppercase;
   white-space: nowrap;
@@ -1731,6 +1731,15 @@ body {
   }
   .emerix-page .page-login .login-content {
     overflow: hidden;
+  }
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .page-login .form {
+    padding: 1rem;
+  }
+  .emerix-page .page-login .form-container {
+    padding: 0;
   }
 }
 
