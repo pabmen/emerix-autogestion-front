@@ -1622,11 +1622,12 @@ body {
 
 .emerix-page .page-login .bg-container {
   width: 45%;
-  height: 100%;
+  height: 100vh;
   background-image: url("https://www.emerix.com.ar/wp-content/uploads/2020/07/solucion-eficaz.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: -1rem;
+  background-position: left center;
+  margin: -0;
 }
 
 .emerix-page .page-login .login-content {
