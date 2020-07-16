@@ -815,6 +815,7 @@ body {
   right: 0;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
+  pointer-events: none;
 }
 
 .emerix-page .input-wrapper input[type=text],
@@ -883,7 +884,6 @@ body {
 .emerix-page .input-wrapper select {
   height: 1.25rem;
   padding: calc((1.5rem - 1rem) / 2) 0;
-  padding-right: 1rem;
   -webkit-appearance: none;
   font-family: inherit;
 }
@@ -970,6 +970,7 @@ body {
   background-image: url("/assets/images/ui/icono_error.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  pointer-events: none;
 }
 
 .emerix-page .input-wrapper .input-error-popup {

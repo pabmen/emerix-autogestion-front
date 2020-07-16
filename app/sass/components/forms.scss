@@ -19,6 +19,7 @@ form {
 			top: 50%;
 			right: 0;
 			transform: translate(0, -50%);
+			pointer-events: none;
 		}
 	}
 
@@ -72,7 +73,7 @@ form {
 	select {
 		height: 1.25rem;
 		padding: calc((1.5rem - 1rem) / 2) 0;
-		padding-right: 1rem;
+		//padding-right: 1rem;
 		-webkit-appearance: none;
 
 		font-family: inherit;
@@ -159,6 +160,7 @@ form {
 		background-image: url('/assets/images/ui/icono_error.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
+		pointer-events: none;
 	}
 
 	.input-error-popup {
