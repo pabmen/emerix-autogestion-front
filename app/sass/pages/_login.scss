@@ -125,7 +125,7 @@
 		.form {
 			margin-bottom: 0;
 			padding: 1rem;
-			height: calc(100vh - 2rem);
+			min-height: calc(100vh - 2rem);
 		}
 
 		.form-container {

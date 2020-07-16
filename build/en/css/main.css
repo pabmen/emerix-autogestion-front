@@ -1735,7 +1735,7 @@ body {
   .emerix-page .page-login .form {
     margin-bottom: 0;
     padding: 1rem;
-    height: calc(100vh - 2rem);
+    min-height: calc(100vh - 2rem);
   }
   .emerix-page .page-login .form-container {
     width: 100%;
