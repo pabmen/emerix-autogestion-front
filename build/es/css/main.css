@@ -1259,6 +1259,10 @@ body {
   width: 17.5em;
 }
 
+.emerix-page .main-navigation .logo {
+  padding-top: 1.5rem;
+}
+
 .emerix-page .main-navigation .mobile-menu-toggle,
 .emerix-page .main-navigation .mobile-menu-toggle-label {
   display: none;

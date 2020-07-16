@@ -3,6 +3,10 @@
 .main-navigation {
     width: 17.5em;
 
+    .logo {
+        padding-top: 1.5rem;
+    }
+
     .mobile-menu-toggle,
     .mobile-menu-toggle-label {
         display: none;
