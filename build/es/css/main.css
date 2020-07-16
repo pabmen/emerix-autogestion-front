@@ -983,7 +983,7 @@ body {
   color: #fff;
   padding: 0.625rem;
   background-color: rgba(255, 106, 41, 0.77);
-  white-space: nowrap;
+  max-width: 10rem;
 }
 
 .emerix-page .input-wrapper .input-error-popup:after {
@@ -1237,7 +1237,10 @@ body {
 
 .emerix-page .logo {
   padding: 2rem;
-  padding-top: 0;
+}
+
+.emerix-page img {
+  vertical-align: bottom;
 }
 
 .emerix-page .list-view .list-view-title {
