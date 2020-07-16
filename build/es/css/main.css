@@ -1257,6 +1257,7 @@ body {
 
 .emerix-page .main-navigation {
   width: 17.5em;
+  background-color: #fff;
 }
 
 .emerix-page .main-navigation .logo {
@@ -1345,9 +1346,10 @@ body {
 @media all and (max-width: 598px) {
   .emerix-page .main-navigation {
     position: absolute;
-    top: 2.4rem;
-    left: 2rem;
+    top: 2.25rem;
+    left: 1rem;
     z-index: 1000;
+    background-color: transparent;
   }
   .emerix-page .main-navigation .mobile-menu-toggle,
   .emerix-page .main-navigation .mobile-menu-toggle-label {
@@ -1556,7 +1558,7 @@ body {
 
 @media all and (max-width: 598px) {
   .emerix-page .topbar > * {
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
   .emerix-page .topbar:before {
     display: none;

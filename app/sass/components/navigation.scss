@@ -2,6 +2,7 @@
 
 .main-navigation {
     width: 17.5em;
+    background-color: $white;
 
     .logo {
         padding-top: 1.5rem;
@@ -89,9 +90,10 @@
 @media all and (max-width: 598px) {
     .main-navigation {
         position: absolute;
-        top: 2.4rem;
-        left: 2rem;
+        top: 2.25rem;
+        left: 1rem;
         z-index: 1000;
+        background-color: transparent;
 
         .mobile-menu-toggle,
         .mobile-menu-toggle-label {
