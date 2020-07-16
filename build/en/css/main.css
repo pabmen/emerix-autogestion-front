@@ -1346,10 +1346,13 @@ body {
 @media all and (max-width: 598px) {
   .emerix-page .main-navigation {
     position: absolute;
-    top: 2.25rem;
+    top: 2rem;
     left: 1rem;
     z-index: 1000;
     background-color: transparent;
+  }
+  .emerix-page .main-navigation .navigation-container {
+    background-color: #fff;
   }
   .emerix-page .main-navigation .mobile-menu-toggle,
   .emerix-page .main-navigation .mobile-menu-toggle-label {

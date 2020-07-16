@@ -90,10 +90,14 @@
 @media all and (max-width: 598px) {
     .main-navigation {
         position: absolute;
-        top: 2.25rem;
+        top: 2rem;
         left: 1rem;
         z-index: 1000;
         background-color: transparent;
+
+        .navigation-container {
+            background-color: $white;
+        }
 
         .mobile-menu-toggle,
         .mobile-menu-toggle-label {
