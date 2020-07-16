@@ -173,7 +173,7 @@ form {
 		color: $white;
 		padding: 0.625rem;
 		background-color: transparentize($orange, .23);
-		max-width: 10rem;
+		white-space: nowrap;
 
 		&:after {
 			content: "";

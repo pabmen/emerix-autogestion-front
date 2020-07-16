@@ -983,7 +983,7 @@ body {
   color: #fff;
   padding: 0.625rem;
   background-color: rgba(255, 106, 41, 0.77);
-  max-width: 10rem;
+  white-space: nowrap;
 }
 
 .emerix-page .input-wrapper .input-error-popup:after {
