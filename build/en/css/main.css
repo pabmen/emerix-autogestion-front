@@ -1495,9 +1495,12 @@ body {
 }
 
 .emerix-page .topbar {
-  padding: 1rem;
   background-color: #F6F6F5;
   position: relative;
+}
+
+.emerix-page .topbar > .flex-row {
+  padding: 1rem;
 }
 
 .emerix-page .topbar h1 {
@@ -1553,7 +1556,7 @@ body {
 }
 
 .emerix-page .topbar .notifications-menu .dropdown-target ul {
-  padding: .5rem;
+  padding: 1rem;
   border: 1px solid #c1c1c1;
 }
 

@@ -1,9 +1,12 @@
 @import '../vars';
 
 .topbar {
-	padding: 1rem;
 	background-color: $smoke;
 	position: relative;
+
+	> .flex-row {
+		padding: 1rem;
+	}
 
 	h1 {
 		font-size: 1.375rem;
@@ -56,7 +59,7 @@
 			background-color: $smoke;
 
 			ul {
-				padding: .5rem;
+				padding: 1rem;
 				border: 1px solid $lightgray;
 				li {
 					margin: 1rem 0;
