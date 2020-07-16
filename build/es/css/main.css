@@ -1360,6 +1360,8 @@ body {
   }
   .emerix-page .main-navigation .mobile-menu-toggle-label {
     cursor: pointer;
+    width: 2rem;
+    height: 1rem;
   }
   .emerix-page .main-navigation .mobile-menu-toggle-label img {
     width: 20px;
@@ -1546,7 +1548,7 @@ body {
   top: 100%;
   margin-top: .5rem;
   right: 0;
-  min-width: 10rem;
+  min-width: 18.750rem;
   background-color: #F6F6F5;
 }
 
