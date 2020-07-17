@@ -412,7 +412,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 598px) {
   .emerix-page html.desktop {
     font-size: 16px;
   }
@@ -530,7 +530,7 @@ body {
 
 .emerix-page .pages-container {
   background-color: #F6F6F5;
-  height: 100%;
+  min-height: 100%;
 }
 
 .emerix-page .pages-container > * {
@@ -543,7 +543,7 @@ body {
   }
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page .desktop-only {
     display: none;
   }
@@ -773,7 +773,7 @@ body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -984,6 +984,7 @@ body {
   padding: 0.625rem;
   background-color: rgba(255, 106, 41, 0.77);
   white-space: nowrap;
+  pointer-events: none;
 }
 
 .emerix-page .input-wrapper .input-error-popup:after {
@@ -1002,7 +1003,7 @@ body {
   opacity: 1;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page .input-wrapper select {
     height: 1.5rem;
     padding: .35rem 0;
@@ -1119,7 +1120,7 @@ body {
   color: inherit;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page .btn {
     padding: 1rem 1.5rem;
   }
@@ -1178,7 +1179,7 @@ body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1343,7 +1344,7 @@ body {
           transform: translate(0, -50%) scale(-1);
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page .main-navigation {
     position: absolute;
     top: 2rem;
@@ -1487,7 +1488,7 @@ body {
   background-color: #F6F6F5;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page .table-container .table tr:not(.table-header) {
     padding-top: 0;
     padding-bottom: 0;
@@ -1564,7 +1565,7 @@ body {
   margin: 1rem 0;
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 598px) {
   .emerix-page .topbar > * {
     margin-left: 2rem;
   }
@@ -1649,7 +1650,7 @@ body {
 }
 
 .emerix-page .page-login .login-content {
-  height: calc(100% - 2rem);
+  height: calc(504px - 2rem);
 }
 
 .emerix-page .page-login .login-content > :first-child {
@@ -1723,7 +1724,13 @@ body {
   color: #000;
 }
 
-@media all and (max-width: 600px) {
+@media all and (min-width: 599px) {
+  .emerix-page .page-login .logo {
+    padding-top: 0;
+  }
+}
+
+@media all and (max-width: 598px) {
   .emerix-page .page-login {
     height: 100vh;
   }
@@ -1750,6 +1757,7 @@ body {
   }
   .emerix-page .page-login .login-content {
     overflow: hidden;
+    height: calc(100% - 2rem);
   }
   .emerix-page .overlay .dialog-container {
     width: calc(100vw - 4rem);
@@ -1758,10 +1766,16 @@ body {
     margin: 0;
     top: 1rem;
     left: 1rem;
-    left: 1rem;
-    bottom: 1rem;
+    height: calc(100vh - 6rem);
+    width: calc(100vw - 6rem);
     -webkit-transform: none;
             transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .emerix-page .overlay .login-dialog h1, .emerix-page .overlay .login-dialog h2 {
     color: #000;

@@ -9,7 +9,9 @@
 		{% include "structure/_navigation.njk" %}
 		<div class="flex-column flex-grow">
 			{% include "structure/_topbar.njk" %}
-			{% include "pages/_home.njk" %}
+			<div class="pages-container">
+				{% include "pages/_invoice.njk" %}
+			</div>
 		</div>
 	</div>
 </body>

@@ -1,3 +1,5 @@
+@import '../vars';
+
 // Box-sizing reset. Best for responsive and sizing in general! The old one is content-box.
 html {
 	box-sizing: border-box;
@@ -142,7 +144,7 @@ hr {
 
 .pages-container {
 	background-color: $smoke;
-	height: 100%;
+	min-height: 100%;
 
 	& > * {
 		margin: 0 auto;
