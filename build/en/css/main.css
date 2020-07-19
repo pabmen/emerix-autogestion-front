@@ -1871,10 +1871,8 @@ html.no-scroll body {
 
 .emerix-page .page-home .payment-plans,
 .emerix-page .page-home .promises-latest {
-  margin: 1rem -2rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 1rem;
+  margin: 0 -2rem;
+  padding: 1rem 2rem;
   border-bottom: 1px solid #F6F6F5;
 }
 
@@ -1923,6 +1921,10 @@ html.no-scroll body {
 }
 
 .emerix-page .page-home .wide-link {
+  margin-bottom: 0;
+}
+
+.emerix-page .page-home .wide-link a {
   display: block;
   width: 100%;
   text-decoration: none;
@@ -1931,7 +1933,7 @@ html.no-scroll body {
   color: #000;
 }
 
-.emerix-page .page-home .wide-link:after {
+.emerix-page .page-home .wide-link a:after {
   content: '>';
   position: absolute;
   top: 50%;

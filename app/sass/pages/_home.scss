@@ -11,10 +11,8 @@
     .payment-plans,
     .promises-latest {
     
-        margin: 1rem -2rem;
-        padding-left: 2rem;
-        padding-right: 2rem;
-        padding-bottom: 1rem;
+        margin: 0 -2rem;
+        padding: 1rem 2rem;
         border-bottom: 1px solid $smoke;
     
         p  {
@@ -58,19 +56,23 @@
     }
 
     .wide-link {
-        display: block;
-        width: 100%;
-        text-decoration: none;
-        position: relative;
-        padding-top: .5rem;
-        color: $black;
-        
-        &:after {
-            content: '>';
-            position: absolute;
-            top: 50%;
-            right: 0;
-            transform: translate(0, -50%);
+        margin-bottom: 0;
+    
+        a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            position: relative;
+            padding-top: .5rem;
+            color: $black;
+            
+            &:after {
+                content: '>';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translate(0, -50%);
+            }
         }
     }
 
