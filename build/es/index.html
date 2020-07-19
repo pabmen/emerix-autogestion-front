@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-19 01:24:44';
+    window.buildDate = '2020-07-19 16:14:53';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -1068,11 +1068,13 @@
 	document.querySelectorAll('.table tr:not(.table-header)').forEach((tr) => {
 		tr.addEventListener('click', () => {
 			document.querySelector('#invoice-sidebar').classList.add('active')
+			document.querySelector('html').classList.add('no-scroll')
 		})
 	})
 
 	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
 		document.querySelector('.overlay').classList.remove('active')
+		document.querySelector('html').classList.remove('no-scroll')
 	})
 </script>
 			</div>

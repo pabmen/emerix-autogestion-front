@@ -16,10 +16,12 @@
 	document.querySelectorAll('.table tr:not(.table-header)').forEach((tr) => {
 		tr.addEventListener('click', () => {
 			document.querySelector('#invoice-sidebar').classList.add('active')
+			document.querySelector('html').classList.add('no-scroll')
 		})
 	})
 
 	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
 		document.querySelector('.overlay').classList.remove('active')
+		document.querySelector('html').classList.remove('no-scroll')
 	})
 </script>

@@ -1963,13 +1963,6 @@ html.no-scroll body {
   }
 }
 
-.emerix-page #invoice-sidebar .dialog-container {
-  padding: 0;
-  max-width: 320px;
-  left: auto;
-  right: 0;
-}
-
 .emerix-page #invoice-sidebar.active .sidebar {
   width: 100%;
 }
@@ -1979,6 +1972,13 @@ html.no-scroll body {
 }
 
 .emerix-page #invoice-sidebar .dialog-container {
+  padding: 0;
+  max-width: 320px;
+  left: auto;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
   position: static;
   background-color: transparent;
   border: 0;
@@ -1988,6 +1988,16 @@ html.no-scroll body {
   box-shadow: none;
   -webkit-transform: none;
           transform: none;
+}
+
+.emerix-page #invoice-sidebar .sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #F6F6F5;
+  width: 0;
+  transition: all 0.5s ease;
 }
 
 .emerix-page #invoice-sidebar .close-btn {
@@ -2000,17 +2010,6 @@ html.no-scroll body {
   display: block;
   width: 1.188rem;
   height: 1.188rem;
-}
-
-.emerix-page #invoice-sidebar .sidebar {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  background-color: #F6F6F5;
-  width: 0;
-  overflow: hidden;
-  transition: all 0.5s ease;
 }
 
 .emerix-page .page-deals {

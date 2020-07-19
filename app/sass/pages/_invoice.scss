@@ -37,12 +37,6 @@
 
 #invoice-sidebar {
 
-    .dialog-container {
-        padding: 0;
-        max-width: 320px;
-        left: auto;
-        right: 0;
-    }
 
 	&.active .sidebar {
         width: 100%;
@@ -53,6 +47,15 @@
     }
     
     .dialog-container {
+        padding: 0;
+        max-width: 320px;
+        left: auto;
+        right: 0;
+
+        height: 100vh;
+        overflow: hidden;
+        overflow-y: auto;
+        
         position: static;
         background-color: transparent;
         border: 0;
@@ -61,6 +64,17 @@
         border-radius: 0;
         box-shadow: none;
         transform: none;
+    }
+
+    //TODO igual al .dialog-container ???
+    .sidebar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: $smoke;
+        width: 0;
+        transition: all $transition-normal;
     }
 
     .close-btn {
@@ -75,14 +89,5 @@
         }
     }
 
-	.sidebar {
-		position: absolute;
-		top: 0;
-		right: 0;
-		height: 100%;
-		background-color: $smoke;
-		width: 0;
-		overflow: hidden;
-		transition: all $transition-normal;
-	}
+
 }

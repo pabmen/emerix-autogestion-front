@@ -15,12 +15,20 @@ o
 Cada elemento que tenga overlays deberá esta contenido dentro de algún elemento con clase **```"overlay"```**:
 
 ```html
+<html>
+.
+.
+.
 <div class="overlay"></div>
 ```
 
-Para activarlo, agregarle la clase **```"active"```**
+Para activarlo, agregarle la clase **```"active"```** y al elemento **``html``** añadirle también la clase **``no-scroll``** para que quede en modal y no se pueda scrollear la página mientras esté abierto.
 
 ```html
+<html class="no-scroll">
+.
+.
+.
 <div class="overlay active"></div>
 ```
 ---
