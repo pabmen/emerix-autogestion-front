@@ -34,6 +34,14 @@ body {
 	//overscroll-behavior: none;
 }
 
+html.no-scroll {
+    overflow: hidden;
+
+    body {
+        overflow: hidden;
+    }
+}
+
 
 .emerix-page {
     font-family: 'Maven Pro';

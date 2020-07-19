@@ -116,4 +116,24 @@
 			}
 		}
 	}
+
+
+	.payment-selector {
+		background-color: $white;
+
+		li {
+			width: 105px;
+			height: 75px;
+			border-radius: $std-radius;
+			border: 1px solid $lightgray;
+
+			&.active {
+				border-color: $violet;
+			}
+
+			& + li {
+				margin-left: 2rem;
+			}
+		}
+	}
 }

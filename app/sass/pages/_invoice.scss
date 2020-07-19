@@ -36,10 +36,13 @@
 
 
 #invoice-sidebar {
-    padding: 0;
-    max-width: 320px;
-    left: auto;
-    right: 0;
+
+    .dialog-container {
+        padding: 0;
+        max-width: 320px;
+        left: auto;
+        right: 0;
+    }
 
 	&.active .sidebar {
         width: 100%;
