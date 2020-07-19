@@ -526,6 +526,14 @@ html.no-scroll body {
   flex-grow: 1;
 }
 
+.emerix-page .justify-center {
+  justify-content: center;
+}
+
+.emerix-page .align-center {
+  align-items: center;
+}
+
 .emerix-page .hidden {
   display: none !important;
 }
@@ -1857,6 +1865,10 @@ html.no-scroll body {
   padding: 1rem;
 }
 
+.emerix-page .page-home .home-area {
+  max-width: 450px;
+}
+
 .emerix-page .page-home .payment-plans,
 .emerix-page .page-home .promises-latest {
   margin: 1rem -2rem;
@@ -1884,6 +1896,8 @@ html.no-scroll body {
 
 .emerix-page .page-home hr {
   background-color: #F6F6F5;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
 .emerix-page .page-home .bullet {

@@ -4,6 +4,10 @@
     margin-top: 1rem;
     padding: 1rem;
 
+    .home-area {
+        max-width: 450px;
+    }
+
     .payment-plans,
     .promises-latest {
     
@@ -35,6 +39,8 @@
 
     hr {
         background-color: $smoke;
+        margin-left: -2rem;
+        margin-right: -2rem;
     }
 
     .bullet {
