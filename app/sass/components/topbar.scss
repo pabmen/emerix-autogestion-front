@@ -45,14 +45,15 @@
 
 		.dropdown-title {
 			width: auto;
-
+			
 			&:after {
 				display: none;
 			}
 		}
-
+		
 		.dropdown-target {
 			position: absolute;
+			overflow: visible;
 			top: 100%;
 			margin-top: .5rem;
 			right: 0;
@@ -70,6 +71,18 @@
 					&:first-child {
 						margin-top: 0;
 					}
+
+					& + li {
+						list-style-type: disc;
+						margin-left: 1rem;
+					}
+				}
+
+				li:first-child,
+				li:first-child + li {
+					list-style: none;
+					margin: 0
+
 				}
 			}
 		}

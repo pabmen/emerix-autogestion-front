@@ -553,6 +553,14 @@ html.no-scroll body {
   margin: 0 auto;
 }
 
+@media all and (min-width: 1025px) {
+  .emerix-page .pages-container .restrict-desktop {
+    width: calc(100% - 10rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 @media all and (min-width: 599px) {
   .emerix-page .mobile-only {
     display: none;
@@ -1623,6 +1631,7 @@ html.no-scroll body {
 
 .emerix-page .topbar .notifications-menu .dropdown-target {
   position: absolute;
+  overflow: visible;
   top: 100%;
   margin-top: .5rem;
   right: 0;
@@ -1641,6 +1650,17 @@ html.no-scroll body {
 
 .emerix-page .topbar .notifications-menu .dropdown-target ul li:first-child {
   margin-top: 0;
+}
+
+.emerix-page .topbar .notifications-menu .dropdown-target ul li + li {
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+.emerix-page .topbar .notifications-menu .dropdown-target ul li:first-child,
+.emerix-page .topbar .notifications-menu .dropdown-target ul li:first-child + li {
+  list-style: none;
+  margin: 0;
 }
 
 @media all and (max-width: 598px) {
