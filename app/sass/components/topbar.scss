@@ -29,6 +29,10 @@
 		color: $violet;
 	}
 
+	.dropdown-target {
+		display: none;
+	}
+
 	.notifications-menu {
 		position: relative;
 		margin-left: 4rem;
@@ -45,6 +49,7 @@
 
 		.dropdown-title {
 			width: auto;
+			cursor: pointer;
 			
 			&:after {
 				display: none;

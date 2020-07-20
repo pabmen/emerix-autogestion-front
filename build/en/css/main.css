@@ -1606,6 +1606,10 @@ html.no-scroll body {
   color: #8569b4;
 }
 
+.emerix-page .topbar .dropdown-target {
+  display: none;
+}
+
 .emerix-page .topbar .notifications-menu {
   position: relative;
   margin-left: 4rem;
@@ -1623,6 +1627,7 @@ html.no-scroll body {
 
 .emerix-page .topbar .notifications-menu .dropdown-title {
   width: auto;
+  cursor: pointer;
 }
 
 .emerix-page .topbar .notifications-menu .dropdown-title:after {
