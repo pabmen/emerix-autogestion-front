@@ -17,6 +17,8 @@ $btn-border-color: transparent;
 	color: $btn-text;
 	display: inline-block;
 	padding: 1.25rem 3rem;
+	position: relative;
+	left: -.5rem;
 	text-transform: uppercase;
 	cursor: pointer;
 	outline: none;

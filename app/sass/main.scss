@@ -34,6 +34,20 @@ body {
 	//overscroll-behavior: none;
 }
 
+html {
+    font-size: 16px;
+    
+    // Box-sizing reset. Best for responsive and sizing in general! The old one is content-box.
+    &,
+    * {
+        box-sizing: border-box;
+    }
+
+    @media all and (max-width: $mobileWidth) {
+        font-size: 14px;
+    }
+}
+
 html.no-scroll {
     overflow: hidden;
 

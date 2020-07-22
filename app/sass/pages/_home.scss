@@ -113,3 +113,30 @@
         }
     }
 }
+
+@media all and (max-width: $mobileWidth) {
+    .page-home {
+        .date {
+            margin-top: 0;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        .flex-column-on-mobile {
+            .flex-center {
+                align-items: flex-start;
+            }
+        }
+
+        .wide-link {
+            margin-top: 1rem;
+            margin-bottom: -.5rem;
+        }
+
+        .list-view-add {
+            display: none;
+        }
+    }
+}

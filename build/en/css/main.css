@@ -385,6 +385,21 @@ body {
   font-style: normal;
 }
 
+html {
+  font-size: 16px;
+}
+
+html,
+html * {
+  box-sizing: border-box;
+}
+
+@media all and (max-width: 598px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 html.no-scroll {
   overflow: hidden;
 }
@@ -407,29 +422,6 @@ html.no-scroll body {
 
 .emerix-page > * {
   min-height: 100%;
-}
-
-.emerix-page html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-@media screen and (max-width: 768px) {
-  .emerix-page html.desktop {
-    font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 598px) {
-  .emerix-page html.desktop {
-    font-size: 16px;
-  }
-}
-
-@media all and (max-width: 320px) {
-  .emerix-page html, .emerix-page body {
-    font-size: 16px;
-  }
 }
 
 .emerix-page *, .emerix-page *:before, .emerix-page *:after {
@@ -485,10 +477,6 @@ html.no-scroll body {
 
 .emerix-page svg path {
   fill: inherit;
-}
-
-.emerix-page sup {
-  top: -0.8em;
 }
 
 .emerix-page .relative {
@@ -1116,6 +1104,8 @@ html.no-scroll body {
   color: #fff;
   display: inline-block;
   padding: 1.25rem 3rem;
+  position: relative;
+  left: -.5rem;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
@@ -1727,6 +1717,22 @@ html.no-scroll body {
   font-weight: bold;
 }
 
+.emerix-page sup {
+  top: -0.8em;
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .text-xxlarge {
+    font-size: 2.6rem;
+  }
+  .emerix-page .text-xlarge {
+    font-size: 1.6rem;
+  }
+  .emerix-page sup {
+    top: -0.65em;
+  }
+}
+
 .emerix-page .page-login {
   height: 100%;
   /*.phone-list {
@@ -2007,6 +2013,25 @@ html.no-scroll body {
 
 .emerix-page .page-home .list-view-add:hover {
   background-image: url("/assets/images/ui/btn-agregar-active.svg");
+}
+
+@media all and (max-width: 598px) {
+  .emerix-page .page-home .date {
+    margin-top: 0;
+  }
+  .emerix-page .page-home .btn {
+    width: 100%;
+  }
+  .emerix-page .page-home .flex-column-on-mobile .flex-center {
+    align-items: flex-start;
+  }
+  .emerix-page .page-home .wide-link {
+    margin-top: 1rem;
+    margin-bottom: -.5rem;
+  }
+  .emerix-page .page-home .list-view-add {
+    display: none;
+  }
 }
 
 .emerix-page .page-invoice {

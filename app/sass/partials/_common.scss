@@ -1,33 +1,5 @@
 @import '../vars';
 
-// Box-sizing reset. Best for responsive and sizing in general! The old one is content-box.
-html {
-	box-sizing: border-box;
-
-	// todo: all these fixed font sizes
-	font-size: 16px;
-}
-
-@media screen and (max-width: 768px) {
-	html.desktop {
-		font-size: 16px;
-	}
-}
-
-@media screen and (max-width: $mobileWidth) {
-	html.desktop {
-		font-size: 16px;
-	}
-}
-
-@media all and (max-width: 320px) {
-	html, body {
-		// todo: review fixed font size
-		font-size: 16px;
-	}
-}
-
-
 *, *:before, *:after {
 	box-sizing: inherit; //box-sizing : border-box;
 	-webkit-tap-highlight-color: transparent;
@@ -90,10 +62,6 @@ svg {
 	path {
 		fill: inherit;
 	}
-}
-
-sup {
-	top: -0.8em;
 }
 
 .relative {
@@ -171,19 +139,13 @@ hr {
 	}
 }
 
-@media all and (min-width: 599px) {
+@media all and (min-width: $mobileWidth + 1) {
 	.mobile-only {
 		display: none;
 	}
 }
 
 @media all and (max-width: $mobileWidth) {
-	.pages-container {
-		& > * {
-			//padding: 0;
-		}
-	}
-
 	.desktop-only {
 		display: none;
 	}
