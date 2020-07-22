@@ -67,10 +67,10 @@
     .bullet {
         display: inline-block;
         vertical-align: middle;
-        width: .25rem;
-        height: .25rem;
+        width: 1.1rem;
+        height: 1.1rem;
         border-radius: 1rem;
-        border: .4rem solid;
+        border: 5px solid;
         margin-right: .5rem;
 
         &.green {border-color: $green;}
