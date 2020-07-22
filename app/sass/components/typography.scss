@@ -31,7 +31,9 @@
 
 
 h1 {
+	font-size: 2.25rem;
 	color: $black;
+	margin-bottom: 1em;
 }
 
 h2, h3, h4, h5 {
@@ -60,5 +62,9 @@ sup {
 
 	sup {
 		top: -0.65em;
+	}
+
+	h1 {
+		font-size: 1.85rem;
 	}
 }

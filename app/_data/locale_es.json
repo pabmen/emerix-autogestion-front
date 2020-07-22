@@ -254,6 +254,7 @@
 		"invoice": {
 			"title": "Tus productos",
 			"table": {
+				"colsClasses": ["col-1-6", "col-1-6", "col-1-6", "col-1-6", "col-1-6", "col-1-6"],
 				"header": [
 					"Producto",
 					"Ejemplo",

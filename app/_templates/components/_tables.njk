@@ -6,7 +6,7 @@
             {% if content.header %}
             <tr class="table-header">
                 {% for headItem in content.header%}
-                <td style="width: {{ 100 / content.header.length }}%">
+                <td {% if content.colsClasses %}class="{{ content.colsClasses[loop.index - 1] }}"{% else %}style="width: {{ 100 / content.header.length }}%"{% endif %}>
                     {% if loop.first and options.specialType == 'checkbox' %}
                     {{ input({
                         'type': 'checkbox',
@@ -25,7 +25,7 @@
                 {% set outeridx = loop %}
                 <tr>
                     {% for column in row %}
-                    <td style="width: {{ 100 / row.length }}%">
+                    <td {% if content.colsClasses %}class="{{ content.colsClasses[loop.index - 1] }}"{% else %}style="width: {{ 100 / row.length }}%"{% endif %}>
                         {% if loop.first and options.specialType == 'checkbox' %}
                             {{ input({
                                 'type': 'checkbox',
