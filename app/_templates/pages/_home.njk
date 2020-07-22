@@ -3,12 +3,12 @@
 	<div class="flex-row flex-column-on-mobile justify-center">
 		<div class="flex-column flex-grow home-area">
 			<div class="box">
-				<p>{{ page.status.title }}</p>
-				<p class="text-xxlarge text-nowrap">$ 10590,57</p>
+				<p class="first-row">{{ page.status.title }}</p>
+				<p class="text-nowrap current-debt"><span class="text-xlarge">$</span> <span class="text-xxlarge">10590</span> <sup class="text-large">57</sup></p>
 				<p>{{ page.status.count }}</p>
-				<p class="text-large">6</p>
-				<p>{{ page.status.due }}</p>
-				<p><strong>10/06/19</strong></p>
+				<p class="text-xlarge">6</p>
+				<p class="cant-products">{{ page.status.due }}</p>
+				<p class="date"><strong>10/06/19</strong></p>
 				<button class="btn">{{ page.status.btn }}</button>
 			</div>
 			<div class="box">
@@ -37,7 +37,7 @@
 		</div>
 		<div class="flex-column flex-grow home-area">
 			<div class="box">
-				<p class="text-center"><img src="{{ page.promotions.src }}" alt=""></p>
+				<img src="{{ page.promotions.src }}" alt="" class="img-responsive benefit-prom">
 				<hr>
 				<p class="wide-link"><a href="#">{{ page.promotions.view }}</a></p>
 			</div>

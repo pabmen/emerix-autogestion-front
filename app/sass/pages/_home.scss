@@ -8,15 +8,38 @@
         max-width: 450px;
     }
 
+    .first-row {
+        margin-top: 0;
+    }
+
+    .current-debt {
+        margin: 1rem 0 2rem;
+    }
+
+    .date {
+        margin-top: -.5rem;
+    }
+
+    .cant-products {
+        margin: 1rem 0;
+    }
+
+    .benefit-prom {
+        margin-bottom: 1.5rem;
+    }
+
+    .list-view-title h2 {
+        margin: 0;
+    }
+
     .payment-plans,
     .promises-latest {
-    
         margin: 0 -2rem;
         padding: 1rem 2rem;
         border-bottom: 1px solid $smoke;
     
         p  {
-            margin-top: 0.25;
+            margin-top: 0.5rem;
             margin-bottom: 0;
         }
     
@@ -56,6 +79,7 @@
     }
 
     .wide-link {
+        margin-top: 1.5rem;
         margin-bottom: 0;
     
         a {
@@ -67,9 +91,9 @@
             color: $black;
             
             &:after {
-                content: '>';
+                content: url("/assets/images/ui/buttons/link-go.svg");
                 position: absolute;
-                top: 50%;
+                top: 60%;
                 right: 0;
                 transform: translate(0, -50%);
             }

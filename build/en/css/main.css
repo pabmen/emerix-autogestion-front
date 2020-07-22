@@ -487,6 +487,10 @@ html.no-scroll body {
   fill: inherit;
 }
 
+.emerix-page sup {
+  top: -0.8em;
+}
+
 .emerix-page .relative {
   position: relative;
 }
@@ -1111,7 +1115,7 @@ html.no-scroll body {
   margin: .5rem;
   color: #fff;
   display: inline-block;
-  padding: 1rem 3rem;
+  padding: 1.25rem 3rem;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
@@ -1681,7 +1685,7 @@ html.no-scroll body {
 }
 
 .emerix-page .text-xxlarge {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -1894,6 +1898,30 @@ html.no-scroll body {
   max-width: 450px;
 }
 
+.emerix-page .page-home .first-row {
+  margin-top: 0;
+}
+
+.emerix-page .page-home .current-debt {
+  margin: 1rem 0 2rem;
+}
+
+.emerix-page .page-home .date {
+  margin-top: -.5rem;
+}
+
+.emerix-page .page-home .cant-products {
+  margin: 1rem 0;
+}
+
+.emerix-page .page-home .benefit-prom {
+  margin-bottom: 1.5rem;
+}
+
+.emerix-page .page-home .list-view-title h2 {
+  margin: 0;
+}
+
 .emerix-page .page-home .payment-plans,
 .emerix-page .page-home .promises-latest {
   margin: 0 -2rem;
@@ -1903,7 +1931,7 @@ html.no-scroll body {
 
 .emerix-page .page-home .payment-plans p,
 .emerix-page .page-home .promises-latest p {
-  margin-top: 0.25;
+  margin-top: 0.5rem;
   margin-bottom: 0;
 }
 
@@ -1946,6 +1974,7 @@ html.no-scroll body {
 }
 
 .emerix-page .page-home .wide-link {
+  margin-top: 1.5rem;
   margin-bottom: 0;
 }
 
@@ -1959,9 +1988,9 @@ html.no-scroll body {
 }
 
 .emerix-page .page-home .wide-link a:after {
-  content: '>';
+  content: url("/assets/images/ui/buttons/link-go.svg");
   position: absolute;
-  top: 50%;
+  top: 60%;
   right: 0;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
@@ -2059,6 +2088,7 @@ html.no-scroll body {
 
 .emerix-page .page-deals .table .input-wrapper {
   margin-bottom: 0;
+  height: 1rem;
 }
 
 .emerix-page .page-deals .table.disabled {
@@ -2172,6 +2202,7 @@ html.no-scroll body {
 
 .emerix-page .page-pay .table .input-wrapper {
   margin-bottom: 0;
+  height: 1rem;
 }
 
 .emerix-page .page-pay .table.disabled {
