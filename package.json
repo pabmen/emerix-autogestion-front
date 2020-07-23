@@ -5,6 +5,7 @@
 	"main": "./app/js/main.js",
 	"module": "./app/js/main.js",
 	"scripts": {
+		"test": "node testing/default.js",
 		"build": "gulp build",
 		"stage": "gulp stage",
 		"start": "gulp dev"
@@ -12,17 +13,20 @@
 	"author": "Pablo Mendoza",
 	"license": "ISC",
 	"dependencies": {
-		"core-js": "^3.6.0",
+		"core-js": "^3.6.5",
 		"ismobilejs": "^0.5.2",
 		"normalize.css": "^8.0.1",
-		"regenerator-runtime": "^0.13.3"
+		"puppeteer": "^1.7.0",
+		"puppeteer-core": "^5.2.1",
+		"regenerator-runtime": "^0.13.3",
+		"sass": "^1.26.10"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.4.5",
 		"@babel/preset-env": "^7.4.5",
 		"autoprefixer": "^9.6.0",
 		"babel-loader": "^8.0.6",
-		"browser-sync": "^2.26.7",
+		"browser-sync": "^2.26.10",
 		"css-loader": "^3.2.0",
 		"cssnano": "^4.1.7",
 		"del": "^5.0.0",
