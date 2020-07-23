@@ -8,10 +8,10 @@
 	}
 
 	.form {
-		max-width: 22rem;
+		max-width: 28rem;
 		margin-left: auto;
 		margin-right: auto;
-		padding: 3rem;
+		padding: 2.5rem;
 	}
 
 	.bg-container {
@@ -101,9 +101,9 @@
 
 }
 
-.overlay .login-dialog {
+.overlay .login-dialog.dialog-container {
 	margin: 0;
-	width: 28.125rem - 4rem;
+	width: 28.125rem;
 
 	h1, h2 {
 		color: $black;

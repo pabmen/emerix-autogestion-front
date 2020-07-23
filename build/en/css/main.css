@@ -905,7 +905,7 @@ html.no-scroll body {
 }
 
 .emerix-page .input-wrapper select {
-  height: 1.25rem;
+  line-height: 1.25rem;
   padding: calc((1.5rem - 1rem) / 2) 0;
   -webkit-appearance: none;
   font-family: inherit;
@@ -1028,7 +1028,6 @@ html.no-scroll body {
 
 @media all and (max-width: 1024px) {
   .emerix-page .input-wrapper select {
-    height: 1.5rem;
     padding: .35rem 0;
     -webkit-appearance: none;
   }
@@ -1797,10 +1796,10 @@ html.no-scroll body {
 }
 
 .emerix-page .page-login .form {
-  max-width: 22rem;
+  max-width: 28rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 3rem;
+  padding: 2.5rem;
 }
 
 .emerix-page .page-login .bg-container {
@@ -1879,12 +1878,12 @@ html.no-scroll body {
   padding-left: .5rem;
 }
 
-.emerix-page .overlay .login-dialog {
+.emerix-page .overlay .login-dialog.dialog-container {
   margin: 0;
-  width: 24.125rem;
+  width: 28.125rem;
 }
 
-.emerix-page .overlay .login-dialog h1, .emerix-page .overlay .login-dialog h2 {
+.emerix-page .overlay .login-dialog.dialog-container h1, .emerix-page .overlay .login-dialog.dialog-container h2 {
   color: #000;
 }
 
@@ -1941,7 +1940,8 @@ html.no-scroll body {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .emerix-page .overlay .login-dialog h1, .emerix-page .overlay .login-dialog h2 {
+  .emerix-page .overlay .login-dialog h1,
+  .emerix-page .overlay .login-dialog h2 {
     color: #000;
   }
 }
