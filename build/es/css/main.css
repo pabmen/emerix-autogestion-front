@@ -1090,8 +1090,9 @@ html.no-scroll body {
   background-color: #FF6A29;
 }
 
-.emerix-page .breadcrumb-container .breadcrumb.last-of-type:after {
+.emerix-page .breadcrumb-container .breadcrumb + :not(.active):before {
   background-color: #c1c1c1;
+  width: 2rem;
 }
 
 .emerix-page .btn {

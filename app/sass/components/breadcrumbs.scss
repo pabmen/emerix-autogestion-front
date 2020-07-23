@@ -58,9 +58,10 @@
             }
         }
 
-        &.last-of-type {
-            &:after {
+        & + :not(.active) {
+            &:before {
                 background-color: $lightgray;
+                width: 2rem;
             }
         }
     }
