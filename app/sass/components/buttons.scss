@@ -20,6 +20,9 @@ $btn-border-color: transparent;
 	cursor: pointer;
 	outline: none;
 
+	& + .btn {
+		margin-left: .5rem;
+	}
 
 	&:hover {
 		background-color: $btn-color-hover;
