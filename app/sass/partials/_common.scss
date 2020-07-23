@@ -129,7 +129,7 @@ hr {
 		margin: 0 auto;
 	}
 
-	@media all and (min-width: $desktopWidth + 1) {
+	@media all and (min-width: $mobileWidth + 1) {
 		.restrict-desktop {
 			width: calc(100% - 10rem);
 			margin-left: auto;

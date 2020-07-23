@@ -394,7 +394,7 @@ html * {
   box-sizing: border-box;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   html {
     font-size: 14px;
   }
@@ -553,13 +553,13 @@ html.no-scroll body {
   }
 }
 
-@media all and (min-width: 599px) {
+@media all and (min-width: 1025px) {
   .emerix-page .mobile-only {
     display: none;
   }
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .desktop-only {
     display: none;
   }
@@ -789,7 +789,7 @@ html.no-scroll body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1026,7 +1026,7 @@ html.no-scroll body {
   opacity: 1;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .input-wrapper select {
     height: 1.5rem;
     padding: .35rem 0;
@@ -1099,13 +1099,10 @@ html.no-scroll body {
   background: #8569b4;
   border-radius: 1.75rem;
   border: 1px solid transparent;
-  box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-  margin: .5rem;
   color: #fff;
   display: inline-block;
   padding: 1.25rem 3rem;
   position: relative;
-  left: -.5rem;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
@@ -1145,7 +1142,7 @@ html.no-scroll body {
   color: inherit;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .btn {
     padding: 1rem 1.5rem;
   }
@@ -1204,7 +1201,7 @@ html.no-scroll body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1376,7 +1373,7 @@ html.no-scroll body {
           transform: translate(0, -50%) scale(-1);
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .main-navigation {
     position: absolute;
     top: 2rem;
@@ -1424,7 +1421,7 @@ html.no-scroll body {
   margin-top: 2rem;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .sidebar-content p {
     margin: .5rem 0;
   }
@@ -1530,7 +1527,7 @@ html.no-scroll body {
   align-items: center;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .table-container .table tr {
     padding: 1rem;
   }
@@ -1543,7 +1540,7 @@ html.no-scroll body {
   flex-grow: 1;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .table-container .table td p {
     margin-bottom: 0;
   }
@@ -1563,13 +1560,13 @@ html.no-scroll body {
   background-color: #F6F6F5;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .table-container .table-header p {
     margin: .5rem 0;
   }
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .table-container .table tr:not(.table-header) {
     padding-top: 0;
     padding-bottom: 0;
@@ -1591,7 +1588,7 @@ html.no-scroll body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1711,7 +1708,7 @@ html.no-scroll body {
   margin: 0;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .topbar > * {
     margin-left: 2rem;
   }
@@ -1772,7 +1769,7 @@ html.no-scroll body {
   top: -0.8em;
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .text-xxlarge {
     font-size: 2.6rem;
   }
@@ -1891,13 +1888,13 @@ html.no-scroll body {
   color: #000;
 }
 
-@media all and (min-width: 599px) {
+@media all and (min-width: 1025px) {
   .emerix-page .page-login .logo {
     padding-top: 0;
   }
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .page-login {
     height: 100vh;
   }
@@ -2009,6 +2006,7 @@ html.no-scroll body {
   background-color: #F6F6F5;
   margin-left: -2rem;
   margin-right: -2rem;
+  margin-bottom: 0;
 }
 
 .emerix-page .page-home .bullet {
@@ -2069,7 +2067,7 @@ html.no-scroll body {
   background-image: url("/assets/images/ui/btn-agregar-active.svg");
 }
 
-@media all and (max-width: 598px) {
+@media all and (max-width: 1024px) {
   .emerix-page .page-home .date {
     margin-top: 0;
   }
