@@ -99,22 +99,40 @@
 		padding-left: .5rem;
 	}
 
+
 	#login_key {
 		text-align: center;
 		font-size: 3rem;
 		letter-spacing: 1rem;
-	} 
+	}
 
 }
 
-.overlay .login-dialog.dialog-container {
-	margin: 0;
-	width: 28.125rem;
-
-	h1, h2 {
-		color: $black;
+.overlay {
+	.login-dialog {
+		margin: 0;
+		width: 28.125rem;
+	
+		h1, h2 {
+			color: $black;
+		}
 	}
 
+	.dialog-content {
+		width: 100%;
+		padding: 1rem;
+	}
+
+	.login-tyc {
+		width: 45rem;
+		max-height: calc(100% - 2rem);
+	}
+
+	.login-tyc-content {
+		max-height: calc(100vh - 6rem);
+		overflow: hidden;
+		overflow-y: auto;
+	}
 }
 
 @media all and (min-width: $mobileWidth + 1) {
@@ -174,8 +192,8 @@
 			margin: 0;
 			top: 1rem;
 			left: 1rem;
-			height: calc(100vh - 6rem);
-			width: calc(100vw - 6rem);
+			height: calc(100vh - 2rem);
+			width: calc(100vw - 2rem);
 			transform: none;
 
 			display: flex;

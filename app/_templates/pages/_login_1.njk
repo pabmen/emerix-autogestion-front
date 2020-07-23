@@ -44,11 +44,14 @@
 {{ dialog(page.dialogs[1]) }}
 
 <script>
+	const HTML = document.querySelector('html')
 	document.querySelector('[data-dialog-target]').addEventListener('click', () => {
+		HTML.classList.add('no-scroll')
 		document.querySelector('.overlay').classList.add('active')
 	})
 
 	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		HTML.classList.remove('no-scroll')
 		document.querySelector('.overlay').classList.remove('active')
 	})
 </script>

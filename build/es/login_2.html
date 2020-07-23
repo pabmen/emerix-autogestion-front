@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-23 05:42:52';
+    window.buildDate = '2020-07-23 17:04:53';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -176,16 +176,20 @@
 
 
 <script>
+	const HTML = document.querySelector('html')
 	document.querySelector('[data-dialog-target="login-2"]').addEventListener('click', () => {
+		HTML.classList.add('no-scroll')
 		document.querySelectorAll('.overlay')[0].classList.add('active')
 	})
 	document.querySelector('[data-dialog-target="login-tyc"]').addEventListener('click', () => {
+		HTML.classList.add('no-scroll')
 		document.querySelectorAll('.overlay')[1].classList.add('active')
 	})
 
 	document.querySelectorAll('.overlay .close-btn').forEach((item) => {
 		item.addEventListener('click', () => {
 			document.querySelectorAll('.overlay').forEach((overlays) => {
+				HTML.classList.remove('no-scroll')
 				overlays.classList.remove('active')
 			})
 		})

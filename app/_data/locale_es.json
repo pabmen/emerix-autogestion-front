@@ -395,24 +395,7 @@
 						"$19450,87"
 					]
 				]
-			},
-			{
-				"header": [
-					"Promesa de pago",
-					"Vencimiento",
-					"Importe adeudado",
-					"Importe a pagar"
-				],
-				"data": [
-					[
-						"TC Visa 5400",
-						"08/10/20",
-						"$19450,87",
-						"$19450,87"
-					]
-				]
-			},
-			{
+			}, {
 				"header": [
 					"Plan de pago",
 					"Vencimiento",

@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-23 05:42:52';
+    window.buildDate = '2020-07-23 17:04:53';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -237,11 +237,14 @@
 
 
 <script>
+	const HTML = document.querySelector('html')
 	document.querySelector('[data-dialog-target]').addEventListener('click', () => {
+		HTML.classList.add('no-scroll')
 		document.querySelector('.overlay').classList.add('active')
 	})
 
 	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		HTML.classList.remove('no-scroll')
 		document.querySelector('.overlay').classList.remove('active')
 	})
 </script>
