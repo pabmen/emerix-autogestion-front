@@ -184,7 +184,29 @@ closeBtn.addEventListener('click', (e) => {
     closeBtn.closest('.overlay').classList.remove('active')
 })
 ```
+
 ---
+## Breadcrumbs
+Los breadcrumbs se arman con el siguiente HTML:
 
+```html
 
+<div class="breadcrumb-container flex-row flex-center" id="">
+    <ul class="flex-row">
+        <li class="active breadcrumb">
+            item1
+        </li>
+        <li class="active breadcrumb">
+            item2
+        </li>
+        <li class="active breadcrumb">
+            item3
+        </li>
+        <li class="breadcrumb">
+            item4
+        </li>
+    </ul>
+</div>
+```
 
+Al poner la clase **``active``** se podrá activar la serie de dots que esten remarcados en sucesión. Los textos _item1_, _item2_, etc solo están por accesibilidad, el texto tiene `color: transparent` y ``font-size: 0``
