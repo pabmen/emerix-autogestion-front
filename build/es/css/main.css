@@ -1879,6 +1879,12 @@ html.no-scroll body {
   padding-left: .5rem;
 }
 
+.emerix-page .page-login #login_key {
+  text-align: center;
+  font-size: 3rem;
+  letter-spacing: 1rem;
+}
+
 .emerix-page .overlay .login-dialog.dialog-container {
   margin: 0;
   width: 28.125rem;
