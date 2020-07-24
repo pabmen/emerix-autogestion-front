@@ -148,6 +148,13 @@
 	}
 
 
+	&.pay-third {
+		.form-padding {
+			padding-right: 2rem;
+		}
+	}
+
+
 	.payment-selector {
 		background-color: $white;
 

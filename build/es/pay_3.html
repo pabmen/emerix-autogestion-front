@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-24 13:41:04';
+    window.buildDate = '2020-07-24 14:03:21';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -88,6 +88,7 @@
 
 
 
+
 <div class="overlay" id="pay-sidebar">
     <div class="dialog-container sidebar" role="dialog">
         <a class="close-btn">
@@ -103,13 +104,11 @@
 
 <section class="page-pay pay-third restrict-desktop">
 	<h1>Registrar pago</h1>
-	<div class="payment-selector box">
-		<form class="form flex-column box" novalidate>
-            <div class="flex flex-column">
-                <div>
-                    <div class="form-group flex-row">
-                        <div class="flex-grow">
-                            
+    <form class="form flex-column box" novalidate>
+        <div class="flex-row">
+            <div class="flex-grow form-padding">
+                <div class="form-group">
+                    
 
 	
 
@@ -121,44 +120,60 @@
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-                        </div>
-                        <div class="">
-                            
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="form-group">
+                    
 	<div class="input-wrapper select">
 		<select id="" required>
 			
-			<option selected="selected" class="placeholder" value="">Total abonado</option>
+			<option selected="selected" class="placeholder" value="">Moneda</option>
 			
 			
-			<option value="Parcial">Parcial</option>
+			<option value="Dólar">Dólar</option>
 			
-			<option value="Parcial2">Parcial2</option>
+			<option value="Pesos">Pesos</option>
 			
 		</select>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row">
+            <div class="form-group flex-grow">
+                
 	<div class="input-wrapper select">
 		<select id="" required>
 			
 			<option selected="selected" class="placeholder" value="">Medio de pago</option>
 			
 			
+			<option value="Tarjeta">Tarjeta</option>
+			
+			<option value="Efectivo">Efectivo</option>
+			
+			<option value="Mercadopago">Mercadopago</option>
+			
+			<option value="Red Link/Rapipago">Red Link/Rapipago</option>
+			
+			<option value="Provincia Pagos">Provincia Pagos</option>
+			
 		</select>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-                    </div>
-                    <div class="form-group">
-                        <div class="flex-row flex-center">
-                            <div class="flex-column flex-center flex-grow">
-                                
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-grow form-padding">
+                <div class="form-group">
+                    
 
 	
 
@@ -170,9 +185,11 @@
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-                            </div>
-                            <div class="flex-column flex-center flex-grow">
-                                
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="form-group">
+                    
 	<div class="input-wrapper select">
 		<select id="" required>
 			
@@ -184,31 +201,20 @@
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="flex-row flex-center">
-                    <div class="flex-row flex-center">
-                        <div class="flex-column flex-center flex-grow">
-                            
-
-	
-
-
+            </div>
+        </div>
+            <div class="form-group">
+                
 	<div class="input-wrapper textarea">
-		<input id="" type="textarea" class="input-elem" placeholder="Comentario" required>
-		
+		<textarea id="" required placeholder="Comentarios">
+		</textarea>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-                        </div>
-                    </div>
-                </div>
             </div>
-        </form>
-	</div>
+    </form>
     <div class="flex-row flex-end">
 		<button class="btn next">Registrar pago</button>
 	</div>

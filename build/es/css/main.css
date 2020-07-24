@@ -916,6 +916,7 @@ html.no-scroll body {
   line-height: 1.25rem;
   padding: calc((1.5rem - 1rem) / 2) 0;
   -webkit-appearance: none;
+  width: 100%;
   font-family: inherit;
 }
 
@@ -926,6 +927,11 @@ html.no-scroll body {
 
 .emerix-page .input-wrapper select option:first-child {
   color: red;
+}
+
+.emerix-page .input-wrapper textarea {
+  width: 100%;
+  height: 6rem;
 }
 
 .emerix-page .input-wrapper input[type=radio]:checked ~ .input-fake-radio .input-caret {
@@ -2445,6 +2451,10 @@ html.no-scroll body {
 .emerix-page .page-pay.pay-second .table-3 tr td:nth-child(3),
 .emerix-page .page-pay.pay-second .table-3 tr td:nth-child(4) {
   text-align: right;
+}
+
+.emerix-page .page-pay.pay-third .form-padding {
+  padding-right: 2rem;
 }
 
 .emerix-page .page-pay .payment-selector {

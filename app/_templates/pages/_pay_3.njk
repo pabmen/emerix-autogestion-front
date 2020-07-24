@@ -2,6 +2,7 @@
 {% from "../components/_dialogs.njk" import dialog %}
 {% from "../components/_breadcrumbs.njk" import breadcrumb %}
 {% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import textarea %}
 {% from "../components/_forms.njk" import select %}
 
 {% set page = pages.pay_3 %}
@@ -10,66 +11,65 @@
 
 <section class="page-pay pay-third restrict-desktop">
 	<h1>Registrar pago</h1>
-	<div class="payment-selector box">
-		<form class="form flex-column box" novalidate>
-            <div class=" flex flex-column">
-                <div>
-                    <div class="form-group flex-row">
-                        <div class="flex-grow">
-                            {{ input({
-                                'id': '',
-                                'placeholder': 'Total abonado'
-                                })
-                            }}
-                        </div>
-                        <div class="">
-                            {{ select({
-                                'id': '',
-                                'items': ['Parcial', 'Parcial2'],
-                                'placeholder': 'Total abonado'
-                            }) }}
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        {{ select({
-                            'id': '',
-                            'items': page.page_1.genres,
-                            'placeholder': 'Medio de pago'
-                        }) }}
-                    </div>
-                    <div class="form-group">
-                        <div class="flex-row flex-center">
-                            <div class="flex-column flex-center flex-grow">
-                                {{ input({
-                                    'id': '',
-                                    'class': 'flex-center flex-column',
-                                    'placeholder': 'N° de comprobante'
-                                    })
-                                }}
-                            </div>
-                            <div class="flex-column flex-center flex-grow">
-                                {{ select({
-                                    'id': '',
-                                    'placeholder': 'Fecha'
-                                }) }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-row flex-center">
-                    <div class="flex-row flex-center">
-                        <div class="flex-column flex-center flex-grow">
-                            {{ input({
-                                'id': '',
-                                'type': 'textarea',
-                                'placeholder': 'Comentario'
-                            }) }}
-                        </div>
-                    </div>
+    <form class="form flex-column box" novalidate>
+        <div class="flex-row ">
+            <div class="flex-grow form-padding">
+                <div class="form-group">
+                    {{ input({
+                        'id': '',
+                        'placeholder': 'Total abonado'
+                        })
+                    }}
                 </div>
             </div>
-        </form>
-	</div>
+            <div class="flex-grow">
+                <div class="form-group">
+                    {{ select({
+                        'id': '',
+                        'items': ['Dólar', 'Pesos'],
+                        'placeholder': 'Moneda'
+                    }) }}
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-row">
+            <div class="form-group flex-grow">
+                {{ select({
+                    'id': '',
+                    'items': ['Tarjeta', 'Efectivo', 'Mercadopago', 'Red Link/Rapipago', 'Provincia Pagos'],
+                    'placeholder': 'Medio de pago'
+                }) }}
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="flex-grow form-padding">
+                <div class="form-group">
+                    {{ input({
+                        'id': '',
+                        'class': 'flex-center flex-column',
+                        'placeholder': 'N° de comprobante'
+                        })
+                    }}
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="form-group">
+                    {{ select({
+                        'id': '',
+                        'placeholder': 'Fecha'
+                    }) }}
+                </div>
+            </div>
+        </div>
+            <div class="form-group">
+                {{ textarea({
+                    'id': '',
+                    'type': 'textarea',
+                    'placeholder': 'Comentarios'
+                }) }}
+            </div>
+    </form>
     <div class="flex-row flex-end">
 		<button class="btn next">Registrar pago</button>
 	</div>
