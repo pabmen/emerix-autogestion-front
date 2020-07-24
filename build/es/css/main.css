@@ -1115,6 +1115,10 @@ html.no-scroll body {
   width: 2rem;
 }
 
+.emerix-page .buttons-container {
+  margin-top: 1.125rem;
+}
+
 .emerix-page .btn {
   background: linear-gradient(90deg, #8569B4 0%, #A388D1 100%);
   background-color: #8569b4;
@@ -2451,6 +2455,10 @@ html.no-scroll body {
 .emerix-page .page-pay.pay-second .table-3 tr td:nth-child(3),
 .emerix-page .page-pay.pay-second .table-3 tr td:nth-child(4) {
   text-align: right;
+}
+
+.emerix-page .page-pay.pay-third .wrapper {
+  max-width: 28rem;
 }
 
 .emerix-page .page-pay.pay-third .form-padding {

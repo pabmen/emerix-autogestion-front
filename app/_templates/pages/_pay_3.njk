@@ -11,68 +11,70 @@
 
 <section class="page-pay pay-third restrict-desktop">
 	<h1>Registrar pago</h1>
-    <form class="form flex-column box" novalidate>
-        <div class="flex-row ">
-            <div class="flex-grow form-padding">
-                <div class="form-group">
-                    {{ input({
-                        'id': '',
-                        'placeholder': 'Total abonado'
-                        })
-                    }}
+    <div class="wrapper">
+        <form class="form flex-column box" novalidate>
+            <div class="flex-row ">
+                <div class="flex-grow form-padding">
+                    <div class="form-group">
+                        {{ input({
+                            'id': '',
+                            'placeholder': 'Total abonado'
+                            })
+                        }}
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <div class="form-group">
+                        {{ select({
+                            'id': '',
+                            'items': ['Dólar', 'Pesos'],
+                            'placeholder': 'Moneda'
+                        }) }}
+                    </div>
                 </div>
             </div>
-            <div class="flex-grow">
-                <div class="form-group">
-                    {{ select({
-                        'id': '',
-                        'items': ['Dólar', 'Pesos'],
-                        'placeholder': 'Moneda'
-                    }) }}
-                </div>
-            </div>
-        </div>
 
-        <div class="flex-row">
-            <div class="form-group flex-grow">
-                {{ select({
-                    'id': '',
-                    'items': ['Tarjeta', 'Efectivo', 'Mercadopago', 'Red Link/Rapipago', 'Provincia Pagos'],
-                    'placeholder': 'Medio de pago'
-                }) }}
-            </div>
-        </div>
-        <div class="flex-row">
-            <div class="flex-grow form-padding">
-                <div class="form-group">
-                    {{ input({
-                        'id': '',
-                        'class': 'flex-center flex-column',
-                        'placeholder': 'N° de comprobante'
-                        })
-                    }}
-                </div>
-            </div>
-            <div class="flex-grow">
-                <div class="form-group">
+            <div class="flex-row">
+                <div class="form-group flex-grow">
                     {{ select({
                         'id': '',
-                        'placeholder': 'Fecha'
+                        'items': ['Tarjeta', 'Efectivo', 'Mercadopago', 'Red Link/Rapipago', 'Provincia Pagos'],
+                        'placeholder': 'Medio de pago'
                     }) }}
                 </div>
             </div>
-        </div>
-            <div class="form-group">
-                {{ textarea({
-                    'id': '',
-                    'type': 'textarea',
-                    'placeholder': 'Comentarios'
-                }) }}
+            <div class="flex-row">
+                <div class="flex-grow form-padding">
+                    <div class="form-group">
+                        {{ input({
+                            'id': '',
+                            'class': 'flex-center flex-column',
+                            'placeholder': 'N° de comprobante'
+                            })
+                        }}
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <div class="form-group">
+                        {{ select({
+                            'id': '',
+                            'placeholder': 'Fecha'
+                        }) }}
+                    </div>
+                </div>
             </div>
-    </form>
-    <div class="flex-row flex-end">
-		<button class="btn next">Registrar pago</button>
-	</div>
+                <div class="form-group">
+                    {{ textarea({
+                        'id': '',
+                        'type': 'textarea',
+                        'placeholder': 'Comentarios'
+                    }) }}
+                </div>
+        </form>
+        <div class="flex-row flex-end buttons-container">
+            <button class="btn next">Registrar pago</button>
+        </div>
+    </div>
 </section>
 
 

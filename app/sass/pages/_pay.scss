@@ -149,6 +149,9 @@
 
 
 	&.pay-third {
+		.wrapper {
+			max-width: 28rem;
+		}
 		.form-padding {
 			padding-right: 2rem;
 		}

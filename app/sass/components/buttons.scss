@@ -7,6 +7,9 @@ $btn-color-active: #4D2378;
 $btn-radius: 1.750rem;
 $btn-border-color: transparent;
 
+.buttons-container {
+	margin-top: 1.125rem;
+}
 
 .btn {
 	background: $btn-color-gradient;
