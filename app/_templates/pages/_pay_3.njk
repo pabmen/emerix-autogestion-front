@@ -1,0 +1,75 @@
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_dialogs.njk" import dialog %}
+{% from "../components/_breadcrumbs.njk" import breadcrumb %}
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+
+{% set page = pages.pay_1 %}
+
+{{ dialog(page.sidebar) }}
+
+<section class="page-pay pay-third restrict-desktop">
+	<h1>Registrar pago</h1>
+	<div class="payment-selector box">
+		<form class="form flex-column box" novalidate>
+            <div class=" flex flex-column">
+                <div>
+                    <div class="form-group flex-row">
+                        <div class="flex-grow">
+                            {{ input({
+                                'id': '',
+                                'placeholder': 'Total abonado'
+                                })
+                            }}
+                        </div>
+                        <div class="">
+                            {{ select({
+                                'id': 'login_dni_type',
+                                'items': page.page_1.dni_types,
+                                'placeholder': 'Total abonado'
+                            }) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ select({
+                            'id': '',
+                            'items': page.page_1.genres,
+                            'placeholder': 'Medio de pago'
+                        }) }}
+                    </div>
+                    <div class="form-group">
+                        <div class="flex-row flex-center">
+                            <div class="flex-column flex-center flex-grow">
+                                {{ input({
+                                    'id': '',
+                                    'class': 'flex-center flex-column',
+                                    'placeholder': 'N° de comprobante'
+                                    })
+                                }}
+                            </div>
+                            <div class="flex-column flex-center flex-grow">
+                                {{ select({
+                                    'id': '',
+                                    'placeholder': 'Fecha'
+                                }) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-row flex-center">
+                    <div class="flex-row flex-center">
+                        <div class="flex-column flex-center flex-grow">
+                            {{ select({
+                                'id': '',
+                                'placeholder': 'Fecha'
+                            }) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+	</div>
+    <div class="flex-row flex-end">
+		<button class="btn">Registrar pago</button>
+	</div>
+</section>

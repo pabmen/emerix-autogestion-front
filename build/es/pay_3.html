@@ -85,135 +85,132 @@
 
 
 
-<section class="page-login">
-	<div class="flex-row flex-center flex-grow" style="height: 100%">
-		<div class="form-container">
-			<form class="form flex-column box" novalidate>
-				<div class="login-content flex flex-column">
-					<div>
-						<div class="flex-row flex-center">
-							<h1 class="visually-hidden">Emerix Login</h1>
-							<img class="logo" src="/assets/images/logos/emerix.png" alt="">
-						</div>
-						<div class="form-group flex-row">
-							<div class="login-dnitype-container">
-								
-	<div class="input-wrapper select">
-		<select id="login_dni_type" required>
-			
-			<option selected="selected" class="placeholder" value="">Documento</option>
-			
-			
-			<option value="DNI">DNI</option>
-			
-			<option value="LC">LC</option>
-			
-			<option value="Otro">Otro</option>
-			
-		</select>
-		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">Required</div>
-	</div>
 
-							</div>
-							<div class="flex-grow">
-								
+
+
+<div class="overlay" id="">
+    <div class="dialog-container" role="dialog">
+        <a class="close-btn">
+            <img src="/assets/images/ui/close-btn.svg" alt="Close">
+        </a>
+        <div class="dialog-content -content">
+            
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+<section class="page-pay pay-third restrict-desktop">
+	<h1>Registrar pago</h1>
+	<div class="payment-selector box">
+		<form class="form flex-column box" novalidate>
+            <div class="flex flex-column">
+                <div>
+                    <div class="form-group flex-row">
+                        <div class="flex-grow">
+                            
 
 	
 
 
 	<div class="input-wrapper text">
-		<input id="login_dni" type="text" class="input-elem" pattern="d*" minlength="Número" maxlength="Número" placeholder="Número" required>
+		<input id="" type="text" class="input-elem" placeholder="Total abonado" required>
 		
 		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">El número ingresado es incorrecto. </div>
+		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-							</div>
-						</div>
-						<div class="form-group">
-							
+                        </div>
+                        <div class="">
+                            
 	<div class="input-wrapper select">
-		<select id="login_genre" required>
+		<select id="login_dni_type" required>
 			
-			<option selected="selected" class="placeholder" value="">Género</option>
+			<option selected="selected" class="placeholder" value="">Total abonado</option>
 			
-			
-			<option value="Masculino">Masculino</option>
-			
-			<option value="Femenino">Femenino</option>
-			
-			<option value="Otro">Otro</option>
 			
 		</select>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-						</div>
-						<div class="form-group">
-							<p>Elegí cómo recibir <strong>la clave de acceso instantáneo</strong></p>
-							<div class="flex-row flex-center login-method">
-								<div class="flex-column flex-center flex-grow">
-									
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        
+	<div class="input-wrapper select">
+		<select id="" required>
+			
+			<option selected="selected" class="placeholder" value="">Medio de pago</option>
+			
+			
+		</select>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="flex-row flex-center">
+                            <div class="flex-column flex-center flex-grow">
+                                
 
 	
 
 
-	<div class="input-wrapper radio flex-center flex-column">
-		<input id="login-method-call" type="radio" class="input-elem visually-hidden" name="login-method" required>
-		
-			<div class="input-fake-radio">
-				<span class="input-caret"></span>
-			</div>
-			
-				<label for="login-method-call"><img src="/assets/images/ui/sms.svg"> Sms</label>
-			
+	<div class="input-wrapper text flex-center flex-column">
+		<input id="" type="text" class="input-elem" placeholder="N° de comprobante" required>
 		
 		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">El número ingresado es incorrecto. </div>
+		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-								</div>
-								<div class="flex-column flex-center flex-grow">
-									
-
-	
-
-
-	<div class="input-wrapper radio flex-center flex-column">
-		<input id="login-method-sms" type="radio" class="input-elem visually-hidden" name="login-method" required>
-		
-			<div class="input-fake-radio">
-				<span class="input-caret"></span>
-			</div>
+                            </div>
+                            <div class="flex-column flex-center flex-grow">
+                                
+	<div class="input-wrapper select">
+		<select id="" required>
 			
-				<label for="login-method-sms"><img src="/assets/images/ui/mail.svg"> Mail</label>
+			<option selected="selected" class="placeholder" value="">Fecha</option>
 			
-		
+			
+		</select>
 		<div class="input-error-icon" role="alert"></div>
-		<div class="input-error-popup" role="alert">El número ingresado es incorrecto. </div>
+		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="flex-row flex-center">
-						<button class="btn" data-direction="next">Siguiente</button>
-					</div>
-				</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-row flex-center">
+                    <div class="flex-row flex-center">
+                        <div class="flex-column flex-center flex-grow">
+                            
+	<div class="input-wrapper select">
+		<select id="" required>
+			
+			<option selected="selected" class="placeholder" value="">Fecha</option>
+			
+			
+		</select>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
 
-			</form>
-		</div>
-		<div class="bg-container">
-		</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+	</div>
+    <div class="flex-row flex-end">
+		<button class="btn">Registrar pago</button>
 	</div>
 </section>
         </div>
     </div>
-    <script>
-        document.querySelectorAll('.input-wrapper')[1].classList.add("error")
-    </script>
+
 </body>
 </html>

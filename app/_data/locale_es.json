@@ -457,24 +457,7 @@
 						"$19450,87"
 					]
 				]
-			},
-			{
-				"header": [
-					"Plan de pago",
-					"Vencimiento",
-					"Importe adeudado",
-					"Importe a pagar"
-				],
-				"data": [
-					[
-						"REFI TC VISA 5400 - 1/12",
-						"08/10/20",
-						"$19450,87",
-						"$19450,87"
-					]
-				]
-			}
-			]
+			}]
 		}
 	},
 
