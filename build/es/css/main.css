@@ -2466,15 +2466,15 @@ html.no-scroll body {
   margin-left: 2rem;
 }
 
-.emerix-page #deals-sidebar.active .sidebar {
+.emerix-page #pay-sidebar.active .sidebar {
   width: 100%;
 }
 
-.emerix-page #deals-sidebar.active .sidebar > div {
+.emerix-page #pay-sidebar.active .sidebar > div {
   padding: 1rem;
 }
 
-.emerix-page #deals-sidebar .dialog-container {
+.emerix-page #pay-sidebar .dialog-container {
   padding: 0;
   max-width: 320px;
   left: auto;
@@ -2493,7 +2493,7 @@ html.no-scroll body {
           transform: none;
 }
 
-.emerix-page #deals-sidebar .sidebar {
+.emerix-page #pay-sidebar .sidebar {
   position: absolute;
   top: 0;
   right: 0;
@@ -2503,13 +2503,13 @@ html.no-scroll body {
   transition: all 0.5s ease;
 }
 
-.emerix-page #deals-sidebar .close-btn {
+.emerix-page #pay-sidebar .close-btn {
   top: 0;
   right: 0;
   bottom: auto;
 }
 
-.emerix-page #deals-sidebar .close-btn img {
+.emerix-page #pay-sidebar .close-btn img {
   display: block;
   width: 1.188rem;
   height: 1.188rem;

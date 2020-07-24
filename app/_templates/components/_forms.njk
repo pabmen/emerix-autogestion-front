@@ -59,3 +59,19 @@
 		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>
 	</div>
 {% endmacro %}
+
+
+{% macro textarea(options) %}
+	<div class="input-wrapper select {{ options.class }}">
+		<textarea
+			id="{{ options.id }}"
+			{% if options.required == false %}{% else %}required {% endif %}
+			{% if options.placeholder %}
+			placeholder="{{ options.placeholder }}"
+			{% endif %}
+		>
+		</textarea>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>
+	</div>
+{% endmacro %}

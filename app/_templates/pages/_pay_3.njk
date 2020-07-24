@@ -4,7 +4,7 @@
 {% from "../components/_forms.njk" import input %}
 {% from "../components/_forms.njk" import select %}
 
-{% set page = pages.pay_1 %}
+{% set page = pages.pay_3 %}
 
 {{ dialog(page.sidebar) }}
 
@@ -24,8 +24,8 @@
                         </div>
                         <div class="">
                             {{ select({
-                                'id': 'login_dni_type',
-                                'items': page.page_1.dni_types,
+                                'id': '',
+                                'items': ['Parcial', 'Parcial2'],
                                 'placeholder': 'Total abonado'
                             }) }}
                         </div>
@@ -59,9 +59,10 @@
                 <div class="flex-row flex-center">
                     <div class="flex-row flex-center">
                         <div class="flex-column flex-center flex-grow">
-                            {{ select({
+                            {{ input({
                                 'id': '',
-                                'placeholder': 'Fecha'
+                                'type': 'textarea',
+                                'placeholder': 'Comentario'
                             }) }}
                         </div>
                     </div>
@@ -70,6 +71,21 @@
         </form>
 	</div>
     <div class="flex-row flex-end">
-		<button class="btn">Registrar pago</button>
+		<button class="btn next">Registrar pago</button>
 	</div>
 </section>
+
+
+<script>
+	document.querySelectorAll('.btn.next').forEach((tr) => {
+		tr.addEventListener('click', () => {
+			document.querySelector('#pay-sidebar').classList.add('active')
+			document.querySelector('html').classList.add('no-scroll')
+		})
+	})
+
+	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		document.querySelector('.overlay').classList.remove('active')
+		document.querySelector('html').classList.remove('no-scroll')
+	})
+</script>

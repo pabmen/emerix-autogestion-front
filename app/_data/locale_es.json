@@ -459,6 +459,13 @@
 				]
 			}]
 		},
+		"pay_3": {
+			"sidebar": {
+				"id": "pay-sidebar",
+				"class": "sidebar",
+				"content": "<div class='flex-column'><img src='https://placekitten.com/g/165/165' alt=''><h1>¡El pago se registró con éxito!</h1><p>En las próximas 48 horas vas a ver el saldo de tu deuda actualizada.</p><button class='btn'>Continuar</button></div>"
+			}
+		},
 		"pay_4": {
 			"title": "Pagar",
 			"tables": [

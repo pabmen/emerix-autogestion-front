@@ -55,7 +55,7 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 
 <script>
-    window.buildDate = '2020-07-24 04:23:24';
+    window.buildDate = '2020-07-24 13:41:04';
     console.warn('Build date: ', window.buildDate);
 </script>
 
@@ -88,14 +88,14 @@
 
 
 
-<div class="overlay" id="">
-    <div class="dialog-container" role="dialog">
+<div class="overlay" id="pay-sidebar">
+    <div class="dialog-container sidebar" role="dialog">
         <a class="close-btn">
             <img src="/assets/images/ui/close-btn.svg" alt="Close">
         </a>
-        <div class="dialog-content -content">
+        <div class="dialog-content sidebar-content">
             
-            <div></div>
+            <div><div class="flex-column"><img src="https://placekitten.com/g/165/165" alt=""><h1>¡El pago se registró con éxito!</h1><p>En las próximas 48 horas vas a ver el saldo de tu deuda actualizada.</p><button class="btn">Continuar</button></div></div>
         </div>
     </div>
 </div>
@@ -125,10 +125,14 @@
                         <div class="">
                             
 	<div class="input-wrapper select">
-		<select id="login_dni_type" required>
+		<select id="" required>
 			
 			<option selected="selected" class="placeholder" value="">Total abonado</option>
 			
+			
+			<option value="Parcial">Parcial</option>
+			
+			<option value="Parcial2">Parcial2</option>
 			
 		</select>
 		<div class="input-error-icon" role="alert"></div>
@@ -188,13 +192,13 @@
                     <div class="flex-row flex-center">
                         <div class="flex-column flex-center flex-grow">
                             
-	<div class="input-wrapper select">
-		<select id="" required>
-			
-			<option selected="selected" class="placeholder" value="">Fecha</option>
-			
-			
-		</select>
+
+	
+
+
+	<div class="input-wrapper textarea">
+		<input id="" type="textarea" class="input-elem" placeholder="Comentario" required>
+		
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
@@ -206,9 +210,24 @@
         </form>
 	</div>
     <div class="flex-row flex-end">
-		<button class="btn">Registrar pago</button>
+		<button class="btn next">Registrar pago</button>
 	</div>
 </section>
+
+
+<script>
+	document.querySelectorAll('.btn.next').forEach((tr) => {
+		tr.addEventListener('click', () => {
+			document.querySelector('#pay-sidebar').classList.add('active')
+			document.querySelector('html').classList.add('no-scroll')
+		})
+	})
+
+	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		document.querySelector('.overlay').classList.remove('active')
+		document.querySelector('html').classList.remove('no-scroll')
+	})
+</script>
         </div>
     </div>
 
