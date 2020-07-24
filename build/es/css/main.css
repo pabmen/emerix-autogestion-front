@@ -2371,6 +2371,7 @@ html.no-scroll body {
   background-color: #F6F6F5;
   border-radius: 1rem;
   padding: .5rem 1rem;
+  display: inline-block;
 }
 
 .emerix-page .page-pay .icon-inline {
