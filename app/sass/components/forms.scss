@@ -80,7 +80,12 @@ form {
 		font-family: inherit;
 
 		option {
-			font-family: sans-serif;;
+			font-family: sans-serif;
+			color: inherit;
+
+			&:first-child {
+				color: red;
+			}
 		}
 	}
 
