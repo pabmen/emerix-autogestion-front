@@ -42,8 +42,18 @@
 	}
 
 	.login-method {
+		input:hover ~ label,
 		input:checked ~ label {
 			border: 1px solid $btn-color;
+		}
+
+		input:checked ~ label:after {
+			content: url("/assets/images/ui/buttons/option_checked.svg");
+			position: absolute;
+			top: 60%;
+			left: auto;
+			right: 0;
+			transform: translate(0, -50%);
 		}
 		
 		label {
@@ -56,6 +66,7 @@
 			white-space: nowrap;
 			width: 100%;
 			text-align: center;
+			position: relative;
 
 			// radio button square helper assist
 			&:after {

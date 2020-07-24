@@ -9,7 +9,8 @@ $btn-border-color: transparent;
 
 
 .btn {
-	background: $btn-color;
+	background: $btn-color-gradient;
+	background-color: $btn-color;
 	border-radius: $btn-radius;
 	border: 1px solid transparent;
 	color: $btn-text;
@@ -24,13 +25,9 @@ $btn-border-color: transparent;
 		margin-left: .5rem;
 	}
 
-	&:hover {
-		background-color: $btn-color-hover;
-		outline: none;
-	}
-
+	&:hover,
 	&:active {
-		background-color: $btn-color-active;
+		background: $darkviolet;
 		outline: none;
 	}
 
@@ -40,15 +37,10 @@ $btn-border-color: transparent;
 		color: $btn-color;
 
 		&:hover,
-		&.hover {
+		&.hover,
+		&:active {
 			border: 1px solid $btn-color-hover;
 			color: $btn-color-hover;
-		}
-
-		&:active {
-			background-color: $btn-color-active;
-			border-color: $btn-color-active;
-			color: $btn-text;
 		}
 	}
 

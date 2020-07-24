@@ -1105,7 +1105,8 @@ html.no-scroll body {
 }
 
 .emerix-page .btn {
-  background: #8569b4;
+  background: linear-gradient(90deg, #8569B4 0%, #A388D1 100%);
+  background-color: #8569b4;
   border-radius: 1.75rem;
   border: 1px solid transparent;
   color: #fff;
@@ -1121,13 +1122,8 @@ html.no-scroll body {
   margin-left: .5rem;
 }
 
-.emerix-page .btn:hover {
-  background-color: #A388D1;
-  outline: none;
-}
-
-.emerix-page .btn:active {
-  background-color: #4D2378;
+.emerix-page .btn:hover, .emerix-page .btn:active {
+  background: #4D2378;
   outline: none;
 }
 
@@ -1137,15 +1133,9 @@ html.no-scroll body {
   color: #8569b4;
 }
 
-.emerix-page .btn.secondary:hover, .emerix-page .btn.secondary.hover {
+.emerix-page .btn.secondary:hover, .emerix-page .btn.secondary.hover, .emerix-page .btn.secondary:active {
   border: 1px solid #A388D1;
   color: #A388D1;
-}
-
-.emerix-page .btn.secondary:active {
-  background-color: #4D2378;
-  border-color: #4D2378;
-  color: #fff;
 }
 
 .emerix-page .btn a,
@@ -1843,8 +1833,19 @@ html.no-scroll body {
   margin-right: 2rem;
 }
 
+.emerix-page .page-login .login-method input:hover ~ label,
 .emerix-page .page-login .login-method input:checked ~ label {
   border: 1px solid #8569b4;
+}
+
+.emerix-page .page-login .login-method input:checked ~ label:after {
+  content: url("/assets/images/ui/buttons/option_checked.svg");
+  position: absolute;
+  top: 60%;
+  left: auto;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
 .emerix-page .page-login .login-method label {
@@ -1857,6 +1858,7 @@ html.no-scroll body {
   white-space: nowrap;
   width: 100%;
   text-align: center;
+  position: relative;
 }
 
 .emerix-page .page-login .login-method label:after {
