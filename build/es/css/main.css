@@ -948,7 +948,6 @@ html.no-scroll body {
   position: relative;
   margin-right: .5rem;
   pointer-events: none;
-  opacity: 0;
 }
 
 .emerix-page .input-wrapper .input-fake-radio .input-caret {
@@ -2284,6 +2283,10 @@ html.no-scroll body {
   color: #8569b4;
 }
 
+.emerix-page .page-deals .deal-mini .input-fake-radio {
+  opacity: 0;
+}
+
 .emerix-page .page-deals .deal-mini .payment-title {
   color: #c1c1c1;
   width: 60%;
@@ -2410,6 +2413,10 @@ html.no-scroll body {
 
 .emerix-page .page-pay .pay-mini input:checked ~ label .payment-title {
   color: #8569b4;
+}
+
+.emerix-page .page-pay .pay-mini .input-fake-radio {
+  opacity: 0;
 }
 
 .emerix-page .page-pay .pay-mini .payment-title {
