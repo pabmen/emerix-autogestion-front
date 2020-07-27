@@ -42,6 +42,9 @@
 	}
 
 	.login-method {
+					.input-fake-radio {
+						opacity: 0;
+					}
 		input:hover ~ label,
 		input:checked ~ label {
 			border: 1px solid $btn-color;
@@ -184,6 +187,8 @@
 			label {
 				padding: 1.5rem .5rem;
 			}
+
+
 		}
 
 		.login-content {

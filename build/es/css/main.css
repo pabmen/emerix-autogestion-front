@@ -1863,6 +1863,10 @@ html.no-scroll body {
   margin-right: 2rem;
 }
 
+.emerix-page .page-login .login-method .input-fake-radio {
+  opacity: 0;
+}
+
 .emerix-page .page-login .login-method input:hover ~ label,
 .emerix-page .page-login .login-method input:checked ~ label {
   border: 1px solid #8569b4;
