@@ -1,7 +1,7 @@
 .table-container {
     width: calc(100% - 1.25rem);
 
-    @media all and (min-width: 599px) {
+    @media all and (min-width: $mobileWidth) {
         background-color: $white;
         border: 1px solid transparentize($silver, .85);
         margin: .5rem;
@@ -42,6 +42,18 @@
 
                 p + p {
                     margin-top: 0;
+                }
+            }
+        }
+
+        .input-wrapper {
+            input[type=text] {
+                height: 1.25rem;
+                width: 75%;
+
+                @media all and (max-width: $mobileWidth) {
+                    text-align: left;
+                    width: auto;
                 }
             }
         }

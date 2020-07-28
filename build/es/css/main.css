@@ -1518,7 +1518,7 @@ html.no-scroll body {
   width: calc(100% - 1.25rem);
 }
 
-@media all and (min-width: 599px) {
+@media all and (min-width: 1024px) {
   .emerix-page .table-container {
     background-color: #fff;
     border: 1px solid rgba(152, 152, 152, 0.15);
@@ -1563,6 +1563,18 @@ html.no-scroll body {
   }
   .emerix-page .table-container .table td p + p {
     margin-top: 0;
+  }
+}
+
+.emerix-page .table-container .table .input-wrapper input[type=text] {
+  height: 1.25rem;
+  width: 75%;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .table-container .table .input-wrapper input[type=text] {
+    text-align: left;
+    width: auto;
   }
 }
 
