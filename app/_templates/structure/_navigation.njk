@@ -1,4 +1,11 @@
 {% from "../components/_dropdown.njk" import dropdown %}
+{% from "../components/_dialogs.njk" import dialog %}
+
+{{ dialog({
+		"id": "nav-overlay",
+		"class": "",
+		"content": ""
+	}) }}
 
 <nav class="main-navigation">
 	<input type="checkbox" class="visually-hidden mobile-menu-toggle" id="mobile-menu-toggle">
@@ -34,3 +41,27 @@
 		</ul>
 	</div>
 </nav>
+
+<script>
+	const mobileMenuBtn = document.querySelector('#mobile-menu-toggle')
+	const navOverlay = document.querySelector('#nav-overlay')
+
+
+	mobileMenuBtn.checked = false
+
+	mobileMenuBtn.addEventListener('click', () => {
+		console.log(mobileMenuBtn.getAttribute('checked'))
+
+		if (mobileMenuBtn.getAttribute('checked')) {
+			navOverlay.classList.remove('active')
+		} else {
+			navOverlay.classList.add('active')
+		}
+	})
+
+	navOverlay.addEventListener('click', () => {
+		//mobileMenuBtn.click()
+		navOverlay.classList.remove('active')
+		mobileMenuBtn.checked = false
+	})
+</script>
