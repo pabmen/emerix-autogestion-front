@@ -849,6 +849,20 @@ html.no-scroll body {
   pointer-events: none;
 }
 
+.emerix-page .input-wrapper.date {
+  position: relative;
+}
+
+.emerix-page .input-wrapper.date:after {
+  content: url("/assets/images/ui/date_icon.svg");
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
 .emerix-page .input-wrapper input[type=text],
 .emerix-page .input-wrapper input[type=email],
 .emerix-page .input-wrapper input[type=search],
@@ -863,6 +877,7 @@ html.no-scroll body {
 
 .emerix-page .input-wrapper textarea,
 .emerix-page .input-wrapper input[type=text],
+.emerix-page .input-wrapper input[type=date],
 .emerix-page .input-wrapper input[type=url],
 .emerix-page .input-wrapper input[type=mail],
 .emerix-page .input-wrapper input[type=textarea],
@@ -879,6 +894,9 @@ html.no-scroll body {
 .emerix-page .input-wrapper input[type=text],
 .emerix-page .input-wrapper input[type=text]:active,
 .emerix-page .input-wrapper input[type=text]:active,
+.emerix-page .input-wrapper input[type=date],
+.emerix-page .input-wrapper input[type=date]:active,
+.emerix-page .input-wrapper input[type=date]:active,
 .emerix-page .input-wrapper input[type=url],
 .emerix-page .input-wrapper input[type=url]:active,
 .emerix-page .input-wrapper input[type=url]:active,
@@ -2346,6 +2364,38 @@ html.no-scroll body {
 .emerix-page .page-deals .deal-mini label {
   padding: 0;
   margin: 0;
+}
+
+.emerix-page .page-deals .box.active, .emerix-page .page-deals .overlay .active.dialog-container, .emerix-page .overlay .page-deals .active.dialog-container, .emerix-page .page-deals .topbar .notifications-menu .dropdown-target ul.active, .emerix-page .topbar .notifications-menu .dropdown-target .page-deals ul.active {
+  border: 1px solid #8569b4;
+}
+
+.emerix-page .page-deals .box.active .payment-title, .emerix-page .page-deals .overlay .active.dialog-container .payment-title, .emerix-page .overlay .page-deals .active.dialog-container .payment-title, .emerix-page .page-deals .topbar .notifications-menu .dropdown-target ul.active .payment-title, .emerix-page .topbar .notifications-menu .dropdown-target .page-deals ul.active .payment-title {
+  color: #8569b4;
+}
+
+.emerix-page .page-deals .custom-date-selector .date-wrapper {
+  display: none;
+  position: relative;
+  align-items: center;
+}
+
+.emerix-page .page-deals .custom-date-selector .date-wrapper .date {
+  margin-right: .5rem;
+  margin-bottom: 0;
+}
+
+.emerix-page .page-deals .custom-date-selector .date-wrapper img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.emerix-page .page-deals .custom-date-selector.active .select-wrapper {
+  display: none;
+}
+
+.emerix-page .page-deals .custom-date-selector.active .date-wrapper {
+  display: flex;
 }
 
 .emerix-page #deals-sidebar {

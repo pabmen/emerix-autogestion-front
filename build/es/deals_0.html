@@ -675,10 +675,11 @@
 
 		</div>
 		<div>
-			<div class="box flex-row flex-center">
+			<div class="box flex-row flex-center active">
 				<div class="payment-title">PERIODO</div>
-				<div class="text-right flex-grow">
-					
+				<div class="text-right flex-grow custom-date-selector">
+					<div class="select-wrapper">
+						
 	<div class="input-wrapper select">
 		<select id="deal_selec" required>
 			
@@ -696,6 +697,22 @@
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
+					</div>
+					<div class="date-wrapper">
+						
+
+	
+
+
+	<div class="input-wrapper date">
+		<input id="date_select_date" type="date" class="input-elem" required>
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+						<img id="close-date" class="close-icn" src="assets/images/ui/close-btn.svg" alt="">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -704,6 +721,24 @@
 		</div>
 	</form>
 </section>
+
+<script>
+	const wrapper = document.querySelector('.custom-date-selector')
+	const select = document.querySelector('#deal_selec')
+	const close = document.querySelector('#close-date')
+
+	select.addEventListener('change', () => {
+		console.log(select.value)
+		if (select.value === 'Elegir fecha') {
+			wrapper.classList.add('active')
+		}
+	})
+
+	close.addEventListener('click', () => {
+		wrapper.classList.remove('active')
+		select.value = select[0].value
+	})
+</script>
 		</div>
 	</div>
 </body>

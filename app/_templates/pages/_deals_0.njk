@@ -49,14 +49,23 @@
 			{% endcall %}
 		</div>
 		<div>
-			<div class="box flex-row flex-center">
+			<div class="box flex-row flex-center active">
 				<div class="payment-title">PERIODO</div>
-				<div class="text-right flex-grow">
-					{{ select({
-						'id': 'deal_selec',
-						'items': ['24hs', '48hs', '72hs', 'Elegir fecha'],
-						'placeholder': page.page_1.dni_type_placeholder
-					}) }}
+				<div class="text-right flex-grow custom-date-selector">
+					<div class="select-wrapper">
+						{{ select({
+							'id': 'deal_selec',
+							'items': ['24hs', '48hs', '72hs', 'Elegir fecha'],
+							'placeholder': page.page_1.dni_type_placeholder
+						}) }}
+					</div>
+					<div class="date-wrapper">
+						{{ input({
+							'type': 'date',
+							'id': 'date_select_date'
+						}) }}
+						<img id="close-date" class="close-icn" src="assets/images/ui/close-btn.svg" alt=""/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -65,3 +74,21 @@
 		</div>
 	</form>
 </section>
+
+<script>
+	const wrapper = document.querySelector('.custom-date-selector')
+	const select = document.querySelector('#deal_selec')
+	const close = document.querySelector('#close-date')
+
+	select.addEventListener('change', () => {
+		console.log(select.value)
+		if (select.value === 'Elegir fecha') {
+			wrapper.classList.add('active')
+		}
+	})
+
+	close.addEventListener('click', () => {
+		wrapper.classList.remove('active')
+		select.value = select[0].value
+	})
+</script>
