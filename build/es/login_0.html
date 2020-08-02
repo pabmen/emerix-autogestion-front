@@ -1,10 +1,10 @@
 
 
 
-<!DOCTYPE html>
-<html lang="" class="no-js">
-	<head>
-		<title></title>
+	<!DOCTYPE html>
+	<html lang="" class="no-js">
+		<head>
+			<title></title>
 <meta charset="UTF-8">
 <meta name="description" content="">
 <meta name="keywords" content="">
@@ -73,105 +73,10 @@
 
 <script defer type="text/javascript" src="js/main.bundle.js"></script>-->
 
-	</head>
-<body class="emerix-page">
-
-	<div class="flex-column">
-		
-
-<nav class="topbar">
-    <div class="flex-row flex-center">
-        <div class="flex-grow">
-            <h1 class="logo-container">
-                <img id="site-logo" class="site-logo" src="/assets/images/logos/emerix.png">
-            </h1>
-        </div>
-        <div class="username">
-            <p>¡Hola <strong>Usuario</strong>!</p>
-        </div>
-        <div class="notifications-menu">
-            
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-topbar-dropdown">
-    
-    
-    <label class="dropdown-title item" for="dropdown-trigger-topbar-dropdown">
-         <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
-    </label>
-    <div class="dropdown-target">
-        
-                <ul>
-                    <li><strong>Notificaciones</strong></li>
-                    <li><hr></li>
-                    <li>Una promesa de pago está por vencer, podés pagar ahora.</li>
-                    <li>Tu solicitud de plan de pago fue aprobada.</li>
-                </ul>
-            
-    </div>
-
-        </div>
-    </div>
-</nav>
-		<div class="flex-row flex-grow">
-			<div>
+		</head>
+		<body class="emerix-page">
 			
-
-
-
-<div class="overlay" id="nav-overlay">
-    <div class="dialog-container" role="dialog">
-        <a class="close-btn">
-            <img src="/assets/images/ui/close-btn.svg" alt="Close">
-        </a>
-        <div class="dialog-content -content">
-            
-            <div></div>
-        </div>
-    </div>
-</div>
-
-
-<nav class="main-navigation">
-	<input type="checkbox" class="visually-hidden mobile-menu-toggle" id="mobile-menu-toggle">
-	<label class="mobile-menu-toggle-label" for="mobile-menu-toggle">
-		<img src="/assets/images/ui/menu.svg" alt="">
-	</label>
-	<div class="navigation-container">
-		<ul>
-			
-		</ul>
-	</div>
-</nav>
-
-<script>
-	const mobileMenuBtn = document.querySelector('#mobile-menu-toggle')
-	const navOverlay = document.querySelector('#nav-overlay')
-
-
-	mobileMenuBtn.checked = false
-
-	mobileMenuBtn.addEventListener('click', () => {
-		console.log(mobileMenuBtn.getAttribute('checked'))
-
-		if (mobileMenuBtn.getAttribute('checked')) {
-			navOverlay.classList.remove('active')
-		} else {
-			navOverlay.classList.add('active')
-		}
-	})
-
-	navOverlay.addEventListener('click', () => {
-		//mobileMenuBtn.click()
-		navOverlay.classList.remove('active')
-		mobileMenuBtn.checked = false
-	})
-
-	document.querySelectorAll('.main-navigation .navigation-item')[0].classList.add('active')
-
-</script>
-			</div>
-			<div class="pages-container">
-				
-            
+    
 
 
 
@@ -305,10 +210,13 @@
 
 <script>
 	document.querySelectorAll('.input-wrapper')[1].classList.add("error")
+
+	// listeners solo para navegar en la demo
+	document.querySelector('[data-direction=next]').addEventListener('click', (e) => {
+		e.preventDefault()
+		window.location = '/login_1.html'
+	})
 </script>
 
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+		</body>
+	</html>

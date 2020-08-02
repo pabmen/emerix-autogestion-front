@@ -8,17 +8,21 @@
 	
 	> .flex-row {
 		height: 100%;
-		padding-right: 2rem;
 		box-shadow: 0 .5rem 1rem transparentize($black, .9);
 	}
 
 	.logo-container {
 		width: $navigation-width;
 		text-align: center;
+
+		img {
+			max-width: 9.25rem;
+		}
 	}
 
-	.username {
-		color: $violet;
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
 
 	.dropdown-target {
@@ -27,6 +31,7 @@
 
 	.notifications-menu {
 		position: relative;
+		margin-right: 2rem;
 		margin-left: 4rem;
 
 		.notifications-alert {
@@ -88,8 +93,15 @@
 
 @media all and (max-width: $mobileWidth) {
 	.topbar {
-		.username {
-			display: none;
+		height: 4.5rem;
+
+		> .flex-row .logo-container {
+			width: 100%;
+		}
+		.notifications-menu {
+			position: absolute;
+			right: 0;
+
 		}
 	}
 }

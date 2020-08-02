@@ -33,60 +33,6 @@
 		"notificationSrc": "/assets/images/ui/navigation/notificaciones.svg"
 	},
 
-	"navigation": {
-		"links": [
-			{
-				"title": "Inicio",
-				"url": "/home.html",
-				"icon": "/assets/images/ui/navigation/icono-home.svg"
-			},
-			{
-				"title": "-",
-				"class": "collapsed-item"
-			},
-			{
-				"title": "Pagar",
-				"url": "/invoice.html",
-				"icon": "/assets/images/ui/navigation/icono-info.svg"
-			},
-			{
-				"title": "Avisar que pagué",
-				"icon": "/assets/images/ui/navigation/icono-avisar.svg"
-			},
-			{
-				"title": "Prometer una fecha",
-				"icon": "/assets/images/ui/navigation/icono-prometer.svg"
-			},
-			{
-				"title": "Pagar en cuotas",
-				"icon": "/assets/images/ui/navigation/icono-cuotas.svg"
-			},
-			{
-				"title": "Actividad",
-				"icon": "/assets/images/ui/navigation/icono-actividad.svg"
-			},
-			{
-				"title": "-",
-				"class": "collapsed-item"
-			},
-			{
-				"title": "Tu Perfil",
-				"url": "#profile",
-				"icon": "/assets/images/ui/navigation/icono-perfil.svg"
-			},
-			{
-				"title": "Preguntas frecuentes",
-				"url": "#faqs",
-				"icon": "/assets/images/ui/navigation/icono-faq.svg"
-			},
-			{
-				"title": "Salir",
-				"url": "#logout",
-				"icon": "/assets/images/ui/navigation/icono-salir.svg"
-			}
-		]
-	},
-
 	"pages": {
 		"login": {
 			"title": "Emerix Login",
@@ -179,55 +125,6 @@
 				}
 			]
 
-		},
-		"home": {
-			"status": {
-				"title": "Tu deuda actual es:",
-				"count": "Cantidad de productos",
-				"due": "Fecha de inicio de mora",
-				"btn": "¡Pagar ahora!"
-			},
-			"payments": {
-				"title": "Últimos planes",
-				"plans": [
-					{
-						"text": "REFI - MC3111223",
-						"date": "17/10/20",
-						"status": "<span class='bullet green'></span>Aprobado"
-					},
-					{
-						"text": "REFI - MC3111223",
-						"date": "17/10/20",
-						"status": "<span class='bullet yellow'></span>En espera"
-					}
-				],
-				"view": "Ver todos los planes"
-			},
-			"promotions": {
-				"src": "https://placekitten.com/g/450/150",
-				"view": "¡Accedé a este beneficio ahora!"
-			},
-			"promises": {
-				"title": "Últimas promesas",
-				"latest": [
-					{
-						"price": "$17,900",
-						"cant": "1 producto",
-						"date": "17/08/20"
-					},
-					{
-						"price": "$37,600",
-						"cant": "3 productos",
-						"date": "17/08/20"
-					},
-					{
-						"price": "$17,900",
-						"cant": "1 producto",
-						"date": "17/08/20"
-					}
-				],
-				"view": "Ver todas las promesas"
-			}
 		},
 		"invoice": {
 			"title": "Tus productos",

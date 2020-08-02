@@ -1,10 +1,10 @@
 
 
 
-<!DOCTYPE html>
-<html lang="" class="no-js">
-	<head>
-		<title></title>
+	<!DOCTYPE html>
+	<html lang="" class="no-js">
+		<head>
+			<title></title>
 <meta charset="UTF-8">
 <meta name="description" content="">
 <meta name="keywords" content="">
@@ -73,121 +73,42 @@
 
 <script defer type="text/javascript" src="js/main.bundle.js"></script>-->
 
-	</head>
-<body class="emerix-page">
-
-	<div class="flex-column">
-		
-
-<nav class="topbar">
-    <div class="flex-row flex-center">
-        <div class="flex-grow">
-            <h1 class="logo-container">
-                <img id="site-logo" class="site-logo" src="/assets/images/logos/emerix.png">
-            </h1>
-        </div>
-        <div class="username">
-            <p>¡Hola <strong>Usuario</strong>!</p>
-        </div>
-        <div class="notifications-menu">
-            
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-topbar-dropdown">
-    
-    
-    <label class="dropdown-title item" for="dropdown-trigger-topbar-dropdown">
-         <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
-    </label>
-    <div class="dropdown-target">
-        
-                <ul>
-                    <li><strong>Notificaciones</strong></li>
-                    <li><hr></li>
-                    <li>Una promesa de pago está por vencer, podés pagar ahora.</li>
-                    <li>Tu solicitud de plan de pago fue aprobada.</li>
-                </ul>
-            
-    </div>
-
-        </div>
-    </div>
-</nav>
-		<div class="flex-row flex-grow">
-			<div>
+		</head>
+		<body class="emerix-page">
 			
+    
 
 
-
-<div class="overlay" id="nav-overlay">
-    <div class="dialog-container" role="dialog">
-        <a class="close-btn">
-            <img src="/assets/images/ui/close-btn.svg" alt="Close">
-        </a>
-        <div class="dialog-content -content">
-            
-            <div></div>
-        </div>
-    </div>
-</div>
-
-
-<nav class="main-navigation">
-	<input type="checkbox" class="visually-hidden mobile-menu-toggle" id="mobile-menu-toggle">
-	<label class="mobile-menu-toggle-label" for="mobile-menu-toggle">
-		<img src="/assets/images/ui/menu.svg" alt="">
-	</label>
-	<div class="navigation-container">
-		<ul>
-			
-		</ul>
-	</div>
-</nav>
-
-<script>
-	const mobileMenuBtn = document.querySelector('#mobile-menu-toggle')
-	const navOverlay = document.querySelector('#nav-overlay')
-
-
-	mobileMenuBtn.checked = false
-
-	mobileMenuBtn.addEventListener('click', () => {
-		console.log(mobileMenuBtn.getAttribute('checked'))
-
-		if (mobileMenuBtn.getAttribute('checked')) {
-			navOverlay.classList.remove('active')
-		} else {
-			navOverlay.classList.add('active')
-		}
-	})
-
-	navOverlay.addEventListener('click', () => {
-		//mobileMenuBtn.click()
-		navOverlay.classList.remove('active')
-		mobileMenuBtn.checked = false
-	})
-
-	document.querySelectorAll('.main-navigation .navigation-item')[0].classList.add('active')
-
-</script>
-			</div>
-			<div class="pages-container">
-				
-    		
 <section class="page-home">
+
+	
+    <div class="flex-column page-header">
+        <div class="page-section">
+            <p>Inicio</p>
+        </div>
+    </div>
+    <div>
+        <h1 class="page-title text-xlarge">Hola Nicolas,</h1>
+        <p class="page-subtitle">¡Es un gusto verte por acá! Queremos ayudarte a alivianar tus deudas ;)</p>
+    </div>
+
+			
 	<div class="flex-row flex-column-on-mobile justify-center">
-		<div class="flex-column flex-grow home-area">
-			<div class="box">
-				<p class="first-row">Tu deuda actual es:</p>
-				<p class="text-nowrap current-debt"><span class="text-xlarge">$</span> <span class="text-xxlarge">10590</span> <sup class="text-large">57</sup></p>
-				<p>Cantidad de productos</p>
-				<p class="text-xlarge">6</p>
-				<p class="cant-products">Fecha de inicio de mora</p>
-				<p class="date"><strong>10/06/19</strong></p>
-				<button class="btn">¡Pagar ahora!</button>
+		<div class="flex-column col-2-3">
+			<div class="box flex-row">
+				<div>
+					<p class="first-row">Tu deuda actual es:</p>
+					<p class="text-nowrap current-debt"><span class="text-xlarge">$</span> <span class="text-xxlarge">10590</span> <sup class="text-large">57</sup></p>
+					<button class="btn">¡Pagar ahora!</button>
+				</div>
+				<div class="home-illus-container">
+					<img class="home-illus" alt="" src="/assets/images/sections/home/ilustracion.svg">
+				</div>
 			</div>
-			<div class="box">
-				<div class="list-view">
+			<div class="">
+				<h2>Tus productos</h2>
+				<div class="list-view box">
 					<div class="list-view-title">
-						<h2>Últimos planes</h2>
 						<div class="list-view-add"></div>
 					</div>
 					<hr>
@@ -218,16 +139,60 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex-column flex-grow home-area">
-			<div class="box">
-				<img src="https://placekitten.com/g/450/150" alt="" class="img-responsive benefit-prom">
-				<hr>
-				<p class="wide-link"><a href="#">¡Accedé a este beneficio ahora!</a></p>
+		<div class="flex-column col-1-3">
+			<div class="box prom-text relative">
+				<p>Diseñamos un plan de pago especialmente para vos ;)</p>
+				<div class="text-right">
+					<button class="btn secondary">Ver plan</button>
+				</div>
 			</div>
-			<div class="box">
-				<div class="list-view">
+			<div class="">
+				<h2>Promesas de pago</h2>
+				<div class="list-view box">
 					<div class="list-view-title">
-						<h2>Últimas promesas</h2>
+						<div class="list-view-add"></div>
+					</div>
+					<hr>
+					<ul class="list-view-content">
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="promise-price">$17,900</p>
+								<p class="promise-date">1 producto</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>17/08/20</p>
+							</div>
+						</li>
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="promise-price">$37,600</p>
+								<p class="promise-date">3 productos</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>17/08/20</p>
+							</div>
+						</li>
+						
+						<li class="flex-row promises-latest">
+							<div class="flex-column flex-grow">
+								<p class="promise-price">$17,900</p>
+								<p class="promise-date">1 producto</p>
+							</div>
+							<div class="flex-column flex-center">
+								<p>17/08/20</p>
+							</div>
+						</li>
+						
+					</ul>
+					<p class="wide-link"><a href="#">Ver todas las promesas</a></p>
+				</div>
+			</div>
+			<div class="">
+				<h2>Planes de pago</h2>
+				<div class="list-view box">
+					<div class="list-view-title">
 						<div class="list-view-add"></div>
 					</div>
 					<hr>
@@ -271,8 +236,5 @@
 	</div>
 </section>
 
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+		</body>
+	</html>

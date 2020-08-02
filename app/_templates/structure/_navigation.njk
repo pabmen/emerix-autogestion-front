@@ -1,6 +1,63 @@
 {% from "../components/_dropdown.njk" import dropdown %}
 {% from "../components/_dialogs.njk" import dialog %}
 
+{% set navigation = {
+		"links": [
+			{
+				"title": "Inicio",
+				"url": "/index.html",
+				"icon": "/assets/images/ui/navigation/icono-home.svg"
+			},
+			{
+				"title": "-",
+				"class": "collapsed-item"
+			},
+			{
+				"title": "Pagar",
+				"url": "/invoice.html",
+				"icon": "/assets/images/ui/navigation/icono-info.svg"
+			},
+			{
+				"title": "Avisar que pagué",
+				"icon": "/assets/images/ui/navigation/icono-avisar.svg",
+				"url": "/pay_0.html"
+			},
+			{
+				"title": "Prometer una fecha",
+				"icon": "/assets/images/ui/navigation/icono-prometer.svg",
+				"url": "/deals_0.html"
+			},
+			{
+				"title": "Pagar en cuotas",
+				"icon": "/assets/images/ui/navigation/icono-cuotas.svg"
+			},
+			{
+				"title": "Actividad",
+				"icon": "/assets/images/ui/navigation/icono-actividad.svg"
+			},
+			{
+				"title": "-",
+				"class": "collapsed-item"
+			},
+			{
+				"title": "Tu Perfil",
+				"url": "#profile",
+				"icon": "/assets/images/ui/navigation/icono-perfil.svg"
+			},
+			{
+				"title": "Preguntas frecuentes",
+				"url": "#faqs",
+				"icon": "/assets/images/ui/navigation/icono-faq.svg"
+			},
+			{
+				"title": "Salir",
+				"url": "#logout",
+				"icon": "/assets/images/ui/navigation/icono-salir.svg"
+			}
+		]
+	}
+%}
+
 {{ dialog({
 		"id": "nav-overlay",
 		"class": "",
@@ -50,6 +107,8 @@
 		mobileMenuBtn.checked = false
 	})
 
-	document.querySelectorAll('.main-navigation .navigation-item')[0].classList.add('active')
+	// set active elmnt
+	
+	//document.querySelectorAll('.main-navigation .navigation-item')[0].classList.add('active')
 
 </script>

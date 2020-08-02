@@ -14,12 +14,14 @@ $btn-border-color: transparent;
 .btn {
 	background: $btn-color-gradient;
 	background-color: $btn-color;
-	border-radius: $btn-radius;
+	border-radius: $std-radius;
 	border: 1px solid transparent;
 	color: $btn-text;
 	display: inline-block;
-	padding: 1.25rem 3rem;
+	padding: .625rem 2.5rem;
 	position: relative;
+	font-weight: bold;
+	line-height: 1.625rem;
 	text-transform: uppercase;
 	cursor: pointer;
 	outline: none;

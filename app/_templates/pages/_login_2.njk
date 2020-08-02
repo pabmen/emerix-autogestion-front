@@ -71,4 +71,16 @@
 	})
 
 	document.querySelectorAll('.input-wrapper')[0].classList.add("error")
+
+
+	// listeners solo para navegar en la demo
+	document.querySelector('[data-direction=next]').addEventListener('click', (e) => {
+		e.preventDefault()
+		window.location = '/index.html'
+	})
+
+	document.querySelector('[data-direction=back]').addEventListener('click', (e) => {
+		e.preventDefault()
+		window.location = '/login_1.html'
+	})
 </script>

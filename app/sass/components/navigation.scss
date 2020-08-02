@@ -4,12 +4,15 @@
 	width: $navigation-width;
 	background-color: $darkviolet;
 	color: $white;
-	padding: 1rem 0;
 	min-height: 100%;
 
 	.mobile-menu-toggle,
 	.mobile-menu-toggle-label {
 		display: none;
+	}
+
+	.navigation-container {
+		padding: 1rem 0;
 	}
 
 	.navigation-item {
@@ -101,20 +104,11 @@
 	
 	.main-navigation {
 		position: absolute;
-		top: 2rem;
+		top: 1.5rem;
 		left: 1rem;
 		z-index: 1000;
+		background-color: transparent;
 
-		.navigation-container {
-			background-color: $white !important;
-			position: fixed;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			width: 75%;
-			overflow: hidden;
-			overflow-y: auto;
-		}
 
 		.mobile-menu-toggle,
 		.mobile-menu-toggle-label {
@@ -130,15 +124,21 @@
 				width: 20px;
 			}
 		}
-				
+
 		.navigation-container {
-			max-height: 0;
+			position: fixed;
+			top: 0;
+			left: -100%;
+			bottom: 0;
+			width: 75%;
 			overflow: hidden;
+			overflow-y: auto;
 			transition: all $transition-normal;
+			background-color: $darkviolet;
 		}
 
 		.mobile-menu-toggle:checked ~ .navigation-container {
-			max-height: 100vh;
+			left: 0;
 		}
 	}
 }

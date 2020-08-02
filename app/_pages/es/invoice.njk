@@ -1,5 +1,5 @@
 {% from "../_templates/_layout.njk" import page %}
 
-{% call page() %}
-    		{% include "pages/_invoice.njk" %}
+{% call page({navIndex: 2}) %}
+	{% include "pages/_invoice.njk" %}
 {% endcall %}

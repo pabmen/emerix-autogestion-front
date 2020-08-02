@@ -1,0 +1,11 @@
+{% macro header(options)%}
+    <div class="flex-column page-header">
+        <div class="page-section">
+            <p>{{ options.section }}</p>
+        </div>
+    </div>
+    <div>
+        <h1 class="page-title text-xlarge">{{ options.title }}</h1>
+        <p class="page-subtitle">{{ options.subtitle }}</p>
+    </div>
+{% endmacro%}

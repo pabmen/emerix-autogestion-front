@@ -4,28 +4,42 @@
     margin-top: 1rem;
     padding: 1rem;
 
-    .home-area {
-        max-width: 450px;
-    }
-
     .first-row {
         margin-top: 0;
     }
 
-    .current-debt {
-        margin: 1rem 0 2rem;
+    .home-illus-container {
+       flex-grow: 1;
+       position: relative;
+       height: 100%;
+
+        .home-illus {
+            position: absolute;
+            top: -50%;
+            left: 0;
+        }
     }
 
-    .date {
-        margin-top: -.5rem;
-    }
 
-    .cant-products {
-        margin: 1rem 0;
-    }
 
-    .benefit-prom {
-        margin-bottom: 1.5rem;
+    .prom-text {
+        color: $orange;
+        font-weight: bold;
+
+        background-image: url('/assets/images/sections/home/prom.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 190px;
+
+        .btn {
+            color: $white;
+            border-color: $white;
+            padding: .625rem 1.5rem;
+            line-height: 0.8rem;
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+        }
     }
 
     .list-view-title h2 {

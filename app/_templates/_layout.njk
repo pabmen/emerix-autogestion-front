@@ -1,34 +1,37 @@
 {% macro page(options) %}
-<!DOCTYPE html>
-<html lang="{{ head.lang }}" class="no-js">
-	<head>
-		{% include "_head.njk" %}
-	</head>
-<body class="emerix-page">
+	<!DOCTYPE html>
+	<html lang="{{ head.lang }}" class="no-js">
+		<head>
+			{% include "_head.njk" %}
+		</head>
+		<body class="emerix-page">
+			<div class="flex-column">
+				{% include "structure/_topbar.njk" %}
+				<div class="flex-row flex-grow">
+					<div>
+					{% include "structure/_navigation.njk" %}
+					</div>
+					<div class="pages-container flex-grow">
+						{{ caller() }}
+					</div>
+				</div>
+			</div>
 
-	<div class="flex-column">
-		{% include "structure/_topbar.njk" %}
-		<div class="flex-row flex-grow">
-			<div>
-			{% include "structure/_navigation.njk" %}
-			</div>
-			<div class="pages-container">
-				{{ caller() }}
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+			<script>
+				document.querySelectorAll('.main-navigation .navigation-item')[{{options.navIndex}}].classList.add('active')
+			</script>
+		</body>
+	</html>
 {% endmacro %}
 
 {% macro simple(options) %}
-<!DOCTYPE html>
-<html lang="{{ head.lang }}" class="no-js">
-	<head>
-		{% include "_head.njk" %}
-	</head>
-<body class="emerix-page">
-	{{ caller() }}
-</body>
-</html>
+	<!DOCTYPE html>
+	<html lang="{{ head.lang }}" class="no-js">
+		<head>
+			{% include "_head.njk" %}
+		</head>
+		<body class="emerix-page">
+			{{ caller() }}
+		</body>
+	</html>
 {% endmacro %}

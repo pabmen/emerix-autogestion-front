@@ -375,7 +375,7 @@ body {
   padding: 0;
   margin: 0;
   border: 0;
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
 }
 
 body {
@@ -541,7 +541,7 @@ html.no-scroll body {
 }
 
 .emerix-page .pages-container {
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
   min-height: 100vh;
 }
 
@@ -784,7 +784,7 @@ html.no-scroll body {
   padding: 2rem;
   margin: .5rem;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .emerix-page .box hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
@@ -1131,12 +1131,14 @@ html.no-scroll body {
 .emerix-page .btn {
   background: linear-gradient(90deg, #A388D1 0%, #8569b4 100%);
   background-color: #8569b4;
-  border-radius: 1.75rem;
+  border-radius: 4px;
   border: 1px solid transparent;
   color: #fff;
   display: inline-block;
-  padding: 1.25rem 3rem;
+  padding: .625rem 2.5rem;
   position: relative;
+  font-weight: bold;
+  line-height: 1.625rem;
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
@@ -1219,7 +1221,7 @@ html.no-scroll body {
   padding: 2rem;
   margin: .5rem;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .emerix-page .box hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
@@ -1328,6 +1330,26 @@ html.no-scroll body {
   width: 50%;
 }
 
+.emerix-page .page-header .page-section p {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #8569b4;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.emerix-page .page-header .page-section p:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 2rem;
+  background-color: #000;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
 .emerix-page img {
   vertical-align: bottom;
 }
@@ -1348,13 +1370,16 @@ html.no-scroll body {
   width: 17rem;
   background-color: #46365B;
   color: #fff;
-  padding: 1rem 0;
   min-height: 100%;
 }
 
 .emerix-page .main-navigation .mobile-menu-toggle,
 .emerix-page .main-navigation .mobile-menu-toggle-label {
   display: none;
+}
+
+.emerix-page .main-navigation .navigation-container {
+  padding: 1rem 0;
 }
 
 .emerix-page .main-navigation .navigation-item {
@@ -1448,19 +1473,10 @@ html.no-scroll body {
   }
   .emerix-page .main-navigation {
     position: absolute;
-    top: 2rem;
+    top: 1.5rem;
     left: 1rem;
     z-index: 1000;
-  }
-  .emerix-page .main-navigation .navigation-container {
-    background-color: #fff !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 75%;
-    overflow: hidden;
-    overflow-y: auto;
+    background-color: transparent;
   }
   .emerix-page .main-navigation .mobile-menu-toggle,
   .emerix-page .main-navigation .mobile-menu-toggle-label {
@@ -1475,12 +1491,18 @@ html.no-scroll body {
     width: 20px;
   }
   .emerix-page .main-navigation .navigation-container {
-    max-height: 0;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 75%;
     overflow: hidden;
+    overflow-y: auto;
     transition: all 0.5s ease;
+    background-color: #46365B;
   }
   .emerix-page .main-navigation .mobile-menu-toggle:checked ~ .navigation-container {
-    max-height: 100vh;
+    left: 0;
   }
 }
 
@@ -1642,7 +1664,7 @@ html.no-scroll body {
   padding: 1rem;
   font-weight: bold;
   color: #8569b4;
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
 }
 
 @media all and (max-width: 1024px) {
@@ -1664,7 +1686,7 @@ html.no-scroll body {
   padding: 2rem;
   margin: .5rem;
   border-radius: 4px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 .emerix-page .box hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
@@ -1710,7 +1732,6 @@ html.no-scroll body {
 
 .emerix-page .topbar > .flex-row {
   height: 100%;
-  padding-right: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -1719,8 +1740,13 @@ html.no-scroll body {
   text-align: center;
 }
 
-.emerix-page .topbar .username {
-  color: #8569b4;
+.emerix-page .topbar .logo-container img {
+  max-width: 9.25rem;
+}
+
+.emerix-page .topbar a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .emerix-page .topbar .dropdown-target {
@@ -1729,6 +1755,7 @@ html.no-scroll body {
 
 .emerix-page .topbar .notifications-menu {
   position: relative;
+  margin-right: 2rem;
   margin-left: 4rem;
 }
 
@@ -1758,7 +1785,7 @@ html.no-scroll body {
   margin-top: .5rem;
   right: 0;
   min-width: 18.750rem;
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
 }
 
 .emerix-page .topbar .notifications-menu .dropdown-target ul {
@@ -1786,8 +1813,15 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
-  .emerix-page .topbar .username {
-    display: none;
+  .emerix-page .topbar {
+    height: 4.5rem;
+  }
+  .emerix-page .topbar > .flex-row .logo-container {
+    width: 100%;
+  }
+  .emerix-page .topbar .notifications-menu {
+    position: absolute;
+    right: 0;
   }
 }
 
@@ -2060,28 +2094,39 @@ html.no-scroll body {
   padding: 1rem;
 }
 
-.emerix-page .page-home .home-area {
-  max-width: 450px;
-}
-
 .emerix-page .page-home .first-row {
   margin-top: 0;
 }
 
-.emerix-page .page-home .current-debt {
-  margin: 1rem 0 2rem;
+.emerix-page .page-home .home-illus-container {
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
 }
 
-.emerix-page .page-home .date {
-  margin-top: -.5rem;
+.emerix-page .page-home .home-illus-container .home-illus {
+  position: absolute;
+  top: -50%;
+  left: 0;
 }
 
-.emerix-page .page-home .cant-products {
-  margin: 1rem 0;
+.emerix-page .page-home .prom-text {
+  color: #FF6A29;
+  font-weight: bold;
+  background-image: url("/assets/images/sections/home/prom.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 190px;
 }
 
-.emerix-page .page-home .benefit-prom {
-  margin-bottom: 1.5rem;
+.emerix-page .page-home .prom-text .btn {
+  color: #fff;
+  border-color: #fff;
+  padding: .625rem 1.5rem;
+  line-height: 0.8rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
 }
 
 .emerix-page .page-home .list-view-title h2 {
@@ -2092,7 +2137,7 @@ html.no-scroll body {
 .emerix-page .page-home .promises-latest {
   margin: 0 -2rem;
   padding: 1rem 2rem;
-  border-bottom: 1px solid #F6F6F5;
+  border-bottom: 1px solid #fbfbfb;
 }
 
 .emerix-page .page-home .payment-plans p,
@@ -2107,12 +2152,12 @@ html.no-scroll body {
 }
 
 .emerix-page .page-home .promises-latest:hover {
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
   color: #8569b4;
 }
 
 .emerix-page .page-home hr {
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
   margin-left: -2rem;
   margin-right: -2rem;
   margin-bottom: 0;
@@ -2251,7 +2296,7 @@ html.no-scroll body {
   top: 0;
   right: 0;
   height: 100%;
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
   width: 0;
   transition: all 0.5s ease;
 }
@@ -2423,7 +2468,7 @@ html.no-scroll body {
   left: auto;
   right: 0;
   height: 100%;
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
   width: 0;
   overflow: hidden;
   transition: all 0.5s ease;
@@ -2456,7 +2501,7 @@ html.no-scroll body {
 }
 
 .emerix-page .page-pay .table .highlight-baloon {
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
   border-radius: 1rem;
   padding: .5rem 1rem;
   display: inline-block;
@@ -2598,7 +2643,7 @@ html.no-scroll body {
   top: 0;
   right: 0;
   height: 100%;
-  background-color: #F6F6F5;
+  background-color: #fbfbfb;
   width: 0;
   transition: all 0.5s ease;
 }
