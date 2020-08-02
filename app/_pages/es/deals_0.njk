@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ head.lang }}" class="no-js">
-	<head>
-		{% include "_head.njk" %}
-	</head>
-<body class="emerix-page">
-	<div class="flex-column flex-grow">
-    	<div class="pages-container">
-    		{% include "pages/_deals_0.njk" %}
-		</div>
-	</div>
-</body>
-</html>
+{% from "../_templates/_layout.njk" import page %}
+
+{% call page() %}
+	{% include "pages/_deals_0.njk" %}
+{% endcall %}

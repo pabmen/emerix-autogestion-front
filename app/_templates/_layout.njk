@@ -1,3 +1,4 @@
+{% macro page(options) %}
 <!DOCTYPE html>
 <html lang="{{ head.lang }}" class="no-js">
 	<head>
@@ -6,17 +7,28 @@
 <body class="emerix-page">
 
 	<div class="flex-column">
-		<div>
 		{% include "structure/_topbar.njk" %}
-		</div>
 		<div class="flex-row flex-grow">
 			<div>
 			{% include "structure/_navigation.njk" %}
 			</div>
 			<div class="pages-container">
-				{% include "pages/_home.njk" %}
+				{{ caller() }}
 			</div>
 		</div>
 	</div>
 </body>
 </html>
+{% endmacro %}
+
+{% macro simple(options) %}
+<!DOCTYPE html>
+<html lang="{{ head.lang }}" class="no-js">
+	<head>
+		{% include "_head.njk" %}
+	</head>
+<body class="emerix-page">
+	{{ caller() }}
+</body>
+</html>
+{% endmacro %}

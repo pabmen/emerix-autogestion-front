@@ -1,11 +1,5 @@
+{% from "../_templates/_layout.njk" import simple %}
 
-
-<!DOCTYPE html>
-<html lang="{{ head.lang }}" class="no-js">
-	<head>
-		{% include "_head.njk" %}
-	</head>
-<body class="emerix-page">
+{% call simple() %}
     {% include "structure/_topbar.njk" %}
-</body>
-</html>
+{% endcall %}

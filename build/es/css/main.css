@@ -1786,12 +1786,6 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
-  .emerix-page .topbar > * {
-    margin-left: 2rem;
-  }
-  .emerix-page .topbar:before {
-    display: none;
-  }
   .emerix-page .topbar .username {
     display: none;
   }

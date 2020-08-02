@@ -1,2 +1,5 @@
-{# index.nunjucks #}
-{% extends "_layout.njk" %}
+{% from "../_templates/_layout.njk" import page %}
+
+{% call page() %}
+    {% include "pages/_home.njk" %}
+{% endcall %}

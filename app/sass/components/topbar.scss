@@ -88,14 +88,6 @@
 
 @media all and (max-width: $mobileWidth) {
 	.topbar {
-		& > * {
-			margin-left: 2rem;
-		}
-
-		&:before {
-			display: none;
-		}
-
 		.username {
 			display: none;
 		}
