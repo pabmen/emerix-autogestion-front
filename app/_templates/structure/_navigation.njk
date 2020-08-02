@@ -13,28 +13,13 @@
 		<img src="/assets/images/ui/menu.svg" alt="">
 	</label>
 	<div class="navigation-container">
-		<div class="text-center">
-			<img class="logo" src="{{ sidebar.logo.src }}" alt="{{ sidebar.logo.alt }}">
-		</div>
 		<ul>
-			{% for item in sidebar.links %}
-			<li class="navigation-item" style="--icon: url('{{ item.icon }}');">
+			{% for item in navigation.links %}
+			<li class="navigation-item {{ item.class }}" style="--icon: url('{{ item.icon }}');">
 				{% if item.title == "-" %}
 					<hr>
 				{% else %}
-					{% if item.dropdown %}
-						{% call dropdown({'title': item.title, 'class': 'item'}) %}
-							<ul>
-							{% for dropdown in item.dropdown %}
-								<li class="item">
-									<a href="{{ dropdown.url }}">{{ dropdown.title }}</a>
-								</li>
-							{% endfor %}
-							</ul>
-						{% endcall %}
-					{% else %}
-						<a class="item" href="{{ item.url }}">{{ item.title }}</a>
-					{% endif %}
+					<a class="item {% if loop.first %}active{% endif %}" href="{{ item.url }}">{{ item.title }}</a>
 				{% endif %}
 			</li>
 			{% endfor %}

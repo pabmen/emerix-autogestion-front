@@ -5,10 +5,14 @@
 	</head>
 <body class="emerix-page">
 
-	<div class="flex-row">
-		{% include "structure/_navigation.njk" %}
-		<div class="flex-column flex-grow">
-			{% include "structure/_topbar.njk" %}
+	<div class="flex-column">
+		<div>
+		{% include "structure/_topbar.njk" %}
+		</div>
+		<div class="flex-row flex-grow">
+			<div>
+			{% include "structure/_navigation.njk" %}
+			</div>
 			<div class="pages-container">
 				{% include "pages/_home.njk" %}
 			</div>

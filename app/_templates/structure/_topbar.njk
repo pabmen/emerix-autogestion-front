@@ -1,12 +1,16 @@
 {% from "../components/_dropdown.njk" import dropdown %}
 
 <nav class="topbar">
-    <ul class="flex-row flex-center">
-        <li class="flex-grow"><h1 class="page-name">Inicio</h1></li>
-        <li class="username">
+    <div class="flex-row flex-center">
+        <div class="flex-grow">
+            <h1 class="logo-container">
+                <img id="site-logo" class="site-logo" src="/assets/images/logos/emerix.png">
+            </h1>
+        </div>
+        <div class="username">
             <p>¡Hola <strong>Usuario</strong>!</p>
-        </li>
-        <li class="notifications-menu">
+        </div>
+        <div class="notifications-menu">
             {% call dropdown({
                 'title': 'topbar-dropdown',
                 'html': '<img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div>',
@@ -19,6 +23,6 @@
                     <li>Tu solicitud de plan de pago fue aprobada.</li>
                 </ul>
             {% endcall %}
-        </li>
-    </ul>
+        </div>
+    </div>
 </nav>

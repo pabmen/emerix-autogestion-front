@@ -73,8 +73,46 @@
 	</head>
 <body class="emerix-page">
 
-	<div class="flex-row">
+	<div class="flex-column">
+		<div>
 		
+
+<nav class="topbar">
+    <div class="flex-row flex-center">
+        <div class="flex-grow">
+            <h1 class="logo-container">
+                <img id="site-logo" class="site-logo" src="/assets/images/logos/emerix.png">
+            </h1>
+        </div>
+        <div class="username">
+            <p>¡Hola <strong>Usuario</strong>!</p>
+        </div>
+        <div class="notifications-menu">
+            
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-topbar-dropdown">
+    
+    
+    <label class="dropdown-title item" for="dropdown-trigger-topbar-dropdown">
+         <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
+    </label>
+    <div class="dropdown-target">
+        
+                <ul>
+                    <li><strong>Notificaciones</strong></li>
+                    <li><hr></li>
+                    <li>Una promesa de pago está por vencer, podés pagar ahora.</li>
+                    <li>Tu solicitud de plan de pago fue aprobada.</li>
+                </ul>
+            
+    </div>
+
+        </div>
+    </div>
+</nav>
+		</div>
+		<div class="flex-row flex-grow">
+			<div>
+			
 
 
 
@@ -97,20 +135,15 @@
 		<img src="/assets/images/ui/menu.svg" alt="">
 	</label>
 	<div class="navigation-container">
-		<div class="text-center">
-			<img class="logo" src="/assets/images/logos/emerix.png" alt="">
-		</div>
 		<ul>
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-home.svg');">
 				
-					
-						<a class="item" href="/home.html">Inicio</a>
-					
+					<a class="item active" href="/home.html">Inicio</a>
 				
 			</li>
 			
-			<li class="navigation-item" style="--icon: url('');">
+			<li class="navigation-item collapsed-item" style="--icon: url('');">
 				
 					<hr>
 				
@@ -118,81 +151,35 @@
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-info.svg');">
 				
-					
-						<a class="item" href="/invoice.html">Mis Cuentas</a>
-					
+					<a class="item" href="/invoice.html">Pagar</a>
 				
 			</li>
 			
-			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-pagar.svg');">
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-avisar.svg');">
 				
-					
-						
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-pagos">
-    
-    
-    <label class="dropdown-title item" for="dropdown-trigger-pagos">
-         Pagos 
-    </label>
-    <div class="dropdown-target">
-        
-							<ul>
-							
-								<li class="item">
-									<a href="/pay_0.html">Pagar</a>
-								</li>
-							
-								<li class="item">
-									<a href="#">Registrar Pago</a>
-								</li>
-							
-								<li class="item">
-									<a href="#">Comprobantes</a>
-								</li>
-							
-							</ul>
-						
-    </div>
-
-					
+					<a class="item" href="">Avisar que pagué</a>
 				
 			</li>
 			
-			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-acuerdo.svg');">
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-prometer.svg');">
 				
-					
-						
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-acuerdos">
-    
-    
-    <label class="dropdown-title item" for="dropdown-trigger-acuerdos">
-         Acuerdos 
-    </label>
-    <div class="dropdown-target">
-        
-							<ul>
-							
-								<li class="item">
-									<a href="/promises.html">Promesas de pago</a>
-								</li>
-							
-								<li class="item">
-									<a href="#">Plan de pago</a>
-								</li>
-							
-								<li class="item">
-									<a href="#">Estado de solicitudes</a>
-								</li>
-							
-							</ul>
-						
-    </div>
-
-					
+					<a class="item" href="">Prometer una fecha</a>
 				
 			</li>
 			
-			<li class="navigation-item" style="--icon: url('');">
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-cuotas.svg');">
+				
+					<a class="item" href="">Pagar en cuotas</a>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-actividad.svg');">
+				
+					<a class="item" href="">Actividad</a>
+				
+			</li>
+			
+			<li class="navigation-item collapsed-item" style="--icon: url('');">
 				
 					<hr>
 				
@@ -200,25 +187,19 @@
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-perfil.svg');">
 				
-					
-						<a class="item" href="#profile">Tu Perfil</a>
-					
+					<a class="item" href="#profile">Tu Perfil</a>
 				
 			</li>
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-faq.svg');">
 				
-					
-						<a class="item" href="#faqs">Preguntas frecuentes</a>
-					
+					<a class="item" href="#faqs">Preguntas frecuentes</a>
 				
 			</li>
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-salir.svg');">
 				
-					
-						<a class="item" href="#logout">Salir</a>
-					
+					<a class="item" href="#logout">Salir</a>
 				
 			</li>
 			
@@ -249,37 +230,7 @@
 		mobileMenuBtn.checked = false
 	})
 </script>
-		<div class="flex-column flex-grow">
-			
-
-<nav class="topbar">
-    <ul class="flex-row flex-center">
-        <li class="flex-grow"><h1 class="page-name">Inicio</h1></li>
-        <li class="username">
-            <p>¡Hola <strong>Usuario</strong>!</p>
-        </li>
-        <li class="notifications-menu">
-            
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-topbar-dropdown">
-    
-    
-    <label class="dropdown-title item" for="dropdown-trigger-topbar-dropdown">
-         <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
-    </label>
-    <div class="dropdown-target">
-        
-                <ul>
-                    <li><strong>Notificaciones</strong></li>
-                    <li><hr></li>
-                    <li>Una promesa de pago está por vencer, podés pagar ahora.</li>
-                    <li>Tu solicitud de plan de pago fue aprobada.</li>
-                </ul>
-            
-    </div>
-
-        </li>
-    </ul>
-</nav>
+			</div>
 			<div class="pages-container">
 				
 <section class="page-home">

@@ -33,11 +33,7 @@
 		"notificationSrc": "/assets/images/ui/navigation/notificaciones.svg"
 	},
 
-	"sidebar": {
-		"logo": {
-			"src": "/assets/images/logos/emerix.png",
-			"alt": ""
-		},
+	"navigation": {
 		"links": [
 			{
 				"title": "Inicio",
@@ -45,51 +41,33 @@
 				"icon": "/assets/images/ui/navigation/icono-home.svg"
 			},
 			{
-				"title": "-"
+				"title": "-",
+				"class": "collapsed-item"
 			},
 			{
-				"title": "Mis Cuentas",
+				"title": "Pagar",
 				"url": "/invoice.html",
 				"icon": "/assets/images/ui/navigation/icono-info.svg"
 			},
 			{
-				"title": "Pagos",
-				"icon": "/assets/images/ui/navigation/icono-pagar.svg",
-				"dropdown": [
-					{
-						"title": "Pagar",
-						"url": "/pay_0.html"
-					},
-					{
-						"title": "Registrar Pago",
-						"url": "#"
-					},
-					{
-						"title": "Comprobantes",
-						"url": "#"
-					}
-				]
+				"title": "Avisar que pagué",
+				"icon": "/assets/images/ui/navigation/icono-avisar.svg"
 			},
 			{
-				"title": "Acuerdos",
-				"dropdown": [
-					{
-						"title": "Promesas de pago",
-						"url": "/promises.html"
-					},
-					{
-						"title": "Plan de pago",
-						"url": "#"
-					},
-					{
-						"title": "Estado de solicitudes",
-						"url": "#"
-					}
-				],
-				"icon": "/assets/images/ui/navigation/icono-acuerdo.svg"
+				"title": "Prometer una fecha",
+				"icon": "/assets/images/ui/navigation/icono-prometer.svg"
 			},
 			{
-				"title": "-"
+				"title": "Pagar en cuotas",
+				"icon": "/assets/images/ui/navigation/icono-cuotas.svg"
+			},
+			{
+				"title": "Actividad",
+				"icon": "/assets/images/ui/navigation/icono-actividad.svg"
+			},
+			{
+				"title": "-",
+				"class": "collapsed-item"
 			},
 			{
 				"title": "Tu Perfil",

@@ -126,7 +126,7 @@ svg {
 hr {
 	border: 0;
 	height: 1px;
-	background: $lightgray;
+	background: transparentize($white, 0.8);
 }
 
 .pages-container {

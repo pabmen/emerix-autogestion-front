@@ -420,10 +420,6 @@ html.no-scroll body {
 */
 }
 
-.emerix-page > * {
-  min-height: 100%;
-}
-
 .emerix-page *, .emerix-page *:before, .emerix-page *:after {
   box-sizing: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -541,7 +537,7 @@ html.no-scroll body {
 .emerix-page hr {
   border: 0;
   height: 1px;
-  background: #c1c1c1;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .emerix-page .pages-container {
@@ -787,7 +783,7 @@ html.no-scroll body {
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
   margin: .5rem;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -1133,7 +1129,7 @@ html.no-scroll body {
 }
 
 .emerix-page .btn {
-  background: linear-gradient(90deg, #8569B4 0%, #A388D1 100%);
+  background: linear-gradient(90deg, #A388D1 0%, #8569b4 100%);
   background-color: #8569b4;
   border-radius: 1.75rem;
   border: 1px solid transparent;
@@ -1151,7 +1147,7 @@ html.no-scroll body {
 }
 
 .emerix-page .btn:hover, .emerix-page .btn:active {
-  background: #4D2378;
+  background: #8569b4;
   outline: none;
 }
 
@@ -1222,7 +1218,7 @@ html.no-scroll body {
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
   margin: .5rem;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -1332,10 +1328,6 @@ html.no-scroll body {
   width: 50%;
 }
 
-.emerix-page .logo {
-  padding: 2rem;
-}
-
 .emerix-page img {
   vertical-align: bottom;
 }
@@ -1353,12 +1345,11 @@ html.no-scroll body {
 }
 
 .emerix-page .main-navigation {
-  width: 17.5em;
-  background-color: #fff;
-}
-
-.emerix-page .main-navigation .logo {
-  padding-top: 1.5rem;
+  width: 17rem;
+  background-color: #46365B;
+  color: #fff;
+  padding: 1rem 0;
+  min-height: 100%;
 }
 
 .emerix-page .main-navigation .mobile-menu-toggle,
@@ -1368,11 +1359,22 @@ html.no-scroll body {
 
 .emerix-page .main-navigation .navigation-item {
   position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+
+.emerix-page .main-navigation .navigation-item:not(.collapsed-item) {
+  min-height: 3.5rem;
+}
+
+.emerix-page .main-navigation .navigation-item hr {
+  width: calc(100% - 3rem);
 }
 
 .emerix-page .main-navigation .navigation-item a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 .emerix-page .main-navigation .navigation-item.active:after {
@@ -1380,24 +1382,22 @@ html.no-scroll body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 3rem;
+  height: 3.5rem;
   width: 4px;
   background-color: #8569b4;
 }
 
+.emerix-page .main-navigation .navigation-item.active {
+  background-color: #46365B;
+}
+
+.emerix-page .main-navigation .navigation-item:hover:not(.collapsed-item) {
+  background-color: #634F7C;
+}
+
 .emerix-page .main-navigation .navigation-item .item {
-  padding: 1rem;
-  padding-left: 0;
   position: relative;
-  padding-left: 2.5rem;
-}
-
-.emerix-page .main-navigation .navigation-item .item.active * {
-  color: #8569b4;
-}
-
-.emerix-page .main-navigation .navigation-item .item:hover {
-  background-color: #F6F6F5;
+  padding-left: 3rem;
 }
 
 .emerix-page .main-navigation .navigation-item > .item {
@@ -1408,10 +1408,12 @@ html.no-scroll body {
   content: "";
   display: block;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 50%;
+  left: 1.5rem;
   width: 1rem;
   height: 1rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   background-image: var(--icon);
   background-size: contain;
   background-repeat: no-repeat;
@@ -1449,7 +1451,6 @@ html.no-scroll body {
     top: 2rem;
     left: 1rem;
     z-index: 1000;
-    background-color: transparent;
   }
   .emerix-page .main-navigation .navigation-container {
     background-color: #fff !important;
@@ -1474,7 +1475,6 @@ html.no-scroll body {
     width: 20px;
   }
   .emerix-page .main-navigation .navigation-container {
-    background-color: #F6F6F5;
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s ease;
@@ -1583,7 +1583,7 @@ html.no-scroll body {
     background-color: #fff;
     border: 1px solid rgba(152, 152, 152, 0.15);
     margin: .5rem;
-    border-radius: 10px;
+    border-radius: 4px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   }
 }
@@ -1663,7 +1663,7 @@ html.no-scroll body {
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
   margin: .5rem;
-  border-radius: 10px;
+  border-radius: 4px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -1703,28 +1703,20 @@ html.no-scroll body {
 }
 
 .emerix-page .topbar {
-  background-color: #F6F6F5;
+  background-color: #fff;
   position: relative;
+  height: 5.25rem;
 }
 
 .emerix-page .topbar > .flex-row {
-  padding: 1rem;
-}
-
-.emerix-page .topbar h1 {
-  font-size: 1.375rem;
-  padding-left: .5rem;
-  color: #8569b4;
-}
-
-.emerix-page .topbar:before {
-  content: "";
-  background-color: #8569b4;
-  width: 0.375rem;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  padding-right: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.emerix-page .topbar .logo-container {
+  width: 17rem;
+  text-align: center;
 }
 
 .emerix-page .topbar .username {
@@ -1937,7 +1929,7 @@ html.no-scroll body {
 .emerix-page .page-login .login-method label {
   order: -1;
   border: 1px solid transparent;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 1.5rem 1rem;
   margin: 1rem;
   text-transform: uppercase;
@@ -2568,7 +2560,7 @@ html.no-scroll body {
 .emerix-page .page-pay .payment-selector li {
   width: 105px;
   height: 75px;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid #c1c1c1;
 }
 

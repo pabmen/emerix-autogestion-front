@@ -1,12 +1,11 @@
 @import '../vars';
 
 .main-navigation {
-	width: 17.5em;
-	background-color: $white;
-
-	.logo {
-		padding-top: 1.5rem;
-	}
+	width: $navigation-width;
+	background-color: $darkviolet;
+	color: $white;
+	padding: 1rem 0;
+	min-height: 100%;
 
 	.mobile-menu-toggle,
 	.mobile-menu-toggle-label {
@@ -15,10 +14,18 @@
 
 	.navigation-item {
 		position: relative;
-		
+		display: flex;
+		align-items: center;
+		transition: all $transition-fast;
+		&:not(.collapsed-item) {min-height: 3.5rem;}
+
+		hr {
+			width: calc(100% - 3rem);
+		}
+
 		a {
 			text-decoration: none;
-			color: $black;
+			color: $white;
 		}
 
 		&.active:after {
@@ -26,24 +33,24 @@
 			position: absolute;
 			top: 0;
 			left: 0;
-			height: 3rem;
+			height: 3.5rem;
 			width: 4px;
 			background-color: $violet;
 		}
 
+		&.active {
+			background-color: $darkviolet;
+		}
+
+		&:hover {
+			&:not(.collapsed-item) {
+				background-color: $semidarkviolet;
+			}
+		}
+
 		.item {
-			padding: 1rem;
-			padding-left: 0;
 			position: relative;
-			padding-left: 2.5rem;
-
-			&.active * {
-				color: $violet;
-			}
-
-			&:hover {
-				background-color: $smoke;
-			}
+			padding-left: 3rem;
 		}
 		
 		& > .item {
@@ -52,10 +59,11 @@
 				content: "";
 				display: block;
 				position: absolute;
-				top: 1rem;
-				left: 1rem;
+				top: 50%;
+				left: 1.5rem;
 				width: 1rem;
 				height: 1rem;
+				transform: translateY(-50%);
 				background-image: var(--icon);
 				background-size: contain;
 				background-repeat: no-repeat;
@@ -96,7 +104,6 @@
 		top: 2rem;
 		left: 1rem;
 		z-index: 1000;
-		background-color: transparent;
 
 		.navigation-container {
 			background-color: $white !important;
@@ -125,7 +132,6 @@
 		}
 				
 		.navigation-container {
-			background-color: $smoke;
 			max-height: 0;
 			overflow: hidden;
 			transition: all $transition-normal;

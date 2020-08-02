@@ -8,7 +8,8 @@ $smoke: #F6F6F5;
 // theme colors
 $lightviolet: #A388D1;
 $violet: #8569b4;
-$darkviolet: #4D2378;
+$semidarkviolet: #634F7C;
+$darkviolet: #46365B;
 
 $orange: #FF6A29;
 
@@ -19,15 +20,16 @@ $yellow: #FFE600;
 
 $transition-fast: .25s ease;
 $transition-normal: .5s ease;
-$border-radius: 10px;
 
-$std-radius: 5px;
+$std-radius: 4px;
+$border-radius: $std-radius;
 
+$navigation-width: 17rem;
 
 $btn-text:$white;
 $btn-color: $violet;
-$btn-color-gradient: linear-gradient(90deg, #8569B4 0%, #A388D1 100%);
-$btn-radius: 28px;
+$btn-color-gradient: linear-gradient(90deg, $lightviolet 0%, $violet 100%);
+$btn-radius: $std-radius;
 $btn-border-color: transparent;
 
 // breakpoints
