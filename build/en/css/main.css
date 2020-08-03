@@ -2221,19 +2221,10 @@ html.no-scroll body {
 .emerix-page .page-home .wide-link a {
   display: block;
   width: 100%;
-  text-decoration: none;
   position: relative;
   padding-top: .5rem;
-  color: #000;
-}
-
-.emerix-page .page-home .wide-link a:after {
-  content: url("/assets/images/ui/buttons/link-go.svg");
-  position: absolute;
-  top: 60%;
-  right: 0;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  color: #8569b4;
+  text-align: center;
 }
 
 .emerix-page .page-home .list-view-add {

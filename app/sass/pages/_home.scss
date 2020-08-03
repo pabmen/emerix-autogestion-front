@@ -100,18 +100,10 @@
         a {
             display: block;
             width: 100%;
-            text-decoration: none;
             position: relative;
             padding-top: .5rem;
-            color: $black;
-            
-            &:after {
-                content: url("/assets/images/ui/buttons/link-go.svg");
-                position: absolute;
-                top: 60%;
-                right: 0;
-                transform: translate(0, -50%);
-            }
+            color: $violet;
+            text-align: center;
         }
     }
 
