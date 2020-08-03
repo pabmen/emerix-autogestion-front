@@ -357,6 +357,14 @@ template {
 
 @font-face {
   font-family: 'Maven Pro';
+  src: url("../assets/fonts/MavenPro-Medium.woff2") format("woff2"), url("../assets/fonts/MavenPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Maven Pro';
   src: url("../assets/fonts/MavenPro-Regular.woff2") format("woff2"), url("../assets/fonts/MavenPro-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
@@ -1685,10 +1693,7 @@ html.no-scroll body {
 }
 
 .emerix-page .table-container .table-header {
-  padding: 1rem;
-  font-weight: bold;
-  color: #8569b4;
-  background-color: #fbfbfb;
+  font-weight: 500;
 }
 
 @media all and (max-width: 1024px) {

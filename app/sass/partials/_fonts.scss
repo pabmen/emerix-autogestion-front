@@ -24,6 +24,19 @@
 
 @font-face {
 	font-family: 'Maven Pro';
+	src: url($assetsPath + 'fonts/MavenPro-Medium.woff2') format('woff2'),
+		url($assetsPath + 'fonts/MavenPro-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+
+	// Ensure text remains visible during webfont load
+	// @see https://web.dev/font-display/
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'Maven Pro';
 	src: url($assetsPath + 'fonts/MavenPro-Regular.woff2') format('woff2'),
 		url($assetsPath + 'fonts/MavenPro-Regular.woff') format('woff');
 	font-weight: normal;

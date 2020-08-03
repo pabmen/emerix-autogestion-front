@@ -61,10 +61,8 @@
     }
     
     .table-header {
-        padding: 1rem;
-        font-weight: bold;
-        color: $violet;
-        background-color: $smoke;
+        //padding: 1rem;
+        font-weight: 500;
 
         @media all and (max-width: $mobileWidth) {
             p {
