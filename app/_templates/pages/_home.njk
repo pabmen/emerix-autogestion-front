@@ -1,9 +1,26 @@
 {% from "../structure/_header.njk" import header %}
+{% from "../components/_tables.njk" import table %}
 
 {% set page = {
 			"status": {
 				"title": "Tu deuda actual es:",
 				"btn": "¡Pagar ahora!"
+			},
+			"table": {
+				"colsClasses": ["col-3-6", "col-1-6 text-center", "col-1-4 text-center", "col-2-6 text-right"],
+				"header": [
+					"Producto",
+					"Vencimiento",
+					"Atraso",
+					"Monto adeudado"
+				],
+				"data": [
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "0", "$19450,87"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/seguros.svg' alt=''>&nbsp;PRÉSTAMO 12 cuotas", "12/10/20", "0", "$19450,87"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2", "$19450,87"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/tc.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/20", "4", "$19450,87"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20", "$19450,87"]
+				]
 			},
 			"payments": {
 				"title": "Últimos planes",
@@ -70,7 +87,10 @@
 			</div>
 			<div class="">
 				<h2>Tus productos</h2>
-				<div class="list-view box">
+				<div class="flex-row">
+					{{ table(page.table) }}
+				</div>
+				{# <div class="list-view box">
 					<div class="list-view-title">
 						<div class="list-view-add"></div>
 					</div>
@@ -89,7 +109,7 @@
 						{% endfor %}
 					</ul>
 					<p class="wide-link"><a href="#">{{ page.payments.view }}</a></p>
-				</div>
+				</div> #}
 			</div>
 		</div>
 		<div class="flex-column col-1-3">
