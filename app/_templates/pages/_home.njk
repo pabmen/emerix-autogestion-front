@@ -6,7 +6,7 @@
 				"title": "Tu deuda actual es:",
 				"btn": "¡Pagar ahora!"
 			},
-			"table": {
+			"productos": {
 				"colsClasses": ["col-3-6", "col-1-6 text-center", "col-1-4 text-center", "col-2-6 text-right"],
 				"header": [
 					"Producto",
@@ -15,11 +15,19 @@
 					"Monto adeudado"
 				],
 				"data": [
-					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "0", "$19450,87"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "1 día", "$19450,87"],
 					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/seguros.svg' alt=''>&nbsp;PRÉSTAMO 12 cuotas", "12/10/20", "0", "$19450,87"],
-					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2", "$19450,87"],
-					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/tc.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/20", "4", "$19450,87"],
-					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20", "$19450,87"]
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2 días", "$19450,87"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/tc.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/20", "4 días", "$19450,87"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20 días", "$19450,87"]
+				]
+			},
+			"planes": {
+				"colsClasses": ["col-3-5", "col-2-5 text-right"],
+				"data": [
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/refinanciacion.svg' alt=''>&nbsp;TC VISA 5400", "EN ESPERA"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/refinanciacion.svg' alt=''>&nbsp;Préstamo personal", "EN ESPERA"],
+					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "APROBADO"]
 				]
 			},
 			"payments": {
@@ -88,7 +96,7 @@
 			<div class="">
 				<h2>Tus productos</h2>
 				<div class="flex-row">
-					{{ table(page.table) }}
+					{{ table(page.productos) }}
 				</div>
 				{# <div class="list-view box">
 					<div class="list-view-title">
@@ -144,7 +152,12 @@
 			</div>
 			<div class="">
 				<h2>Planes de pago</h2>
-				<div class="list-view box">
+
+				<div class="flex-row">
+					{{ table(page.planes) }}
+				</div>
+
+				{# <div class="list-view box">
 					<div class="list-view-title">
 						<div class="list-view-add"></div>
 					</div>
@@ -163,7 +176,7 @@
 						{% endfor %}
 					</ul>
 					<p class="wide-link"><a href="#">{{ page.promises.view }}</a></p>
-				</div>
+				</div> #}
 			</div>
 		</div>
 	</div>
