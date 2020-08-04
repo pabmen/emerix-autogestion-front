@@ -64,3 +64,13 @@
 .col-1-2 {
     width: (1 / 2) * 100%;
 }
+
+.restrict-width {
+    max-width: 44.5rem;
+
+    &.large {
+        max-width: 66.875rem;
+    }
+    margin-left: auto;
+    margin-right: auto;
+}

@@ -1362,6 +1362,16 @@ html.no-scroll body {
   width: 50%;
 }
 
+.emerix-page .restrict-width {
+  max-width: 44.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emerix-page .restrict-width.large {
+  max-width: 66.875rem;
+}
+
 .emerix-page .page-header .top-decoration {
   font-size: 1.125rem;
   font-weight: bold;
@@ -1634,12 +1644,6 @@ html.no-scroll body {
 .emerix-page .slider-arrows a.next-slide {
   right: 0;
   left: auto;
-}
-
-.emerix-page .success {
-  max-width: 44.5rem;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 @media all and (max-width: 1024px) {
