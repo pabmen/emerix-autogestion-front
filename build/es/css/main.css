@@ -402,7 +402,7 @@ html * {
   box-sizing: border-box;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   html {
     font-size: 14px;
   }
@@ -557,7 +557,7 @@ html.no-scroll body {
   margin: 0 auto;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 105px) {
   .emerix-page .pages-container .restrict-desktop {
     width: calc(100% - 10rem);
     margin-left: auto;
@@ -565,13 +565,13 @@ html.no-scroll body {
   }
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 105px) {
   .emerix-page .mobile-only {
     display: none;
   }
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .desktop-only {
     display: none;
   }
@@ -801,7 +801,7 @@ html.no-scroll body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1063,7 +1063,7 @@ html.no-scroll body {
   opacity: 1;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .input-wrapper select {
     padding: .35rem 0;
     -webkit-appearance: none;
@@ -1179,7 +1179,7 @@ html.no-scroll body {
   color: inherit;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .btn {
     padding: 1rem 1.5rem;
   }
@@ -1238,7 +1238,7 @@ html.no-scroll body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1499,7 +1499,7 @@ html.no-scroll body {
           transform: translate(0, -50%) scale(-1);
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page #nav-overlay .dialog-container {
     display: none;
   }
@@ -1552,7 +1552,7 @@ html.no-scroll body {
   margin-top: 2rem;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .sidebar-content p {
     margin: .5rem 0;
   }
@@ -1632,7 +1632,7 @@ html.no-scroll body {
   width: calc(100% - 1.25rem);
 }
 
-@media all and (min-width: 1024px) {
+@media all and (min-width: 104px) {
   .emerix-page .table-container {
     background-color: #fff;
     border: 1px solid rgba(152, 152, 152, 0.15);
@@ -1658,7 +1658,7 @@ html.no-scroll body {
   align-items: center;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .table-container .table tr {
     padding: 1rem;
   }
@@ -1671,7 +1671,7 @@ html.no-scroll body {
   flex-grow: 1;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .table-container .table td p {
     margin-bottom: 0;
   }
@@ -1685,7 +1685,7 @@ html.no-scroll body {
   width: 75%;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .table-container .table .input-wrapper input[type=text] {
     text-align: left;
     width: auto;
@@ -1696,13 +1696,77 @@ html.no-scroll body {
   font-weight: 500;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .table-container .table-header p {
     margin: .5rem 0;
   }
 }
 
-@media all and (max-width: 1024px) {
+.emerix-page .table-container .item-label {
+  font-weight: 500;
+}
+
+.emerix-page .table-container .date-box {
+  border: 1px solid #000;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  margin-right: 1rem;
+}
+
+.emerix-page .table-container .date-box .month {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.emerix-page .table-container .date-box .number {
+  color: #8569b4;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  font-weight: bold;
+}
+
+.emerix-page .table-container .status-label {
+  font-size: 0.875rem;
+}
+
+.emerix-page .table-container .status-label .bullet {
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  border-radius: 1rem;
+  border: 5px solid;
+  margin-right: .5rem;
+}
+
+.emerix-page .table-container .status-label .bullet.green {
+  border-color: #83DF63;
+}
+
+.emerix-page .table-container .status-label .bullet.yellow {
+  border-color: #FFE600;
+}
+
+.emerix-page .table-container .status-label .bullet.red {
+  border-color: #F06464;
+}
+
+.emerix-page .table-container .btn {
+  font-weight: normal;
+  border: 1px solid #8569b4;
+  line-height: 1rem;
+  background: transparent;
+  color: #8569b4;
+  padding: .25rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+@media all and (max-width: 104px) {
   .emerix-page .table-container .table tr:not(.table-header) {
     padding-top: 0;
     padding-bottom: 0;
@@ -1724,7 +1788,7 @@ html.no-scroll body {
   margin-right: -1rem;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page {
     /*.box {
 		margin: 0;
@@ -1841,7 +1905,7 @@ html.no-scroll body {
   margin: 0;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .topbar {
     height: 4.5rem;
   }
@@ -1902,7 +1966,7 @@ html.no-scroll body {
   top: -0.8em;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .text-xxlarge {
     font-size: 2.6rem;
   }
@@ -2059,13 +2123,13 @@ html.no-scroll body {
   overflow-y: auto;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 105px) {
   .emerix-page .page-login .logo {
     padding-top: 0;
   }
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .page-login {
     height: 100vh;
   }
@@ -2157,10 +2221,6 @@ html.no-scroll body {
   right: 1rem;
 }
 
-.emerix-page .page-home .list-view-title h2 {
-  margin: 0;
-}
-
 .emerix-page .page-home .payment-plans,
 .emerix-page .page-home .promises-latest {
   margin: 0 -2rem;
@@ -2191,28 +2251,6 @@ html.no-scroll body {
   margin-bottom: 0;
 }
 
-.emerix-page .page-home .bullet {
-  display: inline-block;
-  vertical-align: middle;
-  width: 15px;
-  height: 15px;
-  border-radius: 1rem;
-  border: 5px solid;
-  margin-right: .5rem;
-}
-
-.emerix-page .page-home .bullet.green {
-  border-color: #83DF63;
-}
-
-.emerix-page .page-home .bullet.yellow {
-  border-color: #FFE600;
-}
-
-.emerix-page .page-home .bullet.red {
-  border-color: #83DF63;
-}
-
 .emerix-page .page-home .wide-link {
   margin-top: 1.5rem;
   margin-bottom: 0;
@@ -2228,20 +2266,7 @@ html.no-scroll body {
   font-size: 0.875rem;
 }
 
-.emerix-page .page-home .list-view-add {
-  width: 2rem;
-  height: 2rem;
-  background-image: url("/assets/images/ui/btn-agregar.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  cursor: pointer;
-}
-
-.emerix-page .page-home .list-view-add:hover {
-  background-image: url("/assets/images/ui/btn-agregar-active.svg");
-}
-
-@media all and (max-width: 1024px) {
+@media all and (max-width: 104px) {
   .emerix-page .page-home .date {
     margin-top: 0;
   }
@@ -2254,9 +2279,6 @@ html.no-scroll body {
   .emerix-page .page-home .wide-link {
     margin-top: 1rem;
     margin-bottom: -.5rem;
-  }
-  .emerix-page .page-home .list-view-add {
-    display: none;
   }
 }
 

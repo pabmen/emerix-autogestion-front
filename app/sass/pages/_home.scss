@@ -42,10 +42,6 @@
         }
     }
 
-    .list-view-title h2 {
-        margin: 0;
-    }
-
     .payment-plans,
     .promises-latest {
         margin: 0 -2rem;
@@ -79,20 +75,6 @@
         margin-bottom: 0;
     }
 
-    .bullet {
-        display: inline-block;
-        vertical-align: middle;
-        width: 15px;
-        height: 15px;
-        border-radius: 1rem;
-        border: 5px solid;
-        margin-right: .5rem;
-
-        &.green {border-color: $green;}
-        &.yellow {border-color: $yellow;}
-        &.red {border-color: $red;}
-    }
-
     .wide-link {
         margin-top: 1.5rem;
         margin-bottom: 0;
@@ -105,19 +87,6 @@
             color: $violet;
             text-align: center;
             font-size: 0.875rem;
-        }
-    }
-
-    .list-view-add {
-        width: 2rem;
-        height: 2rem;
-        background-image: url("/assets/images/ui/btn-agregar.svg");
-        background-repeat:  no-repeat;
-        background-size: contain;
-        cursor: pointer;
-        
-        &:hover {
-            background-image: url("/assets/images/ui/btn-agregar-active.svg");
         }
     }
 }
@@ -141,10 +110,6 @@
         .wide-link {
             margin-top: 1rem;
             margin-bottom: -.5rem;
-        }
-
-        .list-view-add {
-            display: none;
         }
     }
 }
