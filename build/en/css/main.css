@@ -1362,7 +1362,7 @@ html.no-scroll body {
   width: 50%;
 }
 
-.emerix-page .page-header .page-section p {
+.emerix-page .page-header .top-decoration {
   font-size: 1.125rem;
   font-weight: bold;
   color: #8569b4;
@@ -1370,7 +1370,7 @@ html.no-scroll body {
   padding-left: 1rem;
 }
 
-.emerix-page .page-header .page-section p:before {
+.emerix-page .page-header .top-decoration:before {
   content: '';
   position: absolute;
   top: 50%;
@@ -1380,6 +1380,14 @@ html.no-scroll body {
   background-color: #000;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.emerix-page .page-header a.top-decoration {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .emerix-page img {
@@ -1626,6 +1634,28 @@ html.no-scroll body {
 .emerix-page .slider-arrows a.next-slide {
   right: 0;
   left: auto;
+}
+
+.emerix-page .success {
+  max-width: 44.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .success .title {
+    text-align: left;
+  }
+}
+
+.emerix-page .success .subtitle {
+  margin-top: 2rem;
+  line-height: 1.625rem;
+}
+
+.emerix-page .success .subtitle a {
+  font-weight: bold;
+  color: #000;
 }
 
 .emerix-page .table-container {

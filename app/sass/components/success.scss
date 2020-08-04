@@ -1,0 +1,21 @@
+.success {
+    max-width: 44.5rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    .title {
+        @media all and (max-width: $mobileWidth) {
+            text-align: left;
+        }
+    }
+
+    .subtitle {
+        margin-top: 2rem;
+        line-height: 1.625rem;
+
+        a {
+            font-weight: bold;
+            color: $black;
+        }
+    }
+}

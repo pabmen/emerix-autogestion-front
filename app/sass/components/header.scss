@@ -1,6 +1,5 @@
 .page-header {
-
-    .page-section p {
+    .top-decoration {
         font-size: 1.125rem;
         font-weight: bold;
         color: $violet;
@@ -17,5 +16,13 @@
             background-color: $black;
             transform: translateY(-50%);
         }
+    }
+
+    a.top-decoration {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        text-decoration: none;
     }
 }

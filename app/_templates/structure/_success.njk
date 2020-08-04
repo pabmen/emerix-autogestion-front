@@ -1,0 +1,7 @@
+{% macro success(options)%}
+    <div class="success flex-column flex-center text-center">
+        <h2 class="title">{{ options.title | safe }}</h2>
+        <img src="/assets/images/ui/common/success.svg" alt="Success image">
+        <p class="subtitle">{{ options.subtitle | safe }}</p>
+    </div>
+{% endmacro %}

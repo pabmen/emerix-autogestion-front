@@ -150,19 +150,20 @@
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-info.svg');">
 				
-					<a class="item" href="/invoice.html">Pagar</a>
+					<a class="item" href="/pagar.html">Pagar</a>
 				
 			</li>
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-avisar.svg');">
 				
-					<a class="item" href="/pay_0.html">Avisar que pagué</a>
+					<a class="item" href="/avisar_pague.html">Avisar que pagué</a>
 				
 			</li>
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-prometer.svg');">
 				
-					<a class="item" href="/deals_0.html">Prometer una fecha</a>
+					<a class="item" href="/prometer_fecha
+				.html">Prometer una fecha</a>
 				
 			</li>
 			
@@ -229,10 +230,6 @@
 		mobileMenuBtn.checked = false
 	})
 
-	// set active elmnt
-	
-	//document.querySelectorAll('.main-navigation .navigation-item')[0].classList.add('active')
-
 </script>
 					</div>
 					<div class="pages-container flex-grow">
@@ -266,7 +263,7 @@
         
     
     
-    <div class="title">Confirmar importe a pagar</div>
+    <div class="title">Elegí el medio de pago</div>
     
     <ul class="flex-row">
     
@@ -290,270 +287,41 @@
 </div>
 </div>
 	</div>
+	<h2>Pago electrónico</h2>
+	<p>Seleccioná el medio de pago por el que optás y luego presioná continuar.</p>
+	<div class="payment-selector box">
+		<ul class="flex-row">
+			<li class="flex-column flex-center active"><img src="/assets/images/logos/mercadopago.svg" alt=""></li>
+			<li class="flex-column flex-center"><img src="/assets/images/logos/visa.svg" alt=""></li>
+			<li class="flex-column flex-center"><img src="/assets/images/logos/mastercard.svg" alt=""></li>
+			<li class="flex-column flex-center"><img src="/assets/images/logos/amex.svg" alt=""></li>
+			<li class="flex-column flex-center"><img src="/assets/images/logos/generic.svg" alt=""></li>
+			<li class="flex-column flex-center"><img src="/assets/images/logos/generic.svg" alt=""></li>
+		</ul>
+	</div>
+	<h2>Transferencia o depósito</h2>
+	<p>Seleccioná la cuenta por la que optás y luego presioná continuar para registrar el pago. Si aún no lo realizaste se te va generar una promesa de pago por 24hs.</p>
 	<div class="flex-row flex-column-on-mobile">
-		<div class="box flex-grow text-center">
-			<h3>Importe adeudado</h3>
-			<p class="text-xlarge">$900000,00</p>
+		<div class="box">
+			<img src="https://placekitten.com/250/65" alt="" class="img-responsive">
+			<p>
+				Nombre: Empresa Emerix<br>
+				N° Cuenta 567-778-9<br>
+				Alias Supervielle.paga
+			</p>
 		</div>
-		<div class="box flex-grow text-center">
-			<h3>Importe a pagar</h3>
-			<p class="text-xlarge">$900000,00</p>
+		<div class="box">
+			<img src="https://placekitten.com/250/65" alt="" class="img-responsive">
+			<p>
+				Nombre: Empresa Emerix<br>
+				N° Cuenta 567-778-9<br>
+				Alias Supervielle.paga
+			</p>
 		</div>
 	</div>
-	<div class="flex-column">
-        
-	        
-	<div class="table-container">
-		<table class="table" width="100%" border="0">
-			
-				<tr class="table-header">
-					
-					<td style="width: 16.666666666666668%">
-						
-							Producto
-						
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							Vencimiento
-						
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							Atraso
-						
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							Importe adeudado
-						
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							Pago mínimo
-						
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							Importe a pagar
-						
-						
-					</td>
-					
-				</tr>
-			
-			
-				
-				<tr>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								TC VISA 5400
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								10/08/20
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								5 días
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								$19450,87
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								$19450,87
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								$19450,87
-							
-						
-					</td>
-					
-				</tr>
-			
-				
-				<tr>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								TC MASTER 2431
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								10/08/20
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								95 días
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								$2038,87
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								$2038,87
-							
-						
-					</td>
-					
-					<td style="width: 16.666666666666668%">
-						
-							
-								$2038,87
-							
-						
-					</td>
-					
-				</tr>
-			
-
-		</table>
-	</div>
-
-
-	
-
-        
-	        
-	<div class="table-container">
-		<table class="table" width="100%" border="0">
-			
-				<tr class="table-header">
-					
-					<td style="width: 25%">
-						
-							Promesa de pago
-						
-						
-					</td>
-					
-					<td style="width: 25%">
-						
-							Vencimiento
-						
-						
-					</td>
-					
-					<td style="width: 25%">
-						
-							Importe adeudado
-						
-						
-					</td>
-					
-					<td style="width: 25%">
-						
-							Importe a pagar
-						
-						
-					</td>
-					
-				</tr>
-			
-			
-				
-				<tr>
-					
-					<td style="width: 25%">
-						
-							
-								PROM 222wwww
-							
-						
-					</td>
-					
-					<td style="width: 25%">
-						
-							
-								08/10/20
-							
-						
-					</td>
-					
-					<td style="width: 25%">
-						
-							
-								$19450,87
-							
-						
-					</td>
-					
-					<td style="width: 25%">
-						
-							
-								$19450,87
-							
-						
-					</td>
-					
-				</tr>
-			
-
-		</table>
-	</div>
-
-
-	
-
-        
-	</div>
-	<p><img class="icon-inline" src="/assets/images/ui/icono_info.svg" alt=""> La distribución del importe se hace por productos en base los días de mora, una vez cubierto el monto automaticamente contempla el siguiente producto hasta cubrir el importe ingresado.</p>
-	<div class="pay-mini flex-row buttons-container">
-		<button class="btn secondary">Cancelar</button>
-		<button class="btn">Confirmar</button>
+	<div class="pay-mini flex-row flex-end buttons-container">
+		<button class="btn secondary">Atrás</button>
+		<button class="btn">Siguiente</button>
 	</div>
 </section>
 
@@ -562,7 +330,7 @@
 			</div>
 
 			<script>
-				document.querySelectorAll('.main-navigation .navigation-item')[3].classList.add('active')
+				document.querySelectorAll('.main-navigation .navigation-item')[2].classList.add('active')
 			</script>
 		</body>
 	</html>

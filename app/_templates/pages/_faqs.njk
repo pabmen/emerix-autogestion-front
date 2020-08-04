@@ -1,1 +1,25 @@
+{% from "../components/_forms.njk" import input %}
+{% from "../structure/_header.njk" import header %}
+
 {% set page = pages.faqs %}
+
+<section class="page-home">
+
+	{{ header({
+		section: 'Preguntas frecuentes',
+		title: 'Te ayudamos a resolver tus consultas',
+		subtitle: 'Ingresá la palabra clave de lo que querés averiguar'
+	}) }}
+
+
+    <div class="box">
+        {{ input({
+            'id': 'faqs_search',
+            'type': 'search',
+            'placeholder': 'Ejemplo: Promesas de pago, Plan de pagos, Registrar un pago, Pagar...',
+            'error': 'El número ingresado es incorrecto.'
+            })
+        }}
+    </div>
+
+</section>
