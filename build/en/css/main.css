@@ -2343,6 +2343,55 @@ html.no-scroll body {
   }
 }
 
+.emerix-page #home-sidebar.active .sidebar {
+  width: 100%;
+}
+
+.emerix-page #home-sidebar.active .sidebar > div {
+  padding: 1rem;
+}
+
+.emerix-page #home-sidebar .dialog-container {
+  padding: 0;
+  max-width: 320px;
+  left: auto;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  position: static;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.emerix-page #home-sidebar .sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: #fbfbfb;
+  width: 0;
+  transition: all 0.5s ease;
+}
+
+.emerix-page #home-sidebar .close-btn {
+  top: 0;
+  right: 0;
+  bottom: auto;
+}
+
+.emerix-page #home-sidebar .close-btn img {
+  display: block;
+  width: 1.188rem;
+  height: 1.188rem;
+}
+
 .emerix-page .page-invoice {
   padding: 1rem;
 }

@@ -241,6 +241,24 @@
 
 
 
+
+
+
+
+
+<div class="overlay" id="home-sidebar">
+    <div class="dialog-container sidebar" role="dialog">
+        <a class="close-btn">
+            <img src="/assets/images/ui/close-btn.svg" alt="Close">
+        </a>
+        <div class="dialog-content sidebar-content">
+            
+            <div><div class="flex-column"><h1>Detalle de producto</h1><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class="btn secondary hover"><img src="/assets/images/ui/buttons/download.svg" alt=""> Libre deuda</button></div></div>
+        </div>
+    </div>
+</div>
+
+
 <section class="page-home">
 
 	
@@ -269,7 +287,7 @@
 			</div>
 			<div class="">
 				<h2>Tus productos</h2>
-				<div class="flex-row">
+				<div class="flex-row products-table">
 					
 	<div class="table-container desktop-only">
         <table class="table selectable" width="100%" border="0">
@@ -1064,6 +1082,22 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	const overlay = document.querySelector('.overlay')
+
+	document.querySelectorAll('.products-table tr').forEach((tr) => {
+		tr.addEventListener('click', () => {
+			overlay.classList.add('active')
+		})
+	})
+
+
+	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		overlay.classList.remove('active')
+	})
+
+</script>
 
 					</div>
 				</div>

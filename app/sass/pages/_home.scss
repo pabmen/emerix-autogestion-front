@@ -152,3 +152,62 @@
 		}
 	}
 }
+
+
+
+#home-sidebar {
+
+
+	&.active .sidebar {
+		width: 100%;
+
+		>div {
+			padding: 1rem;
+		}
+	}
+
+	.dialog-container {
+		padding: 0;
+		max-width: 320px;
+		left: auto;
+		right: 0;
+
+		height: 100vh;
+		overflow: hidden;
+		overflow-y: auto;
+
+		position: static;
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		margin: 0;
+		border-radius: 0;
+		box-shadow: none;
+		transform: none;
+	}
+
+	//TODO igual al .dialog-container ???
+	.sidebar {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		background-color: $smoke;
+		width: 0;
+		transition: all $transition-normal;
+	}
+
+	.close-btn {
+		top: 0;
+		right: 0;
+		bottom: auto;
+
+		img {
+			display: block;
+			width: 1.188rem;
+			height: 1.188rem;
+		}
+	}
+
+
+}
