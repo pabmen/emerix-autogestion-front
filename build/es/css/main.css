@@ -1850,6 +1850,7 @@ html.no-scroll body {
   background-color: #fff;
   position: relative;
   height: 5.25rem;
+  z-index: 10;
 }
 
 .emerix-page .topbar > .flex-row {

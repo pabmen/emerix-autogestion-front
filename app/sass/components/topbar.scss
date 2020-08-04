@@ -5,6 +5,7 @@
 	background-color: $white;
 	position: relative;
 	height: 5.25rem;
+	z-index: 10;
 	
 	> .flex-row {
 		height: 100%;
