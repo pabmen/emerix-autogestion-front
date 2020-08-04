@@ -30,31 +30,16 @@
 					["<img style='float: left; vertical-align: middle' src='/assets/images/sections/home/icons/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "APROBADO"]
 				]
 			},
-			"payments": {
-				"title": "Últimos planes",
-				"plans": [
-					{
-						"text": "REFI - MC3111223",
-						"date": "17/10/20",
-						"status": "<span class='bullet green'></span>Aprobado"
-					},
-					{
-						"text": "REFI - MC3111223",
-						"date": "17/10/20",
-						"status": "<span class='bullet yellow'></span>En espera"
-					}
-				],
-				"view": "Ver todos los planes"
-			},
 			"promotions": {
 				"src": "https://placekitten.com/g/450/150",
 				"view": "¡Accedé a este beneficio ahora!"
 			},
 			"promises": {
 				"colsClasses": ["", "text-right"],
+				"rowsClasses": ["", "", "disabled"],
 				"data": [
-					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Abr</span><span class='number'>12</span></div><div class='item-label'>$17,900</div></div>", "<button class='btn'>Pagar</button><div class='status-label'><span class='bullet red'></span>VENCIDA</div>"],
-					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Dic</span><span class='number'>31</span></div><div class='item-label'>$37,670</div></div>", "<button class='btn'>Pagar</button><div class='status-label'><span class='bullet red'></span>VENCIDA</div>"],
+					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Abr</span><span class='number'>12</span></div><div class='item-label'>$17,900</div></div>", "<button class='btn'>Pagar</button>"],
+					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Dic</span><span class='number'>31</span></div><div class='item-label'>$37,670</div></div>", "<button class='btn'>Pagar</button>"],
 					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Jul</span><span class='number'>05</span></div><div class='item-label'>$12,500</div></div>", "<button class='btn'>Pagar</button><div class='status-label'><span class='bullet red'></span>VENCIDA</div>"]
 				],
 				"view": "Ver todas las promesas"
@@ -86,26 +71,6 @@
 				<div class="flex-row">
 					{{ table(page.productos) }}
 				</div>
-				{# <div class="list-view box">
-					<div class="list-view-title">
-						<div class="list-view-add"></div>
-					</div>
-					<hr>
-					<ul class="list-view-content">
-						{% for plan in page.payments.plans %}
-						<li class="flex-row promises-latest flex-column-on-mobile">
-							<div class="flex-column flex-grow">
-								<p class="plan-text">{{ plan.text }}</p>
-								<p class="plan-date">{{ plan.date }}</p>
-							</div>
-							<div class="flex-column flex-center">
-								<p>{{ plan.status }}</p>
-							</div>
-						</li>
-						{% endfor %}
-					</ul>
-					<p class="wide-link"><a href="#">{{ page.payments.view }}</a></p>
-				</div> #}
 			</div>
 		</div>
 		<div class="flex-column col-1-3">
@@ -115,31 +80,11 @@
 					<button class="btn secondary">Ver plan</button>
 				</div>
 			</div>
-			<div class="">
+			<div class="promises-table">
 				<h2>Promesas de pago</h2>
 				<div class ="flex-row">
 					{{ table(page.promises) }}
 				</div>
-				{# <div class="list-view box">
-					<div class="list-view-title">
-						<div class="list-view-add"></div>
-					</div>
-					<hr>
-					<ul class="list-view-content">
-						{% for promise in page.promises.latest %}
-						<li class="flex-row promises-latest">
-							<div class="flex-column flex-grow">
-								<p class="promise-price">{{ promise.price}}</p>
-								<p class="promise-date">{{ promise.cant}}</p>
-							</div>
-							<div class="flex-column flex-center">
-								<p>{{ promise.date }}</p>
-							</div>
-						</li>
-						{% endfor %}
-					</ul>
-					<p class="wide-link"><a href="#">GENERAR UNA PROMESA</a></p>
-				</div> #}
 			</div>
 			<div class="">
 				<h2>Planes de pago</h2>
@@ -147,27 +92,6 @@
 				<div class="flex-row">
 					{{ table(page.planes) }}
 				</div>
-
-				{# <div class="list-view box">
-					<div class="list-view-title">
-						<div class="list-view-add"></div>
-					</div>
-					<hr>
-					<ul class="list-view-content">
-						{% for promise in page.promises.latest %}
-						<li class="flex-row promises-latest">
-							<div class="flex-column flex-grow">
-								<p class="promise-price">{{ promise.price}}</p>
-								<p class="promise-date">{{ promise.cant}}</p>
-							</div>
-							<div class="flex-column flex-center">
-								<p>{{ promise.date }}</p>
-							</div>
-						</li>
-						{% endfor %}
-					</ul>
-					<p class="wide-link"><a href="#">{{ page.promises.view }}</a></p>
-				</div> #}
 			</div>
 		</div>
 	</div>

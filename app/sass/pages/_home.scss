@@ -1,115 +1,154 @@
 @import '../vars';
 
 .page-home {
-    margin-top: 1rem;
-    padding: 1rem;
+	margin-top: 1rem;
+	padding: 1rem;
 
-    .first-row {
-        margin-top: 0;
-    }
+	.first-row {
+		margin-top: 0;
+	}
 
-    .home-illus-container {
-       flex-grow: 1;
-       position: relative;
-       height: 100%;
+	.home-illus-container {
+	   flex-grow: 1;
+	   position: relative;
+	   height: 100%;
 
-        .home-illus {
-            position: absolute;
-            top: -50%;
-            left: 0;
-        }
-    }
+		.home-illus {
+			position: absolute;
+			top: -50%;
+			left: 0;
+		}
+	}
 
 
+	.prom-text {
+		color: $orange;
+		font-weight: bold;
 
-    .prom-text {
-        color: $orange;
-        font-weight: bold;
+		background-image: url('/assets/images/sections/home/prom.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 190px;
 
-        background-image: url('/assets/images/sections/home/prom.svg');
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 190px;
+		.btn {
+			color: $white;
+			border-color: $white;
+			padding: .625rem 1.5rem;
+			line-height: 0.8rem;
+			position: absolute;
+			bottom: 1rem;
+			right: 1rem;
+		}
+	}
 
-        .btn {
-            color: $white;
-            border-color: $white;
-            padding: .625rem 1.5rem;
-            line-height: 0.8rem;
-            position: absolute;
-            bottom: 1rem;
-            right: 1rem;
-        }
-    }
+	.promises-table {
+		.btn {
+			display: none
+		}
 
-    .payment-plans,
-    .promises-latest {
-        margin: 0 -2rem;
-        padding: 1rem 2rem;
-        border-bottom: 1px solid $smoke;
-    
-        p  {
-            margin-top: 0.5rem;
-            margin-bottom: 0;
-        }
-    
-    }
+		tr {
+			td {
+				display: flex;
+			}
 
-    .plan-date,
-    .promise-date {
-        color: $silver;
-    }
+			td:first-child {
+				justify-content: flex-start;
+			}
 
-    .promises-latest {
-        &:hover {
-            background-color: $smoke;
-            color: $violet;
-            
-        }
-    }
+			td:last-child {
+				justify-content: flex-end;
+			}
 
-    hr {
-        background-color: $smoke;
-        margin-left: -2rem;
-        margin-right: -2rem;
-        margin-bottom: 0;
-    }
+			&.disabled {
+				.item-label {
+					color: $lightgray;
+				}
 
-    .wide-link {
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-    
-        a {
-            display: block;
-            width: 100%;
-            position: relative;
-            padding-top: .5rem;
-            color: $violet;
-            text-align: center;
-            font-size: 0.875rem;
-        }
-    }
+				.date-box {
+					border-color: $lightgray;
+				}
+			}
+			
+			&:not(.disabled):hover {
+				.btn {
+					display: block;
+				}
+
+				.status-label {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.payment-plans,
+	.promises-latest {
+		margin: 0 -2rem;
+		padding: 1rem 2rem;
+		border-bottom: 1px solid $smoke;
+	
+		p  {
+			margin-top: 0.5rem;
+			margin-bottom: 0;
+		}
+	
+	}
+
+	.plan-date,
+	.promise-date {
+		color: $silver;
+	}
+
+	.promises-latest {
+		&:hover {
+			background-color: $smoke;
+			color: $violet;
+			
+		}
+	}
+
+	hr {
+		background-color: $smoke;
+		margin-left: -2rem;
+		margin-right: -2rem;
+		margin-bottom: 0;
+	}
+
+	.wide-link {
+		margin-top: 1.5rem;
+		margin-bottom: 0;
+	
+		a {
+			display: block;
+			width: 100%;
+			position: relative;
+			padding-top: .5rem;
+			color: $violet;
+			text-align: center;
+			font-size: 0.875rem;
+		}
+	}
 }
 
 @media all and (max-width: $mobileWidth) {
-    .page-home {
-        .date {
-            margin-top: 0;
-        }
+	.page-home {
+		.date {
+			margin-top: 0;
+		}
 
-        .btn {
-            width: 100%;
-        }
+		.btn {
+			width: 100%;
+		}
 
-        .flex-column-on-mobile {
-            .flex-center {
-                align-items: flex-start;
-            }
-        }
+		.flex-column-on-mobile {
+			.flex-center {
+				align-items: flex-start;
+			}
+		}
 
-        .wide-link {
-            margin-top: 1rem;
-            margin-bottom: -.5rem;
-        }
-    }
+		.wide-link {
+			margin-top: 1rem;
+			margin-bottom: -.5rem;
+		}
+	}
 }

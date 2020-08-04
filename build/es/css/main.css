@@ -2221,6 +2221,38 @@ html.no-scroll body {
   right: 1rem;
 }
 
+.emerix-page .page-home .promises-table .btn {
+  display: none;
+}
+
+.emerix-page .page-home .promises-table tr td {
+  display: flex;
+}
+
+.emerix-page .page-home .promises-table tr td:first-child {
+  justify-content: flex-start;
+}
+
+.emerix-page .page-home .promises-table tr td:last-child {
+  justify-content: flex-end;
+}
+
+.emerix-page .page-home .promises-table tr.disabled .item-label {
+  color: #c1c1c1;
+}
+
+.emerix-page .page-home .promises-table tr.disabled .date-box {
+  border-color: #c1c1c1;
+}
+
+.emerix-page .page-home .promises-table tr:not(.disabled):hover .btn {
+  display: block;
+}
+
+.emerix-page .page-home .promises-table tr:not(.disabled):hover .status-label {
+  display: none;
+}
+
 .emerix-page .page-home .payment-plans,
 .emerix-page .page-home .promises-latest {
   margin: 0 -2rem;
