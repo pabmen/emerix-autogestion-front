@@ -1,0 +1,49 @@
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_dialogs.njk" import dialog %}
+{% from "../components/_breadcrumbs.njk" import breadcrumb %}
+
+{% set page = pages.deals_1 %}
+
+{{ dialog(page.sidebar) }}
+
+<section class="page-deals restrict-desktop">
+	<div class="flex-row flex-center">
+		<h1 class="flex-grow">{{ page.title }}</h1>
+		<div>{{ breadcrumb({
+			'items': ['item1', 'item2', 'item3', 'item4'],
+			'index': 1
+		}) }}</div>
+	</div>
+	<div class="flex-row flex-column-on-mobile">
+		<div class="box flex-grow text-center">
+			<h3>Importe acordado</h3>
+			<p class="text-xlarge">$900000,00</p>
+		</div>
+		<div class="box flex-grow text-center">
+			<h3>Plazo de pago</h3>
+			<p class="text-xlarge">24hs</p>
+		</div>
+	</div>
+	<div class="flex-row">
+	{{ table(page.table, {'class': 'disabled'}) }}
+	</div>
+	<p><img src="/assets/images/ui/icono_info.svg" alt=""> La distribución del importe se hace por productos en base los días de mora, una vez cubierto el monto automaticamente contempla el siguiente producto hasta cubrir el importe ingresado.</p>
+	<div class="deal-mini flex-row buttons-container">
+		<button class="btn secondary back">Cancelar</button>
+		<button class="btn next">Confirmar</button>
+	</div>
+</section>
+
+
+<script>
+	const HTML = document.querySelector('html')
+	document.querySelector('.btn.next').addEventListener('click', () => {
+		HTML.classList.add('no-scroll')
+		document.querySelector('.overlay').classList.add('active')
+	})
+
+	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		HTML.classList.remove('no-scroll')
+		document.querySelector('.overlay').classList.remove('active')
+	})
+</script>

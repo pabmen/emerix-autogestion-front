@@ -1,0 +1,7 @@
+
+{% macro title(options)%}
+	<div>
+		<h1 class="page-title text-xlarge">{{ options.title | safe }}</h1>
+		{% if options.subtitle %}<p class="page-subtitle">{{ options.subtitle | safe }}</p>{% endif %}
+	</div>
+{% endmacro %}

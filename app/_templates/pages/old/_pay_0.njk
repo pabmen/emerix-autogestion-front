@@ -1,0 +1,59 @@
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_dialogs.njk" import dialog %}
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_breadcrumbs.njk" import breadcrumb %}
+
+{% set page = pages.pay_0 %}
+
+<section class="page-pay pay-first restrict-desktop">
+	<div class="flex-row flex-center">
+		<h1 class="flex-grow">{{ page.title }}</h1>
+        {{ breadcrumb({
+            'title': 'Seleccionar deudas a pagar',
+            'items': ['item1', 'item2', 'item3', 'item4'],
+            'index': 0
+        }) }}
+	</div>
+	<div class="flex-column">
+        {% for item in page.tables %}
+	        {{ table(item, {
+                'specialType': 'checkbox',
+                'idPrepend': 'table-' + loop.index,
+                'class': 'table-' + loop.index
+            }) }}
+        {% endfor %}
+	</div>
+	<div class="flex-column pay-mini"> 
+		<div>
+			{% call input({
+				'type': 'radio',
+				'id': 'payment-total',
+				'name': 'payment-type',
+				'specialLabel': 1
+			}) %}
+				<div class="box flex-row flex-center">
+					<div class="payment-title">IMPORTE FINAL</div>
+					<div class="text-right flex-grow"><strong>$0,00</strong></div>
+				</div>
+			{% endcall %}
+		</div>
+		<div>
+			{% call input({
+				'type': 'radio',
+				'id': 'payment-parcial',
+				'name': 'payment-type',
+				'specialLabel': 1
+			}) %}
+				<div class="box flex-row flex-center">
+					<div class="payment-title">OTRO IMPORTE</div>
+					<div class="text-right flex-grow">
+						{{ input({}) }}
+					</div>
+				</div>
+			{% endcall %}
+		</div>
+        <div class="text-right buttons-container">
+		    <button class="btn"><a href="/pay_1.html">Siguiente</a></button>
+        </div>
+	</div>
+</section>

@@ -1,0 +1,93 @@
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_dialogs.njk" import dialog %}
+{% from "../components/_breadcrumbs.njk" import breadcrumb %}
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import textarea %}
+{% from "../components/_forms.njk" import select %}
+
+{% set page = pages.pay_3 %}
+
+{{ dialog(page.sidebar) }}
+
+<section class="page-pay pay-third restrict-desktop">
+	<h1>Registrar pago</h1>
+    <div class="wrapper">
+        <form class="form flex-column box" novalidate>
+            <div class="flex-row ">
+                <div class="flex-grow form-padding">
+                    <div class="form-group">
+                        {{ input({
+                            'id': '',
+                            'placeholder': 'Total abonado'
+                            })
+                        }}
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <div class="form-group">
+                        {{ select({
+                            'id': '',
+                            'items': ['Dólar', 'Pesos'],
+                            'placeholder': 'Moneda'
+                        }) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-row">
+                <div class="form-group flex-grow">
+                    {{ select({
+                        'id': '',
+                        'items': ['Tarjeta', 'Efectivo', 'Mercadopago', 'Red Link/Rapipago', 'Provincia Pagos'],
+                        'placeholder': 'Medio de pago'
+                    }) }}
+                </div>
+            </div>
+            <div class="flex-row">
+                <div class="flex-grow form-padding">
+                    <div class="form-group">
+                        {{ input({
+                            'id': '',
+                            'class': 'flex-center flex-column',
+                            'placeholder': 'N° de comprobante'
+                            })
+                        }}
+                    </div>
+                </div>
+                <div class="flex-grow">
+                    <div class="form-group">
+                        {{ select({
+                            'id': '',
+                            'placeholder': 'Fecha'
+                        }) }}
+                    </div>
+                </div>
+            </div>
+                <div class="form-group">
+                    {{ textarea({
+                        'id': '',
+                        'type': 'textarea',
+                        'placeholder': 'Comentarios'
+                    }) }}
+                </div>
+        </form>
+        <div class="flex-row flex-end buttons-container">
+            <button class="btn next">Registrar pago</button>
+        </div>
+    </div>
+</section>
+
+
+<script>
+	document.querySelectorAll('.btn.next').forEach((tr) => {
+		tr.addEventListener('click', () => {
+			document.querySelector('#pay-sidebar').classList.add('active')
+			document.querySelector('html').classList.add('no-scroll')
+		})
+	})
+
+	document.querySelector('.overlay .close-btn').addEventListener('click', () => {
+		document.querySelector('.overlay').classList.remove('active')
+		document.querySelector('html').classList.remove('no-scroll')
+	})
+</script>

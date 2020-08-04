@@ -1,0 +1,40 @@
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_dialogs.njk" import dialog %}
+{% from "../components/_breadcrumbs.njk" import breadcrumb %}
+
+{% set page = pages.pay_1 %}
+
+{{ dialog(page.sidebar) }}
+
+<section class="page-pay pay-second restrict-desktop">
+	<div class="flex-row flex-center">
+		<h1 class="flex-grow">{{ page.title }}</h1>
+		<div>{{ breadcrumb({
+			'items': ['item1', 'item2', 'item3', 'item4'],
+			'index': 2,
+			'title': 'Confirmar importe a pagar'
+		}) }}</div>
+	</div>
+	<div class="flex-row flex-column-on-mobile">
+		<div class="box flex-grow text-center ">
+			<h3>Importe adeudado</h3>
+			<p class="text-xlarge">$900000,00</p>
+		</div>
+		<div class="box flex-grow text-center ">
+			<h3>Importe a pagar</h3>
+			<p class="text-xlarge">$900000,00</p>
+		</div>
+	</div>
+	<div class="flex-column">
+        {% for item in page.tables%}
+	        {{ table(item, {
+                'class': 'disabled table-' + loop.index
+            }) }}
+        {% endfor %}
+	</div>
+	<p><img class="icon-inline" src="/assets/images/ui/icono_info.svg" alt=""> La distribución del importe se hace por productos en base los días de mora, una vez cubierto el monto automaticamente contempla el siguiente producto hasta cubrir el importe ingresado.</p>
+	<div class="pay-mini flex-row buttons-container">
+		<button class="btn secondary">Cancelar</button>
+		<button class="btn">Confirmar</button>
+	</div>
+</section>
