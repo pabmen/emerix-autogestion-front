@@ -2265,6 +2265,7 @@ html.no-scroll body {
 .emerix-page .page-home .prom-text {
   color: #FF6A29;
   font-weight: bold;
+  border: 0;
   background-image: url("/assets/images/sections/home/prom.svg");
   background-size: cover;
   background-repeat: no-repeat;

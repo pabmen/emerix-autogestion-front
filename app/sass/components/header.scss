@@ -1,28 +1,28 @@
 .page-header {
-    .top-decoration {
-        font-size: 1.125rem;
-        font-weight: bold;
-        color: $violet;
-        position: relative;
-        padding-left: 1rem;
+	.top-decoration {
+		font-size: 1.125rem;
+		font-weight: bold;
+		color: $violet;
+		position: relative;
+		padding-left: 1rem;
 
-        &:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 1px;
-            height: 2rem;
-            background-color: $black;
-            transform: translateY(-50%);
-        }
-    }
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 1px;
+			height: 2rem;
+			background-color: $black;
+			transform: translateY(-50%);
+		}
+	}
 
-    a.top-decoration {
-        display: block;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        font-weight: normal;
-        text-decoration: none;
-    }
+	a.top-decoration {
+		display: block;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		font-weight: normal;
+		text-decoration: none;
+	}
 }

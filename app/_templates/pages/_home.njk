@@ -1,4 +1,5 @@
 {% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
 {% from "../components/_tables.njk" import table %}
 {% from "../components/_dialogs.njk" import dialog %}
 
@@ -59,10 +60,15 @@
 <section class="page-home">
 
 	{{ header({
-		section: 'Inicio',
-		title: 'Hola Nicolas,',
-		subtitle: '¡Es un gusto verte por acá! Queremos ayudarte a alivianar tus deudas ;)'
+		section: 'Inicio'
 	}) }}
+
+	<div>
+		{{ title({
+			title: 'Hola Nicolas,',
+			subtitle: '¡Es un gusto verte por acá! Queremos ayudarte a alivianar tus deudas ;)'
+		}) }}
+	</div>
 			
 	<div class="flex-row flex-column-on-mobile justify-center">
 		<div class="flex-column col-2-3">

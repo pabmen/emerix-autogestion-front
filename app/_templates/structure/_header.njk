@@ -1,15 +1,11 @@
 {% macro header(options)%}
-    <div class="flex-column page-header">
-        <div class="page-section">
-            {% if options.section %}
-                <p class="top-decoration">{{ options.section | safe }}</p>
-            {% elseif options.link %}
-                <a class="top-decoration" href="{{ options.link.href }}">{{ options.link.text }}</a>
-            {% endif %}
-        </div>
-    </div>
-    <div>
-        {% if options.title %}<h1 class="page-title text-xlarge">{{ options.title | safe }}</h1>{% endif %}
-        {% if options.subtitle %}<p class="page-subtitle">{{ options.subtitle | safe }}</p>{% endif %}
-    </div>
+	<div class="flex-column page-header">
+		<div class="page-section">
+			{% if options.section %}
+				<p class="top-decoration">{{ options.section | safe }}</p>
+			{% elseif options.link %}
+				<a class="top-decoration" href="{{ options.link.href }}">{{ options.link.text }}</a>
+			{% endif %}
+		</div>
+	</div>
 {% endmacro%}
