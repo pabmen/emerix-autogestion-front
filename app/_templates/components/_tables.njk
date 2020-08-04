@@ -1,78 +1,78 @@
 {% from "../components/_forms.njk" import input %}
 
 {% macro table(content, options) %}
-	<div class="table-container desktop-only">
-        <table class="table {{content.class}}" width="100%" border="0">
-            {% if content.header %}
-            <tr class="table-header {% if content.rowsClasses %}{{ content.rowsClasses[loop.index - 1] }}{% endif %}">
-                {% for headItem in content.header%}
-                <td {% if content.colsClasses %}class="{{ content.colsClasses[loop.index - 1] }}"{% else %}style="width: {{ 100 / content.header.length }}%"{% endif %}>
-                    {% if loop.first and options.specialType == 'checkbox' %}
-                    {{ input({
-                        'type': 'checkbox',
-                        'id': options.idPrepend + 'table-select-all',
-                        'label': headItem
-                    }) }}
-                    {% else %}
-                        {{headItem}}
-                    {% endif %}
-                    
-                </td>
-                {% endfor %}
-            </tr>
-            {% endif %}
-            {% for row in content.data %}
-                {% set outeridx = loop %}
-                <tr {% if content.rowsClasses %}class="{{ content.rowsClasses[loop.index - 1] }}"{% endif %}>
-                    {% for column in row %}
-                    <td {% if content.colsClasses %}class="{{ content.colsClasses[loop.index - 1] }}"{% else %}style="width: {{ 100 / row.length }}%"{% endif %}>
-                        {% if loop.first and options.specialType == 'checkbox' %}
-                            {{ input({
-                                'type': 'checkbox',
-                                'id': options.idPrepend + 'table-select-' + outeridx.index,
-                                'label': column
-                            }) }}
-                        {% else %}
-                            {% if column.values %}
-                                {% for items in column.value %}
-                                    <div class="{{ item.class }}">{{ item.content }}</div>
-                                {% endfor %}
-                            {% else %}
-                                {{ column | safe }}
-                            {% endif %}
-                        {% endif %}
-                    </td>
-                    {% endfor %}
-                </tr>
-            {% endfor %}
+	<div class="table-container">
+		<table class="table {{content.class}}" width="100%" border="0">
+			{% if content.header %}
+				<tr class="table-header">
+					{% for headItem in content.header%}
+					<td {% if content.colsClasses %}class="{{ content.colsClasses[loop.index - 1] }}"{% else %}style="width: {{ 100 / content.header.length }}%"{% endif %}>
+						{% if loop.first and options.specialType == 'checkbox' %}
+						{{ input({
+							'type': 'checkbox',
+							'id': options.idPrepend + 'table-select-all',
+							'label': headItem
+						}) }}
+						{% else %}
+							{{headItem}}
+						{% endif %}
+						
+					</td>
+					{% endfor %}
+				</tr>
+			{% endif %}
+			{% for row in content.data %}
+				{% set outeridx = loop %}
+				<tr {% if content.rowsClasses %}class="{{ content.rowsClasses[loop.index - 1] }}"{% endif %}>
+					{% for column in row %}
+					<td {% if content.colsClasses %}class="{{ content.colsClasses[loop.index - 1] }}"{% else %}style="width: {{ 100 / row.length }}%"{% endif %}>
+						{% if loop.first and options.specialType == 'checkbox' %}
+							{{ input({
+								'type': 'checkbox',
+								'id': options.idPrepend + 'table-select-' + outeridx.index,
+								'label': column
+							}) }}
+						{% else %}
+							{% if column.values %}
+								{% for items in column.value %}
+									<div class="{{ item.class }}">{{ item.content }}</div>
+								{% endfor %}
+							{% else %}
+								{{ column | safe }}
+							{% endif %}
+						{% endif %}
+					</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
 
-        </table>
-    </div>
+		</table>
+	</div>
 
 
-    <div class="mobile-only flex-column flex-grow table-container">
-        {% for row in content.data %}
-        {% set outeridx = loop %}
-        <table class="box table flex-row {{content.class}}">
-            {% for column in row %}
-                <tr {% if loop.first %} class="table-header"{% endif %}>
-                    <td>
-                        {% if loop.first and options.specialType == 'checkbox' %}
-                        {{ input({
-                            'type': 'checkbox',
-                            'id': options.idPrepend + 'table-select-m' + outeridx.index,
-                            'label': column
-                        }) }}
-                        {% else %}
-                            {% if loop.first == false %}
-                                <p><strong>{{ content.header[(loop.index - 1)] }}</strong></p>
-                            {% endif %}
-                            <p>{{ column }}</p>
-                        {% endif %}
-                    </td>
-                </tr>
-            {% endfor %}
-        </table>
-        {% endfor %}
-    </div>
+	{#<div class="mobile-only flex-column flex-grow table-container">
+		{% for row in content.data %}
+		{% set outeridx = loop %}
+		<table class="box table flex-row {{content.class}}">
+			{% for column in row %}
+				<tr {% if loop.first %} class="table-header"{% endif %}>
+					<td>
+						{% if loop.first and options.specialType == 'checkbox' %}
+						{{ input({
+							'type': 'checkbox',
+							'id': options.idPrepend + 'table-select-m' + outeridx.index,
+							'label': column
+						}) }}
+						{% else %}
+							{% if loop.first == false %}
+								<p><strong>{{ content.header[(loop.index - 1)] }}</strong></p>
+							{% endif %}
+							<p>{{ column }}</p>
+						{% endif %}
+					</td>
+				</tr>
+			{% endfor %}
+		</table>
+		{% endfor %}
+	</div>}#}
 {% endmacro %}

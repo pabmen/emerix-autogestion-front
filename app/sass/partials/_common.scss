@@ -149,13 +149,13 @@ hr {
 
 @media all and (min-width: $mobileWidth + 1) {
 	.mobile-only {
-		display: none;
+		display: none !important;
 	}
 }
 
 @media all and (max-width: $mobileWidth) {
 	.desktop-only {
-		display: none;
+		display: none !important;
 	}
 
 	.flex-column-on-mobile {

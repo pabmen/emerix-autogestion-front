@@ -81,39 +81,6 @@
 		}
 	}
 
-	.payment-plans,
-	.promises-latest {
-		margin: 0 -2rem;
-		padding: 1rem 2rem;
-		border-bottom: 1px solid $smoke;
-	
-		p  {
-			margin-top: 0.5rem;
-			margin-bottom: 0;
-		}
-	
-	}
-
-	.plan-date,
-	.promise-date {
-		color: $silver;
-	}
-
-	.promises-latest {
-		&:hover {
-			background-color: $smoke;
-			color: $violet;
-			
-		}
-	}
-
-	hr {
-		background-color: $smoke;
-		margin-left: -2rem;
-		margin-right: -2rem;
-		margin-bottom: 0;
-	}
-
 	.wide-link {
 		margin-top: 1.5rem;
 		margin-bottom: 0;
@@ -149,6 +116,32 @@
 		.wide-link {
 			margin-top: 1rem;
 			margin-bottom: -.5rem;
+		}
+
+		.flex-column.col-1-3,
+		.flex-column.col-2-3 {
+			width: 100%;
+		}
+
+
+		.promises-table {
+			.btn {
+				display: block;
+			}
+
+			.status-label {
+				display: none;
+			}
+
+			.disabled {
+				.btn {
+					display: none;
+				}
+
+				.status-label {
+					display: block;
+				}
+			}
 		}
 	}
 }
