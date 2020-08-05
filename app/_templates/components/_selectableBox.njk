@@ -1,0 +1,31 @@
+{%- macro random_int(len) -%}
+  {%- for _ in range(len) -%}
+    {{ range(10) | random }}
+  {%- endfor -%}
+{%- endmacro -%}
+
+{% set id = 'box-' + random_int(10) %}
+
+{% macro selectableBox(options) %}
+<div class="selectable-box {{ options.class}}" id="{{ id }}">
+	{{ caller()}}
+</div>
+<script>
+	;(() => {
+		const container = document.querySelector('#{{ id }}')
+		const boxes = container.querySelectorAll('.box')
+
+		boxes.forEach((box, i) => {
+			if (i === 0) {
+				box.classList.add('active')
+			}
+			box.addEventListener('click', () => {
+				boxes.forEach((box) => {
+					box.classList.remove('active')
+				})
+				box.classList.add('active')
+			})
+		})
+	})();
+</script>
+{% endmacro %}

@@ -237,7 +237,7 @@
 
 
 
-<section class="page-promises promises">
+<section class="page-promises">
 	
 	
 	<div class="page-progress">
@@ -251,36 +251,36 @@
 	</div>
 
 
-	<div class="restrict-width">
-		
+    <div class="restrict-width">
+        
 	<div class="title">
 		<h1 class="page-title text-large">Generar una promesa de pago</h1>
 		<p class="page-subtitle"><span></span>Elegí cómo querés generar la promesa de pago, tenes 2 opciones:</p>
 	</div>
 
 
-		
-<div class="selectable-box flex-row" id="box-8977125008">
+        
+<div class="selectable-box flex-row" id="box-5371362657">
 	
-			<div class="box col-1-2">
-				<div class="flex-row flex-center">
-					<img src="/assets/images/sections/promises/1.svg" alt="">
-					<img src="/assets/images/sections/promises/1_active.svg" alt="">
-				</div>
-				<p class="text-center">Prometer por el monto total de la deuda o ingresando un monto definido por vos.</p>
-			</div>
-			<div class="box col-1-2">
-				<div class="flex-row flex-center">
-					<img src="/assets/images/sections/promises/2.svg" alt="">
-					<img src="/assets/images/sections/promises/2_active.svg" alt="">
-				</div>
-				<p class="text-center">Prometer por selección de los productos, ya sea el total de cada monto o uno definido por vos.</p>
-			</div>
-		
+            <div class="box">
+                <div class="flex-row flex-center">
+                    <img src="/assets/images/sections/promises/1.svg" alt="">
+                    <img src="/assets/images/sections/promises/1_active.svg" alt="">
+                </div>
+                <p class="text-center">Prometer por el monto total de la deuda o ingresando un monto definido por vos.</p>
+            </div>
+            <div class="box">
+                <div class="flex-row flex-center">
+                    <img src="/assets/images/sections/promises/2.svg" alt="">
+                    <img src="/assets/images/sections/promises/2_active.svg" alt="">
+                </div>
+                <p class="text-center">Prometer por selección de los productos, ya sea el total de cada monto o uno definido por vos.</p>
+            </div>
+        
 </div>
 <script>
 	;(() => {
-		const container = document.querySelector('#box-8977125008')
+		const container = document.querySelector('#box-5371362657')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {
@@ -297,23 +297,12 @@
 	})();
 </script>
 
-		<div>
-			<button class="btn" data-next>Siguiente</button>
-		</div>
-	</div>
+        <div>
+            <button class="btn" data-next>Siguiente</button>
+        </div>
+    </div>
 </section>
 
-<script>
-	const boxes = document.querySelectorAll('.selectable-box .box')
-
-	document.querySelector('[data-next]').addEventListener('click', () => {
-		if (boxes[0].classList.contains('active')) {
-			window.location.href = '/prometer_1.html'
-		} else {
-			window.location.href = '/prometer_2.html'
-		}
-	})
-</script>
 
 					</div>
 				</div>

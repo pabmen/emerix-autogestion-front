@@ -135,6 +135,7 @@ hr {
 
 	& > * {
 		margin: 0 auto;
+		padding: 1rem;
 	}
 
 	@media all and (min-width: $mobileWidth + 1) {

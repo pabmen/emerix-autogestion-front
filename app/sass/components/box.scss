@@ -16,7 +16,7 @@
 	background-color: $white;
 	border: 1px solid transparentize($silver, .85);
 	padding: 2rem;
-	margin: .5rem;
+	margin: $box-margin;
 	border-radius: $border-radius;
 	box-shadow: .25rem .5rem 1rem transparentize($black, .9);
 
@@ -26,6 +26,10 @@
 
 	&:last-child {
 		margin-right: 0;
+	}
+
+	&:only-child {
+		//width: calc(inherit - $box);
 	}
 
 	hr {

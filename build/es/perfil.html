@@ -236,91 +236,72 @@
 	
 
 
-
-<section class="page-promises promises">
+<section class="page-pay pay-success">
 	
-	
-	<div class="page-progress">
-		<div class="progress progress-5"></div>
-	</div>
 	
 	<div class="flex-column page-header">
 		
-			<p class="top-decoration">Prometer una fecha</p>
+			<p class="top-decoration">Tu perfil</p>
 		
 	</div>
 
 
-	<div class="restrict-width">
-		
+    <div class="restrict-width">
+        
 	<div class="title">
-		<h1 class="page-title text-large">Generar una promesa de pago</h1>
-		<p class="page-subtitle"><span></span>Elegí cómo querés generar la promesa de pago, tenes 2 opciones:</p>
+		<h1 class="page-title text-large">Esta es la información con la que contamos</h1>
+		<p class="page-subtitle"><span></span>Ingresá la palabra clave de lo que querés averiguar</p>
 	</div>
 
-
-		
-<div class="selectable-box flex-row" id="box-8977125008">
-	
-			<div class="box col-1-2">
-				<div class="flex-row flex-center">
-					<img src="/assets/images/sections/promises/1.svg" alt="">
-					<img src="/assets/images/sections/promises/1_active.svg" alt="">
+        <div class="flex-column flex-center box">
+			<img src="/assets/images/sections/account/icon.svg" alt="User icon">
+			<h3>Nicolas Alberto Moroso</h3>
+			<p>DNI 31910555</p>
+			<div class="flex-row">
+				<div class="col-1-2">
+					<p><strong>Mail principal</strong></p>
+					<p>nico_moroso@gmail.com</p>
 				</div>
-				<p class="text-center">Prometer por el monto total de la deuda o ingresando un monto definido por vos.</p>
-			</div>
-			<div class="box col-1-2">
-				<div class="flex-row flex-center">
-					<img src="/assets/images/sections/promises/2.svg" alt="">
-					<img src="/assets/images/sections/promises/2_active.svg" alt="">
+				<div class="col-1-2">
+					<p><strong>Mail secundario</strong></p>
+					<p>nico_moroso@gmail.com</p>
 				</div>
-				<p class="text-center">Prometer por selección de los productos, ya sea el total de cada monto o uno definido por vos.</p>
 			</div>
-		
-</div>
-<script>
-	;(() => {
-		const container = document.querySelector('#box-8977125008')
-		const boxes = container.querySelectorAll('.box')
-
-		boxes.forEach((box, i) => {
-			if (i === 0) {
-				box.classList.add('active')
-			}
-			box.addEventListener('click', () => {
-				boxes.forEach((box) => {
-					box.classList.remove('active')
-				})
-				box.classList.add('active')
-			})
-		})
-	})();
-</script>
-
-		<div>
-			<button class="btn" data-next>Siguiente</button>
+			<div class="flex-row">
+				<div class="col-1-2">
+					<div class="flex-row">
+						<div>
+							<img src="/assets/images/sections/account/phone.svg" alt="">
+						</div>
+						<div>
+							<p><strong>Teléfono principal</strong></p>
+							<p>+ 54 9 11 3690 9090</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-1-2">
+					<div class="flex-row">
+						<div>
+							<img src="/assets/images/sections/account/phone.svg" alt="">
+						</div>
+						<div>
+							<p><strong>Teléfono principal</strong></p>
+							<p>+ 54 9 11 3690 9090</p>
+						</div>
+					</div>
+				</div>
+			
 		</div>
-	</div>
-</section>
+    </div>
 
-<script>
-	const boxes = document.querySelectorAll('.selectable-box .box')
-
-	document.querySelector('[data-next]').addEventListener('click', () => {
-		if (boxes[0].classList.contains('active')) {
-			window.location.href = '/prometer_1.html'
-		} else {
-			window.location.href = '/prometer_2.html'
-		}
-	})
-</script>
+</div></section>
 
 					</div>
 				</div>
 			</div>
 
 			<script>
-				document.querySelectorAll('.main-navigation .navigation-item')[4].classList.add('active')
+				document.querySelectorAll('.main-navigation .navigation-item')[8].classList.add('active')
 			</script>
 		</body>
 	</html>
