@@ -1,0 +1,49 @@
+{% from "../components/_selectableBox.njk" import selectableBox %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+<section class="page-promises promises">
+	{{ header({
+		progress: 5,
+		section: 'Pagar'
+	}) }}
+
+	<div class="restrict-width">
+		{{ title({
+			title: 'Pagar mi deuda',
+			subtitle: '<span></span>Elegí cómo querés pagar, tenes 2 opciones:'
+		}) }}
+
+		{% call selectableBox({class: 'flex-row'}) %}
+			<div class="box col-1-2">
+				<div class="flex-row flex-center">
+					<img src="/assets/images/sections/promises/1.svg" alt="">
+					<img src="/assets/images/sections/promises/1_active.svg" alt="">
+				</div>
+				<p class="text-center">Prometer por el monto total de la deuda o ingresando un monto definido por vos.</p>
+			</div>
+			<div class="box col-1-2">
+				<div class="flex-row flex-center">
+					<img src="/assets/images/sections/promises/2.svg" alt="">
+					<img src="/assets/images/sections/promises/2_active.svg" alt="">
+				</div>
+				<p class="text-center">Prometer por selección de los productos, ya sea el total de cada monto o uno definido por vos.</p>
+			</div>
+		{% endcall %}
+		<div>
+			<button class="btn" data-next>Siguiente</button>
+		</div>
+	</div>
+</section>
+
+<script>
+	const boxes = document.querySelectorAll('.selectable-box .box')
+
+	document.querySelector('[data-next]').addEventListener('click', () => {
+		if (boxes[0].classList.contains('active')) {
+			window.location.href = '/prometer_1.html'
+		} else {
+			window.location.href = '/prometer_2.html'
+		}
+	})
+</script>
