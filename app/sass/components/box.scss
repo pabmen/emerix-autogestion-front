@@ -1,5 +1,17 @@
 @import '../vars';
 
+.selectable-box {
+	.box {
+		cursor: pointer;
+
+		transition: border-color $transition-fast;
+
+		&.active {
+			border-color: $violet;
+		}
+	}
+}
+
 .box {
 	background-color: $white;
 	border: 1px solid transparentize($silver, .85);
@@ -7,6 +19,14 @@
 	margin: .5rem;
 	border-radius: $border-radius;
 	box-shadow: .25rem .5rem 1rem transparentize($black, .9);
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
 
 	hr {
 		background-color: $silver;

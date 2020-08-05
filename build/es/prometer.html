@@ -156,7 +156,7 @@
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-avisar.svg');">
 				
-					<a class="item" href="/pagar_avisar.html">Avisar que pagué</a>
+					<a class="item" href="/avisar.html">Avisar que pagué</a>
 				
 			</li>
 			
@@ -186,7 +186,7 @@
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-perfil.svg');">
 				
-					<a class="item" href="#profile">Tu Perfil</a>
+					<a class="item" href="/perfil.html">Tu Perfil</a>
 				
 			</li>
 			
@@ -237,32 +237,67 @@
 
 
 
-
-<section class="page-pay pay-success">
+<section class="page-promises">
+	
+	
+	<div class="page-progress">
+		<div class="progress progress-5"></div>
+	</div>
 	
 	<div class="flex-column page-header">
-		<div class="page-section">
-			
-				<p class="top-decoration">Prometer una fecha</p>
-			
-		</div>
+		
+			<p class="top-decoration">Prometer una fecha</p>
+		
 	</div>
 
 
-    <div class="">
+    <div class="restrict-width">
         
-	<div>
-		<h1 class="page-title text-xlarge">Generar una promesa de pago</h1>
-		<p class="page-subtitle">Elegí cómo querés generar la promesa de pago, tenes 2 opciones:</p>
+	<div class="title">
+		<h1 class="page-title text-large">Generar una promesa de pago</h1>
+		<p class="page-subtitle"><span></span>Elegí cómo querés generar la promesa de pago, tenes 2 opciones:</p>
 	</div>
 
-    </div>
 
-    
-    <div class="success flex-column flex-center text-center restrict-width">
-        <h2 class="title">¡El pago se realizó con éxito!</h2>
-        <img src="/assets/images/ui/common/success.svg" alt="Success image">
-        <p class="subtitle">Ingresando a la opción <a href="#">Actividad</a> podés acceder a los comprobantes de pago.</p>
+        
+<div class="selectable-box flex-row" id="box-7041772919">
+	
+            <div class="box">
+                <div class="flex-row flex-center">
+                    <img src="/assets/images/sections/promises/1.svg" alt="">
+                    <img src="/assets/images/sections/promises/1_active.svg" alt="">
+                </div>
+                <p class="text-center">Prometer por el monto total de la deuda o ingresando un monto definido por vos.</p>
+            </div>
+            <div class="box">
+                <div class="flex-row flex-center">
+                    <img src="/assets/images/sections/promises/2.svg" alt="">
+                    <img src="/assets/images/sections/promises/2_active.svg" alt="">
+                </div>
+                <p class="text-center">Prometer por selección de los productos, ya sea el total de cada monto o uno definido por vos.</p>
+            </div>
+        
+</div>
+<script>
+	const container = document.querySelector('#box-7041772919')
+	const boxes = container.querySelectorAll('.box')
+
+	boxes.forEach((box, i) => {
+		if (i === 0) {
+			box.classList.add('active')
+		}
+		box.addEventListener('click', () => {
+			boxes.forEach((box) => {
+				box.classList.remove('active')
+			})
+			box.classList.add('active')
+		})
+	})
+</script>
+
+        <div>
+            <button class="btn">Siguiente</button>
+        </div>
     </div>
 
 </section>

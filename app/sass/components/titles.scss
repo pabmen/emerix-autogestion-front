@@ -1,0 +1,14 @@
+@import '../vars';
+
+.title {
+	.page-subtitle {
+		span {
+			display: inline-block;
+			width: 4px;
+			height: 4px;
+			vertical-align: baseline;
+			background: $lightviolet;
+			margin-right: .5rem;
+		}
+	}
+}
