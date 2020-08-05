@@ -2561,22 +2561,22 @@ html.no-scroll body {
   height: 1.188rem;
 }
 
-.emerix-page .page-promises .promises .box.active p, .emerix-page .page-promises .promises .overlay .active.dialog-container p, .emerix-page .overlay .page-promises .promises .active.dialog-container p, .emerix-page .page-promises .promises .topbar .notifications-menu .dropdown-target ul.active p, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises .promises ul.active p {
+.emerix-page .page-promises.promises .box.active p, .emerix-page .page-promises.promises .overlay .active.dialog-container p, .emerix-page .overlay .page-promises.promises .active.dialog-container p, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active p, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active p {
   font-weight: bold;
 }
 
-.emerix-page .page-promises .promises .box.active img, .emerix-page .page-promises .promises .overlay .active.dialog-container img, .emerix-page .overlay .page-promises .promises .active.dialog-container img, .emerix-page .page-promises .promises .topbar .notifications-menu .dropdown-target ul.active img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises .promises ul.active img {
+.emerix-page .page-promises.promises .box.active img, .emerix-page .page-promises.promises .overlay .active.dialog-container img, .emerix-page .overlay .page-promises.promises .active.dialog-container img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active img {
   display: none;
 }
 
-.emerix-page .page-promises .promises .box.active img + img, .emerix-page .page-promises .promises .overlay .active.dialog-container img + img, .emerix-page .overlay .page-promises .promises .active.dialog-container img + img, .emerix-page .page-promises .promises .topbar .notifications-menu .dropdown-target ul.active img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises .promises ul.active img + img {
+.emerix-page .page-promises.promises .box.active img + img, .emerix-page .page-promises.promises .overlay .active.dialog-container img + img, .emerix-page .overlay .page-promises.promises .active.dialog-container img + img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active img + img {
   display: block;
 }
 
-.emerix-page .page-promises .promises .box:not(.active) img, .emerix-page .page-promises .promises .overlay .dialog-container:not(.active) img, .emerix-page .overlay .page-promises .promises .dialog-container:not(.active) img, .emerix-page .page-promises .promises .topbar .notifications-menu .dropdown-target ul:not(.active) img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises .promises ul:not(.active) img {
+.emerix-page .page-promises.promises .box:not(.active) img, .emerix-page .page-promises.promises .overlay .dialog-container:not(.active) img, .emerix-page .overlay .page-promises.promises .dialog-container:not(.active) img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul:not(.active) img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul:not(.active) img {
   display: block;
 }
 
-.emerix-page .page-promises .promises .box:not(.active) img + img, .emerix-page .page-promises .promises .overlay .dialog-container:not(.active) img + img, .emerix-page .overlay .page-promises .promises .dialog-container:not(.active) img + img, .emerix-page .page-promises .promises .topbar .notifications-menu .dropdown-target ul:not(.active) img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises .promises ul:not(.active) img + img {
+.emerix-page .page-promises.promises .box:not(.active) img + img, .emerix-page .page-promises.promises .overlay .dialog-container:not(.active) img + img, .emerix-page .overlay .page-promises.promises .dialog-container:not(.active) img + img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul:not(.active) img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul:not(.active) img + img {
   display: none;
 }
