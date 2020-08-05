@@ -1,0 +1,68 @@
+
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_forms.njk" import textarea %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+<section class="page-payments">
+	{{ header({
+		progress: 5,
+		section: 'Prometer una fecha'
+	}) }}
+
+	<div class="restrict-width small">
+		{{ title({
+			title: 'Registrar pago',
+			subtitle: '<span></span>A continuación podés ingresar los datos del pago realizado'
+		}) }}
+		<div class="box flex-col">
+			<div class="flex-row flex-column-on-mobile col-1-2">
+				{{input({
+					placeholder: 'Total abonado'
+				})}}
+				{{ select({
+					'id': 'login_dni_type',
+					'items': ['Pesos', 'Dólares', 'Euros'],
+					'placeholder': 'Moneda'
+				}) }}
+			</div>
+			<div class="flex-row flex-column-on-mobile col-1-2">
+				{{input({
+					placeholder: 'N° de comprobante'
+				})}}
+
+				{{input({
+					type: 'date',
+					placeholder: 'Fecha'
+				})}}
+			</div>
+			<div>
+				<p>Medio pago por el cuál abonaste:</p>
+				<div class="payment-selector">
+					<ul class="flex-row">
+						<li class="flex-column active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				{{ textarea({placeholder: 'Comentarios'})}}
+			</div>
+		</div>
+		<div>
+			<button class="btn" data-next>Registrar pago</button>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.querySelector('[data-next]').addEventListener('click', () => {
+		window.location.href = '/avisar_exito.html'
+	})
+</script>

@@ -36,9 +36,12 @@
             tr:not(.table-header) {
                 position: relative;
                 &:hover {
+                    background-color: $smoke;
+
                     .item-label {
                         font-weight: 500;
                     }
+                    
                 	&:before {
                 		content: '';
                         position: absolute;

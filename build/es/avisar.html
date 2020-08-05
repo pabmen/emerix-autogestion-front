@@ -233,7 +233,129 @@
 					</div>
 					<div class="pages-container flex-grow">
 						
-    
+	
+
+
+
+
+
+
+<section class="page-payments">
+	
+	
+	<div class="page-progress">
+		<div class="progress progress-5"></div>
+	</div>
+	
+	<div class="flex-column page-header">
+		
+			<p class="top-decoration">Prometer una fecha</p>
+		
+	</div>
+
+
+	<div class="restrict-width small">
+		
+	<div class="title">
+		<h1 class="page-title text-large">Registrar pago</h1>
+		<p class="page-subtitle"><span></span>A continuación podés ingresar los datos del pago realizado</p>
+	</div>
+
+		<div class="box flex-col">
+			<div class="flex-row flex-column-on-mobile col-1-2">
+				
+
+	
+
+
+	<div class="input-wrapper text">
+		<input id="" type="text" class="input-elem" placeholder="Total abonado" required>
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+				
+	<div class="input-wrapper select">
+		<select id="login_dni_type" required>
+			
+			<option selected="selected" class="placeholder" value="">Moneda</option>
+			
+			
+			<option value="Pesos">Pesos</option>
+			
+			<option value="Dólares">Dólares</option>
+			
+			<option value="Euros">Euros</option>
+			
+		</select>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+			</div>
+			<div class="flex-row flex-column-on-mobile col-1-2">
+				
+
+	
+
+
+	<div class="input-wrapper text">
+		<input id="" type="text" class="input-elem" placeholder="N° de comprobante" required>
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+
+				
+
+	
+
+
+	<div class="input-wrapper date">
+		<input id="" type="date" class="input-elem" placeholder="Fecha" required>
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+			</div>
+			<div>
+				<p>Medio pago por el cuál abonaste:</p>
+				<div class="payment-selector">
+					<ul class="flex-row">
+						<li class="flex-column active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				
+	<div class="input-wrapper textarea">
+		<textarea id="" required placeholder="Comentarios"></textarea>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+			</div>
+		</div>
+		<div>
+			<button class="btn" data-next>Registrar pago</button>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.querySelector('[data-next]').addEventListener('click', () => {
+		window.location.href = '/avisar_exito.html'
+	})
+</script>
 
 					</div>
 				</div>
