@@ -54,6 +54,12 @@
                 }
             }
         }
+
+        &.disabled {
+            * {
+                color: $lightgray;
+            }
+        }
         
         td {
             flex-grow: 1;

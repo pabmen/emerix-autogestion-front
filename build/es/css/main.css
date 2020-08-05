@@ -1853,6 +1853,10 @@ html.no-scroll body {
   background-color: #A388D1;
 }
 
+.emerix-page .table-container .table.disabled * {
+  color: #c1c1c1;
+}
+
 .emerix-page .table-container .table td {
   flex-grow: 1;
   display: flex;
