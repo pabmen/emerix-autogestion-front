@@ -23,6 +23,66 @@ form {
 		}
 	}
 
+
+	&.select2 {		
+		border-radius: 8px !important;
+		position: relative;
+		padding: 0;
+		padding-top: .5rem;
+		overflow: hidden;
+		height: 3rem;
+
+		&:after {
+			content: url("/assets/images/ui/dropdown.svg");
+			position: absolute;
+			top: 1.75rem;
+			right: 1.5rem;
+			transform: translate(0, -50%);
+			pointer-events: none;
+			transition: all $transition-fast;
+		}
+
+		&.active {
+			@extend .box;
+			padding: 0 !important;
+			height: auto;
+
+			&:after {
+				top: 1rem;
+				transform: scale(-1);
+			}
+		}
+
+		li {
+			transition: all $transition-fast;
+
+			div {
+				padding: 1rem 0;
+				margin: 0 1.5rem;
+				line-height: 1rem;
+				position: relative;
+			}
+			
+			&.placeholder  {
+				div:after {
+					content: "";
+					position: absolute;
+					bottom: .5rem;
+					left: 0;
+					width: 100%;
+					border-bottom: 1px solid $violet;
+				}
+			}
+		
+			&:hover:not(.placeholder) {
+				background-color: $lightviolet;
+				color: $white
+			}
+		}
+
+	}
+
+
 	&.date {
 		position: relative;
 

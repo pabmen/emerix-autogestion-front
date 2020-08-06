@@ -1,0 +1,10 @@
+{% from "../_templates/_layout.njk" import page %}
+{% from "../_templates/components/_forms.njk" import select2 %}
+
+{% call page({navIndex: 4}) %}
+	<div style="max-width: 450px; margin: 10% auto">
+	{{ select2({
+		placeholder: 'PERIODO',
+		items: ['24 horas', '48 horas', '72 horas', 'Elegir fecha']
+	}) }}
+{% endcall %}

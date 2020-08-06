@@ -61,6 +61,37 @@
 {% endmacro %}
 
 
+{% macro select2(options) %}
+	<div class="input-wrapper select select2 {{ options.class }}">
+		<ul
+			id="{{ options.id }}"
+			data-value=""
+		>
+			{% if options.placeholder %}
+			<li class="placeholder" value="" class="active"><div>{{ options.placeholder }}</div></li>
+			{% endif %}
+			{% for item in options.items %}
+			<li data-value="{{ item }}"><div class="selectable">{{ item }}</div></li>
+			{% endfor %}
+		</ul>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>
+	</div>
+
+	<script>
+		const select = document.querySelector('.select2')
+		const placeholder = select.querySelector('.placeholder div')
+		select.addEventListener('click', (e) => {
+			select.classList.toggle('active')
+			if (e.target.classList.contains('selectable')) {
+				placeholder.innerText = e.target.innerText
+				select.setAttribute('data-value', e.target.parentElement.getAttribute('data-value'))
+			}
+		})
+	</script>
+{% endmacro %}
+
+
 {% macro textarea(options) %}
 	<div class="input-wrapper textarea {{ options.class }}">
 		<textarea

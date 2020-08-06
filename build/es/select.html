@@ -1,6 +1,7 @@
 
 
 
+
 	<!DOCTYPE html>
 	<html lang="" class="no-js">
 		<head>
@@ -233,94 +234,46 @@
 					</div>
 					<div class="pages-container flex-grow">
 						
+	<div style="max-width: 450px; margin: 10% auto">
 	
-
-
-
-<section class="page-promises promises">
-	
-	
-	<div class="page-progress">
-		<div class="progress progress-5"></div>
-	</div>
-	
-	<div class="flex-column page-header">
-		
-			<p class="top-decoration">Pagar</p>
-		
-	</div>
-
-
-	<div class="restrict-width">
-		
-	<div class="title">
-		<h1 class="page-title text-large">Pagar mi deuda</h1>
-		<p class="page-subtitle"><span></span>Elegí cómo querés pagar, tenes 2 opciones:</p>
+	<div class="input-wrapper select select2">
+		<ul id="" data-value="">
+			
+			<li class="placeholder" value="" class="active"><div>PERIODO</div></li>
+			
+			
+			<li data-value="24 horas"><div class="selectable">24 horas</div></li>
+			
+			<li data-value="48 horas"><div class="selectable">48 horas</div></li>
+			
+			<li data-value="72 horas"><div class="selectable">72 horas</div></li>
+			
+			<li data-value="Elegir fecha"><div class="selectable">Elegir fecha</div></li>
+			
+		</ul>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
 	</div>
 
-
-		
-<div class="selectable-box flex-row" id="box-5880776716">
-	
-			<div class="box col-1-2">
-				<div class="flex-row flex-center">
-					<img src="/assets/images/sections/promises/1.svg" alt="">
-					<img src="/assets/images/sections/promises/1_active.svg" alt="">
-				</div>
-				<p class="text-center">Prometer por el monto total de la deuda o ingresando un monto definido por vos.</p>
-			</div>
-			<div class="box col-1-2">
-				<div class="flex-row flex-center">
-					<img src="/assets/images/sections/promises/2.svg" alt="">
-					<img src="/assets/images/sections/promises/2_active.svg" alt="">
-				</div>
-				<p class="text-center">Prometer por selección de los productos, ya sea el total de cada monto o uno definido por vos.</p>
-			</div>
-		
-</div>
-<script>
-	;(() => {
-		const container = document.querySelector('#box-5880776716')
-		const boxes = container.querySelectorAll('.box')
-
-		boxes.forEach((box, i) => {
-			if (i === 0) {
-				box.classList.add('active')
+	<script>
+		const select = document.querySelector('.select2')
+		const placeholder = select.querySelector('.placeholder div')
+		select.addEventListener('click', (e) => {
+			select.classList.toggle('active')
+			if (e.target.classList.contains('selectable')) {
+				placeholder.innerText = e.target.innerText
+				select.setAttribute('data-value', e.target.parentElement.getAttribute('data-value'))
 			}
-			box.addEventListener('click', () => {
-				boxes.forEach((box) => {
-					box.classList.remove('active')
-				})
-				box.classList.add('active')
-			})
 		})
-	})();
-</script>
+	</script>
 
-		<div>
-			<button class="btn" data-next>Siguiente</button>
-		</div>
-	</div>
-</section>
-
-<script>
-	const boxes = document.querySelectorAll('.selectable-box .box')
-
-	document.querySelector('[data-next]').addEventListener('click', () => {
-		if (boxes[0].classList.contains('active')) {
-			window.location.href = '/pagar_1.html'
-		} else {
-			window.location.href = '/pagar_2.html'
-		}
-	})
-</script>
 
 					</div>
 				</div>
 			</div>
 
 			<script>
-				document.querySelectorAll('.main-navigation .navigation-item')[2].classList.add('active')
+				document.querySelectorAll('.main-navigation .navigation-item')[4].classList.add('active')
 			</script>
-		</body>
+		</div></body>
 	</html>

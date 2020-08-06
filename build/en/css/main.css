@@ -787,16 +787,16 @@ html.no-scroll body {
   overflow: hidden;
 }
 
-.emerix-page .selectable-box .box, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
+.emerix-page .selectable-box .box, .emerix-page .selectable-box .input-wrapper.select2.active, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
   cursor: pointer;
   transition: border-color 0.15s ease;
 }
 
-.emerix-page .selectable-box .box.active, .emerix-page .selectable-box .overlay .active.dialog-container, .emerix-page .overlay .selectable-box .active.dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul.active, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul.active {
+.emerix-page .selectable-box .box.active, .emerix-page .selectable-box .active.input-wrapper.select2, .emerix-page .selectable-box .overlay .active.dialog-container, .emerix-page .overlay .selectable-box .active.dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul.active, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul.active {
   border-color: #8569b4;
 }
 
-.emerix-page .box, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
+.emerix-page .box, .emerix-page .input-wrapper.select2.active, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
@@ -805,15 +805,15 @@ html.no-scroll body {
   box-shadow: 0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child {
+.emerix-page .box:first-child, .emerix-page .input-wrapper.select2.active:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child {
   margin-left: 0;
 }
 
-.emerix-page .box:last-child, .emerix-page .overlay .dialog-container:last-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:last-child {
+.emerix-page .box:last-child, .emerix-page .input-wrapper.select2.active:last-child, .emerix-page .overlay .dialog-container:last-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:last-child {
   margin-right: 0;
 }
 
-.emerix-page .box hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
+.emerix-page .box hr, .emerix-page .input-wrapper.select2.active hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
   background-color: #989898;
   margin-left: -1rem;
   margin-right: -1rem;
@@ -827,20 +827,27 @@ html.no-scroll body {
 		box-shadow: none;
 	}*/
   }
-  .emerix-page .box, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
+  .emerix-page .box, .emerix-page .input-wrapper.select2.active, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
     margin: 1.5rem;
     margin-left: 0;
     margin-right: 0;
   }
-  .emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child,
+  .emerix-page .box:first-child, .emerix-page .input-wrapper.select2.active:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child,
   .emerix-page .box + .box,
+  .emerix-page .input-wrapper.select2.active + .box,
   .emerix-page .overlay .dialog-container + .box,
   .emerix-page .topbar .notifications-menu .dropdown-target ul + .box,
+  .emerix-page .box + .input-wrapper.select2.active,
+  .emerix-page .input-wrapper.select2.active + .input-wrapper.select2.active,
+  .emerix-page .overlay .dialog-container + .input-wrapper.select2.active,
+  .emerix-page .topbar .notifications-menu .dropdown-target ul + .input-wrapper.select2.active,
   .emerix-page .overlay .box + .dialog-container,
+  .emerix-page .overlay .input-wrapper.select2.active + .dialog-container,
   .emerix-page .overlay .dialog-container + .dialog-container,
   .emerix-page .topbar .notifications-menu .dropdown-target .overlay ul + .dialog-container,
   .emerix-page .overlay .topbar .notifications-menu .dropdown-target ul + .dialog-container,
   .emerix-page .topbar .notifications-menu .dropdown-target .box + ul,
+  .emerix-page .topbar .notifications-menu .dropdown-target .input-wrapper.select2.active + ul,
   .emerix-page .overlay .topbar .notifications-menu .dropdown-target .dialog-container + ul,
   .emerix-page .topbar .notifications-menu .dropdown-target .overlay .dialog-container + ul,
   .emerix-page .topbar .notifications-menu .dropdown-target ul + ul {
@@ -869,6 +876,62 @@ html.no-scroll body {
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   pointer-events: none;
+}
+
+.emerix-page .input-wrapper.select2 {
+  border-radius: 8px !important;
+  position: relative;
+  padding: 0;
+  padding-top: .5rem;
+  overflow: hidden;
+  height: 3rem;
+}
+
+.emerix-page .input-wrapper.select2:after {
+  content: url("/assets/images/ui/dropdown.svg");
+  position: absolute;
+  top: 1.75rem;
+  right: 1.5rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  pointer-events: none;
+  transition: all 0.15s ease;
+}
+
+.emerix-page .input-wrapper.select2.active {
+  padding: 0 !important;
+  height: auto;
+}
+
+.emerix-page .input-wrapper.select2.active:after {
+  top: 1rem;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+
+.emerix-page .input-wrapper.select2 li {
+  transition: all 0.15s ease;
+}
+
+.emerix-page .input-wrapper.select2 li div {
+  padding: 1rem 0;
+  margin: 0 1.5rem;
+  line-height: 1rem;
+  position: relative;
+}
+
+.emerix-page .input-wrapper.select2 li.placeholder div:after {
+  content: "";
+  position: absolute;
+  bottom: .5rem;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #8569b4;
+}
+
+.emerix-page .input-wrapper.select2 li:hover:not(.placeholder) {
+  background-color: #A388D1;
+  color: #fff;
 }
 
 .emerix-page .input-wrapper.date {
@@ -1241,16 +1304,16 @@ html.no-scroll body {
   content: '↑';
 }
 
-.emerix-page .selectable-box .box, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
+.emerix-page .selectable-box .box, .emerix-page .selectable-box .input-wrapper.select2.active, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
   cursor: pointer;
   transition: border-color 0.15s ease;
 }
 
-.emerix-page .selectable-box .box.active, .emerix-page .selectable-box .overlay .active.dialog-container, .emerix-page .overlay .selectable-box .active.dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul.active, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul.active {
+.emerix-page .selectable-box .box.active, .emerix-page .selectable-box .active.input-wrapper.select2, .emerix-page .selectable-box .overlay .active.dialog-container, .emerix-page .overlay .selectable-box .active.dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul.active, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul.active {
   border-color: #8569b4;
 }
 
-.emerix-page .box, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
+.emerix-page .box, .emerix-page .input-wrapper.select2.active, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
@@ -1259,15 +1322,15 @@ html.no-scroll body {
   box-shadow: 0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child {
+.emerix-page .box:first-child, .emerix-page .input-wrapper.select2.active:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child {
   margin-left: 0;
 }
 
-.emerix-page .box:last-child, .emerix-page .overlay .dialog-container:last-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:last-child {
+.emerix-page .box:last-child, .emerix-page .input-wrapper.select2.active:last-child, .emerix-page .overlay .dialog-container:last-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:last-child {
   margin-right: 0;
 }
 
-.emerix-page .box hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
+.emerix-page .box hr, .emerix-page .input-wrapper.select2.active hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
   background-color: #989898;
   margin-left: -1rem;
   margin-right: -1rem;
@@ -1281,20 +1344,27 @@ html.no-scroll body {
 		box-shadow: none;
 	}*/
   }
-  .emerix-page .box, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
+  .emerix-page .box, .emerix-page .input-wrapper.select2.active, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
     margin: 1.5rem;
     margin-left: 0;
     margin-right: 0;
   }
-  .emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child,
+  .emerix-page .box:first-child, .emerix-page .input-wrapper.select2.active:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child,
   .emerix-page .box + .box,
+  .emerix-page .input-wrapper.select2.active + .box,
   .emerix-page .overlay .dialog-container + .box,
   .emerix-page .topbar .notifications-menu .dropdown-target ul + .box,
+  .emerix-page .box + .input-wrapper.select2.active,
+  .emerix-page .input-wrapper.select2.active + .input-wrapper.select2.active,
+  .emerix-page .overlay .dialog-container + .input-wrapper.select2.active,
+  .emerix-page .topbar .notifications-menu .dropdown-target ul + .input-wrapper.select2.active,
   .emerix-page .overlay .box + .dialog-container,
+  .emerix-page .overlay .input-wrapper.select2.active + .dialog-container,
   .emerix-page .overlay .dialog-container + .dialog-container,
   .emerix-page .topbar .notifications-menu .dropdown-target .overlay ul + .dialog-container,
   .emerix-page .overlay .topbar .notifications-menu .dropdown-target ul + .dialog-container,
   .emerix-page .topbar .notifications-menu .dropdown-target .box + ul,
+  .emerix-page .topbar .notifications-menu .dropdown-target .input-wrapper.select2.active + ul,
   .emerix-page .overlay .topbar .notifications-menu .dropdown-target .dialog-container + ul,
   .emerix-page .topbar .notifications-menu .dropdown-target .overlay .dialog-container + ul,
   .emerix-page .topbar .notifications-menu .dropdown-target ul + ul {
@@ -1996,16 +2066,16 @@ html.no-scroll body {
   margin-right: .5rem;
 }
 
-.emerix-page .selectable-box .box, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
+.emerix-page .selectable-box .box, .emerix-page .selectable-box .input-wrapper.select2.active, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
   cursor: pointer;
   transition: border-color 0.15s ease;
 }
 
-.emerix-page .selectable-box .box.active, .emerix-page .selectable-box .overlay .active.dialog-container, .emerix-page .overlay .selectable-box .active.dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul.active, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul.active {
+.emerix-page .selectable-box .box.active, .emerix-page .selectable-box .active.input-wrapper.select2, .emerix-page .selectable-box .overlay .active.dialog-container, .emerix-page .overlay .selectable-box .active.dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul.active, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul.active {
   border-color: #8569b4;
 }
 
-.emerix-page .box, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
+.emerix-page .box, .emerix-page .input-wrapper.select2.active, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
@@ -2014,15 +2084,15 @@ html.no-scroll body {
   box-shadow: 0.25rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child {
+.emerix-page .box:first-child, .emerix-page .input-wrapper.select2.active:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child {
   margin-left: 0;
 }
 
-.emerix-page .box:last-child, .emerix-page .overlay .dialog-container:last-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:last-child {
+.emerix-page .box:last-child, .emerix-page .input-wrapper.select2.active:last-child, .emerix-page .overlay .dialog-container:last-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:last-child {
   margin-right: 0;
 }
 
-.emerix-page .box hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
+.emerix-page .box hr, .emerix-page .input-wrapper.select2.active hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
   background-color: #989898;
   margin-left: -1rem;
   margin-right: -1rem;
@@ -2036,20 +2106,27 @@ html.no-scroll body {
 		box-shadow: none;
 	}*/
   }
-  .emerix-page .box, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
+  .emerix-page .box, .emerix-page .input-wrapper.select2.active, .emerix-page .overlay .dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul {
     margin: 1.5rem;
     margin-left: 0;
     margin-right: 0;
   }
-  .emerix-page .box:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child,
+  .emerix-page .box:first-child, .emerix-page .input-wrapper.select2.active:first-child, .emerix-page .overlay .dialog-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul:first-child,
   .emerix-page .box + .box,
+  .emerix-page .input-wrapper.select2.active + .box,
   .emerix-page .overlay .dialog-container + .box,
   .emerix-page .topbar .notifications-menu .dropdown-target ul + .box,
+  .emerix-page .box + .input-wrapper.select2.active,
+  .emerix-page .input-wrapper.select2.active + .input-wrapper.select2.active,
+  .emerix-page .overlay .dialog-container + .input-wrapper.select2.active,
+  .emerix-page .topbar .notifications-menu .dropdown-target ul + .input-wrapper.select2.active,
   .emerix-page .overlay .box + .dialog-container,
+  .emerix-page .overlay .input-wrapper.select2.active + .dialog-container,
   .emerix-page .overlay .dialog-container + .dialog-container,
   .emerix-page .topbar .notifications-menu .dropdown-target .overlay ul + .dialog-container,
   .emerix-page .overlay .topbar .notifications-menu .dropdown-target ul + .dialog-container,
   .emerix-page .topbar .notifications-menu .dropdown-target .box + ul,
+  .emerix-page .topbar .notifications-menu .dropdown-target .input-wrapper.select2.active + ul,
   .emerix-page .overlay .topbar .notifications-menu .dropdown-target .dialog-container + ul,
   .emerix-page .topbar .notifications-menu .dropdown-target .overlay .dialog-container + ul,
   .emerix-page .topbar .notifications-menu .dropdown-target ul + ul {
@@ -2392,7 +2469,7 @@ html.no-scroll body {
   .emerix-page .page-login {
     height: 100vh;
   }
-  .emerix-page .page-login .box, .emerix-page .page-login .overlay .dialog-container, .emerix-page .overlay .page-login .dialog-container, .emerix-page .page-login .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-login ul {
+  .emerix-page .page-login .box, .emerix-page .page-login .input-wrapper.select2.active, .emerix-page .page-login .overlay .dialog-container, .emerix-page .overlay .page-login .dialog-container, .emerix-page .page-login .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-login ul {
     box-shadow: none;
     border-radius: 0;
     border: 0;
@@ -2604,23 +2681,23 @@ html.no-scroll body {
   height: 1.188rem;
 }
 
-.emerix-page .page-promises.promises .box.active p, .emerix-page .page-promises.promises .overlay .active.dialog-container p, .emerix-page .overlay .page-promises.promises .active.dialog-container p, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active p, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active p {
+.emerix-page .page-promises.promises .box.active p, .emerix-page .page-promises.promises .active.input-wrapper.select2 p, .emerix-page .page-promises.promises .overlay .active.dialog-container p, .emerix-page .overlay .page-promises.promises .active.dialog-container p, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active p, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active p {
   font-weight: bold;
 }
 
-.emerix-page .page-promises.promises .box.active img, .emerix-page .page-promises.promises .overlay .active.dialog-container img, .emerix-page .overlay .page-promises.promises .active.dialog-container img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active img {
+.emerix-page .page-promises.promises .box.active img, .emerix-page .page-promises.promises .active.input-wrapper.select2 img, .emerix-page .page-promises.promises .overlay .active.dialog-container img, .emerix-page .overlay .page-promises.promises .active.dialog-container img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active img {
   display: none;
 }
 
-.emerix-page .page-promises.promises .box.active img + img, .emerix-page .page-promises.promises .overlay .active.dialog-container img + img, .emerix-page .overlay .page-promises.promises .active.dialog-container img + img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active img + img {
+.emerix-page .page-promises.promises .box.active img + img, .emerix-page .page-promises.promises .active.input-wrapper.select2 img + img, .emerix-page .page-promises.promises .overlay .active.dialog-container img + img, .emerix-page .overlay .page-promises.promises .active.dialog-container img + img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active img + img {
   display: block;
 }
 
-.emerix-page .page-promises.promises .box:not(.active) img, .emerix-page .page-promises.promises .overlay .dialog-container:not(.active) img, .emerix-page .overlay .page-promises.promises .dialog-container:not(.active) img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul:not(.active) img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul:not(.active) img {
+.emerix-page .page-promises.promises .box:not(.active) img, .emerix-page .page-promises.promises .input-wrapper.select2.active:not(.active) img, .emerix-page .page-promises.promises .overlay .dialog-container:not(.active) img, .emerix-page .overlay .page-promises.promises .dialog-container:not(.active) img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul:not(.active) img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul:not(.active) img {
   display: block;
 }
 
-.emerix-page .page-promises.promises .box:not(.active) img + img, .emerix-page .page-promises.promises .overlay .dialog-container:not(.active) img + img, .emerix-page .overlay .page-promises.promises .dialog-container:not(.active) img + img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul:not(.active) img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul:not(.active) img + img {
+.emerix-page .page-promises.promises .box:not(.active) img + img, .emerix-page .page-promises.promises .input-wrapper.select2.active:not(.active) img + img, .emerix-page .page-promises.promises .overlay .dialog-container:not(.active) img + img, .emerix-page .overlay .page-promises.promises .dialog-container:not(.active) img + img, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul:not(.active) img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul:not(.active) img + img {
   display: none;
 }
 
