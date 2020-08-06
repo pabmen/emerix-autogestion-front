@@ -1686,6 +1686,19 @@ html.no-scroll body {
   }
 }
 
+.emerix-page .price-container {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.emerix-page .price-container .denomination {
+  font-size: 1rem;
+}
+
+.emerix-page .price-container .cents {
+  font-size: 1rem;
+}
+
 .emerix-page .sidebar-content h1 {
   margin-top: 5rem;
   margin-bottom: 0;
@@ -2217,6 +2230,10 @@ html.no-scroll body {
 	}*/
 }
 
+.emerix-page .page-login .emerix-logo {
+  margin-bottom: 5.25rem;
+}
+
 .emerix-page .page-login .form-container {
   width: 55%;
 }
@@ -2253,6 +2270,20 @@ html.no-scroll body {
 .emerix-page .page-login .login-dnitype-container {
   width: 33.33%;
   margin-right: 2rem;
+}
+
+.emerix-page .page-login .login-method .col-1-2 {
+  margin-right: .5rem;
+}
+
+.emerix-page .page-login .login-method .col-1-2 + .col-1-2 {
+  margin-right: 0;
+  margin-left: .5rem;
+}
+
+.emerix-page .page-login .login-method .input-wrapper {
+  width: 100%;
+  margin-left: .5rem;
 }
 
 .emerix-page .page-login .login-method .input-fake-radio {

@@ -1,3 +1,8 @@
 {% macro price(options) %}
-	<span></span>
+	{% set value = options %}
+
+	{% set integer = value.slice(0 , value | length - 2) %}
+	{% set cents = value.slice(value | length - 2, value | length) %}
+
+	<div class="price-container" data-value="{{ value }}"><span class="denomination">$</span>{{ integer }}<sup class="cents">{{ cents }}</sup></div>
 {% endmacro %}

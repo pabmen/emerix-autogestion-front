@@ -2,6 +2,7 @@
 {% from "../components/_forms.njk" import input %}
 {% from "../components/_forms.njk" import select %}
 {% from "../components/_tables.njk" import table %}
+{% from "../components/_price.njk" import price %}
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
 
@@ -35,7 +36,7 @@
 		<div class="flex-row">
 			<div class="box text-center col-1-2">
 				<p>Monto prometido</p>
-				<p class="text-xlarge">$19959057</p>
+				<p class="text-xlarge">{{ price("19959057") }}</p>
 			</div>
 			<div class="box text-center col-1-2">
 				<p>Vencimiento</p>

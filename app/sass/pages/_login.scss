@@ -3,6 +3,10 @@
 .page-login {
 	height: 100%;
 
+	.emerix-logo {
+		margin-bottom: 5.25rem;
+	}
+
 	.form-container {
 		width: 55%;
 	}
@@ -39,6 +43,23 @@
 	.login-dnitype-container {
 		width: 33.33%;
 		margin-right: 2rem;
+	}
+
+	.login-method {
+
+		.col-1-2 {
+			margin-right: .5rem;
+			
+			& + .col-1-2 {
+				margin-right: 0;
+				margin-left: .5rem;
+			}
+		}
+		.input-wrapper {
+			width: 100%;
+			margin-left: .5rem;
+		}
+
 	}
 
 	.login-method {
