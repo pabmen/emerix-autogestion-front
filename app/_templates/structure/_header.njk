@@ -1,10 +1,10 @@
 {% macro header(options)%}
 	{% if options.progress %}
-	<div class="page-progress">
+	<div class="page-progress {{ options.class }}">
 		<div class="progress progress-{{ options.progress }}"></div>
 	</div>
 	{% endif %}
-	<div class="flex-column page-header">
+	<div class="flex-column page-header {{ options.class }}">
 		{% if options.section %}
 			<p class="top-decoration">{{ options.section | safe }}</p>
 		{% elseif options.link %}

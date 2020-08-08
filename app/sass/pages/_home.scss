@@ -1,6 +1,17 @@
 @import '../vars';
 
 .page-home {
+
+	.title.large {
+		@media all and (min+-width: $mobileWidth + 1) {
+			margin-bottom: 4rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+	}
+
 	.first-row {
 		margin-top: 0;
 	}
@@ -19,13 +30,23 @@
 
 
 	.prom-text {
-		color: $orange;
 		font-weight: bold;
 		border: 0;
 		background-image: url('/assets/images/sections/home/prom.svg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		height: 190px;
+		
+		p {
+			color: $lightorange;
+			font-size: 1.125rem;
+			line-height: 2.125rem;
+			margin: 0;
+		}
+
+		@media all and (min-width: $mobileWidth + 1) {
+			margin-top: -9rem;
+		}
 
 		.btn {
 			color: $white;

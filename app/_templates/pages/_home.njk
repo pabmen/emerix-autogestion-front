@@ -64,6 +64,7 @@
 	<div class="restrict-width large">
 		<div>
 			{{ title({
+				class: 'large',
 				title: 'Hola Nicolas,',
 				subtitle: '¡Es un gusto verte por acá! Queremos ayudarte a alivianar tus deudas ;)'
 			}) }}
@@ -83,7 +84,7 @@
 				</div>
 				<div class="">
 					<h2>Tus productos</h2>
-					<div class="flex-row products-table">
+					<div id="products-table" class="flex-row">
 						{{ table(page.productos) }}
 					</div>
 				</div>
@@ -103,7 +104,6 @@
 				</div>
 				<div class="">
 					<h2>Planes de pago</h2>
-
 					<div class="flex-row">
 						{{ table(page.planes) }}
 					</div>
@@ -116,12 +116,11 @@
 <script>
 	const overlay = document.querySelector('#home-sidebar')
 
-	document.querySelectorAll('.products-table tr').forEach((tr) => {
+	document.querySelectorAll('#products-table tr').forEach((tr) => {
 		tr.addEventListener('click', () => {
 			overlay.classList.add('active')
 		})
 	})
-
 
 	overlay.querySelector('.close-btn').addEventListener('click', () => {
 		overlay.classList.remove('active')

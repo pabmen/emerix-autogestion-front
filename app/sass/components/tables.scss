@@ -1,7 +1,7 @@
 .table-container {
     width: calc(100% - 1.25rem);
 
-    @media all and (min-width: $mobileWidth) {
+    @media all and (min-width: $mobileWidth + 1) {
         background-color: $white;
         border: 1px solid transparentize($silver, .85);
         margin: .5rem;
@@ -146,10 +146,10 @@
         .bullet {
             display: inline-block;
             vertical-align: middle;
-            width: 15px;
-            height: 15px;
-            border-radius: 1rem;
-            border: 5px solid;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            border: 3.5px solid;
             margin-right: .5rem;
     
             &.green {
