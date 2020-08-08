@@ -73,12 +73,12 @@
 		<div class="flex-row flex-column-on-mobile justify-center">
 			<div class="flex-column col-2-3">
 				<div class="box flex-row relative">
-					<div>
+					<div class="flex-grow">
 						<p class="first-row">{{ page.status.title }}</p>
 						<p class="text-nowrap current-debt"><span class="text-xlarge">$</span> <span class="text-xxlarge">10590</span> <sup class="text-large">57</sup></p>
 						<button class="btn">{{ page.status.btn }}</button>
 					</div>
-					<div class="home-illus-container">
+					<div class="home-illus-container desktop-only">
 						<img class="home-illus" alt="" src="/assets/images/sections/home/ilustracion.svg">
 					</div>
 				</div>
@@ -109,8 +109,10 @@
 				<div class="">
 					<h2>Planes de pago</h2>
 					<div class="box">
-						<div class="flex-row">
-							{{ table(page.planes) }}
+						{{ table(page.planes) }}
+						<hr>
+						<div class="wide-link">
+							<a href="#">Generar un plan</a>
 						</div>
 					</div>
 				</div>
