@@ -1,12 +1,35 @@
+
+.box {
+    .table-container {
+        width: calc(100% + #{$box-padding * 2});
+        margin-left: -$box-padding;
+        margin-right: -$box-padding;
+
+        tr {
+            padding: 0 0.75rem;
+        }
+
+        &:first-child {
+            margin-top: -$box-padding;
+        }
+
+        &:last-child {
+        	margin-bottom: -$box-padding;
+        }
+
+    }
+}
 .table-container {
-    width: calc(100% - 1.25rem);
+    width: 100%;
 
     @media all and (min-width: $mobileWidth + 1) {
-        background-color: $white;
-        border: 1px solid transparentize($silver, .85);
-        margin: .5rem;
-        border-radius: $border-radius;
-        box-shadow: 0px 2px 4px transparentize($black, .8);
+        &.box {
+            background-color: $white;
+            border: 1px solid transparentize($silver, .85);
+            margin: .5rem;
+            border-radius: $box-radius;
+            box-shadow: 0px 2px 4px transparentize($black, .8);
+        }
     }
     
     .table {
@@ -19,7 +42,6 @@
         
         tr {
             display: flex;
-            padding: 0 0.75rem;
             flex-direction: row;
             align-items: center;
 

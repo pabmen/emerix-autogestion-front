@@ -546,7 +546,7 @@ html.no-scroll body {
 .emerix-page hr {
   border: 0;
   height: 1px;
-  background: rgba(255, 255, 255, 0.2);
+  background-color: #fbfbfb;
 }
 
 .emerix-page .pages-container {
@@ -801,8 +801,7 @@ html.no-scroll body {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
-  margin: 0.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0.25rem 0.5rem 1rem rgba(60, 60, 59, 0.1);
 }
 
@@ -815,9 +814,8 @@ html.no-scroll body {
 }
 
 .emerix-page .box hr, .emerix-page .input-wrapper.select2.active hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
-  background-color: #989898;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
 @media all and (max-width: 1024px) {
@@ -1230,6 +1228,7 @@ html.no-scroll body {
   font-weight: bold;
   line-height: 1.625rem;
   text-transform: uppercase;
+  text-decoration: none;
   cursor: pointer;
   outline: none;
 }
@@ -1318,8 +1317,7 @@ html.no-scroll body {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
-  margin: 0.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0.25rem 0.5rem 1rem rgba(60, 60, 59, 0.1);
 }
 
@@ -1332,9 +1330,8 @@ html.no-scroll body {
 }
 
 .emerix-page .box hr, .emerix-page .input-wrapper.select2.active hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
-  background-color: #989898;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
 @media all and (max-width: 1024px) {
@@ -1646,6 +1643,7 @@ html.no-scroll body {
 
 .emerix-page .main-navigation .navigation-item hr {
   width: calc(100% - 3rem);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .emerix-page .main-navigation .navigation-item a {
@@ -1876,16 +1874,34 @@ html.no-scroll body {
   color: #3C3C3B;
 }
 
+.emerix-page .box .table-container, .emerix-page .input-wrapper.select2.active .table-container, .emerix-page .overlay .dialog-container .table-container, .emerix-page .topbar .notifications-menu .dropdown-target ul .table-container {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
+.emerix-page .box .table-container tr, .emerix-page .input-wrapper.select2.active .table-container tr, .emerix-page .overlay .dialog-container .table-container tr, .emerix-page .topbar .notifications-menu .dropdown-target ul .table-container tr {
+  padding: 0 0.75rem;
+}
+
+.emerix-page .box .table-container:first-child, .emerix-page .input-wrapper.select2.active .table-container:first-child, .emerix-page .overlay .dialog-container .table-container:first-child, .emerix-page .topbar .notifications-menu .dropdown-target ul .table-container:first-child {
+  margin-top: -2rem;
+}
+
+.emerix-page .box .table-container:last-child, .emerix-page .input-wrapper.select2.active .table-container:last-child, .emerix-page .overlay .dialog-container .table-container:last-child, .emerix-page .topbar .notifications-menu .dropdown-target ul .table-container:last-child {
+  margin-bottom: -2rem;
+}
+
 .emerix-page .table-container {
-  width: calc(100% - 1.25rem);
+  width: 100%;
 }
 
 @media all and (min-width: 1025px) {
-  .emerix-page .table-container {
+  .emerix-page .table-container.box, .emerix-page .table-container.input-wrapper.select2.active, .emerix-page .overlay .table-container.dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target ul.table-container {
     background-color: #fff;
     border: 1px solid rgba(152, 152, 152, 0.15);
     margin: .5rem;
-    border-radius: 4px;
+    border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(60, 60, 59, 0.2);
   }
 }
@@ -1901,7 +1917,6 @@ html.no-scroll body {
 
 .emerix-page .table-container .table tr {
   display: flex;
-  padding: 0 0.75rem;
   flex-direction: row;
   align-items: center;
 }
@@ -2080,8 +2095,7 @@ html.no-scroll body {
   background-color: #fff;
   border: 1px solid rgba(152, 152, 152, 0.15);
   padding: 2rem;
-  margin: 0.5rem;
-  border-radius: 4px;
+  border-radius: 8px;
   box-shadow: 0.25rem 0.5rem 1rem rgba(60, 60, 59, 0.1);
 }
 
@@ -2094,9 +2108,8 @@ html.no-scroll body {
 }
 
 .emerix-page .box hr, .emerix-page .input-wrapper.select2.active hr, .emerix-page .overlay .dialog-container hr, .emerix-page .topbar .notifications-menu .dropdown-target ul hr {
-  background-color: #989898;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
 }
 
 @media all and (max-width: 1024px) {
@@ -2279,6 +2292,14 @@ html.no-scroll body {
 .emerix-page h2 {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.emerix-page h3 {
+  font-size: 1.25rem;
+}
+
+.emerix-page h3, .emerix-page h4, .emerix-page h5 {
+  color: #8569b4;
 }
 
 .emerix-page sup {
@@ -2608,7 +2629,7 @@ html.no-scroll body {
 }
 
 .emerix-page .page-home .wide-link {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0;
 }
 
@@ -2620,6 +2641,7 @@ html.no-scroll body {
   color: #8569b4;
   text-align: center;
   font-size: 0.875rem;
+  text-transform: uppercase;
 }
 
 @media all and (max-width: 1024px) {
@@ -2639,18 +2661,6 @@ html.no-scroll body {
   .emerix-page .page-home .flex-column.col-1-3,
   .emerix-page .page-home .flex-column.col-2-3 {
     width: 100%;
-  }
-  .emerix-page .page-home .promises-table .btn {
-    display: block;
-  }
-  .emerix-page .page-home .promises-table .status-label {
-    display: none;
-  }
-  .emerix-page .page-home .promises-table .disabled .btn {
-    display: none;
-  }
-  .emerix-page .page-home .promises-table .disabled .status-label {
-    display: block;
   }
 }
 

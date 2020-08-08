@@ -15,9 +15,9 @@
 .box {
 	background-color: $white;
 	border: 1px solid transparentize($silver, .85);
-	padding: 2rem;
-	margin: $box-margin;
-	border-radius: $border-radius;
+	padding: $box-padding;
+	//margin: $box-margin;
+	border-radius: $box-radius;
 	box-shadow: .25rem .5rem 1rem transparentize($black, .9);
 
 	&:first-child {
@@ -33,10 +33,10 @@
 	}
 
 	hr {
-		background-color: $silver;
-		margin-left: -1rem;
-		margin-right: -1rem;
+		margin-left: -$box-padding;
+		margin-right: -$box-padding;
 	}
+
 }
 
 @media all and (max-width: $mobileWidth) {

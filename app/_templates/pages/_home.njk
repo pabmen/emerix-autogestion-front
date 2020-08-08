@@ -7,7 +7,7 @@
 			"sidebar": {
 				"id": "home-sidebar",
 				"class": "sidebar",
-				"content": "<div class='flex-column'><h1>Detalle de producto</h1><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class='btn secondary hover'><img src='/assets/images/ui/buttons/download.svg' alt=''> Libre deuda</button></div>"
+				"content": "<div class='flex-column'><h2>Detalle de producto</h2><h3>Tipo de producto</h3><p>TC VISA XXXX XXXX XXXX 1234</p><h3>Deuda</h3><p>$1200</p><h3>Última fecha de pago</h3><p>03/12/96</p><h3>Nº Comprobante</h3><p>34324324443-9</p><h3>Sucursal</h3><p>504 - La Plata</p><button class='btn secondary hover'><img src='/assets/images/ui/buttons/download.svg' alt=''> Libre deuda</button></div>"
 			},
 			"status": {
 				"title": "Tu deuda actual es:",
@@ -46,7 +46,7 @@
 				"data": [
 					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Abr</span><span class='number'>12</span></div><div class='item-label'>$17,900</div></div>", "<button class='btn'>Pagar</button>"],
 					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Dic</span><span class='number'>31</span></div><div class='item-label'>$37,670</div></div>", "<button class='btn'>Pagar</button>"],
-					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Jul</span><span class='number'>05</span></div><div class='item-label'>$12,500</div></div>", "<button class='btn'>Pagar</button><div class='status-label'><span class='bullet red'></span>VENCIDA</div>"]
+					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Jul</span><span class='number'>05</span></div><div class='item-label'>$12,500</div></div>", "<div class='status-label'><span class='bullet red'></span>VENCIDA</div>"]
 				],
 				"view": "Ver todas las promesas"
 			}
@@ -84,7 +84,7 @@
 				</div>
 				<div class="">
 					<h2>Tus productos</h2>
-					<div id="products-table" class="flex-row">
+					<div id="products-table" class="flex-row box">
 						{{ table(page.productos) }}
 					</div>
 				</div>
@@ -96,16 +96,22 @@
 						<button class="btn secondary">Ver plan</button>
 					</div>
 				</div>
-				<div class="promises-table">
+				<div>
 					<h2>Promesas de pago</h2>
-					<div class ="flex-row">
+					<div class="box">
 						{{ table(page.promises) }}
+						<hr>
+						<div class="wide-link">
+							<a href="#">Generar una promesa</a>
+						</div>
 					</div>
 				</div>
 				<div class="">
 					<h2>Planes de pago</h2>
-					<div class="flex-row">
-						{{ table(page.planes) }}
+					<div class="box">
+						<div class="flex-row">
+							{{ table(page.planes) }}
+						</div>
 					</div>
 				</div>
 			</div>

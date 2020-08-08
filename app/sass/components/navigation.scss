@@ -24,6 +24,7 @@
 
 		hr {
 			width: calc(100% - 3rem);
+			background-color: transparentize($white, 0.8);
 		}
 
 		a {
