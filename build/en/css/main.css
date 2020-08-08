@@ -2534,14 +2534,13 @@ html.no-scroll body {
 
 .emerix-page .page-home .home-illus-container {
   flex-grow: 1;
-  position: relative;
-  height: 100%;
 }
 
 .emerix-page .page-home .home-illus-container .home-illus {
   position: absolute;
-  top: -50%;
-  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 120%;
 }
 
 .emerix-page .page-home .prom-text {
