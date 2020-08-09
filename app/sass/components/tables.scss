@@ -1,210 +1,226 @@
 
 .box {
-    .table-container {
-        width: calc(100% + #{$box-padding * 2});
-        margin-left: -$box-padding;
-        margin-right: -$box-padding;
+	.table-container {
+		width: calc(100% + #{$box-padding * 2});
+		margin-left: -$box-padding;
+		margin-right: -$box-padding;
+		
+		tr {
+			padding: 0 0.75rem;
+		}
+		
+		&:first-child {
+			margin-top: -$box-padding;
+		}
+		
+		&:last-child {
+			margin-bottom: -$box-padding;
+		}
+		
+		@media all and (max-width: $mobileWidth) {
+			margin-left: -$box-padding / 2;
+			margin-right: -$box-padding / 2;
+			width: calc(100% + #{$box-padding * 1});
 
-        tr {
-            padding: 0 0.75rem;
-        }
 
-        &:first-child {
-            margin-top: -$box-padding;
-        }
+			&:first-child {
+				margin-top: -1rem;
+			}
 
-        &:last-child {
-        	margin-bottom: -$box-padding;
-        }
-
-    }
+			&:last-child {
+				margin-bottom: -1rem;
+			}
+		}
+	}
 }
+
 .table-container {
-    width: 100%;
+	width: 100%;
 
-    @media all and (min-width: $mobileWidth + 1) {
-        &.box {
-            background-color: $white;
-            border: 1px solid transparentize($silver, .85);
-            margin: .5rem;
-            border-radius: $box-radius;
-            box-shadow: 0px 2px 4px transparentize($black, .8);
-        }
-    }
-    
-    .table {
-        display: flex;
-        padding: 0;
-        
-        tbody {
-            width: 100%;
-        }
-        
-        tr {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+	@media all and (min-width: $mobileWidth + 1) {
+		&.box {
+			background-color: $white;
+			border: 1px solid transparentize($silver, .85);
+			margin: .5rem;
+			border-radius: $box-radius;
+			box-shadow: 0px 2px 4px transparentize($black, .8);
+		}
+	}
+	
+	.table {
+		display: flex;
+		padding: 0;
+		
+		tbody {
+			width: 100%;
+		}
+		
+		tr {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
 
-            @media all and (max-width: $mobileWidth) {
-                padding: 1rem;
+			@media all and (max-width: $mobileWidth) {
+				padding: 1rem;
 
-                & + tr:last-child {
-                    margin-bottom: 2rem;
-                }
-            }
-        }
+				& + tr:last-child {
+					//margin-bottom: 2rem;
+				}
+			}
+		}
 
-        &.selectable {
-            tr:not(.table-header) {
-                position: relative;
-                &:hover {
-                    background-color: $smoke;
+		&.selectable {
+			tr:not(.table-header):not(.disabled) {
+				position: relative;
 
-                    .item-label {
-                        font-weight: 500;
-                    }
-                    
-                	&:before {
-                		content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 4px;
-                        height: 100%;
-                        background-color: $lightviolet;
-                	}
-                }
-            }
-        }
+				&:hover {
+					background-color: $smoke;
 
-        &.disabled {
-            * {
-                color: $lightgray;
-            }
-        }
-        
-        td {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            height: 64px;;
+					.item-label {
+						font-weight: 500;
+					}
+					
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 4px;
+						height: 100%;
+						background-color: $lightviolet;
+					}
+				}
+			}
+		}
 
-            @media all and (max-width: $mobileWidth) {
-                p {
-                    margin-bottom: 0;
-                }
+		&.disabled {
+			* {
+				color: $lightgray;
+			}
+		}
+		
+		td {
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+			height: 64px;;
 
-                p + p {
-                    margin-top: 0;
-                }
-            }
+			@media all and (max-width: $mobileWidth) {
+				p {
+					margin-bottom: 0;
+				}
 
-            &.text-center {
-                justify-content: center;
-            }
-            
-            &.text-right {
-                justify-content: flex-end;
-            }
-        }
+				p + p {
+					margin-top: 0;
+				}
+			}
 
-        .input-wrapper {
-            input[type=text] {
-                height: 1.25rem;
-                width: 75%;
+			&.text-center {
+				justify-content: center;
+			}
+			
+			&.text-right {
+				justify-content: flex-end;
+			}
+		}
 
-                @media all and (max-width: $mobileWidth) {
-                    text-align: left;
-                    width: auto;
-                }
-            }
-        }
+		.input-wrapper {
+			input[type=text] {
+				height: 1.25rem;
+				width: 75%;
 
-    }
-    
-    .table-header {
-        font-weight: 500;
+				@media all and (max-width: $mobileWidth) {
+					text-align: left;
+					width: auto;
+				}
+			}
+		}
 
-        @media all and (max-width: $mobileWidth) {
-            p {
-                margin: .5rem 0;
-            }
-        }
-    }
+	}
+	
+	.table-header {
+		font-weight: 500;
 
-    .item-label {
-        font-weight: 500;
+		@media all and (max-width: $mobileWidth) {
+			p {
+				margin: .5rem 0;
+			}
+		}
+	}
 
-    }
+	.item-label {
+		font-weight: 500;
+		align-self: center;
+	}
 
-    .date-box {
-        border: 1px solid $black;
-        border-radius: $std-radius;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-width: 2.5rem;
-        min-height: 2.5rem;
+	.date-box {
+		border: 1px solid $black;
+		border-radius: $std-radius;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-width: 2.5rem;
+		min-height: 2.5rem;
 
-        margin-right: 1rem;
+		margin-right: 1rem;
 
-        .month {
-            text-transform: uppercase;
-            font-size: 0.75rem;
-        }
+		.month {
+			text-transform: uppercase;
+			font-size: 0.75rem;
+		}
 
-        .number {
-            color: $violet;
-            font-size: 1.125rem;
-            line-height: 1.625rem;
-            font-weight: bold;
-        }
-    }
+		.number {
+			color: $violet;
+			font-size: 1.125rem;
+			line-height: 1.625rem;
+			font-weight: bold;
+		}
+	}
 
-    .status-label {
-        font-size: 0.875rem;
+	.status-label {
+		font-size: 0.875rem;
 
-        .bullet {
-            display: inline-block;
-            vertical-align: middle;
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
-            border: 3.5px solid;
-            margin-right: .5rem;
-    
-            &.green {
-                border-color: $green;
-            }
-    
-            &.yellow {
-                border-color: $yellow;
-            }
-    
-            &.red {
-                border-color: $red;
-            }
-        }
-    }
+		.bullet {
+			display: inline-block;
+			vertical-align: middle;
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+			border: 3.5px solid;
+			margin-right: .5rem;
+	
+			&.green {
+				border-color: $green;
+			}
+	
+			&.yellow {
+				border-color: $yellow;
+			}
+	
+			&.red {
+				border-color: $red;
+			}
+		}
+	}
 
-    .btn {
-        font-weight: normal;
-        border: 1px solid $violet;
-        line-height: 1rem;
-        background: transparent;
-        color: $violet;
-        padding: .25rem 1.5rem;
-        font-size: 0.875rem;
-    }
+	.btn {
+		font-weight: normal;
+		border: 1px solid $violet;
+		line-height: 1rem;
+		background: transparent;
+		color: $violet;
+		padding: .25rem 1.5rem;
+		font-size: 0.875rem;
+	}
 
 
-    @media all and (max-width: $mobileWidth) {
-        .table {
-            tr:not(.table-header) {
-                padding-top: 0;
-                padding-bottom: 0;
-            }
-        }
-    }
+	@media all and (max-width: $mobileWidth) {
+		.table {
+			tr:not(.table-header) {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
 }

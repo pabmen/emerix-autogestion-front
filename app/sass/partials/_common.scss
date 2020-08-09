@@ -99,6 +99,14 @@ svg {
 	align-items: center;
 }
 
+.justify-around {
+	justify-content: space-around;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
 .flex-grow {
 	flex-grow: 1;
 }
@@ -121,6 +129,27 @@ svg {
 
 .hidden {
 	display:none !important;
+}
+
+.col-container {
+	> * {
+		margin: 0 (2.5rem / 2);
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@media all and (max-width: $mobileWidth) {
+		> * {
+			margin: 0;
+		}
+	}
 }
 
 hr {
