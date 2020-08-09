@@ -2072,7 +2072,7 @@ html.no-scroll body {
 }
 
 .emerix-page .table-container .status-label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .emerix-page .table-container .status-label .bullet {
@@ -2311,6 +2311,14 @@ html.no-scroll body {
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.emerix-page .text-small {
+  font-size: 0.75rem;
+}
+
+.emerix-page .text-semi {
+  font-weight: 500;
 }
 
 .emerix-page .text-nowrap {
@@ -2701,11 +2709,9 @@ html.no-scroll body {
   display: none;
 }
 
-@media all and (min-width: 1025px) {
-  .emerix-page .page-home .wide-link {
-    margin-top: 0;
-    margin-bottom: -.5rem;
-  }
+.emerix-page .page-home .wide-link {
+  margin-top: 0;
+  margin-bottom: -.5rem;
 }
 
 .emerix-page .page-home .wide-link a {
@@ -2730,8 +2736,8 @@ html.no-scroll body {
     align-items: flex-start;
   }
   .emerix-page .page-home .wide-link {
-    margin-top: 1rem;
-    margin-bottom: -.5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
   }
   .emerix-page .page-home .flex-column.col-1-3,
   .emerix-page .page-home .flex-column.col-2-3 {
