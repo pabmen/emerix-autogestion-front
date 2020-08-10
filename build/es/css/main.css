@@ -2504,6 +2504,19 @@ html.no-scroll body {
   }
 }
 
+.emerix-page .page-account h3 {
+  font-size: 1.75rem;
+  color: #8569b4;
+  font-weight: normal;
+  padding: 0;
+  margin-bottom: .5rem;
+}
+
+.emerix-page .page-account h3 + p {
+  margin: 0;
+  font-size: 1.3125rem;
+}
+
 .emerix-page .page-faqs .accordion-title {
   font-size: 1.125rem;
   color: #8569b4;

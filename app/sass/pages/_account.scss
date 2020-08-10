@@ -1,0 +1,14 @@
+.page-account {
+	h3 {
+		font-size: 1.75rem;
+		color: $violet;
+		font-weight: normal;
+		padding: 0;
+		margin-bottom: .5rem;
+	}
+
+	h3 + p {
+		margin: 0;
+		font-size: 1.3125rem;
+	}
+}
