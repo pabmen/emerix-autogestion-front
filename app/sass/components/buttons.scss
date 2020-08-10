@@ -27,6 +27,11 @@ $btn-border-color: transparent;
 	cursor: pointer;
 	outline: none;
 
+	@media all and (max-width: $mobileWidth) {
+		display: block;
+		width: 100%;
+	}
+
 	& + .btn {
 		margin-left: .5rem;
 	}

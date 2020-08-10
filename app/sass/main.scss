@@ -86,6 +86,7 @@ html.no-scroll {
     @import './components/navigation';
     @import './components/price';
     @import './components/sidebar';
+    @import './components/selectable-box';
     @import './components/slider';
     @import './components/success';
     @import './components/tables';
@@ -93,9 +94,11 @@ html.no-scroll {
     @import './components/topbar';
     @import './components/typography';
 
+    @import './pages/faqs';
     @import './pages/login';
     @import './pages/home';
     @import './pages/promises';
     @import './pages/payments';
+    @import './pages/pay';
 
 }

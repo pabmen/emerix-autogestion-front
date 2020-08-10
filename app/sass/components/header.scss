@@ -32,6 +32,9 @@
 .page-header {
 	.top-decoration {
 		font-size: 1.125rem;
+		@media all and (max-width: $mobileWidth) {
+			font-size: 1rem;
+		}
 		font-weight: bold;
 		color: $violet;
 		position: relative;

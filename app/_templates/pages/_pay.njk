@@ -2,7 +2,7 @@
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
 
-<section class="page-promises promises">
+<section class="page-pay">
 	{{ header({
 		progress: 5,
 		section: 'Pagar'
@@ -14,7 +14,7 @@
 			subtitle: '<span></span>Elegí cómo querés pagar, tenes 2 opciones:'
 		}) }}
 
-		{% call selectableBox({class: 'flex-row'}) %}
+		{% call selectableBox({class: 'flex-row col-container'}) %}
 			<div class="box col-1-2">
 				<div class="flex-row flex-center">
 					<img src="/assets/images/sections/promises/1.svg" alt="">

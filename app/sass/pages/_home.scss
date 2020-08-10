@@ -163,9 +163,11 @@
 
 		.mobile-btns {
 			margin-bottom: 1rem;
+			justify-content: center;
 			
 			li {
 				margin: 0 (2.5rem / 2);
+				max-width: 5rem;
 
 				a {
 					text-decoration: none;

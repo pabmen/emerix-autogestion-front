@@ -174,7 +174,7 @@
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-actividad.svg');">
 				
-					<a class="item" href="">Actividad</a>
+					<a class="item" href="/comprobantes.html">Tus comprobantes</a>
 				
 			</li>
 			
@@ -257,7 +257,7 @@
 	</div>
 
 
-	<div class="restrict-width">
+	<div class="restrict-width large">
 		
 	<div class="title">
 		<h1 class="page-title text-large">Generar promesa por selección de productos</h1>
@@ -265,9 +265,9 @@
 	</div>
 
 	</div>
-	<div class="restrict-width large flex-row">
+	<div class="restrict-width large flex-row col-container">
 		
-		<div class="col-2-3">
+		<div class="box col-2-3 full-width-mobile">
 			
 	<div class="table-container">
 		<table class="table selectable" width="100%" border="0">
@@ -340,7 +340,7 @@
 				<span class="input-caret"></span>
 			</div>
 			
-				<label for="undefinedtable-select-1"><img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/prestamos.svg" alt="">&nbsp;PRÉSTAMO 36 cuotas</label>
+				<label for="undefinedtable-select-1"><img style="vertical-align: middle" src="/assets/images/ui/tables/prestamos.svg" alt="">&nbsp;PRÉSTAMO 36 cuotas</label>
 			
 		
 		<div class="input-error-icon" role="alert"></div>
@@ -393,7 +393,7 @@
 				<span class="input-caret"></span>
 			</div>
 			
-				<label for="undefinedtable-select-2"><img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/seguros.svg" alt="">&nbsp;PRÉSTAMO 12 cuotas</label>
+				<label for="undefinedtable-select-2"><img style="vertical-align: middle" src="/assets/images/ui/tables/seguros.svg" alt="">&nbsp;PRÉSTAMO 12 cuotas</label>
 			
 		
 		<div class="input-error-icon" role="alert"></div>
@@ -446,7 +446,7 @@
 				<span class="input-caret"></span>
 			</div>
 			
-				<label for="undefinedtable-select-3"><img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/tc.svg" alt="">&nbsp;TC VISA 5400</label>
+				<label for="undefinedtable-select-3"><img style="vertical-align: middle" src="/assets/images/ui/tables/tc.svg" alt="">&nbsp;TC VISA 5400</label>
 			
 		
 		<div class="input-error-icon" role="alert"></div>
@@ -499,7 +499,7 @@
 				<span class="input-caret"></span>
 			</div>
 			
-				<label for="undefinedtable-select-4"><img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/tc.svg" alt="">&nbsp;TC MASTER 2431</label>
+				<label for="undefinedtable-select-4"><img style="vertical-align: middle" src="/assets/images/ui/tables/tc.svg" alt="">&nbsp;TC MASTER 2431</label>
 			
 		
 		<div class="input-error-icon" role="alert"></div>
@@ -552,7 +552,7 @@
 				<span class="input-caret"></span>
 			</div>
 			
-				<label for="undefinedtable-select-5"><img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/refinanciacion.svg" alt="">&nbsp;TC MASTER 2431</label>
+				<label for="undefinedtable-select-5"><img style="vertical-align: middle" src="/assets/images/ui/tables/refinanciacion.svg" alt="">&nbsp;TC MASTER 2431</label>
 			
 		
 		<div class="input-error-icon" role="alert"></div>
@@ -596,9 +596,9 @@
 	
 
 		</div>
-		<div class="flex-column col-1-3">
+		<div class="flex-column col-1-3 full-width-mobile">
 			
-<div class="selectable-box flex-column" id="box-0203341060">
+<div class="selectable-box flex-column" id="box-6991344406">
 	
 				<div class="box">
 					
@@ -622,15 +622,16 @@
 	</div>
 
 				</div>
-				<div class="box flex-row">
-					<p>monto final</p>
-					<p>$0,00</p>
+				<div class="box flex-row justify-between">
+					<span class="text-uppercase">monto final</span>
+					<br>
+					<span><strong>$0,00</strong></span>
 				</div>
 			
 </div>
 <script>
 	;(() => {
-		const container = document.querySelector('#box-0203341060')
+		const container = document.querySelector('#box-6991344406')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {
@@ -647,6 +648,9 @@
 	})();
 </script>
 
+			<div class="error-box">
+				El monto a pagar no puede ser menor al pago mínimo.
+			</div>
 
 			<div>
 				<button class="btn" data-next>Generar promesa</button>

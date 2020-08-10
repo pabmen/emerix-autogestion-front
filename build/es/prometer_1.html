@@ -174,7 +174,7 @@
 			
 			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-actividad.svg');">
 				
-					<a class="item" href="">Actividad</a>
+					<a class="item" href="/comprobantes.html">Tus comprobantes</a>
 				
 			</li>
 			
@@ -239,6 +239,7 @@
 
 
 
+
 <section class="page-promises promises_1">
 	
 	
@@ -262,15 +263,22 @@
 
 
         
-<div class="selectable-box flex-column" id="box-6364277365">
+<div class="selectable-box flex-column" id="box-5064921052">
 	
-			<div class="flex-row">
-				<div class="box col-1-2">
-					<p>Monto total de la deuda</p>
-					<p class="text-xlarge">$19959057</p>
+			<div class="flex-row col-container">
+				<div class="box col-1-2 full-width-mobile">
+					<span>Monto total de la deuda</span>
+					
+	
+
+	
+	
+
+	<div class="price-container" data-value="19959057"><span class="denomination">$</span>199590<sup class="cents">57</sup></div>
+
 				</div>
-				<div class="box col-1-2">
-					<p>Ingresar otro monto</p>
+				<div class="box col-1-2 full-width-mobile">
+					<span>Ingresar otro monto</span>
 					
 
 	
@@ -285,8 +293,8 @@
 
 				</div>
 			</div>
-			<div>
-				<div class="box col-1-2">
+			<div class="flex-row col-container">
+				<div class="box col-1-2 full-width-mobile">
 					
 	<div class="input-wrapper select">
 		<select id="" required>
@@ -308,12 +316,13 @@
 	</div>
 
 				</div>
+				<div class="col-1-2">&nbsp;</div>
 			</div>
         
 </div>
 <script>
 	;(() => {
-		const container = document.querySelector('#box-6364277365')
+		const container = document.querySelector('#box-5064921052')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {

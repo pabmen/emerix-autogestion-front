@@ -1,5 +1,14 @@
 @import '../vars';
 
+.error-box {
+	border-radius: $box-radius;
+	border: 1px solid $red;
+	background-color: $coral;
+	padding: .5rem 1.5rem;
+	color: $white;
+	margin-bottom: 1rem;
+}
+
 .selectable-box {
 	.box {
 		cursor: pointer;
@@ -8,6 +17,14 @@
 
 		&.active {
 			border-color: $violet;
+		}
+	}
+
+	@media all and (max-width: $mobileWidth) {
+		flex-direction: column;
+
+		& > * {
+			width: 100%;
 		}
 	}
 }

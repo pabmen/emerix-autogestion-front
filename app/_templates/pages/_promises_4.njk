@@ -25,7 +25,7 @@
 		progress: 70,
 		link: {
 			href: '/prometer_1.html',
-			text: 'volver a la pantalla anterior'
+			text: 'volver a generar promesa por producto'
 		}
 	}) }}
 
@@ -33,20 +33,22 @@
 		{{ title({
 			title: 'Confirmá el monto y el plazo de pago'
 		}) }}
-		<div class="flex-row">
-			<div class="box text-center col-1-2">
-				<p>Monto prometido</p>
-				<p class="text-xlarge">{{ price("19959057") }}</p>
+		<div class="flex-row col-container">
+			<div class="box text-center col-1-2 full-width-mobile">
+				<span class="text-violet"><strong>Monto prometido</strong></span>
+				<br>
+				<span class="text-xlarge">{{ price("19959057") }}</span>
 			</div>
-			<div class="box text-center col-1-2">
-				<p>Vencimiento</p>
-				<p class="text-xlarge">24Hs</p>
+			<div class="box text-center col-1-2 full-width-mobile">
+				<span class="text-violet"><strong>Vencimiento</strong></span>
+				<br>
+				<span class="text-xlarge">24 horas</span>
 			</div>
 		</div>
-		<div>
+		<div class="box">
 			{{ table(productos) }}
 		</div>
-		<p>La distribución del importe se hace por productos en base los días de mora, una vez cubierto el monto automaticamente contempla el siguiente producto hasta cubrir el importe ingresado.</p>
+		<p class="disclaimer">La distribución del monto se hará en base a los productos seleccionados.</p>
 
 		<button class="btn" data-next>Confirmar</button>
 	</div>

@@ -16,11 +16,11 @@
 				"Monto adeudado"
 			],
 			"data": [
-				["<img style='float: left; vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "1 día", "$19450,87"],
-				["<img style='float: left; vertical-align: middle' src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;PRÉSTAMO 12 cuotas", "12/10/20", "0", "$19450,87"],
-				["<img style='float: left; vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2 días", "$19450,87"],
-				["<img style='float: left; vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/20", "4 días", "$19450,87"],
-				["<img style='float: left; vertical-align: middle' src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20 días", "$19450,87"]
+				["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "1 día", "$19450,87"],
+				["<img style='vertical-align: middle' src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;PRÉSTAMO 12 cuotas", "12/10/20", "0", "$19450,87"],
+				["<img style='vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2 días", "$19450,87"],
+				["<img style='vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/20", "4 días", "$19450,87"],
+				["<img style='vertical-align: middle' src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20 días", "$19450,87"]
 			]
 } %}
 
@@ -33,18 +33,18 @@
 		}
 	}) }}
 
-	<div class="restrict-width">
+	<div class="restrict-width large">
 		{{ title({
 			title: 'Generar promesa por selección de productos',
 			subtitle: '<span></span><strong>Seleccioná los productos</strong> que queres pagar, elegí cuando te comprometes a abonarlo (<strong>periodo</strong>) y luego hace clic en <strong>generar promesa</strong>.'
 		}) }}
 	</div>
-	<div class="restrict-width large flex-row">
+	<div class="restrict-width large flex-row col-container">
 		
-		<div class="col-2-3">
+		<div class="box col-2-3 full-width-mobile">
 			{{ table(productos, {'specialType': 'checkbox'}) }}
 		</div>
-		<div class="flex-column col-1-3">
+		<div class="flex-column col-1-3 full-width-mobile">
 			{% call selectableBox({class: 'flex-column'}) %}
 				<div class="box">
 					{{ select({
@@ -53,11 +53,15 @@
 						'placeholder': 'PERIODO'
 					}) }}
 				</div>
-				<div class="box flex-row">
-					<p>monto final</p>
-					<p>$0,00</p>
+				<div class="box flex-row justify-between">
+					<span class="text-uppercase">monto final</span>
+					<br>
+					<span><strong>$0,00</strong></span>
 				</div>
 			{% endcall %}
+			<div class="error-box">
+				El monto a pagar no puede ser menor al pago mínimo.
+			</div>
 
 			<div>
 				<button class="btn" data-next>Generar promesa</button>

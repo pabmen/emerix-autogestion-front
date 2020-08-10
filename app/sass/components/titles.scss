@@ -2,8 +2,15 @@
 
 .title {
 	.page-subtitle {
+		position: relative;
+		padding-left: .75rem;
+		margin-left: -.75rem;
+
 		span {
 			display: inline-block;
+			position: relative;
+			bottom: 0;
+			left: 0;
 			width: 4px;
 			height: 4px;
 			vertical-align: baseline;
