@@ -1829,12 +1829,13 @@ html.no-scroll body {
     display: none;
   }
   .emerix-page .main-navigation {
-    display: none;
     position: absolute;
     top: 1.5rem;
     left: 1rem;
     z-index: 1000;
     background-color: transparent;
+    min-height: 3rem;
+    width: 3rem;
   }
   .emerix-page .main-navigation .mobile-menu-toggle,
   .emerix-page .main-navigation .mobile-menu-toggle-label {
@@ -1842,8 +1843,8 @@ html.no-scroll body {
   }
   .emerix-page .main-navigation .mobile-menu-toggle-label {
     cursor: pointer;
-    width: 2rem;
-    height: 1rem;
+    width: 100%;
+    height: 100%;
   }
   .emerix-page .main-navigation .mobile-menu-toggle-label img {
     width: 20px;
