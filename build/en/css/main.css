@@ -2521,6 +2521,21 @@ html.no-scroll body {
   font-size: 1.3125rem;
 }
 
+.emerix-page .page-account .btn {
+  padding: .25rem 1rem;
+  line-height: 0.8rem;
+  border-color: #8569b4;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-account .btn {
+    left: 1rem;
+    width: calc(100% - 2rem);
+  }
+}
+
 .emerix-page .page-faqs .accordion-title {
   font-size: 1.125rem;
   color: #8569b4;
