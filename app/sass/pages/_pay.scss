@@ -18,6 +18,12 @@
 			border: 1px solid $lightgray;
 			margin: $itemMargin;
 
+			@media all and (max-width: $mobileWidth) {
+				width: 44px;
+				height: 28px;
+
+			}
+
 			img {
 				max-height: 100%;
 				padding: .5rem;

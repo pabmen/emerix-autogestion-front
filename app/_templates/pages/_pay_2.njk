@@ -40,9 +40,69 @@
 		}) }}
 	</div>
 	<div class="restrict-width large flex-row col-container">
-		<div class="col-2-3 box">
+		<div class="col-2-3 box desktop-only">
 			{{ table(productos, {'specialType': 'checkbox'}) }}
 		</div>
+		
+		<div class="mobile-only">
+			{% call selectableBox({class: 'flex-column'}) %}
+				<div class="box">
+					{{ table({
+							"id": "TEST",
+							"data": [
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas"]
+							]
+						}, {'specialType': 'checkbox'})
+					}}
+					<div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2">Monto adeudo</div>
+								<div class="col-1-2 text-right">$2308,50</div>	
+							</li>
+							<li class="flex-row">
+								<div class="col-1-2">Pago mínimo</div>
+								<div class="col-1-2 text-right">$3200</div>
+							</li>
+							<li class="flex-row">
+								<div class="col-1-2">Monto a pagar</div>
+								<div class="col-1-2 text-right">$19450,87</div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					{{ table({
+							"id": "TEST",
+							"data": [
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas"]
+							]
+						}, {'specialType': 'checkbox'})
+					}}
+					<div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2">Monto adeudo</div>
+								<div class="col-1-2 text-right">$2308,50</div>	
+							</li>
+							<li class="flex-row">
+								<div class="col-1-2">Pago mínimo</div>
+								<div class="col-1-2 text-right">$3200</div>
+							</li>
+							<li class="flex-row">
+								<div class="col-1-2">Monto a pagar</div>
+								<div class="col-1-2 text-right">$19450,87</div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+        	{% endcall %}
+		</div>
+
 		<div class="flex-column col-1-3 full-width-mobile">
 			{% call selectableBox({class: 'flex-column'}) %}
 				<div class="box flex-row justify-between">

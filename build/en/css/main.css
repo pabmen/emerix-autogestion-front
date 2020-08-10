@@ -2971,6 +2971,27 @@ html.no-scroll body {
   display: none;
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .page-payments .col-container {
+    flex-direction: row;
+  }
+  .emerix-page .page-payments .col-container > * {
+    margin: 0 1rem;
+  }
+  .emerix-page .page-payments .col-container > *:first-child {
+    width: 60%;
+  }
+  .emerix-page .page-payments .col-container > *:last-child {
+    width: 30%;
+  }
+  .emerix-page .page-payments .col-container > *:first-child {
+    margin-left: 0;
+  }
+  .emerix-page .page-payments .col-container > *:last-child {
+    margin-right: 0;
+  }
+}
+
 .emerix-page .page-payments .payment-selector {
   background-color: #fff;
 }
@@ -2982,11 +3003,18 @@ html.no-scroll body {
 }
 
 .emerix-page .page-payments .payment-selector li {
-  width: 72px;
+  width: 70px;
   height: 48px;
   border-radius: 4px;
   border: 1px solid #c1c1c1;
   margin: 15px;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-payments .payment-selector li {
+    width: 42px;
+    height: 28px;
+  }
 }
 
 .emerix-page .page-payments .payment-selector li img {
@@ -3014,6 +3042,13 @@ html.no-scroll body {
   border-radius: 4px;
   border: 1px solid #c1c1c1;
   margin: 15px;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-pay .payment-selector li {
+    width: 44px;
+    height: 28px;
+  }
 }
 
 .emerix-page .page-pay .payment-selector li img {

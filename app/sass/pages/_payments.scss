@@ -1,6 +1,32 @@
 .page-payments {
-
 	$itemMargin: 15px;
+
+	@media all and (max-width: $mobileWidth) {
+		.col-container {
+			flex-direction: row;
+
+			> * {
+				&:first-child {
+					width: 60%;
+				}
+
+				&:last-child {
+					width: 30%;
+				}
+
+				margin: 0 (2rem / 2);
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
 
 	.payment-selector {
 		background-color: $white;
@@ -12,11 +38,17 @@
 		}
 
 		li {
-			width: 72px;
+			width: 70px;
 			height: 48px;
 			border-radius: $std-radius;
 			border: 1px solid $lightgray;
 			margin: $itemMargin;
+
+			@media all and (max-width: $mobileWidth) {
+				width: 42px;
+				height: 28px;
+
+			}
 
 			img {
 				max-height: 100%;
