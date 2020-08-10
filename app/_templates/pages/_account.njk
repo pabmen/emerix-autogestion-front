@@ -1,5 +1,6 @@
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
+{% from "../components/_forms.njk" import input %}
 
 <section class="page-account">
 	{{ header({
@@ -15,19 +16,24 @@
 			<img src="/assets/images/sections/account/icon.svg" alt="User icon">
 			<h3>Nicolas Alberto Moroso</h3>
 			<p>DNI 31910555</p>
-			<div class="flex-row">
+			<div class="flex-row full-width">
 				<div class="col-1-2">
 					<p><strong>Mail principal</strong></p>
-					<p>nico_moroso@gmail.com</p>
+					<p>{{input({placeholder: 'nico_moroso@gmail.com'})}}</p>
 				</div>
-				<div class="col-1-2">
-					<p><strong>Mail secundario</strong></p>
-					<p>nico_moroso@gmail.com</p>
+				<div class="col-1-2 text-right">
+					<button class="btn secondary">Guardar</button>
 				</div>
 			</div>
-			<div class="flex-row">
-				
-			</ul>
+			<div class="flex-row full-width">
+				<div class="col-1-2">
+					<p><strong>Teléfono principal</strong></p>
+					<p>+ 54 9 11 3690 9090</p>
+				</div>
+				<div class="col-1-2 text-right">
+					<button class="btn secondary">Modificar</button>
+				</div>
+			</div>
 		</div>
     </div>
 

@@ -1575,6 +1575,10 @@ html.no-scroll body {
   max-width: 32.625rem;
 }
 
+.emerix-page .full-width {
+  width: 100%;
+}
+
 @media all and (max-width: 1024px) {
   .emerix-page .full-width-mobile {
     width: 100%;

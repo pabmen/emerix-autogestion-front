@@ -78,6 +78,10 @@
 	margin-right: auto;
 }
 
+.full-width {
+	width: 100%;
+}
+
 @media all and (max-width: $mobileWidth) {
 	.full-width-mobile {
 		width: 100%;
