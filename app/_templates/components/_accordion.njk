@@ -1,0 +1,9 @@
+{% macro accordion(options) %}
+	<ul class="accordion">
+    {% for item in options %}
+		<li>
+			<div>{{ item }}</div>
+		</li>
+	{% endfor %}
+	</ul>
+{% endmacro %}

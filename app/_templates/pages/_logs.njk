@@ -1,0 +1,37 @@
+{% from "../components/_tables.njk" import table %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+{% set logs = {
+		"class": "selectable",
+		"colsClasses": ["col-1-4", "col-1-4", "col-1-4", "col-1-4 text-right"],
+		"header": [
+			"Fecha",
+			"N° Comprobante",
+			"Medio de pago",
+			"Monto pagado"
+		],
+		"data": [
+			["<div class='flex-row justify-between' style='width: 80%'><div>12/10/2020</div><a href='#' class=''><img src='/assets/images/ui/tables/download.svg' alt=''></a></div>", "09087987987", "Mercadopago", "$19450,87"],
+			["<div class='flex-row justify-between' style='width: 80%'><div>08/07/2020</div><a href='#' class=''><img src='/assets/images/ui/tables/download.svg' alt=''></a></div>", "09087987987", "Tarjeta de crédito", "$19450,87"],
+			["<div class='flex-row justify-between' style='width: 80%'><div>04/10/2019</div><a href='#' class=''><img src='/assets/images/ui/tables/download.svg' alt=''></a></div>", "09087987987", "Tarjeta de débito", "$19450,87"],
+			["<div class='flex-row justify-between' style='width: 80%'><div>10/08/2019</div><a href='#' class=''><img src='/assets/images/ui/tables/download.svg' alt=''></a></div>", "090879879876", "Pago fácil", "$19450,87"]
+		]
+	}
+%}
+
+<section class="page-promises promises">
+	{{ header({
+		section: 'Comprobantes'
+	}) }}
+
+	<div class="restrict-width">
+		{{ title({
+			title: 'Consultá las promesas de pago que realizaste',
+			subtitle: '<span></span>Podés ver el detalle si no recordás lo prometido y pagar si aún están vigente.'
+		}) }}
+		<div class="box">
+			{{ table(logs) }}
+		</div>
+	</div>
+</section>

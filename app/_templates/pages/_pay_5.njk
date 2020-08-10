@@ -1,0 +1,46 @@
+{% from "../components/_selectableBox.njk" import selectableBox %}
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_price.njk" import price %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+<section class="page-pay">
+	{{ header({
+		progress: 70,
+		link: {
+			href: '/pagar_1.html',
+			text: 'volver a la pantalla anterior'
+		}
+	}) }}
+
+	<div class="restrict-width">
+		{{ title({
+			title: 'Pago online',
+			subtitle: '<span></span>Elegí cómo querés pagar, tenes 2 opciones:'
+		}) }}
+		<div class="box">
+			<div class="payment-selector">
+				<ul class="flex-row">
+					<li class="flex-column active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
+					<li class="flex-column"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
+					<li class="flex-column"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
+					<li class="flex-column"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
+					<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+					<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+					<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+				</ul>
+			</div>
+		</div>
+
+		<button class="btn" data-next>Confirmar</button>
+	</div>
+</section>
+<script>
+	const boxes = document.querySelectorAll('.selectable-box .box')
+
+	document.querySelector('[data-next]').addEventListener('click', () => {
+		window.location.href = '/pagar_exito.html'
+	})
+</script>
