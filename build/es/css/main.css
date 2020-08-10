@@ -2536,6 +2536,10 @@ html.no-scroll body {
   }
 }
 
+.emerix-page .page-account .icns {
+  margin-right: 1rem;
+}
+
 .emerix-page .page-faqs .accordion-title {
   font-size: 1.125rem;
   color: #8569b4;
