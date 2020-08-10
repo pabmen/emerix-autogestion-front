@@ -2780,6 +2780,14 @@ html.no-scroll body {
   }
 }
 
+.emerix-page .page-logs .download-icn {
+  display: none;
+}
+
+.emerix-page .page-logs tr:hover .download-icn {
+  display: inline;
+}
+
 @media all and (min-width: 1025px) {
   .emerix-page .page-home .title.large {
     margin-bottom: 4rem;

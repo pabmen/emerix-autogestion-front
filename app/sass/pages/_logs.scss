@@ -1,0 +1,11 @@
+.page-logs {
+	.download-icn {
+		display: none;
+	}
+
+	tr:hover {
+		.download-icn {
+			display: inline;
+		}
+	}
+}
