@@ -2527,11 +2527,23 @@ html.no-scroll body {
   border-color: #8569b4;
   font-weight: normal;
   font-size: 12px;
+  white-space: nowrap;
+}
+
+.emerix-page .page-account .btn.save:before {
+  content: url("/assets/images/sections/account/save.svg");
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.emerix-page .page-account .btn.edit:before {
+  content: url("/assets/images/sections/account/edit.svg");
+  display: inline-block;
+  vertical-align: middle;
 }
 
 @media all and (max-width: 1024px) {
   .emerix-page .page-account .btn {
-    left: 1rem;
     width: calc(100% - 2rem);
   }
 }
