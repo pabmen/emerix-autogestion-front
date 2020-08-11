@@ -2598,6 +2598,10 @@ html.no-scroll body {
   margin-right: 1rem;
 }
 
+.emerix-page .page-faqs .input-wrapper {
+  margin-bottom: 0;
+}
+
 .emerix-page .page-faqs .accordion-title a {
   font-size: 1.125rem;
   color: #8569b4;
