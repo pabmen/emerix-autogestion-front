@@ -556,6 +556,7 @@ html.no-scroll body {
 }
 
 .emerix-page .disclaimer {
+  margin: 2rem 0;
   position: relative;
   padding-left: 2rem;
 }
