@@ -5,7 +5,7 @@
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
 
-<section class="page-pay">
+<section class="page-pay pay_1">
 	{{ header({
         progress: 30,
 		link: {
@@ -29,9 +29,11 @@
 				</div>
 				<div class="box col-1-2 full-width-mobile">
 					<span>Ingresar otro monto</span>
-					{{ input({
+					<br>
+					<span class="text-xlarge fake-input-text">{{ price("000") }}</span>
+					{# {{ input({
 						placeholder: '$000'
-					}) }}
+					}) }} #}
 				</div>
 			</div>
         {% endcall %}

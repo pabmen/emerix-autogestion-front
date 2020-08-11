@@ -1,6 +1,22 @@
 .page-pay {
-
 	$itemMargin: 15px;
+
+	&.pay_1 {
+		.selectable-box {
+			span:first-child {
+				padding-bottom: 1rem;
+			}
+			.box:not(.active) {
+				color: $silver;
+			}
+
+			.box + .box .price-container {
+				padding-bottom: .5rem;
+				margin-bottom: -.5rem;
+				border-bottom: 1px solid;
+			}
+		}
+	}
 
 	.payment-selector {
 		background-color: $white;

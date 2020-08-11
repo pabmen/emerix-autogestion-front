@@ -219,6 +219,7 @@
 
 	@media all and (max-width: $mobileWidth) {
 		.table {
+			font-size: 0.85rem;
 			.table-header {
 				display: none;
 			}
