@@ -2,10 +2,13 @@
 	.input-wrapper {
 		margin-bottom: 0;
 	}
-	
+
 	.accordion-title a {
 		font-size: 1.125rem;
 		color: $violet;
 		margin-bottom: .5rem;
+	}
+	.accordion-content {
+		padding-top: 1rem;
 	}
 }

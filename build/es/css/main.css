@@ -2608,6 +2608,10 @@ html.no-scroll body {
   margin-bottom: .5rem;
 }
 
+.emerix-page .page-faqs .accordion-content {
+  padding-top: 1rem;
+}
+
 .emerix-page .page-login {
   height: 100%;
   /*.phone-list {
@@ -2865,6 +2869,9 @@ html.no-scroll body {
 }
 
 @media all and (min-width: 1025px) {
+  .emerix-page .page-logs .logs-table tr:not(.table-header):hover {
+    font-weight: 500;
+  }
   .emerix-page .page-logs .logs-table .download-icn {
     display: none;
   }
