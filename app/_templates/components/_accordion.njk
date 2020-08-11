@@ -1,9 +1,30 @@
 {% macro accordion(options) %}
-	<ul class="accordion">
+	{%- macro random_int(len) -%}
+	{%- for _ in range(len) -%}
+		{{ range(10) | random }}
+	{%- endfor -%}
+	{%- endmacro -%}
+
+	{% set id = 'accordion-' + random_int(10) %}
+	<ul class="accordion" id="{{ id }}">
     {% for item in options %}
-		<li>
-			<div>{{ item }}</div>
+		<li class="flex-column">
+			<div class="accordion-title"><a href="#">{{ item.title }}</a></div>
+			<div class="accordion-content">{{ item.content }}</div>
 		</li>
 	{% endfor %}
 	</ul>
+	<script>
+		const accordion = document.querySelector('#{{ id }}')
+		const items = accordion.querySelectorAll('li')
+		
+		
+		accordion.querySelectorAll('.accordion-title > a').forEach((trigger) => {
+			trigger.addEventListener('click', (e) => {
+				e.preventDefault()
+				items.forEach((item) => item.classList.remove('active'))
+				trigger.closest('li').classList.add('active')
+			})
+		})
+	</script>
 {% endmacro %}

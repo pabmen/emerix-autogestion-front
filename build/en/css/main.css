@@ -2571,6 +2571,20 @@ html.no-scroll body {
   margin-bottom: 1rem;
 }
 
+.emerix-page .page-faqs .accordion li .accordion-title {
+  cursor: pointer;
+}
+
+.emerix-page .page-faqs .accordion li .accordion-content {
+  transition: all 0.35s ease;
+}
+
+.emerix-page .page-faqs .accordion li:not(.active) .accordion-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
 .emerix-page .page-login {
   height: 100%;
   /*.phone-list {
