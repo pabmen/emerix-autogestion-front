@@ -138,12 +138,12 @@ svg {
 .disclaimer {
 	margin: 2rem 0;
 	position: relative;
-	padding-left: 2rem;
+	padding-left: 3rem;
 	&:before {
 		content: url("/assets/images/ui/icono_info.svg");
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: 1rem;
 		width: 1rem;
 	}
 }
