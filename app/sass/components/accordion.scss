@@ -1,0 +1,22 @@
+.accordion {
+	margin: 2rem 0;
+
+	li {
+		margin-bottom: 1rem;
+
+		a {
+			text-decoration: none;
+			display: block
+		}
+
+		.accordion-content {
+			transition: all $transition-normal;
+		}
+
+		&:not(.active) .accordion-content {
+			height: 0;
+			opacity: 0;
+			overflow: hidden;
+		}
+	}
+}

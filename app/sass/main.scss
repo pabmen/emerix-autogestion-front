@@ -73,6 +73,7 @@ html.no-scroll {
 	// Accessibility styles
 	@import './partials/accessibility';
 
+    @import './components/accordion';
     @import './components/box';
     @import './components/forms';
     @import './components/breadcrumbs';

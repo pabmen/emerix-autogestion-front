@@ -840,6 +840,29 @@ html.no-scroll body {
   overflow: hidden;
 }
 
+.emerix-page .accordion {
+  margin: 2rem 0;
+}
+
+.emerix-page .accordion li {
+  margin-bottom: 1rem;
+}
+
+.emerix-page .accordion li a {
+  text-decoration: none;
+  display: block;
+}
+
+.emerix-page .accordion li .accordion-content {
+  transition: all 0.35s ease;
+}
+
+.emerix-page .accordion li:not(.active) .accordion-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
 .emerix-page .error-box {
   border-radius: 8px;
   border: 1px solid #D73232;
@@ -1010,6 +1033,20 @@ html.no-scroll body {
 
 .emerix-page .input-wrapper.date:after {
   content: url("/assets/images/ui/date_icon.svg");
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.emerix-page .input-wrapper.search {
+  position: relative;
+}
+
+.emerix-page .input-wrapper.search:after {
+  content: url("/assets/images/ui/search_icon.svg");
   position: absolute;
   top: 50%;
   right: 0;
@@ -2561,28 +2598,10 @@ html.no-scroll body {
   margin-right: 1rem;
 }
 
-.emerix-page .page-faqs .accordion-title {
+.emerix-page .page-faqs .accordion-title a {
   font-size: 1.125rem;
   color: #8569b4;
   margin-bottom: .5rem;
-}
-
-.emerix-page .page-faqs .accordion li {
-  margin-bottom: 1rem;
-}
-
-.emerix-page .page-faqs .accordion li .accordion-title {
-  cursor: pointer;
-}
-
-.emerix-page .page-faqs .accordion li .accordion-content {
-  transition: all 0.35s ease;
-}
-
-.emerix-page .page-faqs .accordion li:not(.active) .accordion-content {
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
 }
 
 .emerix-page .page-login {

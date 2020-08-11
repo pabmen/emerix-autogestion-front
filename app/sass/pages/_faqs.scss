@@ -1,27 +1,7 @@
 .page-faqs {
-	.accordion-title {
+	.accordion-title a {
 		font-size: 1.125rem;
 		color: $violet;
 		margin-bottom: .5rem;
-	}
-
-	.accordion {
-		li {
-			margin-bottom: 1rem;
-
-			.accordion-title {
-				cursor: pointer;
-			}
-
-			.accordion-content {
-				transition: all $transition-normal;
-			}
-
-			&:not(.active) .accordion-content {
-				height: 0;
-				opacity: 0;
-				overflow: hidden;
-			}
-		}
 	}
 }
