@@ -186,8 +186,7 @@ function copyRootFiles() {
 		CONFIG.srcPath + '*.ico',
 		CONFIG.srcPath + '*.svg',
 		CONFIG.srcPath + 'browserconfig.xml',
-		CONFIG.srcPath + 'site.webmanifest',
-		'_headers'
+		CONFIG.srcPath + 'site.webmanifest'
 	], {base: CONFIG.srcPath})
 
 	.pipe(print())
