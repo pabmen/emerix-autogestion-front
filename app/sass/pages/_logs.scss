@@ -38,13 +38,6 @@
 			}
 		}
 		@media all and (min-width: $mobileWidth + 1) {
-
-			tr:not(.table-header) {
-				&:hover {
-					font-weight: 500;
-				}
-			}
-			
 			.download-icn {
 				display: none;
 			}

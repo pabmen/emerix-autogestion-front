@@ -2103,6 +2103,7 @@ html.no-scroll body {
 
 .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover {
   background-color: #fbfbfb;
+  font-weight: 500;
 }
 
 .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover .item-label {
@@ -2869,9 +2870,6 @@ html.no-scroll body {
 }
 
 @media all and (min-width: 1025px) {
-  .emerix-page .page-logs .logs-table tr:not(.table-header):hover {
-    font-weight: 500;
-  }
   .emerix-page .page-logs .logs-table .download-icn {
     display: none;
   }
