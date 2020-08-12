@@ -8,6 +8,14 @@
 		}
 	}
 
+	&.promises_1 {
+		@media all and (max-width: $mobileWidth) {
+			.col-3-6 {
+				width: 100%;
+			}
+		}
+	}
+
 	&.promises {
 		.box.active {
 			p {

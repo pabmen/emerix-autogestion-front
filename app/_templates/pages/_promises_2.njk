@@ -45,7 +45,7 @@
 			{{ table(productos, {'specialType': 'checkbox'}) }}
 		</div>
 		<div class="flex-column col-1-3 full-width-mobile">
-			{% call selectableBox({class: 'flex-column'}) %}
+			<div class="flex-column row-container">
 				<div class="box">
 					{{ select({
 						'id': '',
@@ -58,7 +58,7 @@
 					<br>
 					<span><strong>$0,00</strong></span>
 				</div>
-			{% endcall %}
+			</div>
 			<div class="error-box">
 				El monto a pagar no puede ser menor al pago mínimo.
 			</div>

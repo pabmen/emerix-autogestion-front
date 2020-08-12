@@ -595,6 +595,18 @@ html.no-scroll body {
   }
 }
 
+.emerix-page .row-container {
+  margin-bottom: 1rem;
+}
+
+.emerix-page .row-container > * {
+  margin-bottom: 1rem;
+}
+
+.emerix-page .row-container > *:last-child {
+  margin-bottom: 0;
+}
+
 .emerix-page hr {
   border: 0;
   height: 1px;
@@ -3123,6 +3135,12 @@ html.no-scroll body {
 @media all and (max-width: 1024px) {
   .emerix-page .page-promises .selectable-box {
     text-align: center;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-promises.promises_1 .col-3-6 {
+    width: 100%;
   }
 }
 
