@@ -88,10 +88,10 @@
         <div class="notifications-menu">
             
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-4231085447">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-7156261199">
     
     
-    <label class="dropdown-title item" for="dropdown-trigger-dropdown-4231085447">
+    <label class="dropdown-title item" for="dropdown-trigger-dropdown-7156261199">
          <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
     </label>
     <div class="dropdown-target">
@@ -247,6 +247,7 @@
 					<div class="pages-container flex-grow">
 						
 	
+
 
 
 
@@ -545,7 +546,7 @@
 		<div class="mobile-only">
 			
 
-<div class="selectable-box flex-column special-mobile-selectable-box" id="box-0534715039">
+<div class="selectable-box flex-column special-mobile-selectable-box" id="box-4716346778">
 	
 				<div class="box">
 					
@@ -593,10 +594,10 @@
 						<div class="dropdown-card">
 						
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-6336220852">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-3974488539">
     
     
-    <label class="dropdown-title" for="dropdown-trigger-dropdown-6336220852">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-3974488539">
           
     </label>
     <div class="dropdown-target">
@@ -672,10 +673,10 @@
 						<div class="dropdown-card">
 						
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-9260218523">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-5485701185">
     
     
-    <label class="dropdown-title" for="dropdown-trigger-dropdown-9260218523">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-5485701185">
           
     </label>
     <div class="dropdown-target">
@@ -709,7 +710,7 @@
 </div>
 <script>
 	;(() => {
-		const container = document.querySelector('#box-0534715039')
+		const container = document.querySelector('#box-4716346778')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {
@@ -731,24 +732,36 @@
 			<div class="flex-column row-container">
 				<div class="box">
 					
-	<div class="input-wrapper select">
-		<select id="promises-select" required>
+	<div class="input-wrapper select select2">
+		<ul id="promises-select" data-value="">
 			
-			<option selected="selected" class="placeholder" value="">PERIODO</option>
+			<li class="placeholder" value="" class="active"><div>PERIODO</div></li>
 			
 			
-			<option value="24hs">24hs</option>
+			<li data-value="24hs"><div class="selectable">24hs</div></li>
 			
-			<option value="48hs">48hs</option>
+			<li data-value="48hs"><div class="selectable">48hs</div></li>
 			
-			<option value="72hs">72hs</option>
+			<li data-value="72hs"><div class="selectable">72hs</div></li>
 			
-			<option value="Elegir fecha">Elegir fecha</option>
+			<li data-value="Elegir fecha"><div class="selectable">Elegir fecha</div></li>
 			
-		</select>
+		</ul>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
+
+	<script>
+		const select = document.querySelector('.select2')
+		const placeholder = select.querySelector('.placeholder div')
+		select.addEventListener('click', (e) => {
+			select.classList.toggle('active')
+			if (e.target.classList.contains('selectable')) {
+				placeholder.innerText = e.target.innerText
+				select.setAttribute('data-value', e.target.parentElement.getAttribute('data-value'))
+			}
+		})
+	</script>
 
 				</div>
 				<div class="box flex-row justify-between">

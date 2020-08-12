@@ -2,6 +2,7 @@
 {% from "../components/_selectableBox.njk" import selectableBox %}
 {% from "../components/_forms.njk" import input %}
 {% from "../components/_forms.njk" import select %}
+{% from "../components/_forms.njk" import select2 %}
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
 
@@ -36,7 +37,7 @@
 			</div>
 			<div class="flex-row col-container">
 				<div class="box col-1-2 full-width-mobile">
-					{{ select({
+					{{ select2({
 						'id': '',
 						'items': ['24hs', '48hs', '72hs', 'Elegir fecha'],
 						'placeholder': 'PERIODO'

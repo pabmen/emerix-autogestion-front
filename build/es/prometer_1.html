@@ -88,10 +88,10 @@
         <div class="notifications-menu">
             
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-4838835659">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-9235222791">
     
     
-    <label class="dropdown-title item" for="dropdown-trigger-dropdown-4838835659">
+    <label class="dropdown-title item" for="dropdown-trigger-dropdown-9235222791">
          <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
     </label>
     <div class="dropdown-target">
@@ -253,6 +253,7 @@
 
 
 
+
 <section class="page-promises promises_1">
 	
 	
@@ -277,7 +278,7 @@
 
         
 
-<div class="selectable-box flex-column" id="box-9578570271">
+<div class="selectable-box flex-column" id="box-7029773095">
 	
 			<div class="flex-row col-container">
 				<div class="box col-1-2 full-width-mobile">
@@ -310,24 +311,36 @@
 			<div class="flex-row col-container">
 				<div class="box col-1-2 full-width-mobile">
 					
-	<div class="input-wrapper select">
-		<select id="" required>
+	<div class="input-wrapper select select2">
+		<ul id="" data-value="">
 			
-			<option selected="selected" class="placeholder" value="">PERIODO</option>
+			<li class="placeholder" value="" class="active"><div>PERIODO</div></li>
 			
 			
-			<option value="24hs">24hs</option>
+			<li data-value="24hs"><div class="selectable">24hs</div></li>
 			
-			<option value="48hs">48hs</option>
+			<li data-value="48hs"><div class="selectable">48hs</div></li>
 			
-			<option value="72hs">72hs</option>
+			<li data-value="72hs"><div class="selectable">72hs</div></li>
 			
-			<option value="Elegir fecha">Elegir fecha</option>
+			<li data-value="Elegir fecha"><div class="selectable">Elegir fecha</div></li>
 			
-		</select>
+		</ul>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
+
+	<script>
+		const select = document.querySelector('.select2')
+		const placeholder = select.querySelector('.placeholder div')
+		select.addEventListener('click', (e) => {
+			select.classList.toggle('active')
+			if (e.target.classList.contains('selectable')) {
+				placeholder.innerText = e.target.innerText
+				select.setAttribute('data-value', e.target.parentElement.getAttribute('data-value'))
+			}
+		})
+	</script>
 
 				</div>
 				<div class="col-1-2">&nbsp;</div>
@@ -336,7 +349,7 @@
 </div>
 <script>
 	;(() => {
-		const container = document.querySelector('#box-9578570271')
+		const container = document.querySelector('#box-7029773095')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {

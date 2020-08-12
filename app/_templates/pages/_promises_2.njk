@@ -2,6 +2,7 @@
 {% from "../components/_dropdown.njk" import dropdown %}
 {% from "../components/_forms.njk" import input %}
 {% from "../components/_forms.njk" import select %}
+{% from "../components/_forms.njk" import select2 %}
 {% from "../components/_tables.njk" import table %}
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
@@ -119,7 +120,7 @@
 		<div class="flex-column col-1-3 full-width-mobile">
 			<div class="flex-column row-container">
 				<div class="box">
-					{{ select({
+					{{ select2({
 						'id': 'promises-select',
 						'items': ['24hs', '48hs', '72hs', 'Elegir fecha'],
 						'placeholder': 'PERIODO'
