@@ -1,4 +1,4 @@
-
+{% from "../components/_selectableBox.njk" import selectableBox %}
 {% from "../components/_forms.njk" import input %}
 {% from "../components/_forms.njk" import select %}
 {% from "../components/_forms.njk" import textarea %}
@@ -48,13 +48,15 @@
 				<p>Medio pago por el cuál abonaste:</p>
 				<div class="payment-selector">
 					<ul class="flex-row">
-						<li class="flex-column flex-center active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						{% call selectableBox({class: 'flex-row'}) %}
+						<li class="box active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						{% endcall %}
 					</ul>
 				</div>
 			</div>

@@ -6,7 +6,7 @@
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
 
-<section class="page-pay">
+<section class="page-pay pay_5">
 	{{ header({
 		progress: 70,
 		link: {
@@ -20,16 +20,19 @@
 			title: 'Pago online',
 			subtitle: '<span></span>Elegí cómo querés pagar, tenes 2 opciones:'
 		}) }}
+
 		<div class="box">
 			<div class="payment-selector">
 				<ul class="flex-row">
-					<li class="flex-column active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
-					<li class="flex-column"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
-					<li class="flex-column"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
-					<li class="flex-column"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
-					<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
-					<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
-					<li class="flex-column"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+					{% call selectableBox({class: 'flex-row'}) %}
+						<li class="active box"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+					{% endcall %}
 				</ul>
 			</div>
 		</div>

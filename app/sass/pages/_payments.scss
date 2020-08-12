@@ -61,4 +61,22 @@
 
 		}
 	}
+
+	.selectable-box {
+		flex-wrap: wrap;
+
+		@media all and (max-width: $mobileWidth) {
+			flex-direction: row;
+		}
+	}
+
+	.payment-selector {
+		.box {
+			display: flex;
+			padding: 0;
+			box-shadow: none;
+			justify-content: center;
+			align-items: center;
+		}
+	}
 }

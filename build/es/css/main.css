@@ -3266,6 +3266,24 @@ html.no-scroll body {
   border-color: #8569b4;
 }
 
+.emerix-page .page-payments .selectable-box {
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-payments .selectable-box {
+    flex-direction: row;
+  }
+}
+
+.emerix-page .page-payments .payment-selector .box, .emerix-page .page-payments .payment-selector .input-wrapper.select2.active, .emerix-page .page-payments .payment-selector .overlay .dialog-container, .emerix-page .overlay .page-payments .payment-selector .dialog-container, .emerix-page .page-payments .payment-selector .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-payments .payment-selector ul {
+  display: flex;
+  padding: 0;
+  box-shadow: none;
+  justify-content: center;
+  align-items: center;
+}
+
 .emerix-page .page-pay.pay_1 .selectable-box span:first-child {
   padding-bottom: 1rem;
 }
@@ -3342,4 +3360,22 @@ html.no-scroll body {
 
 .emerix-page .page-pay .payment-selector li.active {
   border-color: #8569b4;
+}
+
+.emerix-page .page-pay.pay_5 .selectable-box {
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-pay.pay_5 .selectable-box {
+    flex-direction: row;
+  }
+}
+
+.emerix-page .page-pay.pay_5 .payment-selector .box, .emerix-page .page-pay.pay_5 .payment-selector .input-wrapper.select2.active, .emerix-page .page-pay.pay_5 .payment-selector .overlay .dialog-container, .emerix-page .overlay .page-pay.pay_5 .payment-selector .dialog-container, .emerix-page .page-pay.pay_5 .payment-selector .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-pay.pay_5 .payment-selector ul {
+  display: flex;
+  padding: 0;
+  box-shadow: none;
+  justify-content: center;
+  align-items: center;
 }

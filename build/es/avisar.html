@@ -344,13 +344,37 @@
 				<p>Medio pago por el cuál abonaste:</p>
 				<div class="payment-selector">
 					<ul class="flex-row">
-						<li class="flex-column flex-center active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
-						<li class="flex-column flex-center"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						
+<div class="selectable-box flex-row" id="box-7418955397">
+	
+						<li class="box active"><img src="/assets/images/sections/payments/mercadopago.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/visa.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/mastercard.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/amex.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						<li class="box"><img src="/assets/images/sections/payments/generic.svg" alt=""></li>
+						
+</div>
+<script>
+	;(() => {
+		const container = document.querySelector('#box-7418955397')
+		const boxes = container.querySelectorAll('.box')
+
+		boxes.forEach((box, i) => {
+			if (i === 0) {
+				box.classList.add('active')
+			}
+			box.addEventListener('click', () => {
+				boxes.forEach((box) => {
+					box.classList.remove('active')
+				})
+				box.classList.add('active')
+			})
+		})
+	})();
+</script>
+
 					</ul>
 				</div>
 			</div>
