@@ -25,6 +25,32 @@
 		}
 	}
 
+	&.pay {
+		.box.active {
+			p {
+				font-weight: bold;
+			}
+
+			img {
+				display: none;
+			}
+
+			img+img {
+				display: block;
+			}
+		}
+
+		.box:not(.active) {
+			img {
+				display: block;
+			}
+
+			img+img {
+				display: none;
+			}
+		}
+	}
+
 	.input-wrapper.huge.price {
 		margin-bottom: 0;
 	}

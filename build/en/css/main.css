@@ -1058,10 +1058,17 @@ html.no-scroll body {
 }
 
 .emerix-page .input-wrapper.search:after {
-  content: url("/assets/images/ui/search_icon.svg");
+  content: "";
+  background-image: url("/assets/images/ui/search_icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 22px;
+  height: 22px;
+  display: block;
   position: absolute;
   top: 50%;
   right: 0;
+  margin-top: -2px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   pointer-events: none;
@@ -2644,7 +2651,7 @@ html.no-scroll body {
 
 .emerix-page .page-account .text-right {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .emerix-page .page-account .icns {
@@ -3261,6 +3268,26 @@ html.no-scroll body {
   .emerix-page .page-pay .selectable-box {
     text-align: center;
   }
+}
+
+.emerix-page .page-pay.pay .box.active p, .emerix-page .page-pay.pay .active.input-wrapper.select2 p, .emerix-page .page-pay.pay .overlay .active.dialog-container p, .emerix-page .overlay .page-pay.pay .active.dialog-container p, .emerix-page .page-pay.pay .topbar .notifications-menu .dropdown-target ul.active p, .emerix-page .topbar .notifications-menu .dropdown-target .page-pay.pay ul.active p {
+  font-weight: bold;
+}
+
+.emerix-page .page-pay.pay .box.active img, .emerix-page .page-pay.pay .active.input-wrapper.select2 img, .emerix-page .page-pay.pay .overlay .active.dialog-container img, .emerix-page .overlay .page-pay.pay .active.dialog-container img, .emerix-page .page-pay.pay .topbar .notifications-menu .dropdown-target ul.active img, .emerix-page .topbar .notifications-menu .dropdown-target .page-pay.pay ul.active img {
+  display: none;
+}
+
+.emerix-page .page-pay.pay .box.active img + img, .emerix-page .page-pay.pay .active.input-wrapper.select2 img + img, .emerix-page .page-pay.pay .overlay .active.dialog-container img + img, .emerix-page .overlay .page-pay.pay .active.dialog-container img + img, .emerix-page .page-pay.pay .topbar .notifications-menu .dropdown-target ul.active img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-pay.pay ul.active img + img {
+  display: block;
+}
+
+.emerix-page .page-pay.pay .box:not(.active) img, .emerix-page .page-pay.pay .input-wrapper.select2.active:not(.active) img, .emerix-page .page-pay.pay .overlay .dialog-container:not(.active) img, .emerix-page .overlay .page-pay.pay .dialog-container:not(.active) img, .emerix-page .page-pay.pay .topbar .notifications-menu .dropdown-target ul:not(.active) img, .emerix-page .topbar .notifications-menu .dropdown-target .page-pay.pay ul:not(.active) img {
+  display: block;
+}
+
+.emerix-page .page-pay.pay .box:not(.active) img + img, .emerix-page .page-pay.pay .input-wrapper.select2.active:not(.active) img + img, .emerix-page .page-pay.pay .overlay .dialog-container:not(.active) img + img, .emerix-page .overlay .page-pay.pay .dialog-container:not(.active) img + img, .emerix-page .page-pay.pay .topbar .notifications-menu .dropdown-target ul:not(.active) img + img, .emerix-page .topbar .notifications-menu .dropdown-target .page-pay.pay ul:not(.active) img + img {
+  display: none;
 }
 
 .emerix-page .page-pay .input-wrapper.huge.price {
