@@ -89,10 +89,10 @@
         <div class="notifications-menu">
             
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-0678905442">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-8418722441">
     
     
-    <label class="dropdown-title item" for="dropdown-trigger-dropdown-0678905442">
+    <label class="dropdown-title item" for="dropdown-trigger-dropdown-8418722441">
          <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
     </label>
     <div class="dropdown-target">
@@ -250,18 +250,19 @@
 	<div style="max-width: 450px; margin: 10% auto">
 	
 	<div class="input-wrapper select select2">
+		
 		<ul id="" data-value="">
 			
 			<li class="placeholder" value="" class="active"><div>PERIODO</div></li>
 			
 			
-			<li data-value="24 horas"><div class="selectable">24 horas</div></li>
+				<li data-value="24 horas"><div class="selectable">24 horas</div></li>
 			
-			<li data-value="48 horas"><div class="selectable">48 horas</div></li>
+				<li data-value="48 horas"><div class="selectable">48 horas</div></li>
 			
-			<li data-value="72 horas"><div class="selectable">72 horas</div></li>
+				<li data-value="72 horas"><div class="selectable">72 horas</div></li>
 			
-			<li data-value="Elegir fecha"><div class="selectable">Elegir fecha</div></li>
+				<li data-value="Elegir fecha"><div class="selectable last">Elegir fecha</div></li>
 			
 		</ul>
 		<div class="input-error-icon" role="alert"></div>
@@ -272,10 +273,15 @@
 		const select = document.querySelector('.select2')
 		const placeholder = select.querySelector('.placeholder div')
 		select.addEventListener('click', (e) => {
+			const target = e.target
 			select.classList.toggle('active')
-			if (e.target.classList.contains('selectable')) {
-				placeholder.innerText = e.target.innerText
-				select.setAttribute('data-value', e.target.parentElement.getAttribute('data-value'))
+			if (target.classList.contains('selectable')) {
+				if (target.classList.contains('date-picker')) {
+					select.classList.add('date-selected')
+				} else {
+					placeholder.innerText = target.innerText
+					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+				}
 			}
 		})
 	</script>

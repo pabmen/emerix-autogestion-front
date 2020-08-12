@@ -88,10 +88,10 @@
         <div class="notifications-menu">
             
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-7156261199">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-0760914969">
     
     
-    <label class="dropdown-title item" for="dropdown-trigger-dropdown-7156261199">
+    <label class="dropdown-title item" for="dropdown-trigger-dropdown-0760914969">
          <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
     </label>
     <div class="dropdown-target">
@@ -546,7 +546,7 @@
 		<div class="mobile-only">
 			
 
-<div class="selectable-box flex-column special-mobile-selectable-box" id="box-4716346778">
+<div class="selectable-box flex-column special-mobile-selectable-box" id="box-0285798662">
 	
 				<div class="box">
 					
@@ -594,10 +594,10 @@
 						<div class="dropdown-card">
 						
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-3974488539">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-1707831122">
     
     
-    <label class="dropdown-title" for="dropdown-trigger-dropdown-3974488539">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-1707831122">
           
     </label>
     <div class="dropdown-target">
@@ -673,10 +673,10 @@
 						<div class="dropdown-card">
 						
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-5485701185">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-4990896506">
     
     
-    <label class="dropdown-title" for="dropdown-trigger-dropdown-5485701185">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-4990896506">
           
     </label>
     <div class="dropdown-target">
@@ -710,7 +710,7 @@
 </div>
 <script>
 	;(() => {
-		const container = document.querySelector('#box-4716346778')
+		const container = document.querySelector('#box-0285798662')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {
@@ -733,18 +733,19 @@
 				<div class="box">
 					
 	<div class="input-wrapper select select2">
+		
 		<ul id="promises-select" data-value="">
 			
 			<li class="placeholder" value="" class="active"><div>PERIODO</div></li>
 			
 			
-			<li data-value="24hs"><div class="selectable">24hs</div></li>
+				<li data-value="24hs"><div class="selectable">24hs</div></li>
 			
-			<li data-value="48hs"><div class="selectable">48hs</div></li>
+				<li data-value="48hs"><div class="selectable">48hs</div></li>
 			
-			<li data-value="72hs"><div class="selectable">72hs</div></li>
+				<li data-value="72hs"><div class="selectable">72hs</div></li>
 			
-			<li data-value="Elegir fecha"><div class="selectable">Elegir fecha</div></li>
+				<li data-value="Elegir fecha"><div class="selectable last">Elegir fecha</div></li>
 			
 		</ul>
 		<div class="input-error-icon" role="alert"></div>
@@ -755,10 +756,15 @@
 		const select = document.querySelector('.select2')
 		const placeholder = select.querySelector('.placeholder div')
 		select.addEventListener('click', (e) => {
+			const target = e.target
 			select.classList.toggle('active')
-			if (e.target.classList.contains('selectable')) {
-				placeholder.innerText = e.target.innerText
-				select.setAttribute('data-value', e.target.parentElement.getAttribute('data-value'))
+			if (target.classList.contains('selectable')) {
+				if (target.classList.contains('date-picker')) {
+					select.classList.add('date-selected')
+				} else {
+					placeholder.innerText = target.innerText
+					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+				}
 			}
 		})
 	</script>

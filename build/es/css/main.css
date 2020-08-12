@@ -1021,6 +1021,28 @@ html.no-scroll body {
   padding: 0 !important;
 }
 
+.emerix-page .input-wrapper.select2.date-selected .select2-date {
+  display: block;
+  position: relative;
+}
+
+.emerix-page .input-wrapper.select2.date-selected .select2-date:after {
+  content: url("/assets/images/ui/close-btn.svg");
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.emerix-page .input-wrapper.select2.date-selected ul {
+  display: none;
+}
+
+.emerix-page .input-wrapper.select2 .select2-date {
+  display: none;
+}
+
 .emerix-page .input-wrapper.select2 ul {
   background-color: #fff;
 }

@@ -62,6 +62,29 @@ form {
 			}
 		}
 
+		&.date-selected {
+			.select2-date {
+				display: block;
+				position: relative;
+
+				&:after {
+					content: url("/assets/images/ui/close-btn.svg");
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
+				}
+			}
+
+			ul {
+				display: none;
+			}
+		}
+
+		.select2-date {
+			display: none;
+		}
+
 		ul {
 			background-color: $white;
 		}

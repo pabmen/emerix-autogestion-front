@@ -63,6 +63,11 @@
 
 {% macro select2(options) %}
 	<div class="input-wrapper select select2 {{ options.class }}">
+		{% if options.date %}
+			<div class="select2-date">
+				<input type="date" value="">
+			</div>
+		{% endif %}
 		<ul
 			id="{{ options.id }}"
 			data-value=""
@@ -71,7 +76,7 @@
 			<li class="placeholder" value="" class="active"><div>{{ options.placeholder }}</div></li>
 			{% endif %}
 			{% for item in options.items %}
-			<li data-value="{{ item }}"><div class="selectable">{{ item }}</div></li>
+				<li data-value="{{ item }}"><div class="selectable {% if loop.last %}last {% if options.date %}date-picker {% endif %}{% endif %}">{{ item }}</div></li>
 			{% endfor %}
 		</ul>
 		<div class="input-error-icon" role="alert"></div>
@@ -82,10 +87,15 @@
 		const select = document.querySelector('.select2')
 		const placeholder = select.querySelector('.placeholder div')
 		select.addEventListener('click', (e) => {
+			const target = e.target
 			select.classList.toggle('active')
-			if (e.target.classList.contains('selectable')) {
-				placeholder.innerText = e.target.innerText
-				select.setAttribute('data-value', e.target.parentElement.getAttribute('data-value'))
+			if (target.classList.contains('selectable')) {
+				if (target.classList.contains('date-picker')) {
+					select.classList.add('date-selected')
+				} else {
+					placeholder.innerText = target.innerText
+					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+				}
 			}
 		})
 	</script>
