@@ -17,9 +17,13 @@
 		padding: .25rem 1rem;
 		line-height: 0.8rem;
 		border-color: $violet;
-		font-weight: normal;
-		font-size: 12px;
-		white-space: nowrap;
+
+		span {
+			vertical-align: middle;
+			font-weight: normal;
+			font-size: 12px;
+			white-space: nowrap;
+		}
 
 		&.save {
 			&:before {
@@ -37,8 +41,25 @@
 			}
 		}
 
+		&.clear {
+			border: none;
+			background: none;
+			padding: 0;
+			
+			&:before {
+				content: url("/assets/images/sections/account/clear.svg");
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
 		@media all and (max-width: $mobileWidth) {
-			width: calc(100% - 2rem);
+			width: auto;
+			padding: .25rem;
+
+			span {
+				display: none;
+			}
 		}
 	}
 

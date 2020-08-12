@@ -1,4 +1,213 @@
- <!DOCTYPE html> <html lang="" class="no-js"> <head> <title></title> <meta charset="UTF-8"> <meta name="description" content=""> <meta name="keywords" content=""> <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,shrink-to-fit=no"> <meta http-equiv="x-ua-compatible" content="ie=edge"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <meta name="apple-mobile-web-app-title" content=""> <meta property="og:title" content=""> <meta property="og:description" content=""> <meta property="og:image" content="https://prod.com/es"> <meta property="og:image:width" content="2048"> <meta property="og:image:height" content="1072"> <meta property="og:type" content="website"> <meta property="og:url" content="https://prod.com/es"> <meta property="fb:app_id" content=""> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content=""> <meta name="twitter:description" content=""> <meta name="twitter:image" content="https://prod.com/es"> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="manifest" href="/site.webmanifest"> <link rel="mask-icon" href="/safari-pinned-tab.svg" color=""> <meta name="msapplication-TileColor" content=""> <meta name="theme-color" content=""> <link rel="preconnect" href="https://www.google-analytics.com"> <link rel="stylesheet" type="text/css" href="css/main.css"> </head> <body class="emerix-page"> <div class="flex-column"> <nav class="topbar"> <div class="flex-row flex-center"> <div class="flex-grow"> <div class="logo-container flex-grow"> <a href="/index.html"><img id="site-logo" class="site-logo" src="/assets/images/logos/emerix.png"></a> </div> </div> <div class="notifications-menu"> <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-topbar-dropdown"> <label class="dropdown-title item" for="dropdown-trigger-topbar-dropdown"> <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> </label> <div class="dropdown-target"> <ul> <li><strong>Notificaciones</strong></li> <li><hr></li> <li><a href="/invoice.html">Una promesa de pago está por vencer, podés pagar ahora.</a></li> <li><a href="#">Tu solicitud de plan de pago fue aprobada.</a></li> </ul> </div> </div> </div> </nav> <div class="flex-row flex-grow"> <div> <div class="overlay" id="nav-overlay"> <div class="dialog-container" role="dialog"> <a class="close-btn"> <img src="/assets/images/ui/close-btn.svg" alt="Close"> </a> <div class="dialog-content -content"> <div></div> </div> </div> </div> <nav class="main-navigation"> <input type="checkbox" class="visually-hidden mobile-menu-toggle" id="mobile-menu-toggle"> <label class="mobile-menu-toggle-label" for="mobile-menu-toggle"> <img src="/assets/images/ui/menu.svg" alt=""> </label> <div class="navigation-container"> <ul> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-home.svg');"> <a class="item active" href="/index.html">Inicio</a> </li> <li class="navigation-item collapsed-item" style="--icon: url('');"> <hr> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-info.svg');"> <a class="item" href="/pagar.html">Pagar</a> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-avisar.svg');"> <a class="item" href="/avisar.html">Avisar que pagué</a> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-prometer.svg');"> <a class="item" href="/prometer.html">Prometer una fecha</a> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-cuotas.svg');"> <a class="item" href="">Pagar en cuotas</a> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-actividad.svg');"> <a class="item" href="/comprobantes.html">Tus comprobantes</a> </li> <li class="navigation-item collapsed-item" style="--icon: url('');"> <hr> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-perfil.svg');"> <a class="item" href="/perfil.html">Tu Perfil</a> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-faq.svg');"> <a class="item" href="/faqs.html">Preguntas frecuentes</a> </li> <li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-salir.svg');"> <a class="item" href="#logout">Salir</a> </li> </ul> </div> </nav> <script> const mobileMenuBtn = document.querySelector('#mobile-menu-toggle')
+
+
+
+	<!DOCTYPE html>
+	<html lang="" class="no-js">
+		<head>
+			<title></title>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<!-- https://a11yproject.com/posts/never-use-maximum-scale/ -->
+<!-- Never user maximum-scale=1 -->
+<!-- Avoid using user-scalable="no" -->
+
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="">
+
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://stage.com/es">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1072">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://stage.com/es">
+<meta property="fb:app_id" content="">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://stage.com/es">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+<meta name="msapplication-TileColor" content="">
+<meta name="theme-color" content="">
+
+<!-- @see https://web.dev/uses-rel-preconnect/?utm_source=lighthouse&utm_medium=devtools -->
+<!-- @see https://developers.google.com/web/fundamentals/performance/resource-prioritization#use-case_knowing_where_from_but_not_what_youre_fetching -->
+<link rel="preconnect" href="https://www.google-analytics.com">
+
+<!-- @see https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content -->
+<!--<link rel="preload" as="font" type="font/woff2" crossorigin="anonymous" href="./assets/fonts/....woff2">-->
+
+<!-- @see https://web.dev/defer-non-critical-css/ -->
+<!--<link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" type="text/css" href="css/main.css"></noscript>-->
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-00000000-00"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-00000000-00');
+</script>
+
+
+<script defer type="text/javascript" src="js/main.bundle.js"></script>-->
+
+		</head>
+		<body class="emerix-page">
+			<div class="flex-column">
+				
+
+<nav class="topbar">
+    <div class="flex-row flex-center">
+        <div class="flex-grow">
+            <div class="logo-container flex-grow">
+                <a href="/index.html"><img id="site-logo" class="site-logo" src="/assets/images/logos/emerix.png"></a>
+            </div>
+        </div>
+        <div class="notifications-menu">
+            
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-topbar-dropdown">
+    
+    
+    <label class="dropdown-title item" for="dropdown-trigger-topbar-dropdown">
+         <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
+    </label>
+    <div class="dropdown-target">
+        
+                <ul>
+                    <li><strong>Notificaciones</strong></li>
+                    <li><hr></li>
+                    <li><a href="/invoice.html">Una promesa de pago está por vencer, podés pagar ahora.</a></li>
+                    <li><a href="#">Tu solicitud de plan de pago fue aprobada.</a></li>
+                </ul>
+            
+    </div>
+
+        </div>
+    </div>
+</nav>
+				<div class="flex-row flex-grow">
+					<div>
+					
+
+
+
+
+
+<div class="overlay" id="nav-overlay">
+    <div class="dialog-container" role="dialog">
+        <a class="close-btn">
+            <img src="/assets/images/ui/close-btn.svg" alt="Close">
+        </a>
+        <div class="dialog-content -content">
+            
+            <div></div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="main-navigation">
+	<input type="checkbox" class="visually-hidden mobile-menu-toggle" id="mobile-menu-toggle">
+	<label class="mobile-menu-toggle-label" for="mobile-menu-toggle">
+		<img src="/assets/images/ui/menu.svg" alt="">
+	</label>
+	<div class="navigation-container">
+		<ul>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-home.svg');">
+				
+					<a class="item active" href="/index.html">Inicio</a>
+				
+			</li>
+			
+			<li class="navigation-item collapsed-item" style="--icon: url('');">
+				
+					<hr>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-info.svg');">
+				
+					<a class="item" href="/pagar.html">Pagar</a>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-avisar.svg');">
+				
+					<a class="item" href="/avisar.html">Avisar que pagué</a>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-prometer.svg');">
+				
+					<a class="item" href="/prometer.html">Prometer una fecha</a>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-cuotas.svg');">
+				
+					<a class="item" href="">Pagar en cuotas</a>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-actividad.svg');">
+				
+					<a class="item" href="/comprobantes.html">Tus comprobantes</a>
+				
+			</li>
+			
+			<li class="navigation-item collapsed-item" style="--icon: url('');">
+				
+					<hr>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-perfil.svg');">
+				
+					<a class="item" href="/perfil.html">Tu Perfil</a>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-faq.svg');">
+				
+					<a class="item" href="/faqs.html">Preguntas frecuentes</a>
+				
+			</li>
+			
+			<li class="navigation-item" style="--icon: url('/assets/images/ui/navigation/icono-salir.svg');">
+				
+					<a class="item" href="#logout">Salir</a>
+				
+			</li>
+			
+		</ul>
+	</div>
+</nav>
+
+<script>
+	const mobileMenuBtn = document.querySelector('#mobile-menu-toggle')
 	const navOverlay = document.querySelector('#nav-overlay')
 
 
@@ -18,8 +227,76 @@
 		//mobileMenuBtn.click()
 		navOverlay.classList.remove('active')
 		mobileMenuBtn.checked = false
-	}) </script> </div> <div class="pages-container flex-grow"> <section class="page-pay pay_1"> <div class="page-progress"> <div class="progress progress-30"></div> </div> <div class="flex-column page-header"> <a class="top-decoration" href="/pagar.html">volver a la pantalla anterior</a> </div> <div class="restrict-width"> <div class="title"> <h1 class="page-title text-large">Pagar por monto</h1> <p class="page-subtitle"><span></span>Aboná el <strong>monto total de la deuda</strong> o <strong>ingresá otro monto</strong>, y luego hace clic en <strong>pagar ahora</strong>.</p> </div> <div class="selectable-box flex-column" id="box-5110981368"> <div class="flex-row flex-column-on-mobile col-container"> <div class="box col-1-2 full-width-mobile"> <span>Monto total de la deuda</span> <br> <span class="text-xlarge"> <div class="price-container" data-value="19959057"><span class="denomination">$</span>199590<sup class="cents">57</sup></div> </span> </div> <div class="box col-1-2 full-width-mobile"> <span>Ingresar otro monto</span> <br> <span class="text-xlarge fake-input-text"> <div class="price-container" data-value="000"><span class="denomination">$</span>0<sup class="cents">00</sup></div> </span> </div> </div> </div> <script> ;(() => {
-		const container = document.querySelector('#box-5110981368')
+	})
+
+</script>
+					</div>
+					<div class="pages-container flex-grow">
+						
+	
+
+
+
+
+
+
+<section class="page-pay pay_1">
+	
+	
+	<div class="page-progress">
+		<div class="progress progress-30"></div>
+	</div>
+	
+	<div class="flex-column page-header">
+		
+			<a class="top-decoration" href="/pagar.html">volver a la pantalla anterior</a>
+		
+	</div>
+
+
+    <div class="restrict-width">
+        
+	<div class="title">
+		<h1 class="page-title text-large">Pagar por monto</h1>
+		<p class="page-subtitle"><span></span>Aboná el <strong>monto total de la deuda</strong> o <strong>ingresá otro monto</strong>, y luego hace clic en <strong>pagar ahora</strong>.</p>
+	</div>
+
+
+        
+<div class="selectable-box flex-column" id="box-7961548748">
+	
+			<div class="flex-row flex-column-on-mobile col-container">
+				<div class="box col-1-2 full-width-mobile">
+					<span>Monto total de la deuda</span>
+					<br>
+					<span class="text-xlarge">
+	
+
+	
+	
+
+	<div class="price-container" data-value="19959057"><span class="denomination">$</span>199590<sup class="cents">57</sup></div>
+</span>
+				</div>
+				<div class="box col-1-2 full-width-mobile">
+					<span>Ingresar otro monto</span>
+					<br>
+					<span class="text-xlarge fake-input-text">
+	
+
+	
+	
+
+	<div class="price-container" data-value="000"><span class="denomination">$</span>0<sup class="cents">00</sup></div>
+</span>
+					
+				</div>
+			</div>
+        
+</div>
+<script>
+	;(() => {
+		const container = document.querySelector('#box-7961548748')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {
@@ -33,7 +310,17 @@
 				box.classList.add('active')
 			})
 		})
-	})(); </script> <div> <button class="btn" data-next>Pagar ahora</button> </div> </div> </section> <script> const boxes = document.querySelectorAll('.selectable-box .box')
+	})();
+</script>
+
+        <div>
+            <button class="btn" data-next>Pagar ahora</button>
+        </div>
+    </div>
+</section>
+
+<script>
+	const boxes = document.querySelectorAll('.selectable-box .box')
 
 	document.querySelector('[data-next]').addEventListener('click', () => {
 		if (boxes[0].classList.contains('active')) {
@@ -41,4 +328,15 @@
 		} else {
 			window.location.href = '/pagar_4.html'
 		}
-	}) </script> </div> </div> </div> <script> document.querySelectorAll('.main-navigation .navigation-item')[2].classList.add('active') </script> </body> </html> 
+	})
+</script>
+
+					</div>
+				</div>
+			</div>
+
+			<script>
+				document.querySelectorAll('.main-navigation .navigation-item')[2].classList.add('active')
+			</script>
+		</body>
+	</html>
