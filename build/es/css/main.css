@@ -1275,7 +1275,8 @@ html.no-scroll body {
   left: 0;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: #989898;
+  color: gray;
+  font-weight: normal;
 }
 
 .emerix-page .input-wrapper.price input {
@@ -3157,6 +3158,10 @@ html.no-scroll body {
   }
 }
 
+.emerix-page .page-promises .input-wrapper.huge.price {
+  margin-bottom: 0;
+}
+
 @media all and (max-width: 1024px) {
   .emerix-page .page-promises.promises_1 .col-3-6 {
     width: 100%;
@@ -3256,6 +3261,10 @@ html.no-scroll body {
   .emerix-page .page-pay .selectable-box {
     text-align: center;
   }
+}
+
+.emerix-page .page-pay .input-wrapper.huge.price {
+  margin-bottom: 0;
 }
 
 .emerix-page .page-pay .payment-selector {

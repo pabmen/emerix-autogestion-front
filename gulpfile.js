@@ -713,6 +713,8 @@ function watchFiles() {
  */
 const dev = gulp.series(clean, css, gulp.parallel(renderTemplates, copyFiles, webpackDev), browserSync, watchFiles);
 
+const dev2 = gulp.series(clean, css, gulp.parallel(renderTemplates, copyFiles, webpackDev));
+
 // Same but it will start browser sync pointing at the english site
 const devEng = gulp.series(clean, css, gulp.parallel(renderTemplates, copyFiles, webpackDev), setEnglish, browserSync, watchFiles);
 
@@ -746,7 +748,7 @@ exports.webpackBundleAnalyzer = webpackBundleAnalyzer;
 
 exports.dev = dev;
 exports.devEng = devEng;
-exports.stage = stage;
+exports.stage = dev2;
 exports.build = build;
 
 

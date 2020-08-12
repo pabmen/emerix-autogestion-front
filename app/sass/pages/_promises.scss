@@ -8,6 +8,10 @@
 		}
 	}
 
+	.input-wrapper.huge.price {
+		margin-bottom: 0;
+	}
+
 	&.promises_1 {
 		@media all and (max-width: $mobileWidth) {
 			.col-3-6 {
