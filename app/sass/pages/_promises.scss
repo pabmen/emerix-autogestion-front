@@ -2,6 +2,12 @@
 
 .page-promises {
 
+	@media all and (max-width: $mobileWidth) {
+		.selectable-box {
+			text-align: center;
+		}
+	}
+
 	&.promises {
 		.box.active {
 			p {

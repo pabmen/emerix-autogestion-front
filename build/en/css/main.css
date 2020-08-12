@@ -3026,6 +3026,9 @@ html.no-scroll body {
   .emerix-page .page-home .flex-column.col-2-3 {
     width: 100%;
   }
+  .emerix-page .page-home .col-3-6 {
+    width: 100%;
+  }
   .emerix-page .page-home .mobile-btns {
     margin-bottom: 1rem;
     justify-content: center;
@@ -3095,6 +3098,12 @@ html.no-scroll body {
   display: block;
   width: 1.188rem;
   height: 1.188rem;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-promises .selectable-box {
+    text-align: center;
+  }
 }
 
 .emerix-page .page-promises.promises .box.active p, .emerix-page .page-promises.promises .active.input-wrapper.select2 p, .emerix-page .page-promises.promises .overlay .active.dialog-container p, .emerix-page .overlay .page-promises.promises .active.dialog-container p, .emerix-page .page-promises.promises .topbar .notifications-menu .dropdown-target ul.active p, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises.promises ul.active p {
@@ -3184,6 +3193,12 @@ html.no-scroll body {
   padding-bottom: .5rem;
   margin-bottom: -.5rem;
   border-bottom: 1px solid;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-pay .selectable-box {
+    text-align: center;
+  }
 }
 
 .emerix-page .page-pay .payment-selector {
