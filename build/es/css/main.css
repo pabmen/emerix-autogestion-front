@@ -1263,6 +1263,25 @@ html.no-scroll body {
   opacity: 1;
 }
 
+.emerix-page .input-wrapper.huge {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.emerix-page .input-wrapper.price:before {
+  content: '$';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #989898;
+}
+
+.emerix-page .input-wrapper.price input {
+  padding-left: 1.5rem;
+}
+
 @media all and (max-width: 1024px) {
   .emerix-page .input-wrapper select {
     padding: .35rem 0;

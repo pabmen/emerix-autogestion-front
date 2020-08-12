@@ -30,10 +30,10 @@
 				<div class="box col-1-2 full-width-mobile">
 					<span>Ingresar otro monto</span>
 					<br>
-					<span class="text-xlarge fake-input-text">{{ price("000") }}</span>
-					{# {{ input({
-						placeholder: '$000'
-					}) }} #}
+					{{ input({
+						placeholder: '0,00',
+						class: 'huge price'
+					}) }}
 				</div>
 			</div>
         {% endcall %}
