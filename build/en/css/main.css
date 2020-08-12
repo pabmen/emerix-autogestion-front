@@ -3176,7 +3176,7 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
-  .emerix-page .page-promises .selectable-box {
+  .emerix-page .page-promises .selectable-box * {
     text-align: center;
   }
 }
@@ -3299,7 +3299,7 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
-  .emerix-page .page-pay .selectable-box {
+  .emerix-page .page-pay .selectable-box * {
     text-align: center;
   }
 }

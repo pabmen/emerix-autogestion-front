@@ -20,7 +20,7 @@
 	}
 
 	@media all and (max-width: $mobileWidth) {
-		.selectable-box {
+		.selectable-box * {
 			text-align: center;
 		}
 	}
