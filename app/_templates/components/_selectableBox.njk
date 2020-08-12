@@ -1,3 +1,5 @@
+{% macro selectableBox(options) %}
+
 {%- macro random_int(len) -%}
   {%- for _ in range(len) -%}
     {{ range(10) | random }}
@@ -6,7 +8,6 @@
 
 {% set id = 'box-' + random_int(10) %}
 
-{% macro selectableBox(options) %}
 <div class="selectable-box {{ options.class}}" id="{{ id }}">
 	{{ caller()}}
 </div>

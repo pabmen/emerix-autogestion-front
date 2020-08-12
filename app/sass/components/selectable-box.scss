@@ -3,4 +3,20 @@
 		margin-bottom: 1rem;
 	}
 
+
+	@media all and (max-width: $mobileWidth) {
+		&.special-mobile-selectable-box * {
+			font-size: 0.85rem;
+
+			.text-right {
+				input {
+					text-align: right;
+				}
+			}
+		}
+		&:not(.special-mobile-selectable-box) * {
+			text-align: center;
+		}
+	}
+
 }

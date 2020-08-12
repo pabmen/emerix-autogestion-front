@@ -27,7 +27,7 @@
     cursor: pointer;
 
 	&:after {
-		content: '↓';
+		content: url("/assets/images/ui/dropdown.svg");
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -36,7 +36,7 @@
 
 .dropdown-trigger:checked + .dropdown-title {
     &:after {
-        content: '↑';
+        transform: rotate(-180deg);
     }
 }
 

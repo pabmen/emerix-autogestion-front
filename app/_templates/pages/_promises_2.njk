@@ -1,4 +1,5 @@
 {% from "../components/_selectableBox.njk" import selectableBox %}
+{% from "../components/_dropdown.njk" import dropdown %}
 {% from "../components/_forms.njk" import input %}
 {% from "../components/_forms.njk" import select %}
 {% from "../components/_tables.njk" import table %}
@@ -33,15 +34,87 @@
 	}) }}
 
 	<div class="restrict-width large">
+		<div class="col-2-3 full-width-mobile">
 		{{ title({
 			title: 'Generar promesa por selección de productos',
 			subtitle: '<span></span><strong>Seleccioná los productos</strong> que queres pagar, elegí cuando te comprometes a abonarlo (<strong>periodo</strong>) y luego hace clic en <strong>generar promesa</strong>.'
 		}) }}
+		</div>
 	</div>
 	<div class="restrict-width large flex-row col-container">
 		
-		<div class="box col-2-3 full-width-mobile">
+		<div class="box col-2-3 desktop-only">
 			{{ table(productos, {'specialType': 'checkbox'}) }}
+		</div>
+		<div class="mobile-only">
+			{% call selectableBox({class: 'flex-column special-mobile-selectable-box'}) %}
+				<div class="box">
+					{{ table({
+							"data": [
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;<strong>PRÉSTAMO 36 cuotas</strong>"]
+							]
+						}, {'specialType': 'checkbox', "idPrepend": "tbl1"})
+					}}
+					<div>
+						<div class="dropdown-card">
+						{% call dropdown () %}
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						{% endcall %}
+						</div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2"><strong>Monto a pagar</strong></div>
+								<div class="col-1-2 text-right"><div class='input-wrapper text'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div></div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					{{ table({
+							"data": [
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;<strong>PRÉSTAMO 36 cuotas</strong>"]
+							]
+						}, {'specialType': 'checkbox', "idPrepend": "tbl2"})
+					}}
+					<div>
+						<div class="dropdown-card">
+						{% call dropdown () %}
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						{% endcall %}
+						</div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2"><strong>Monto a pagar</strong></div>
+								<div class="col-1-2 text-right"><div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div></div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+        	{% endcall %}
 		</div>
 		<div class="flex-column col-1-3 full-width-mobile">
 			<div class="flex-column row-container">

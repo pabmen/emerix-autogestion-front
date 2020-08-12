@@ -1,13 +1,6 @@
 @import '../vars';
 
 .page-promises {
-
-	@media all and (max-width: $mobileWidth) {
-		.selectable-box * {
-			text-align: center;
-		}
-	}
-
 	.input-wrapper.huge.price {
 		margin-bottom: 0;
 	}
@@ -43,6 +36,16 @@
 			img+img {
 				display: none;
 			}
+		}
+	}
+
+	.dropdown-card {
+		position: relative;
+
+		.dropdown-title {
+			position: absolute;
+			top: -3rem;
+			right: 0;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 {% from "../components/_selectableBox.njk" import selectableBox %}
+{% from "../components/_dropdown.njk" import dropdown %}
 {% from "../components/_forms.njk" import input %}
 {% from "../components/_forms.njk" import select %}
 {% from "../components/_tables.njk" import table %}
@@ -8,7 +9,7 @@
 
 {% set "productos" = {
 			"class": "selectable",
-			"colsClasses": ["col-3-6", "col-1-6 text-center desktop-only", "col-1-4 text-center desktop-only", "col-2-6 text-right"],
+			"colsClasses": ["col-2-6", "col-2-6 text-center desktop-only", "col-1-6 text-center desktop-only", "col-1-6 text-right"],
 			"header": [
 				"Producto",
 				"Monto adeudado",
@@ -16,11 +17,10 @@
 				"Monto a pagar"
 			],
 			"data": [
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "1 día", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;PRÉSTAMO 12 cuotas", "12/10/20", "0", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2 días", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/20", "4 días", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20 días", "$19450,87"]
+				["<img src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "1 día", "$19450,87"],
+				["<img src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;PRÉSTAMO 12 cuotas", "12/10/20", "0", "<div class='input-wrapper text'><input id='' type='text' class='input-elem' placeholder='$2308,50' required=''></div>"],
+				["<img src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2 días", "$19450,87"],
+				["<img src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20 días", "<div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div>"]
 			]
 } %}
 
@@ -34,10 +34,12 @@
 	}) }}
 
 	<div class="restrict-width large">
+		<div class="col-2-3 full-width-mobile">
 		{{ title({
 			title: 'Pagar por selección de productos',
 			subtitle: '<span></span><strong>Seleccioná los productos</strong> que queres pagar, si el monto a pagar está habilitado para editar podés mantener el adeudado o ingresar uno nuevo.'
 		}) }}
+		</div>
 	</div>
 	<div class="restrict-width large flex-row col-container">
 		<div class="col-2-3 box desktop-only">
@@ -45,28 +47,34 @@
 		</div>
 		
 		<div class="mobile-only">
-			{% call selectableBox({class: 'flex-column'}) %}
+			{% call selectableBox({class: 'flex-column special-mobile-selectable-box'}) %}
 				<div class="box">
 					{{ table({
-							"id": "TEST",
 							"data": [
-								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas"]
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;<strong>PRÉSTAMO 36 cuotas</strong>"]
 							]
-						}, {'specialType': 'checkbox'})
+						}, {'specialType': 'checkbox', "idPrepend": "tbl1"})
 					}}
 					<div>
+						<div class="dropdown-card">
+						{% call dropdown () %}
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						{% endcall %}
+						</div>
 						<ul>
 							<li class="flex-row">
-								<div class="col-1-2">Monto adeudo</div>
-								<div class="col-1-2 text-right">$2308,50</div>	
-							</li>
-							<li class="flex-row">
-								<div class="col-1-2">Pago mínimo</div>
-								<div class="col-1-2 text-right">$3200</div>
-							</li>
-							<li class="flex-row">
 								<div class="col-1-2"><strong>Monto a pagar</strong></div>
-								<div class="col-1-2 text-right"><strong>$19450,87</strong></div>
+								<div class="col-1-2 text-right"><div class='input-wrapper text'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div></div>
 							</li>
 
 
@@ -75,25 +83,31 @@
 				</div>
 				<div class="box">
 					{{ table({
-							"id": "TEST",
 							"data": [
-								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas"]
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;<strong>PRÉSTAMO 36 cuotas</strong>"]
 							]
-						}, {'specialType': 'checkbox'})
+						}, {'specialType': 'checkbox', "idPrepend": "tbl2"})
 					}}
 					<div>
+						<div class="dropdown-card">
+						{% call dropdown () %}
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						{% endcall %}
+						</div>
 						<ul>
 							<li class="flex-row">
-								<div class="col-1-2">Monto adeudo</div>
-								<div class="col-1-2 text-right">$2308,50</div>	
-							</li>
-							<li class="flex-row">
-								<div class="col-1-2">Pago mínimo</div>
-								<div class="col-1-2 text-right">$3200</div>
-							</li>
-							<li class="flex-row">
 								<div class="col-1-2"><strong>Monto a pagar</strong></div>
-								<div class="col-1-2 text-right"><strong>$19450,87</strong></div>
+								<div class="col-1-2 text-right"><div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div></div>
 							</li>
 
 
@@ -104,13 +118,13 @@
 		</div>
 
 		<div class="flex-column col-1-3 full-width-mobile">
-			{% call selectableBox({class: 'flex-column'}) %}
+			<div class="flex-column row-container">
 				<div class="box flex-row justify-between">
 					<span class="text-uppercase">monto final</span>
 					<br>
 					<span><strong>$0,00</strong></span>
 				</div>
-			{% endcall %}
+			</div>
 			<div class="error-box">
 				El monto a pagar no puede ser menor al pago mínimo.
 			</div>
