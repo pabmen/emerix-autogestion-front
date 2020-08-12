@@ -64,8 +64,9 @@
 {% macro select2(options) %}
 	<div class="input-wrapper select select2 {{ options.class }}">
 		{% if options.date %}
-			<div class="select2-date">
+			<div class="select2-date input-wrapper date">
 				<input type="date" value="">
+				<img class="alternate-select" src="/assets/images/ui/close-btn.svg" alt="">
 			</div>
 		{% endif %}
 		<ul
@@ -88,7 +89,7 @@
 		const placeholder = select.querySelector('.placeholder div')
 		select.addEventListener('click', (e) => {
 			const target = e.target
-			select.classList.toggle('active')
+			!select.classList.contains('date-selected') && select.classList.toggle('active')
 			if (target.classList.contains('selectable')) {
 				if (target.classList.contains('date-picker')) {
 					select.classList.add('date-selected')
@@ -96,6 +97,8 @@
 					placeholder.innerText = target.innerText
 					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
 				}
+			} else if (target.classList.contains('alternate-select')) {
+				select.classList.remove('date-selected')
 			}
 		})
 	</script>
