@@ -116,6 +116,7 @@ form {
 		}
 	}
 
+	input[type=date],
 	input[type=text],
 	input[type=email],
 	input[type=search],
@@ -123,7 +124,6 @@ form {
 	input[type=number],
 	input[type=url] {
 		border: 0;
-		border-bottom: 1px solid $silver;
 		line-height: 1.5rem;
 		width: 100%;
 	}
@@ -154,6 +154,20 @@ form {
 		/* Firefox */
 	}
 
+	input[type=date]::-webkit-calendar-picker-indicator {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	input[type=date]::-webkit-inner-spin-button,
+	input[type=date]::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		appearance: none;
+		margin: 0;
+	}
+
 	input[type=number]:-moz-inner-spin-button,
 	input[type=number]:-moz-outer-spin-button,
 	input[type=number]:-webkit-inner-spin-button,
@@ -170,6 +184,7 @@ form {
 		padding: calc((1.5rem - 1rem) / 2) 0;
 		//padding-right: 1rem;
 		-webkit-appearance: none;
+		appearance: none;
 		width: 100%;
 
 		font-family: inherit;

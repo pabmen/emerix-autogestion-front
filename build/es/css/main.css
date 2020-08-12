@@ -1074,6 +1074,7 @@ html.no-scroll body {
   pointer-events: none;
 }
 
+.emerix-page .input-wrapper input[type=date],
 .emerix-page .input-wrapper input[type=text],
 .emerix-page .input-wrapper input[type=email],
 .emerix-page .input-wrapper input[type=search],
@@ -1081,7 +1082,6 @@ html.no-scroll body {
 .emerix-page .input-wrapper input[type=number],
 .emerix-page .input-wrapper input[type=url] {
   border: 0;
-  border-bottom: 1px solid #989898;
   line-height: 1.5rem;
   width: 100%;
 }
@@ -1131,6 +1131,20 @@ html.no-scroll body {
   /* Firefox */
 }
 
+.emerix-page .input-wrapper input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.emerix-page .input-wrapper input[type=date]::-webkit-inner-spin-button,
+.emerix-page .input-wrapper input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 .emerix-page .input-wrapper input[type=number]:-moz-inner-spin-button,
 .emerix-page .input-wrapper input[type=number]:-moz-outer-spin-button,
 .emerix-page .input-wrapper input[type=number]:-webkit-inner-spin-button,
@@ -1145,6 +1159,8 @@ html.no-scroll body {
   line-height: 1.25rem;
   padding: calc((1.5rem - 1rem) / 2) 0;
   -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   width: 100%;
   font-family: inherit;
 }
