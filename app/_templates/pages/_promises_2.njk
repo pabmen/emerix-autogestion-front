@@ -5,22 +5,21 @@
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
 
-
 {% set "productos" = {
+			"id": "promises_2",
 			"class": "selectable",
 			"colsClasses": ["col-3-6", "col-1-6 text-center desktop-only", "col-1-4 text-center desktop-only", "col-2-6 text-right"],
 			"header": [
 				"Producto",
-				"Vencimiento",
-				"Atraso",
-				"Monto adeudado"
+				"Monto adeudo",
+				"Pago mínimo",
+				"Monto a pagar"
 			],
 			"data": [
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "01/10/20", "1 día", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;PRÉSTAMO 12 cuotas", "12/10/20", "0", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "08/10/20", "2 días", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/20", "4 días", "$19450,87"],
-				["<img style='vertical-align: middle' src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "08/10/206", "20 días", "$19450,87"]
+				["<img src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "$19450,87", "$200,00", "$19450,87"],
+				["<img src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;SEGURO DE HOGAR", "$19450,87", "$3200,00", "<div class='input-wrapper text'><input id='' type='text' class='input-elem' placeholder='$2308,50' required=''></div>"],
+				["<img src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "$19450,87", "$1908,00", "$19450,87"],
+				["<img src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "$14350,87", "$2308,50", "<div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div>"]
 			]
 } %}
 
@@ -48,7 +47,7 @@
 			<div class="flex-column row-container">
 				<div class="box">
 					{{ select({
-						'id': '',
+						'id': 'promises-select',
 						'items': ['24hs', '48hs', '72hs', 'Elegir fecha'],
 						'placeholder': 'PERIODO'
 					}) }}

@@ -2152,6 +2152,10 @@ html.no-scroll body {
   }
 }
 
+.emerix-page .table-container .table img {
+  vertical-align: middle;
+}
+
 .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled) {
   position: relative;
 }
@@ -2199,12 +2203,25 @@ html.no-scroll body {
   justify-content: center;
 }
 
+.emerix-page .table-container .table td.text-center input {
+  text-align: center;
+}
+
 .emerix-page .table-container .table td.text-right {
   justify-content: flex-end;
 }
 
+.emerix-page .table-container .table td.text-right input {
+  text-align: right;
+}
+
 .emerix-page .table-container .table .input-wrapper {
   margin-bottom: 0;
+}
+
+.emerix-page .table-container .table .input-wrapper.error input {
+  color: #D73232;
+  border-bottom-color: #D73232;
 }
 
 .emerix-page .table-container .table .input-wrapper input[type=text] {

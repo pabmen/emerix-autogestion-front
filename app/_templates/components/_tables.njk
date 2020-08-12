@@ -8,11 +8,13 @@
 					{% for headItem in content.header%}
 					<td {% if content.colsClasses %}class="{{ content.colsClasses[loop.index - 1] }}"{% else %}style="width: {{ 100 / content.header.length }}%"{% endif %}>
 						{% if loop.first and options.specialType == 'checkbox' %}
-						{{ input({
+						{# {{ input({
 							'type': 'checkbox',
 							'id': options.idPrepend + 'table-select-all',
 							'label': headItem
-						}) }}
+						}) }} #}
+
+							&nbsp;&nbsp;&nbsp;&nbsp;{{headItem}}
 						{% else %}
 							{{headItem}}
 						{% endif %}

@@ -69,6 +69,10 @@
 			}
 		}
 
+		img {
+			vertical-align: middle;
+		}
+
 		&.selectable {
 			tr:not(.table-header):not(.disabled) {
 				position: relative;
@@ -117,16 +121,29 @@
 			}
 
 			&.text-center {
+				input {
+					text-align: center;
+				}
 				justify-content: center;
 			}
 			
 			&.text-right {
+				input {
+					text-align: right;
+				}
 				justify-content: flex-end;
 			}
 		}
 
 		.input-wrapper {
 			margin-bottom: 0;
+
+			&.error {
+				input {
+					color: $red;
+					border-bottom-color: $red;
+				}
+			}
 			
 			input[type=text] {
 				height: 1.25rem;
