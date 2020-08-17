@@ -1,13 +1,12 @@
 {% from "../components/_selectableBox.njk" import selectableBox %}
 {% from "../components/_forms.njk" import input %}
-{% from "../components/_forms.njk" import select %}
+{% from "../components/_forms.njk" import select2 %}
 {% from "../components/_forms.njk" import textarea %}
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
 
 <section class="page-payments">
 	{{ header({
-		progress: 5,
 		section: 'Avisar que pagué'
 	}) }}
 
@@ -16,7 +15,7 @@
 			title: 'Registrar pago',
 			subtitle: '<span></span>A continuación podés ingresar los datos del pago realizado'
 		}) }}
-		<div class="box flex-column">
+		<div class="box flex-column row-container">
 			<div class="flex-row col-container">
 				<div class="col-2-3">
 					{{input({
@@ -24,7 +23,7 @@
 					})}}
 				</div>
 				<div class="col-1-3">
-					{{ select({
+					{{ select2({
 						'id': 'login_dni_type',
 						'items': ['Pesos', 'Dólares', 'Euros'],
 						'placeholder': 'Moneda'

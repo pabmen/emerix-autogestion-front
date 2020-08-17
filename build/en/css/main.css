@@ -437,6 +437,7 @@ html.no-scroll body {
   font-size: 1rem;
 }
 
+.emerix-page a:link,
 .emerix-page a:visited {
   color: inherit;
 }
@@ -1472,10 +1473,11 @@ html.no-scroll body {
 }
 
 .emerix-page .btn a,
+.emerix-page .btn a:link,
 .emerix-page .btn a:visited,
-.emerix-page .btn a:active {
+.emerix-page .btn a:active, .emerix-page .btn:link, .emerix-page .btn:visited, .emerix-page .btn:active {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 
 @media all and (max-width: 1024px) {

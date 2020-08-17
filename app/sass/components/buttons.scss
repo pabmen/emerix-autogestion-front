@@ -56,10 +56,15 @@ $btn-border-color: transparent;
 	}
 
 	a,
+	a:link,
 	a:visited,
-	a:active {
+	a:active,
+	&:link,
+	&:visited,
+	&:active
+	{
 		text-decoration: none;
-		color: inherit;
+		color: $btn-text;
 	}
 }
 
