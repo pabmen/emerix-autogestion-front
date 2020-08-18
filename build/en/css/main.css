@@ -2032,9 +2032,19 @@ html.no-scroll body {
   margin-bottom: 0;
 }
 
-.emerix-page .sidebar-content h3 {
+.emerix-page .sidebar-content h2 {
+  margin-bottom: 2rem;
+}
+
+.emerix-page .sidebar-content h3, .emerix-page .sidebar-content h4 {
+  margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.emerix-page .sidebar-content h3 + p, .emerix-page .sidebar-content h4 + p {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .emerix-page .sidebar-content button {
@@ -2664,6 +2674,10 @@ html.no-scroll body {
   font-size: 1.25rem;
 }
 
+.emerix-page h4 {
+  font-size: 1.125rem;
+}
+
 .emerix-page h3, .emerix-page h4, .emerix-page h5 {
   color: #8569b4;
 }
@@ -3051,6 +3065,12 @@ html.no-scroll body {
 
 .emerix-page .page-home .title.large h1 {
   font-size: 2rem;
+}
+
+@media all and (min-width: 1025px) {
+  .emerix-page .page-home .title.large h1 {
+    margin-top: -.5rem;
+  }
 }
 
 .emerix-page .page-home .debt-container .btn {

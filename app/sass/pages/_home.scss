@@ -9,6 +9,9 @@
 
 		h1 {
 			font-size: 2rem;
+			@media all and (min+-width: $mobileWidth + 1) {
+				margin-top: -.5rem;
+			}
 		}
 	}
 
