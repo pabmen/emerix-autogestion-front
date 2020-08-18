@@ -3175,6 +3175,7 @@ html.no-scroll body {
   text-align: center;
   font-size: 0.875rem;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .emerix-page .page-home .wide-link a:hover {
