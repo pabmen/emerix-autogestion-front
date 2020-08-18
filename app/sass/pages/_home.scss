@@ -149,6 +149,10 @@
 
 @media all and (max-width: $mobileWidth) {
 	.page-home {
+
+		h2 + .box {
+			margin-top: 0;;
+		}
 		.date {
 			margin-top: 0;
 		}

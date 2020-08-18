@@ -3203,6 +3203,9 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
+  .emerix-page .page-home h2 + .box, .emerix-page .page-home .input-wrapper.select2.active h2 + ul, .emerix-page .input-wrapper.select2.active .page-home h2 + ul, .emerix-page .page-home .overlay h2 + .dialog-container, .emerix-page .overlay .page-home h2 + .dialog-container, .emerix-page .page-home .topbar .notifications-menu .dropdown-target h2 + ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-home h2 + ul {
+    margin-top: 0;
+  }
   .emerix-page .page-home .date {
     margin-top: 0;
   }
