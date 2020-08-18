@@ -13,6 +13,10 @@
 	}
 
 	.debt-container {
+		.btn {
+			z-index: 1;
+		}
+
 		@media all and (max-width: $mobileWidth) {
 			text-align: center;
 		}
@@ -131,6 +135,10 @@
 			text-align: center;
 			font-size: 0.875rem;
 			text-transform: uppercase;
+			
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

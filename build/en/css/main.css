@@ -1008,6 +1008,7 @@ html.no-scroll body {
 
 .emerix-page .input-wrapper.select2.active {
   overflow: visible;
+  z-index: 100;
 }
 
 .emerix-page .input-wrapper.select2.active:after {
@@ -3052,6 +3053,10 @@ html.no-scroll body {
   font-size: 2rem;
 }
 
+.emerix-page .page-home .debt-container .btn {
+  z-index: 1;
+}
+
 @media all and (max-width: 1024px) {
   .emerix-page .page-home .debt-container {
     text-align: center;
@@ -3170,6 +3175,10 @@ html.no-scroll body {
   text-align: center;
   font-size: 0.875rem;
   text-transform: uppercase;
+}
+
+.emerix-page .page-home .wide-link a:hover {
+  text-decoration: underline;
 }
 
 @media all and (max-width: 1024px) {

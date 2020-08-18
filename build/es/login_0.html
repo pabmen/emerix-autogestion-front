@@ -94,7 +94,8 @@
 						<div class="form-group flex-row">
 							<div class="login-dnitype-container">
 								
-	<div class="input-wrapper select select2">
+
+	<div class="input-wrapper select select2" id="select-2664690957">
 		
 		<ul id="login_dni_type" data-value="">
 			
@@ -113,22 +114,31 @@
 	</div>
 
 	<script>
-		const select = document.querySelector('.select2')
-		const placeholder = select.querySelector('.placeholder div')
-		select.addEventListener('click', (e) => {
-			const target = e.target
-			!select.classList.contains('date-selected') && select.classList.toggle('active')
-			if (target.classList.contains('selectable')) {
-				if (target.classList.contains('date-picker')) {
-					select.classList.add('date-selected')
-				} else {
-					placeholder.innerText = target.innerText
-					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+		;(() => {
+			const select = document.querySelector('#select-2664690957')
+			const placeholder = select.querySelector('.placeholder div')
+
+			select.addEventListener('click', (e) => {
+				const target = e.target
+
+				document.querySelectorAll('.select.select2').forEach((item) => {
+					if (!item.isEqualNode(select))
+					item.classList.remove('active')
+				})
+
+				!select.classList.contains('date-selected') && select.classList.toggle('active')
+				if (target.classList.contains('selectable')) {
+					if (target.classList.contains('date-picker')) {
+						select.classList.add('date-selected')
+					} else {
+						placeholder.innerText = target.innerText
+						select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+					}
+				} else if (target.classList.contains('alternate-select')) {
+					select.classList.remove('date-selected')
 				}
-			} else if (target.classList.contains('alternate-select')) {
-				select.classList.remove('date-selected')
-			}
-		})
+			})
+		})()
 	</script>
 
 							</div>
@@ -149,7 +159,8 @@
 						</div>
 						<div class="form-group">
 							
-	<div class="input-wrapper select select2">
+
+	<div class="input-wrapper select select2" id="select-7842677177">
 		
 		<ul id="login_genre" data-value="">
 			
@@ -168,22 +179,31 @@
 	</div>
 
 	<script>
-		const select = document.querySelector('.select2')
-		const placeholder = select.querySelector('.placeholder div')
-		select.addEventListener('click', (e) => {
-			const target = e.target
-			!select.classList.contains('date-selected') && select.classList.toggle('active')
-			if (target.classList.contains('selectable')) {
-				if (target.classList.contains('date-picker')) {
-					select.classList.add('date-selected')
-				} else {
-					placeholder.innerText = target.innerText
-					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+		;(() => {
+			const select = document.querySelector('#select-7842677177')
+			const placeholder = select.querySelector('.placeholder div')
+
+			select.addEventListener('click', (e) => {
+				const target = e.target
+
+				document.querySelectorAll('.select.select2').forEach((item) => {
+					if (!item.isEqualNode(select))
+					item.classList.remove('active')
+				})
+
+				!select.classList.contains('date-selected') && select.classList.toggle('active')
+				if (target.classList.contains('selectable')) {
+					if (target.classList.contains('date-picker')) {
+						select.classList.add('date-selected')
+					} else {
+						placeholder.innerText = target.innerText
+						select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+					}
+				} else if (target.classList.contains('alternate-select')) {
+					select.classList.remove('date-selected')
 				}
-			} else if (target.classList.contains('alternate-select')) {
-				select.classList.remove('date-selected')
-			}
-		})
+			})
+		})()
 	</script>
 
 						</div>

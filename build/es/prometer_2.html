@@ -88,10 +88,10 @@
         <div class="notifications-menu">
             
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-3825495623">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-1345924722">
     
     
-    <label class="dropdown-title item" for="dropdown-trigger-dropdown-3825495623">
+    <label class="dropdown-title item" for="dropdown-trigger-dropdown-1345924722">
          <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
     </label>
     <div class="dropdown-target">
@@ -546,7 +546,7 @@
 		<div class="mobile-only">
 			
 
-<div class="selectable-box flex-column special-mobile-selectable-box" id="box-6922386870">
+<div class="selectable-box flex-column special-mobile-selectable-box" id="box-4921536861">
 	
 				<div class="box">
 					
@@ -594,10 +594,10 @@
 						<div class="dropdown-card">
 						
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-3882628015">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-8510566241">
     
     
-    <label class="dropdown-title" for="dropdown-trigger-dropdown-3882628015">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-8510566241">
           
     </label>
     <div class="dropdown-target">
@@ -673,10 +673,10 @@
 						<div class="dropdown-card">
 						
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-8085701733">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-0075734279">
     
     
-    <label class="dropdown-title" for="dropdown-trigger-dropdown-8085701733">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-0075734279">
           
     </label>
     <div class="dropdown-target">
@@ -710,7 +710,7 @@
 </div>
 <script>
 	;(() => {
-		const container = document.querySelector('#box-6922386870')
+		const container = document.querySelector('#box-4921536861')
 		const boxes = container.querySelectorAll('.box')
 
 		boxes.forEach((box, i) => {
@@ -758,22 +758,31 @@
 	</div>
 
 	<script>
-		const select = document.querySelector('.select2')
-		const placeholder = select.querySelector('.placeholder div')
-		select.addEventListener('click', (e) => {
-			const target = e.target
-			!select.classList.contains('date-selected') && select.classList.toggle('active')
-			if (target.classList.contains('selectable')) {
-				if (target.classList.contains('date-picker')) {
-					select.classList.add('date-selected')
-				} else {
-					placeholder.innerText = target.innerText
-					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+		;(() => {
+			const select = document.querySelector('#')
+			const placeholder = select.querySelector('.placeholder div')
+
+			select.addEventListener('click', (e) => {
+				const target = e.target
+
+				document.querySelectorAll('.select.select2').forEach((item) => {
+					if (!item.isEqualNode(select))
+					item.classList.remove('active')
+				})
+
+				!select.classList.contains('date-selected') && select.classList.toggle('active')
+				if (target.classList.contains('selectable')) {
+					if (target.classList.contains('date-picker')) {
+						select.classList.add('date-selected')
+					} else {
+						placeholder.innerText = target.innerText
+						select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+					}
+				} else if (target.classList.contains('alternate-select')) {
+					select.classList.remove('date-selected')
 				}
-			} else if (target.classList.contains('alternate-select')) {
-				select.classList.remove('date-selected')
-			}
-		})
+			})
+		})()
 	</script>
 
 				</div>

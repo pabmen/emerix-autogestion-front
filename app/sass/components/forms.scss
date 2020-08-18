@@ -48,6 +48,7 @@ form {
 
 		&.active {
 			overflow: visible;
+			z-index: 100;
 
 			&:after {
 				top: 1rem;
