@@ -2779,6 +2779,7 @@ html.no-scroll body {
 
 .emerix-page .page-login .emerix-logo {
   margin-bottom: 5.25rem;
+  margin-top: 5.25rem;
 }
 
 .emerix-page .page-login .form-container {
@@ -2913,6 +2914,11 @@ html.no-scroll body {
   color: #3C3C3B;
 }
 
+.emerix-page .overlay .login-dialog .close-btn {
+  top: 0;
+  right: 0;
+}
+
 .emerix-page .overlay .dialog-content {
   width: 100%;
   padding: 1rem;
@@ -2982,9 +2988,6 @@ html.no-scroll body {
   .emerix-page .overlay .login-dialog:not(.dialog-content) h1,
   .emerix-page .overlay .login-dialog:not(.dialog-content) h2 {
     color: #3C3C3B;
-  }
-  .emerix-page .overlay .login-dialog:not(.dialog-content) .close-btn {
-    top: 0;
   }
   .emerix-page .overlay .dialog-content {
     padding-top: 3rem;

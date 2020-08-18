@@ -5,6 +5,7 @@
 
 	.emerix-logo {
 		margin-bottom: 5.25rem;
+		margin-top: 5.25rem;
 	}
 
 	.form-container {
@@ -151,6 +152,11 @@
 		h1, h2 {
 			color: $black;
 		}
+
+		.close-btn {
+			top: 0;
+			right: 0;
+		}
 	}
 
 	.dialog-content {
@@ -246,10 +252,6 @@
 			&.login-dialog-2,
 			&.login-dialog-3 {
 
-			}
-	
-			.close-btn {
-				top: 0;
 			}
 		}
 
