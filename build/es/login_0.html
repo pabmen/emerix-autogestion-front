@@ -94,22 +94,42 @@
 						<div class="form-group flex-row">
 							<div class="login-dnitype-container">
 								
-	<div class="input-wrapper select">
-		<select id="login_dni_type" required>
+	<div class="input-wrapper select select2">
+		
+		<ul id="login_dni_type" data-value="">
 			
-			<option selected="selected" class="placeholder" value="">Documento</option>
+			<li class="placeholder" value="" class="active"><div>Documento</div></li>
 			
 			
-			<option value="DNI">DNI</option>
+				<li data-value="DNI"><div class="selectable">DNI</div></li>
 			
-			<option value="LC">LC</option>
+				<li data-value="LC"><div class="selectable">LC</div></li>
 			
-			<option value="Otro">Otro</option>
+				<li data-value="Otro"><div class="selectable last">Otro</div></li>
 			
-		</select>
+		</ul>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
+
+	<script>
+		const select = document.querySelector('.select2')
+		const placeholder = select.querySelector('.placeholder div')
+		select.addEventListener('click', (e) => {
+			const target = e.target
+			!select.classList.contains('date-selected') && select.classList.toggle('active')
+			if (target.classList.contains('selectable')) {
+				if (target.classList.contains('date-picker')) {
+					select.classList.add('date-selected')
+				} else {
+					placeholder.innerText = target.innerText
+					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+				}
+			} else if (target.classList.contains('alternate-select')) {
+				select.classList.remove('date-selected')
+			}
+		})
+	</script>
 
 							</div>
 							<div class="flex-grow">
@@ -129,22 +149,42 @@
 						</div>
 						<div class="form-group">
 							
-	<div class="input-wrapper select">
-		<select id="login_genre" required>
+	<div class="input-wrapper select select2">
+		
+		<ul id="login_genre" data-value="">
 			
-			<option selected="selected" class="placeholder" value="">Género</option>
+			<li class="placeholder" value="" class="active"><div>Género</div></li>
 			
 			
-			<option value="Masculino">Masculino</option>
+				<li data-value="Masculino"><div class="selectable">Masculino</div></li>
 			
-			<option value="Femenino">Femenino</option>
+				<li data-value="Femenino"><div class="selectable">Femenino</div></li>
 			
-			<option value="Otro">Otro</option>
+				<li data-value="Otro"><div class="selectable last">Otro</div></li>
 			
-		</select>
+		</ul>
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">Required</div>
 	</div>
+
+	<script>
+		const select = document.querySelector('.select2')
+		const placeholder = select.querySelector('.placeholder div')
+		select.addEventListener('click', (e) => {
+			const target = e.target
+			!select.classList.contains('date-selected') && select.classList.toggle('active')
+			if (target.classList.contains('selectable')) {
+				if (target.classList.contains('date-picker')) {
+					select.classList.add('date-selected')
+				} else {
+					placeholder.innerText = target.innerText
+					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+				}
+			} else if (target.classList.contains('alternate-select')) {
+				select.classList.remove('date-selected')
+			}
+		})
+	</script>
 
 						</div>
 						<div class="form-group">

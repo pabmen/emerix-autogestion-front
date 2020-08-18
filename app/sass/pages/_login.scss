@@ -191,7 +191,7 @@
 		.form {
 			margin-bottom: 0;
 			padding: 1rem;
-			min-height: calc(100vh - 2rem);
+			//min-height: calc(100vh - 2rem);
 		}
 
 		.form-container {
@@ -208,12 +208,9 @@
 			label {
 				padding: 1.5rem .5rem;
 			}
-
-
 		}
 
 		.login-content {
-			overflow: hidden;
 			height: calc(100% - 2rem);
 		}
 	}
@@ -225,13 +222,13 @@
 
 		}
 
-		.login-dialog {
+		.login-dialog:not(.dialog-content) {
 			margin: 0;
-			top: 1rem;
+			top: 50%;
 			left: 1rem;
-			height: calc(100vh - 2rem);
 			width: calc(100vw - 2rem);
-			transform: none;
+			//height: calc(100vh - 2rem);
+			transform: translateY(-50%);
 
 			display: flex;
 			flex-direction: column;
@@ -245,7 +242,21 @@
 			h2 {
 				color: $black;
 			}
+
+			&.login-dialog-2,
+			&.login-dialog-3 {
+
+			}
 	
+			.close-btn {
+				top: 0;
+			}
 		}
+
+		.dialog-content {
+			padding-top: 3rem;
+			padding-bottom: 3rem;
+		}
+
 	}
 }

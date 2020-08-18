@@ -41,7 +41,7 @@
 		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>
 	</div>
 {% endmacro %}
-
+{#
 {% macro select(options) %}
 	<div class="input-wrapper select {{ options.class }}">
 		<select
@@ -58,8 +58,50 @@
 		<div class="input-error-icon" role="alert"></div>
 		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>
 	</div>
-{% endmacro %}
+{% endmacro %}#}
 
+{% macro select(options) %}
+	<div class="input-wrapper select select2 {{ options.class }}">
+		{% if options.date %}
+			<div class="select2-date input-wrapper date">
+				<input type="date" value="">
+				<img class="alternate-select" src="/assets/images/ui/close-btn.svg" alt="">
+			</div>
+		{% endif %}
+		<ul
+			id="{{ options.id }}"
+			data-value=""
+		>
+			{% if options.placeholder %}
+			<li class="placeholder" value="" class="active"><div>{{ options.placeholder }}</div></li>
+			{% endif %}
+			{% for item in options.items %}
+				<li data-value="{{ item }}"><div class="selectable {% if loop.last %}last {% if options.date %}date-picker {% endif %}{% endif %}">{{ item }}</div></li>
+			{% endfor %}
+		</ul>
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">{% if options.error %}{{options.error}} {% else %}Required{% endif %}</div>
+	</div>
+
+	<script>
+		const select = document.querySelector('.select2')
+		const placeholder = select.querySelector('.placeholder div')
+		select.addEventListener('click', (e) => {
+			const target = e.target
+			!select.classList.contains('date-selected') && select.classList.toggle('active')
+			if (target.classList.contains('selectable')) {
+				if (target.classList.contains('date-picker')) {
+					select.classList.add('date-selected')
+				} else {
+					placeholder.innerText = target.innerText
+					select.setAttribute('data-value', target.parentElement.getAttribute('data-value'))
+				}
+			} else if (target.classList.contains('alternate-select')) {
+				select.classList.remove('date-selected')
+			}
+		})
+	</script>
+{% endmacro %}
 
 {% macro select2(options) %}
 	<div class="input-wrapper select select2 {{ options.class }}">
