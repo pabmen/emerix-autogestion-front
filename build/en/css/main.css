@@ -3505,6 +3505,7 @@ html.no-scroll body {
 @media all and (max-width: 1024px) {
   .emerix-page .page-pay .payment-selector ul {
     margin-left: 0;
+    margin-right: 0;
   }
 }
 
