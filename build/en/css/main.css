@@ -990,6 +990,7 @@ html.no-scroll body {
   padding-top: .5rem;
   overflow: hidden;
   height: 3rem;
+  margin-top: -1.125rem;
   margin-left: -1rem;
   margin-right: -1rem;
   z-index: 10;
@@ -1318,6 +1319,7 @@ html.no-scroll body {
   background-color: rgba(255, 106, 41, 0.77);
   white-space: nowrap;
   pointer-events: none;
+  z-index: 100;
 }
 
 .emerix-page .input-wrapper .input-error-popup:after {
