@@ -2275,6 +2275,9 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
+  .emerix-page .table-container .table td {
+    height: 42px;
+  }
   .emerix-page .table-container .table td p {
     margin-bottom: 0;
   }

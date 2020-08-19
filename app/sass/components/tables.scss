@@ -111,6 +111,7 @@
 			height: 64px; // TODO 
 
 			@media all and (max-width: $tabletWidth) {
+				height: 42px;
 				p {
 					margin-bottom: 0;
 				}
