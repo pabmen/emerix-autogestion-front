@@ -1,6 +1,6 @@
 .success {
     .title {
-        @media all and (max-width: $mobileWidth) {
+        @media all and (max-width: $tabletWidth) {
             text-align: left;
         }
     }

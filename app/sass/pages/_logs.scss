@@ -1,7 +1,7 @@
 .page-logs {
 
 	.box-table-container {
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			box-shadow: none;
 			padding: 0;
 			margin: .5rem;
@@ -9,7 +9,7 @@
 			background: transparent;
 		}
 
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			tr {
 				background-color: $white;
 				border: 1px solid transparentize($silver, .85);
@@ -26,7 +26,7 @@
 	}
 
 	.logs-table {
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			.col-1-4.text-right {
 				margin-right: 1rem;
 			}
@@ -37,7 +37,7 @@
 				transform: translateY(-50%);
 			}
 		}
-		@media all and (min-width: $mobileWidth + 1) {
+		@media all and (min-width: $tabletWidth + 1) {
 			.download-icn {
 				display: none;
 			}

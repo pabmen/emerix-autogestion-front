@@ -165,7 +165,7 @@ svg {
 		}
 	}
 
-	@media all and (max-width: $mobileWidth) {
+	@media all and (max-width: $tabletWidth) {
 		flex-direction: column;
 		
 		> * {
@@ -203,7 +203,7 @@ hr {
 		padding: 1rem;
 	}
 
-	@media all and (min-width: $mobileWidth + 1) {
+	@media all and (min-width: $tabletWidth + 1) {
 		.restrict-desktop {
 			width: calc(100% - 10rem);
 			margin-left: auto;
@@ -213,13 +213,13 @@ hr {
 	}
 }
 
-@media all and (min-width: $mobileWidth + 1) {
+@media all and (min-width: $tabletWidth + 1) {
 	.mobile-only {
 		display: none !important;
 	}
 }
 
-@media all and (max-width: $mobileWidth) {
+@media all and (max-width: $tabletWidth) {
 	.desktop-only {
 		display: none !important;
 	}

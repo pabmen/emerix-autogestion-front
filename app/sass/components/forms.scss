@@ -388,7 +388,7 @@ form {
 	
 }
 
-@media all and (max-width: $mobileWidth) {
+@media all and (max-width: $tabletWidth) {
 	.input-wrapper {
 		select {
 			//height: 1.5rem;

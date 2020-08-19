@@ -98,7 +98,7 @@
 	}
 }
 
-@media all and (max-width: $mobileWidth) {
+@media all and (max-width: $tabletWidth) {
 	#nav-overlay .dialog-container {
 		display: none;
 	}

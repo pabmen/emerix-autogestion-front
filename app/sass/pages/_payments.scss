@@ -1,7 +1,7 @@
 .page-payments {
 	$itemMargin: 15px;
 
-	@media all and (max-width: $mobileWidth) {
+	@media all and (max-width: $tabletWidth) {
 		.col-container {
 			flex-direction: row;
 
@@ -44,7 +44,7 @@
 			border: 1px solid $lightgray;
 			margin: $itemMargin;
 
-			@media all and (max-width: $mobileWidth) {
+			@media all and (max-width: $tabletWidth) {
 				width: 42px;
 				height: 28px;
 
@@ -65,7 +65,7 @@
 	.selectable-box {
 		flex-wrap: wrap;
 
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			flex-direction: row;
 		}
 	}

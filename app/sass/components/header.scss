@@ -32,7 +32,7 @@
 .page-header {
 	.top-decoration {
 		font-size: 1.125rem;
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			font-size: 1rem;
 		}
 		font-weight: bold;

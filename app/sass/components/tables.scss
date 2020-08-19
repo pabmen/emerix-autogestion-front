@@ -17,7 +17,7 @@
 			margin-bottom: -$box-padding;
 		}
 		
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			margin-left: -$box-padding / 2;
 			margin-right: -$box-padding / 2;
 			width: calc(100% + #{$box-padding * 1});
@@ -37,7 +37,7 @@
 .table-container {
 	width: 100%;
 
-	@media all and (min-width: $mobileWidth + 1) {
+	@media all and (min-width: $tabletWidth + 1) {
 		&.box {
 			background-color: $white;
 			border: 1px solid transparentize($silver, .85);
@@ -60,7 +60,7 @@
 			flex-direction: row;
 			align-items: center;
 
-			@media all and (max-width: $mobileWidth) {
+			@media all and (max-width: $tabletWidth) {
 				padding: 1rem;
 
 				& + tr:last-child {
@@ -110,7 +110,7 @@
 			align-items: center;
 			height: 64px;;
 
-			@media all and (max-width: $mobileWidth) {
+			@media all and (max-width: $tabletWidth) {
 				p {
 					margin-bottom: 0;
 				}
@@ -150,7 +150,7 @@
 				height: 1.25rem;
 				width: 75%;
 
-				@media all and (max-width: $mobileWidth) {
+				@media all and (max-width: $tabletWidth) {
 					text-align: left;
 					width: auto;
 				}
@@ -162,7 +162,7 @@
 	.table-header {
 		font-weight: 500;
 
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			p {
 				margin: .5rem 0;
 			}
@@ -236,7 +236,7 @@
 	}
 
 
-	@media all and (max-width: $mobileWidth) {
+	@media all and (max-width: $tabletWidth) {
 		.table {
 			font-size: 0.85rem;
 			.table-header {

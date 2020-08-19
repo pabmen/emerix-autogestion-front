@@ -176,7 +176,7 @@
 	}
 }
 
-@media all and (min-width: $mobileWidth + 1) {
+@media all and (min-width: $tabletWidth + 1) {
 	.page-login {
 		.logo {
 			padding-top: 0;
@@ -184,7 +184,7 @@
 	}
 }
 
-@media all and (max-width: $mobileWidth) {
+@media all and (max-width: $tabletWidth) {
 	.page-login {
 		height: 100vh;
 

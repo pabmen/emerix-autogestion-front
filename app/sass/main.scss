@@ -44,7 +44,7 @@ html {
         box-sizing: border-box;
     }
 
-    @media all and (max-width: $mobileWidth) {
+    @media all and (max-width: $tabletWidth) {
         font-size: 14px;
     }
 }

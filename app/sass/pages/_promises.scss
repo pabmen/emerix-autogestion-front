@@ -6,7 +6,7 @@
 	}
 
 	&.promises_1 {
-		@media all and (max-width: $mobileWidth) {
+		@media all and (max-width: $tabletWidth) {
 			.col-3-6 {
 				width: 100%;
 			}

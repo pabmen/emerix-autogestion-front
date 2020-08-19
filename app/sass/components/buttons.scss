@@ -27,7 +27,7 @@ $btn-border-color: transparent;
 	cursor: pointer;
 	outline: none;
 
-	@media all and (max-width: $mobileWidth) {
+	@media all and (max-width: $tabletWidth) {
 		display: block;
 		width: 100%;
 	}
@@ -68,7 +68,7 @@ $btn-border-color: transparent;
 	}
 }
 
-@media all and (max-width: $mobileWidth) {
+@media all and (max-width: $tabletWidth) {
 	.btn {
 		padding: 1rem 1.5rem;
 	}

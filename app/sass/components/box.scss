@@ -20,7 +20,7 @@
 		}
 	}
 
-	@media all and (max-width: $mobileWidth) {
+	@media all and (max-width: $tabletWidth) {
 		flex-direction: column;
 
 		& > * {
@@ -56,7 +56,7 @@
 
 }
 
-@media all and (max-width: $mobileWidth) {
+@media all and (max-width: $tabletWidth) {
 	.box {
 		margin: 1.5rem;
 		margin-left: 0;
