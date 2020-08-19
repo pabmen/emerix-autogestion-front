@@ -2,8 +2,17 @@
 	$itemMargin: 15px;
 
 	@media all and (max-width: $tabletWidth) {
+
 		.col-container {
 			flex-direction: row;
+
+			&.flex-column-on-mobile {
+				flex-direction: column;
+				> * {
+					margin: .5rem 0;
+					width: 100% !important;
+				}
+			}
 
 			> * {
 				&:first-child {
@@ -47,12 +56,15 @@
 			@media all and (max-width: $tabletWidth) {
 				width: 42px;
 				height: 28px;
-
 			}
 
 			img {
 				max-height: 100%;
 				padding: .5rem;
+
+				@media all and (max-width: $tabletWidth) {
+					padding: .25rem;
+				}
 			}
 
 			&.active {

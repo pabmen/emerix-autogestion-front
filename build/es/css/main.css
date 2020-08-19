@@ -3343,6 +3343,13 @@ html.no-scroll body {
   .emerix-page .page-payments .col-container {
     flex-direction: row;
   }
+  .emerix-page .page-payments .col-container.flex-column-on-mobile {
+    flex-direction: column;
+  }
+  .emerix-page .page-payments .col-container.flex-column-on-mobile > * {
+    margin: .5rem 0;
+    width: 100% !important;
+  }
   .emerix-page .page-payments .col-container > * {
     margin: 0 1rem;
   }
@@ -3388,6 +3395,12 @@ html.no-scroll body {
 .emerix-page .page-payments .payment-selector li img {
   max-height: 100%;
   padding: .5rem;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-payments .payment-selector li img {
+    padding: .25rem;
+  }
 }
 
 .emerix-page .page-payments .payment-selector li.active {
