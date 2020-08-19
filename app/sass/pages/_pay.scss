@@ -2,6 +2,10 @@
 	$itemMargin: 15px;
 
 	@media all and (max-width: $tabletWidth) {
+
+		label img {
+			width: 1.5rem;
+		}
 		.selector-icon {
 			width: 25%;
 			min-width: 3.5rem;
@@ -75,6 +79,10 @@
 			flex-wrap: wrap;
 			margin-left: -$itemMargin;
 			margin-right: -$itemMargin;
+
+			@media all and (max-width: $tabletWidth) {
+				margin-left: 0;
+			}
 		}
 
 		li {
@@ -87,7 +95,7 @@
 			@media all and (max-width: $tabletWidth) {
 				width: 44px;
 				height: 28px;
-
+				margin: .5rem;
 			}
 
 			img {

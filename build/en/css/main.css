@@ -3434,6 +3434,9 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
+  .emerix-page .page-pay label img {
+    width: 1.5rem;
+  }
   .emerix-page .page-pay .selector-icon {
     width: 25%;
     min-width: 3.5rem;
@@ -3499,6 +3502,12 @@ html.no-scroll body {
   margin-right: -15px;
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .page-pay .payment-selector ul {
+    margin-left: 0;
+  }
+}
+
 .emerix-page .page-pay .payment-selector li {
   width: 72px;
   height: 48px;
@@ -3511,6 +3520,7 @@ html.no-scroll body {
   .emerix-page .page-pay .payment-selector li {
     width: 44px;
     height: 28px;
+    margin: .5rem;
   }
 }
 
