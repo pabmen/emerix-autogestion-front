@@ -1,6 +1,14 @@
 .page-pay {
 	$itemMargin: 15px;
 
+	@media all and (max-width: $tabletWidth) {
+		.selector-icon {
+			width: 25%;
+			min-width: 3.5rem;
+		}
+
+	}
+
 	&.pay_1 {
 		.selectable-box {
 			span:first-child {

@@ -642,7 +642,12 @@ html.no-scroll body {
     display: none !important;
   }
   .emerix-page .flex-column-on-mobile {
+    display: flex;
     flex-direction: column;
+  }
+  .emerix-page .flex-row-on-mobile {
+    display: flex;
+    flex-direction: row;
   }
 }
 
@@ -3423,6 +3428,13 @@ html.no-scroll body {
   box-shadow: none;
   justify-content: center;
   align-items: center;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-pay .selector-icon {
+    width: 25%;
+    min-width: 3.5rem;
+  }
 }
 
 .emerix-page .page-pay.pay_1 .selectable-box span:first-child {

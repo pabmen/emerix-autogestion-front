@@ -225,6 +225,12 @@ hr {
 	}
 
 	.flex-column-on-mobile {
+		display: flex;
 		flex-direction: column;
+	}
+
+	.flex-row-on-mobile {
+		display: flex;
+		flex-direction: row;
 	}
 }
