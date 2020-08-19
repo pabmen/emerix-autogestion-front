@@ -649,6 +649,9 @@ html.no-scroll body {
     display: flex;
     flex-direction: row;
   }
+  .emerix-page .margin-bottom-on-mobile {
+    margin-bottom: 1rem;
+  }
 }
 
 .emerix-page html:not(.debug) .debug {
@@ -3434,6 +3437,7 @@ html.no-scroll body {
   .emerix-page .page-pay .selector-icon {
     width: 25%;
     min-width: 3.5rem;
+    margin-right: 1rem;
   }
 }
 
@@ -3517,6 +3521,12 @@ html.no-scroll body {
 
 .emerix-page .page-pay .payment-selector li.active {
   border-color: #8569b4;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-pay.pay_2 .margin-bottom-on-mobile {
+    margin-bottom: .25rem;
+  }
 }
 
 .emerix-page .page-pay.pay_5 .selectable-box {

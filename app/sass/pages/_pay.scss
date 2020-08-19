@@ -5,6 +5,7 @@
 		.selector-icon {
 			width: 25%;
 			min-width: 3.5rem;
+			margin-right: 1rem;
 		}
 
 	}
@@ -98,6 +99,14 @@
 				border-color: $violet;
 			}
 
+		}
+	}
+
+	&.pay_2 {
+		@media all and (max-width: $tabletWidth) {
+			.margin-bottom-on-mobile {
+				margin-bottom: .25rem;
+			}
 		}
 	}
 
