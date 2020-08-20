@@ -635,6 +635,9 @@ html.no-scroll body {
   .emerix-page .mobile-only {
     display: none !important;
   }
+  .emerix-page .page-title {
+    font-size: 1.5rem;
+  }
 }
 
 @media all and (max-width: 1024px) {
@@ -651,6 +654,9 @@ html.no-scroll body {
   }
   .emerix-page .margin-bottom-on-mobile {
     margin-bottom: 1rem;
+  }
+  .emerix-page .page-title {
+    font-size: 1.28rem;
   }
 }
 
@@ -3058,6 +3064,7 @@ html.no-scroll body {
     right: .5rem;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
+    width: 1rem;
   }
 }
 

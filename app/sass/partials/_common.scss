@@ -217,6 +217,10 @@ hr {
 	.mobile-only {
 		display: none !important;
 	}
+
+	.page-title {
+		font-size: 1.5rem;
+	}
 }
 
 @media all and (max-width: $tabletWidth) {
@@ -236,5 +240,9 @@ hr {
 
 	.margin-bottom-on-mobile {
 		margin-bottom: 1rem;
+	}
+
+	.page-title {
+		font-size: 1.28rem;
 	}
 }
