@@ -23,10 +23,13 @@
 			trigger.addEventListener('click', (e) => {
 				e.preventDefault()
 				items.forEach((item) => item.classList.remove('active'))
-				e.target.scrollIntoView({
-					behavior: "smooth"
-				});
 				trigger.closest('li').classList.add('active')
+				setTimeout(() => {
+					e.target.scrollIntoView({
+						block: 'start',
+						behavior: "smooth"
+					});
+				}, 500)
 			})
 		})
 	</script>
