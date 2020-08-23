@@ -981,6 +981,8 @@ html.no-scroll body {
 .emerix-page .input-wrapper {
   position: relative;
   margin-bottom: 1rem;
+  /* clears the 'X' from Internet Explorer */
+  /* clears the 'X' from Chrome */
 }
 
 .emerix-page .input-wrapper.select {
@@ -1156,6 +1158,7 @@ html.no-scroll body {
 .emerix-page .input-wrapper input[type=date],
 .emerix-page .input-wrapper input[type=url],
 .emerix-page .input-wrapper input[type=mail],
+.emerix-page .input-wrapper input[type=search],
 .emerix-page .input-wrapper input[type=textarea],
 .emerix-page .input-wrapper input[type=number],
 .emerix-page .input-wrapper select {
@@ -1179,6 +1182,9 @@ html.no-scroll body {
 .emerix-page .input-wrapper input[type=mail],
 .emerix-page .input-wrapper input[type=mail]:active,
 .emerix-page .input-wrapper input[type=mail]:active,
+.emerix-page .input-wrapper input[type=search],
+.emerix-page .input-wrapper input[type=search]:active,
+.emerix-page .input-wrapper input[type=search]:active,
 .emerix-page .input-wrapper input[type=textarea],
 .emerix-page .input-wrapper input[type=textarea]:active,
 .emerix-page .input-wrapper input[type=textarea]:active,
@@ -1218,6 +1224,25 @@ html.no-scroll body {
   -moz-appearance: none;
   appearance: none;
   margin: 0;
+}
+
+.emerix-page .input-wrapper input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.emerix-page .input-wrapper input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.emerix-page .input-wrapper input[type=search]::-webkit-search-decoration,
+.emerix-page .input-wrapper input[type=search]::-webkit-search-cancel-button,
+.emerix-page .input-wrapper input[type=search]::-webkit-search-results-button,
+.emerix-page .input-wrapper input[type=search]::-webkit-search-results-decoration {
+  display: none;
 }
 
 .emerix-page .input-wrapper select {
