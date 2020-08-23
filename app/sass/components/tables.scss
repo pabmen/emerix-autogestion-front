@@ -77,22 +77,24 @@
 			tr:not(.table-header):not(.disabled) {
 				position: relative;
 
-				&:hover {
-					background-color: $smoke;
-					font-weight: 500;
-
-					.item-label {
+				@media all and (min-width: $tabletWidth + 1) {
+					&:hover {
+						background-color: $smoke;
 						font-weight: 500;
-					}
-					
-					&:before {
-						content: '';
-						position: absolute;
-						top: 0;
-						left: 0;
-						width: 4px;
-						height: 100%;
-						background-color: $lightviolet;
+	
+						.item-label {
+							font-weight: 500;
+						}
+						
+						&:before {
+							content: '';
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 4px;
+							height: 100%;
+							background-color: $lightviolet;
+						}
 					}
 				}
 			}

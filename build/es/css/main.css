@@ -2275,23 +2275,23 @@ html.no-scroll body {
   position: relative;
 }
 
-.emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover {
-  background-color: #fbfbfb;
-  font-weight: 500;
-}
-
-.emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover .item-label {
-  font-weight: 500;
-}
-
-.emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background-color: #A388D1;
+@media all and (min-width: 1025px) {
+  .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover {
+    background-color: #fbfbfb;
+    font-weight: 500;
+  }
+  .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover .item-label {
+    font-weight: 500;
+  }
+  .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #A388D1;
+  }
 }
 
 .emerix-page .table-container .table.disabled * {
@@ -3383,7 +3383,7 @@ html.no-scroll body {
 
 .emerix-page .page-promises .dropdown-card .dropdown-title {
   position: absolute;
-  top: -3rem;
+  top: -2rem;
   right: 0;
 }
 
