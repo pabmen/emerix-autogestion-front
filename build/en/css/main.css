@@ -3296,6 +3296,10 @@ html.no-scroll body {
   .emerix-page .page-home .mobile-btns li:last-child {
     margin-right: 0;
   }
+  .emerix-page .page-home .box .table-container, .emerix-page .page-home .input-wrapper.select2.active ul .table-container, .emerix-page .input-wrapper.select2.active .page-home ul .table-container, .emerix-page .page-home .overlay .dialog-container .table-container, .emerix-page .overlay .page-home .dialog-container .table-container, .emerix-page .page-home .topbar .notifications-menu .dropdown-target ul .table-container, .emerix-page .topbar .notifications-menu .dropdown-target .page-home ul .table-container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .emerix-page #home-sidebar.active .sidebar {
