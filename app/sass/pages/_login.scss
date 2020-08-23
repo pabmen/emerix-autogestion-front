@@ -170,9 +170,14 @@
 	}
 
 	.login-tyc-content {
-		max-height: calc(100vh - 6rem);
 		overflow: hidden;
 		overflow-y: auto;
+		max-height: calc(100vh - 7rem);
+		margin-top: 1rem;
+
+		h2:first-child {
+			margin-top: -1rem;
+		}
 	}
 }
 

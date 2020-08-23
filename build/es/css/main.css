@@ -2964,9 +2964,14 @@ html.no-scroll body {
 }
 
 .emerix-page .overlay .login-tyc-content {
-  max-height: calc(100vh - 6rem);
   overflow: hidden;
   overflow-y: auto;
+  max-height: calc(100vh - 7rem);
+  margin-top: 1rem;
+}
+
+.emerix-page .overlay .login-tyc-content h2:first-child {
+  margin-top: -1rem;
 }
 
 @media all and (min-width: 1025px) {
