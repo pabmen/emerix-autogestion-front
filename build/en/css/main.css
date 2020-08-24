@@ -905,6 +905,12 @@ html.no-scroll body {
   padding: .5rem 1.5rem;
   color: #8C855E;
   margin-bottom: 1rem;
+  width: 100%;
+}
+
+.emerix-page .warning-box img {
+  vertical-align: middle;
+  margin-right: .5rem;
 }
 
 .emerix-page .selectable-box .box, .emerix-page .selectable-box .input-wrapper.select2.active ul, .emerix-page .input-wrapper.select2.active .selectable-box ul, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
@@ -1592,6 +1598,12 @@ html.no-scroll body {
   padding: .5rem 1.5rem;
   color: #8C855E;
   margin-bottom: 1rem;
+  width: 100%;
+}
+
+.emerix-page .warning-box img {
+  vertical-align: middle;
+  margin-right: .5rem;
 }
 
 .emerix-page .selectable-box .box, .emerix-page .selectable-box .input-wrapper.select2.active ul, .emerix-page .input-wrapper.select2.active .selectable-box ul, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
@@ -2073,7 +2085,7 @@ html.no-scroll body {
   }
 }
 
-.emerix-page .price-container {
+.emerix-page .price-container:not(.text-normal) {
   font-size: 2rem;
   font-weight: bold;
 }
@@ -2495,6 +2507,12 @@ html.no-scroll body {
   padding: .5rem 1.5rem;
   color: #8C855E;
   margin-bottom: 1rem;
+  width: 100%;
+}
+
+.emerix-page .warning-box img {
+  vertical-align: middle;
+  margin-right: .5rem;
 }
 
 .emerix-page .selectable-box .box, .emerix-page .selectable-box .input-wrapper.select2.active ul, .emerix-page .input-wrapper.select2.active .selectable-box ul, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {

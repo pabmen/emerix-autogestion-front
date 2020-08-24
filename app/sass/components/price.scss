@@ -1,6 +1,13 @@
 .price-container {
-	font-size: 2rem;
-	font-weight: bold;
+	
+	&:not(.text-normal) {
+		font-size: 2rem;
+		font-weight: bold;
+	}
+
+	&.text-normal {
+		
+	}
 
 	.denomination {
 		font-size: 1rem;

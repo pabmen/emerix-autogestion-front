@@ -6,6 +6,7 @@
 {% from "../components/_tables.njk" import table %}
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
+{% from "../components/_price.njk" import price %}
 
 {% set "productos" = {
 			"id": "promises_2",
@@ -42,7 +43,7 @@
 		}) }}
 		</div>
 	</div>
-	<div class="restrict-width large flex-row col-container">
+	<div class="restrict-width large">
 		<div class="flex-col">
 			<div class="warning-box">
 				<img src="/assets/images/ui/icono_info_2.svg" alt=""><strong>TC MASTER 9844</strong> no puede ser incluído en el <strong>Acuerdo verbal</strong>.
@@ -51,9 +52,98 @@
 				<img src="/assets/images/ui/icono_info_2.svg" alt=""><strong>TC MASTER 9844</strong> no puede ser incluído en el <strong>Acuerdo verbal</strong>.
 			</div>
 		</div>
-		<div>
+		<div class="flex-row col-container">
 			<div class="col-1-4 box">
-				Acuerdo verbal
+				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Acuerdo verbal</div>
+				<div>
+				</div>
+				<div><strong>A financiar</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Quita</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Anticipo</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+				
+				<div><strong>Cuota promedio</strong></div>
+				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
+				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
+				<a href="#">Ver detalle del plan y cuotas</a>
+			</div>
+			<div class="col-1-4 box">
+				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Refinanciación 12 cuotas</div>
+				<div>
+				</div>
+				<div><strong>A financiar</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Quita</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Anticipo</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+				
+				<div><strong>Cuota promedio</strong></div>
+				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
+				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
+				<a href="#">Ver detalle del plan y cuotas</a>
+			</div>
+			<div class="col-1-4 box">
+				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Refinanciación 12 cuotas</div>
+				<div>
+				</div>
+				<div><strong>A financiar</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Quita</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Anticipo</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+				
+				<div><strong>Cuota promedio</strong></div>
+				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
+				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
+				<a href="#">Ver detalle del plan y cuotas</a>
+			</div>
+			<div class="col-1-4 box">
+				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Refinanciación 12 cuotas</div>
+				<div>
+				</div>
+				<div><strong>A financiar</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Quita</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Anticipo</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+				
+				<div><strong>Cuota promedio</strong></div>
+				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
+				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
+				<a href="#">Ver detalle del plan y cuotas</a>
+			</div>
+		</div>
+		<div class="flex-row col-container">
+			<div class="col-1-4 box">
+				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Acuerdo verbal</div>
+				<div>
+				</div>
+				<div><strong>A financiar</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Quita</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+
+				<div><strong>Anticipo</strong></div>
+				<div>{{ price({value: "1200000", class: "text-normal"})}}</div>
+				
+				<div><strong>Cuota promedio</strong></div>
+				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
+				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
+				<a href="#">Ver detalle del plan y cuotas</a>
 			</div>
 		</div>
 	</div>

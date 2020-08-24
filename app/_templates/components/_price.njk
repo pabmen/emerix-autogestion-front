@@ -1,8 +1,12 @@
 {% macro price(options) %}
-	{% set value = options %}
+	{% if options.value %}
+		{% set value = options.value %}
+	{% else %}
+		{% set value = options %}
+	{% endif %}
 
 	{% set integer = value.slice(0 , value | length - 2) %}
 	{% set cents = value.slice(value | length - 2, value | length) %}
 
-	<div class="price-container" data-value="{{ value }}"><span class="denomination">$</span>{{ integer }}<sup class="cents">{{ cents }}</sup></div>
+	<div class="price-container {{ options.class }}" data-value="{{ value }}"><span class="denomination">$</span>{{ integer }}<sup class="cents">{{ cents }}</sup></div>
 {% endmacro %}
