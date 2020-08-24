@@ -1,0 +1,133 @@
+{% from "../components/_selectableBox.njk" import selectableBox %}
+{% from "../components/_dropdown.njk" import dropdown %}
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_tables.njk" import table %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+{% set "productos" = {
+			"id": "promises_2",
+			"class": "selectable",
+			"colsClasses": ["col-3-6", "col-1-6 text-center desktop-only", "col-1-4 text-center desktop-only", "col-2-6 text-right"],
+			"header": [
+				"Producto",
+				"Monto adeudo",
+				"Pago mínimo",
+				"Monto a pagar"
+			],
+			"data": [
+				["<img src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "$19450,87", "$200,00", "$19450,87"],
+				["<img src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;SEGURO DE HOGAR", "$19450,87", "$3200,00", "<div class='input-wrapper text'><input id='' type='text' class='input-elem' placeholder='$2308,50' required=''></div>"],
+				["<img src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "$19450,87", "$1908,00", "$19450,87"],
+				["<img src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "$14350,87", "$2308,50", "<div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div>"]
+			]
+} %}
+
+<section class="page-promises promises_1">
+	{{ header({
+		progress: 10,
+		link: {
+			href: '/cuotas.html',
+			text: 'Pagar en cuotas'
+		}
+	}) }}
+
+	<div class="restrict-width large">
+		<div class="col-2-3 full-width-mobile">
+		{{ title({
+			title: 'Creá un plan de pago',
+			subtitle: '<span></span><strong>Seleccioná los productos</strong> que queres incluir en tu nuevo plan.'
+		}) }}
+		</div>
+	</div>
+	<div class="restrict-width large flex-row col-container">
+		
+		<div class="box col-2-3 desktop-only">
+			{{ table(productos, {'specialType': 'checkbox'}) }}
+		</div>
+		<div class="mobile-only">
+			{% call selectableBox({class: 'flex-column special-mobile-selectable-box'}) %}
+				<div class="box">
+					{{ table({
+							"data": [
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;<strong>PRÉSTAMO 36 cuotas</strong>"]
+							]
+						}, {'specialType': 'checkbox', "idPrepend": "tbl1"})
+					}}
+					<div>
+						<div class="dropdown-card">
+						{% call dropdown () %}
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						{% endcall %}
+						</div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2"><strong>Monto a pagar</strong></div>
+								<div class="col-1-2 text-right"><div class='input-wrapper text'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div></div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					{{ table({
+							"data": [
+								["<img style='vertical-align: middle' src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;<strong>PRÉSTAMO 36 cuotas</strong>"]
+							]
+						}, {'specialType': 'checkbox', "idPrepend": "tbl2"})
+					}}
+					<div>
+						<div class="dropdown-card">
+						{% call dropdown () %}
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						{% endcall %}
+						</div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2"><strong>Monto a pagar</strong></div>
+								<div class="col-1-2 text-right"><div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div></div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+        	{% endcall %}
+		</div>
+		<div class="flex-column col-1-3 full-width-mobile">
+			<div class="flex-column row-container">
+				<div class="box flex-row justify-between">
+					<span class="text-uppercase">monto final</span>
+					<br>
+					<span><strong>$0,00</strong></span>
+				</div>
+			</div>
+			<div>
+				<a href="/planes_1.html" class="btn">Elegir plan</a>
+			</div>
+		</div>
+	</div>
+</section>

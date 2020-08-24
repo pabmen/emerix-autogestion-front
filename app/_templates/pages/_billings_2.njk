@@ -1,0 +1,68 @@
+{% from "../components/_selectableBox.njk" import selectableBox %}
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_tables.njk" import table %}
+{% from "../components/_price.njk" import price %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+
+{% set "productos" = {
+			"class": "disabled",
+			"colsClasses": ["col-1-2", "col-1-2 text-right"],
+			"header": [
+				"Productos incluidos",
+				"Monto adeudado"
+			],
+			"data": [
+				["PRÉSTAMO 36 cuotas", "$19450,87"],
+				["PRÉSTAMO 12 cuotas", "$19450,87"]
+			]
+} %}
+
+<section class="page-pay">
+	{{ header({
+		progress: 70,
+		link: {
+			href: '/planes_1.html',
+			text: 'volver a la pantalla anterior'
+		}
+	}) }}
+
+	<div class="restrict-width">
+		{{ title({
+			title: 'Confirmá el plan: Refinanciación 12 cuotas'
+		}) }}
+		<div class="flex-row col-container box">
+			<div class="text-center col-1-2 full-width-mobile">
+				<span class="text-violet"><strong>Monto a financiar</strong></span>
+				<br>
+				<span class="text-xlarge">{{ price("19959057") }}</span>
+			</div>
+			<div class="text-center col-1-2 full-width-mobile">
+				<span class="text-violet"><strong>Quita</strong></span>
+				<br>
+				<span class="text-xlarge">{{ price("1000000") }}</span>
+			</div>
+		</div>
+		<div class="flex-row col-container box">
+			<div class="text-center col-1-2 full-width-mobile">
+				<span class="text-violet"><strong>Anticipar</strong></span>
+				<br>
+				<span class="text-xlarge">{{ price("200000") }}</span>
+			</div>
+			<div class="text-center col-1-2 full-width-mobile">
+				<span class="text-violet"><strong>Cuota mensual</strong></span>
+				<br>
+				<span class="text-xlarge">{{ price("300000") }}</span>
+			</div>
+		</div>
+		<div class="box">
+			{{ table(productos) }}
+		</div>
+		<p class="disclaimer">La distribución del monto se hará en base a los productos seleccionados.</p>
+
+		<button class="btn" data-next>Confirmar</button>
+		<button class="btn" data-next>Pagar anticipo</button>
+	</div>
+</section>

@@ -898,6 +898,15 @@ html.no-scroll body {
   margin-bottom: 1rem;
 }
 
+.emerix-page .warning-box {
+  border-radius: 8px;
+  border: 1px solid #FFE600;
+  background-color: #FFED91;
+  padding: .5rem 1.5rem;
+  color: #8C855E;
+  margin-bottom: 1rem;
+}
+
 .emerix-page .selectable-box .box, .emerix-page .selectable-box .input-wrapper.select2.active ul, .emerix-page .input-wrapper.select2.active .selectable-box ul, .emerix-page .selectable-box .overlay .dialog-container, .emerix-page .overlay .selectable-box .dialog-container, .emerix-page .selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .selectable-box ul {
   cursor: pointer;
   transition: border-color 0.15s ease;
@@ -1573,6 +1582,15 @@ html.no-scroll body {
   background-color: #EB7777;
   padding: .5rem 1.5rem;
   color: #fff;
+  margin-bottom: 1rem;
+}
+
+.emerix-page .warning-box {
+  border-radius: 8px;
+  border: 1px solid #FFE600;
+  background-color: #FFED91;
+  padding: .5rem 1.5rem;
+  color: #8C855E;
   margin-bottom: 1rem;
 }
 
@@ -2467,6 +2485,15 @@ html.no-scroll body {
   background-color: #EB7777;
   padding: .5rem 1.5rem;
   color: #fff;
+  margin-bottom: 1rem;
+}
+
+.emerix-page .warning-box {
+  border-radius: 8px;
+  border: 1px solid #FFE600;
+  background-color: #FFED91;
+  padding: .5rem 1.5rem;
+  color: #8C855E;
   margin-bottom: 1rem;
 }
 

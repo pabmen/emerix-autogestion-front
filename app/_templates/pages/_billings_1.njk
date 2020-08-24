@@ -1,0 +1,60 @@
+{% from "../components/_selectableBox.njk" import selectableBox %}
+{% from "../components/_dropdown.njk" import dropdown %}
+{% from "../components/_forms.njk" import input %}
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_tables.njk" import table %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+{% set "productos" = {
+			"id": "promises_2",
+			"class": "selectable",
+			"colsClasses": ["col-3-6", "col-1-6 text-center desktop-only", "col-1-4 text-center desktop-only", "col-2-6 text-right"],
+			"header": [
+				"Producto",
+				"Monto adeudo",
+				"Pago mínimo",
+				"Monto a pagar"
+			],
+			"data": [
+				["<img src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "$19450,87", "$200,00", "$19450,87"],
+				["<img src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;SEGURO DE HOGAR", "$19450,87", "$3200,00", "<div class='input-wrapper text'><input id='' type='text' class='input-elem' placeholder='$2308,50' required=''></div>"],
+				["<img src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "$19450,87", "$1908,00", "$19450,87"],
+				["<img src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "$14350,87", "$2308,50", "<div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div>"]
+			]
+} %}
+
+<section class="page-promises promises_1">
+	{{ header({
+		progress: 30,
+		link: {
+			href: '/planes.html',
+			text: 'volver a la pantalla anterior'
+		}
+	}) }}
+
+	<div class="restrict-width large">
+		<div class="full-width-mobile">
+		{{ title({
+			title: 'Elegí un plan',
+			subtitle: '<span></span><strong>Seleccioná el plan</strong> que se ajuste mejor a la reestructuración de tu deuda.'
+		}) }}
+		</div>
+	</div>
+	<div class="restrict-width large flex-row col-container">
+		<div class="flex-col">
+			<div class="warning-box">
+				<img src="/assets/images/ui/icono_info_2.svg" alt=""><strong>TC MASTER 9844</strong> no puede ser incluído en el <strong>Acuerdo verbal</strong>.
+			</div>
+			<div class="warning-box">
+				<img src="/assets/images/ui/icono_info_2.svg" alt=""><strong>TC MASTER 9844</strong> no puede ser incluído en el <strong>Acuerdo verbal</strong>.
+			</div>
+		</div>
+		<div>
+			<div class="col-1-4 box">
+				Acuerdo verbal
+			</div>
+		</div>
+	</div>
+</section>
