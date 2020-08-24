@@ -46,10 +46,14 @@
 		background-image: url('/assets/images/sections/home/prom.svg');
 		background-size: cover;
 		background-repeat: no-repeat;
+		background-position: center;
 		height: 190px;
 
 		@media all and (max-width: $tabletWidth) {
 			height: 150px;
+			p {
+				text-align: center;
+			}
 		}
 		
 		@media all and (min-width: $tabletWidth + 1) {
