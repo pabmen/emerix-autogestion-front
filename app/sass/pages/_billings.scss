@@ -1,6 +1,32 @@
 .page-billings {
+
+	.data-field {
+		margin-bottom: 1rem;
+	}
+
 	.btn {
 		text-align: center;
+		margin-bottom: 1rem;;
+	}
+
+	.price-container.text-normal {
+		.denomination {
+			font-size: .75em;
+		}
+		sup {
+			top: 0;
+			&:before {
+				content: ',';
+			}
+		}
+	}
+
+	a[data-popup] {
+		font-size: 12px;
+		color: $violet;
+		text-decoration: none;
+		text-align: center;
+		display: block;
 	}
 
 	@media all and (max-width: $tabletWidth) {

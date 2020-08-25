@@ -2859,8 +2859,33 @@ html.no-scroll body {
   margin-right: 1rem;
 }
 
+.emerix-page .page-billings .data-field {
+  margin-bottom: 1rem;
+}
+
 .emerix-page .page-billings .btn {
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.emerix-page .page-billings .price-container.text-normal .denomination {
+  font-size: .75em;
+}
+
+.emerix-page .page-billings .price-container.text-normal sup {
+  top: 0;
+}
+
+.emerix-page .page-billings .price-container.text-normal sup:before {
+  content: ',';
+}
+
+.emerix-page .page-billings a[data-popup] {
+  font-size: 12px;
+  color: #8569b4;
+  text-decoration: none;
+  text-align: center;
+  display: block;
 }
 
 @media all and (max-width: 1024px) {
