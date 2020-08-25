@@ -2859,8 +2859,18 @@ html.no-scroll body {
   margin-right: 1rem;
 }
 
+.emerix-page .page-billings h4 img {
+  vertical-align: middle;
+  float: left;
+  margin-right: .5rem;
+}
+
 .emerix-page .page-billings .data-field {
   margin-bottom: 1rem;
+}
+
+.emerix-page .page-billings .data-field div {
+  margin: .5rem 0;
 }
 
 .emerix-page .page-billings .btn {

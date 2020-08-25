@@ -1,7 +1,19 @@
 .page-billings {
 
+	h4 {
+		img {
+			vertical-align: middle;
+			float: left;
+			margin-right: .5rem;
+		}
+	}
+
 	.data-field {
 		margin-bottom: 1rem;
+
+		div {
+			margin: .5rem 0;
+		}
 	}
 
 	.btn {
