@@ -8,25 +8,8 @@
 {% from "../structure/_title.njk" import title %}
 {% from "../components/_price.njk" import price %}
 
-{% set "productos" = {
-			"id": "promises_2",
-			"class": "selectable",
-			"colsClasses": ["col-3-6", "col-1-6 text-center desktop-only", "col-1-4 text-center desktop-only", "col-2-6 text-right"],
-			"header": [
-				"Producto",
-				"Monto adeudo",
-				"Pago mínimo",
-				"Monto a pagar"
-			],
-			"data": [
-				["<img src='/assets/images/ui/tables/prestamos.svg' alt=''>&nbsp;PRÉSTAMO 36 cuotas", "$19450,87", "$200,00", "$19450,87"],
-				["<img src='/assets/images/ui/tables/seguros.svg' alt=''>&nbsp;SEGURO DE HOGAR", "$19450,87", "$3200,00", "<div class='input-wrapper text'><input id='' type='text' class='input-elem' placeholder='$2308,50' required=''></div>"],
-				["<img src='/assets/images/ui/tables/tc.svg' alt=''>&nbsp;TC VISA 5400", "$19450,87", "$1908,00", "$19450,87"],
-				["<img src='/assets/images/ui/tables/refinanciacion.svg' alt=''>&nbsp;TC MASTER 2431", "$14350,87", "$2308,50", "<div class='input-wrapper text error'><input id='' type='text' class='input-elem' value='$2308,50' required=''></div>"]
-			]
-} %}
 
-<section class="page-promises promises_1">
+<section class="page-billings">
 	{{ header({
 		progress: 30,
 		link: {
@@ -43,6 +26,7 @@
 		}) }}
 		</div>
 	</div>
+
 	<div class="restrict-width large">
 		<div class="flex-col">
 			<div class="warning-box">
@@ -53,7 +37,7 @@
 			</div>
 		</div>
 		<div class="flex-row col-container">
-			<div class="col-1-4 box">
+			<div class="col-1-4 box full-width-mobile">
 				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Acuerdo verbal</div>
 				<div>
 				</div>
@@ -69,9 +53,9 @@
 				<div><strong>Cuota promedio</strong></div>
 				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
 				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
-				<a href="#">Ver detalle del plan y cuotas</a>
+				<a href="#" data-popup="billings">Ver detalle del plan y cuotas</a>
 			</div>
-			<div class="col-1-4 box">
+			<div class="col-1-4 box full-width-mobile">
 				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Refinanciación 12 cuotas</div>
 				<div>
 				</div>
@@ -87,9 +71,9 @@
 				<div><strong>Cuota promedio</strong></div>
 				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
 				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
-				<a href="#">Ver detalle del plan y cuotas</a>
+				<a href="#" data-popup="billings">Ver detalle del plan y cuotas</a>
 			</div>
-			<div class="col-1-4 box">
+			<div class="col-1-4 box full-width-mobile">
 				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Refinanciación 12 cuotas</div>
 				<div>
 				</div>
@@ -105,9 +89,9 @@
 				<div><strong>Cuota promedio</strong></div>
 				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
 				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
-				<a href="#">Ver detalle del plan y cuotas</a>
+				<a href="#" data-popup="billings">Ver detalle del plan y cuotas</a>
 			</div>
-			<div class="col-1-4 box">
+			<div class="col-1-4 box full-width-mobile">
 				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Refinanciación 12 cuotas</div>
 				<div>
 				</div>
@@ -123,11 +107,11 @@
 				<div><strong>Cuota promedio</strong></div>
 				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
 				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
-				<a href="#">Ver detalle del plan y cuotas</a>
+				<a href="#" data-popup="billings">Ver detalle del plan y cuotas</a>
 			</div>
 		</div>
 		<div class="flex-row col-container">
-			<div class="col-1-4 box">
+			<div class="col-1-4 box full-width-mobile">
 				<div><img src="/assets/images/ui/tables/prestamos.svg" alt="">Acuerdo verbal</div>
 				<div>
 				</div>
@@ -143,8 +127,39 @@
 				<div><strong>Cuota promedio</strong></div>
 				<div>{{ price({value: "300000", class: "text-normal"})}}</div>
 				<a class="btn secondary" href="/planes_2.html">Seleccionar</a>
-				<a href="#">Ver detalle del plan y cuotas</a>
+				<a href="#" data-popup="billings">Ver detalle del plan y cuotas</a>
 			</div>
 		</div>
 	</div>
+
 </section>
+
+
+
+
+{% from "components/_dialogs.njk" import dialog %}
+
+{{ dialog({
+		"id": "billing-dialog-0",
+		"class": "billing-dialog",
+		"title": "",
+		"content": "<div class='billing-title'><h3><img src='/assets/images/ui/tables/prestamos.svg' alt=''>Acuerdo verbal</h3></div><div class='table-container row-container'><table class='table' width='100%'><tr class='table-header'><td class='col-1-5 text-center'>N° Cuota</td><td class='col-1-5 text-center'>Capital</td><td class='col-1-5 text-center'>Interés</td><td class='col-1-5 text-center'>Cargos Adm.</td><td class='col-1-5 text-center'>Valor cuota</td></tr><tr><td class='col-1-5 text-center'>1</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>2</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>3</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>4</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>5</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>6</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>7</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>8</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>9</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>10</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>11</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>12</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'></td><td class='col-1-5 text-center'></td><td class='col-1-5 text-center'></td><td class='col-1-5 text-center'><strong>Total</strong></td><td class='col-1-5 text-center'><strong>$19222,00</strong></td></tr></table></div><a class='btn secondary active' href='/planes_2.html'>Seleccionar plan</a>"
+}) }}
+
+
+<script>
+	const HTML = document.querySelector('html')
+
+	document.querySelector('#billing-dialog-0 .close-btn').addEventListener('click', () => {
+		HTML.classList.remove('no-scroll')
+		document.querySelector('#billing-dialog-0').classList.remove('active')
+	})
+
+	document.querySelectorAll('[data-popup=billings]').forEach((e) => {
+		e.addEventListener('click', (e) => {
+			e.preventDefault()
+			HTML.classList.add('no-scroll')
+			document.querySelector('#billing-dialog-0').classList.add('active')
+		})
+	})
+</script>

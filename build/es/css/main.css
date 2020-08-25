@@ -1524,7 +1524,7 @@ html.no-scroll body {
   color: #8569b4;
 }
 
-.emerix-page .btn.secondary:hover, .emerix-page .btn.secondary.hover, .emerix-page .btn.secondary:active {
+.emerix-page .btn.secondary:hover, .emerix-page .btn.secondary.hover, .emerix-page .btn.secondary:active, .emerix-page .btn.secondary.active {
   border: 1px solid #A388D1;
   color: #A388D1;
 }
@@ -1704,8 +1704,8 @@ html.no-scroll body {
   position: absolute;
   padding: 1rem;
   cursor: pointer;
-  bottom: 100%;
-  right: 1rem;
+  top: 0;
+  right: 0;
   z-index: 10;
 }
 
@@ -2857,6 +2857,72 @@ html.no-scroll body {
 
 .emerix-page .page-account .icns {
   margin-right: 1rem;
+}
+
+.emerix-page .page-billings .btn {
+  text-align: center;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-billings .btn + .btn {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+.emerix-page .dialog-container.billing-dialog {
+  padding: 0;
+}
+
+.emerix-page .billing-dialog {
+  max-width: 44.5rem;
+  width: 44.5rem;
+  padding: 0;
+}
+
+.emerix-page .billing-dialog h3 {
+  font-size: 1.125rem;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .billing-dialog h3 {
+    margin-top: 0;
+  }
+}
+
+.emerix-page .billing-dialog h3 img {
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+.emerix-page .billing-dialog .btn {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.emerix-page .billing-dialog .table-container .table {
+  padding: 0 1.5rem;
+}
+
+.emerix-page .billing-dialog .table-container .table td {
+  height: 2.5rem;
+}
+
+.emerix-page .billing-dialog .table-container .table td:first-child {
+  width: 10%;
+}
+
+.emerix-page .billing-dialog .table-container .table tr {
+  padding: 0;
+}
+
+.emerix-page .billing-dialog .table-container .table tr:not(:last-child) {
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.emerix-page .billing-dialog .table-container .table .table-header {
+  display: flex;
 }
 
 .emerix-page .page-faqs .input-wrapper {
