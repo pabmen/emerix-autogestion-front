@@ -9,8 +9,6 @@
 {% set id = 'dropdown-' + random_int(10) %}
 
     <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-{{ id }}">
-    
-    
     <label class="dropdown-title {% if options.class %}{{options.class}}{% endif %}" for="dropdown-trigger-{{ id }}">
         {% if options.html %} {{ options.html | safe }} {% else %} {{ options.title }} {% endif %}
     </label>

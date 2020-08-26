@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -2859,9 +2860,45 @@ html.no-scroll body {
   margin-right: 1rem;
 }
 
+.emerix-page .page-billings h4 {
+  margin-top: 0;
+}
+
 .emerix-page .page-billings h4 img {
   vertical-align: middle;
   float: left;
+  margin-right: .5rem;
+}
+
+.emerix-page .page-billings .card-dropdown-container {
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+}
+
+.emerix-page .page-billings .card-dropdown {
+  background-color: #F7F7F7;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.emerix-page .page-billings .dropdown-title::after {
+  top: .4rem;
+  right: .4rem;
+}
+
+.emerix-page .page-billings .card-dropdown-target {
+  background-color: #F7F7F7;
+  border-radius: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-bottom: .5rem;
+}
+
+.emerix-page .page-billings .card-dropdown-target li:before {
+  content: '•';
+  display: inline-block;
+  margin-left: .5rem;
   margin-right: .5rem;
 }
 
