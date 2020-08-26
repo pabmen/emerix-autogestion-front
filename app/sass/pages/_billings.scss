@@ -46,7 +46,7 @@
 	.data-field {
 		margin-bottom: 1rem;
 
-		div {
+		> div {
 			margin: .5rem 0;
 		}
 	}
@@ -80,6 +80,71 @@
 		.btn + .btn {
 			margin-left: 0;
 			margin-top: 1rem;
+		}
+
+		h4 {
+			color: $black;
+			font-size: 1rem;
+
+			img {
+				width: 2rem;
+				float: none;
+			}
+		}
+
+		.data-field {
+			display: flex;
+			flex-direction: row;
+			margin-bottom: 0;
+
+			div {
+				width: 50%;
+
+				& + div {
+					position: relative;
+
+					> div {
+						position: absolute;
+						top: 0;
+						right: 0;
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		.card-dropdown {
+			pointer-events: none;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		.card-dropdown-container {
+			margin-left: 0;
+			margin-right: 0;
+		}
+
+		.dropdown-target {
+			max-height: none;
+		}
+
+		.card-global-wrapper {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 3.5rem;
+
+			&:after {
+				top: 1rem;
+				right: 1rem;
+			}
+
+		}
+
+		input:not(:checked) + .card-global-wrapper + .dropdown-target {
+			max-height: 2rem;
 		}
 	}
 }

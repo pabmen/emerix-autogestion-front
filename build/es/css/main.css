@@ -2906,7 +2906,7 @@ html.no-scroll body {
   margin-bottom: 1rem;
 }
 
-.emerix-page .page-billings .data-field div {
+.emerix-page .page-billings .data-field > div {
   margin: .5rem 0;
 }
 
@@ -2939,6 +2939,57 @@ html.no-scroll body {
   .emerix-page .page-billings .btn + .btn {
     margin-left: 0;
     margin-top: 1rem;
+  }
+  .emerix-page .page-billings h4 {
+    color: #3C3C3B;
+    font-size: 1rem;
+  }
+  .emerix-page .page-billings h4 img {
+    width: 2rem;
+    float: none;
+  }
+  .emerix-page .page-billings .data-field {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+  .emerix-page .page-billings .data-field div {
+    width: 50%;
+  }
+  .emerix-page .page-billings .data-field div + div {
+    position: relative;
+  }
+  .emerix-page .page-billings .data-field div + div > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+  }
+  .emerix-page .page-billings .card-dropdown {
+    pointer-events: none;
+  }
+  .emerix-page .page-billings .card-dropdown:after {
+    display: none;
+  }
+  .emerix-page .page-billings .card-dropdown-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .emerix-page .page-billings .dropdown-target {
+    max-height: none;
+  }
+  .emerix-page .page-billings .card-global-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3.5rem;
+  }
+  .emerix-page .page-billings .card-global-wrapper:after {
+    top: 1rem;
+    right: 1rem;
+  }
+  .emerix-page .page-billings input:not(:checked) + .card-global-wrapper + .dropdown-target {
+    max-height: 2rem;
   }
 }
 
