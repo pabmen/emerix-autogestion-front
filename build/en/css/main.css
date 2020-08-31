@@ -3451,6 +3451,12 @@ html.no-scroll body {
   align-self: flex-start;
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .page-home .promises-table .table.selectable .align-start .align-self-start {
+    margin-top: 12px;
+  }
+}
+
 .emerix-page .page-home .promises-table .table.selectable label {
   margin-top: 12px;
 }

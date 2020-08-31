@@ -101,8 +101,12 @@
 					margin-top: 12px;
 					margin-bottom: 12px;
 				}
-
+				
 				.align-self-start {
+					@media all and (max-width: $tabletWidth) {
+						margin-top: 12px;
+					}
+
 					align-self: flex-start;
 				}
 			}
