@@ -2,6 +2,7 @@
 {% from "../structure/_title.njk" import title %}
 {% from "../components/_tables.njk" import table %}
 {% from "../components/_dialogs.njk" import dialog %}
+{% from "../components/_dropdown.njk" import dropdown %}
 
 {% set page = {
 			"sidebar": {
@@ -42,11 +43,11 @@
 			},
 			"promesas": {
 				"class": "selectable",
-				"colsClasses": ["", "text-right"],
-				"rowsClasses": ["", "", "disabled"],
+				"colsClasses": ["", "text-right align-self-start"],
+				"rowsClasses": ["", "align-start", "disabled"],
 				"data": [
 					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Abr</span><span class='number'>12</span></div><div class='item-label'>$17,900</div></div>", "<a href='/pagar.html'><button class='btn'>Pagar</button></a>"],
-					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Dic</span><span class='number'>31</span></div><div class='item-label'>$37,670</div></div>", "<a href='/pagar.html'><button class='btn'>Pagar</button></a>"],
+					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Dic</span><span class='number'>31</span></div><div class='flex-column'><input aria-hidden='true' type='checkbox' class='dropdown-trigger' id='dropdown-trigger-dropdown-3509838989'><label class='dropdown-title card-dropdown' for='dropdown-trigger-dropdown-3509838989'><div class='item-label'>$37,670</div></label><div class='dropdown-target'><ul class='card-dropdown-target'><li class='flex-row margin-bottom-on-mobile'>TC VISA 5400</li><li class='flex-row margin-bottom-on-mobile'>PRESTAMO 36 CUOTAS</li></ul></div></div></div>", "<a href='/pagar.html'><button class='btn'>Pagar</button></a>"],
 					["<div class='flex-row flex-center'><div class='date-box'><span class='month'>Jul</span><span class='number'>05</span></div><div class='item-label'>$12,500</div></div>", "<div class='status-label'><span class='bullet red'></span>VENCIDA</div>"]
 				],
 				"view": "Ver todas las promesas"

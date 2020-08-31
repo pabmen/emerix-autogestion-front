@@ -94,6 +94,42 @@
 			}
 		}
 
+		.table.selectable {
+			.align-start {
+				.flex-center {
+					align-items: flex-start;
+					margin-top: 12px;
+					margin-bottom: 12px;
+				}
+
+				.align-self-start {
+					align-self: flex-start;
+				}
+			}
+
+			label {
+				margin-top: 12px;
+			}
+
+			.dropdown-target {
+				font-size: 12px;
+				font-weight: normal;
+				padding-top: 2rem;
+
+				@media all and (max-width: $tabletWidth) {
+					padding-top: 1rem;
+				}
+
+				li {
+					padding: .5rem 0;
+					@media all and (max-width: $tabletWidth) {
+						padding: .25rem 0;
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
 		tr {
 			td {
 				display: flex;
