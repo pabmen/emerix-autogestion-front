@@ -88,8 +88,8 @@
         <div class="notifications-menu">
             
 
-    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-2852191199">
-    <label class="dropdown-title item" for="dropdown-trigger-dropdown-2852191199">
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-0576881443">
+    <label class="dropdown-title item" for="dropdown-trigger-dropdown-0576881443">
          <img src="/assets/images/ui/topbar/notificaciones.svg" alt=""><div class="notifications-alert"></div> 
     </label>
     <div class="dropdown-target">
@@ -244,86 +244,45 @@
 					</div>
 					<div class="pages-container flex-grow">
 						
-    
-
-
-
-
-
-
-
-
-<div class="overlay" id="home-sidebar">
-    <div class="dialog-container sidebar" role="dialog">
-        <a class="close-btn">
-            <img src="/assets/images/ui/close-btn.svg" alt="Close">
-        </a>
-        <div class="dialog-content sidebar-content">
-            
-            <div><div class="flex-column"><h2>Detalle de producto</h2><h4>Tipo de producto</h4><p>TC VISA XXXX XXXX XXXX 1234</p><h4>Deuda</h4><p>$1200</p><h4>Última fecha de pago</h4><p>03/12/96</p><h4>Nº Comprobante</h4><p>34324324443-9</p><h4>Sucursal</h4><p>504 - La Plata</p><button class="btn secondary hover"><img src="/assets/images/ui/buttons/download.svg" alt=""> Libre deuda</button></div></div>
-        </div>
-    </div>
-</div>
-
-
-<section class="page-home">
-
 	
+
+
+
+
+
+
+
+
+
+
+<section class="page-billings">
+	
+	
+	<div class="page-progress">
+		<div class="progress progress-10"></div>
+	</div>
 	
 	<div class="flex-column page-header">
 		
-			<p class="top-decoration">Inicio</p>
+			<a class="top-decoration" href="/cuotas.html">Pagar en cuotas</a>
 		
 	</div>
 
+
 	<div class="restrict-width large">
-		<div>
-			
-	<div class="title large">
-		<h1 class="page-title">Hola Nicolas,</h1>
-		<p class="page-subtitle">¡Es un gusto verte por acá! Queremos ayudarte a alivianar tus deudas ;)</p>
+		<div class="col-2-3 full-width-mobile">
+		
+	<div class="title">
+		<h1 class="page-title">Creá un plan de pago</h1>
+		<p class="page-subtitle"><span></span><strong>Seleccioná los productos</strong> que queres incluir en tu nuevo plan.</p>
 	</div>
 
 		</div>
+	</div>
+	<div class="restrict-width large flex-row col-container">
+		
+		<div class="box col-2-3 desktop-only">
 			
-		<div class="flex-row justify-center col-container">
-			<div class="flex-column col-2-3">
-				<div class="box flex-row relative">
-					<div class="flex-grow debt-container">
-						<p class="first-row">Tu deuda actual es:</p>
-						<p class="text-nowrap"><span class="text-xlarge">$</span> <span class="text-xxlarge">199590</span> <sup class="text-large">57</sup></p>
-						<a href="/pagar.html" class="btn">¡Pagar ahora!</a>
-					</div>
-					<div class="home-illus-container desktop-only">
-						<img class="home-illus" alt="" src="/assets/images/sections/home/ilustracion.svg">
-					</div>
-				</div>
-				<div class="mobile-only">
-					<ul class="flex-row mobile-btns">
-						<li class="col-1-3 text-center">
-							<a href="/avisar.html">
-								<img src="/assets/images/sections/home/01.svg" alt="">
-								Avisar que pagué
-							</a>
-						</li>
-						<li class="col-1-3 text-center">
-							<a href="/prometer.html">
-								<img src="/assets/images/sections/home/02.svg" alt="">
-								Prometer una fecha
-							</a>
-						</li>
-						<li class="col-1-3 text-center">
-							<a href="/pagar.html">
-								<img src="/assets/images/sections/home/03.svg" alt="">
-								Pagar en cuotas
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="">
-					<h2>Tus productos</h2>
-					<div id="products-table" class="flex-row box">
-						
 	<div class="table-container">
 		<table class="table selectable" width="100%" border="0">
 			
@@ -331,28 +290,30 @@
 					
 					<td class="col-3-6">
 						
-							Producto
+						
+
+							&nbsp;&nbsp;&nbsp;&nbsp;Producto
 						
 						
 					</td>
 					
 					<td class="col-1-6 text-center desktop-only">
 						
-							Vencimiento
+							Monto adeudo
 						
 						
 					</td>
 					
 					<td class="col-1-4 text-center desktop-only">
 						
-							Atraso
+							Pago mínimo
 						
 						
 					</td>
 					
 					<td class="col-2-6 text-right">
 						
-							Monto adeudado
+							Monto a pagar
 						
 						
 					</td>
@@ -366,15 +327,31 @@
 					<td class="col-3-6">
 						
 							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/prestamos.svg" alt="">&nbsp;PRÉSTAMO 36 cuotas
-							
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="undefinedtable-select-1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="undefinedtable-select-1"><img src="/assets/images/ui/tables/prestamos.svg" alt="">&nbsp;PRÉSTAMO 36 cuotas</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
 						
 					</td>
 					
 					<td class="col-1-6 text-center desktop-only">
 						
 							
-								01/10/20
+								$19450,87
 							
 						
 					</td>
@@ -382,7 +359,7 @@
 					<td class="col-1-4 text-center desktop-only">
 						
 							
-								1 día
+								$200,00
 							
 						
 					</td>
@@ -403,15 +380,31 @@
 					<td class="col-3-6">
 						
 							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/seguros.svg" alt="">&nbsp;PRÉSTAMO 12 cuotas
-							
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="undefinedtable-select-2" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="undefinedtable-select-2"><img src="/assets/images/ui/tables/seguros.svg" alt="">&nbsp;SEGURO DE HOGAR</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
 						
 					</td>
 					
 					<td class="col-1-6 text-center desktop-only">
 						
 							
-								12/10/20
+								$19450,87
 							
 						
 					</td>
@@ -419,7 +412,60 @@
 					<td class="col-1-4 text-center desktop-only">
 						
 							
-								0
+								$3200,00
+							
+						
+					</td>
+					
+					<td class="col-2-6 text-right">
+						
+							
+								$2930,98
+							
+						
+					</td>
+					
+				</tr>
+			
+				
+				<tr>
+					
+					<td class="col-3-6">
+						
+							
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="undefinedtable-select-3" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="undefinedtable-select-3"><img src="/assets/images/ui/tables/tc.svg" alt="">&nbsp;TC VISA 5400</label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+						
+					</td>
+					
+					<td class="col-1-6 text-center desktop-only">
+						
+							
+								$19450,87
+							
+						
+					</td>
+					
+					<td class="col-1-4 text-center desktop-only">
+						
+							
+								$1908,00
 							
 						
 					</td>
@@ -440,89 +486,31 @@
 					<td class="col-3-6">
 						
 							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/tc.svg" alt="">&nbsp;TC VISA 5400
-							
-						
-					</td>
-					
-					<td class="col-1-6 text-center desktop-only">
-						
-							
-								08/10/20
-							
-						
-					</td>
-					
-					<td class="col-1-4 text-center desktop-only">
-						
-							
-								2 días
-							
-						
-					</td>
-					
-					<td class="col-2-6 text-right">
-						
-							
-								$19450,87
-							
-						
-					</td>
-					
-				</tr>
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="undefinedtable-select-4" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
 			
-				
-				<tr>
-					
-					<td class="col-3-6">
-						
-							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/tc.svg" alt="">&nbsp;TC MASTER 2431
-							
-						
-					</td>
-					
-					<td class="col-1-6 text-center desktop-only">
-						
-							
-								08/10/20
-							
-						
-					</td>
-					
-					<td class="col-1-4 text-center desktop-only">
-						
-							
-								4 días
-							
-						
-					</td>
-					
-					<td class="col-2-6 text-right">
-						
-							
-								$19450,87
-							
-						
-					</td>
-					
-				</tr>
+				<label for="undefinedtable-select-4"><img src="/assets/images/ui/tables/refinanciacion.svg" alt="">&nbsp;TC MASTER 2431</label>
 			
-				
-				<tr>
-					
-					<td class="col-3-6">
-						
-							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/refinanciacion.svg" alt="">&nbsp;TC MASTER 2431
-							
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
 						
 					</td>
 					
 					<td class="col-1-6 text-center desktop-only">
 						
 							
-								08/10/206
+								$14350,87
 							
 						
 					</td>
@@ -530,7 +518,7 @@
 					<td class="col-1-4 text-center desktop-only">
 						
 							
-								20 días
+								$2308,50
 							
 						
 					</td>
@@ -538,7 +526,7 @@
 					<td class="col-2-6 text-right">
 						
 							
-								$19450,87
+								$54254,92
 							
 						
 					</td>
@@ -552,224 +540,210 @@
 
 	
 
+		</div>
+		<div class="mobile-only">
+			
+
+<div class="selectable-box flex-column special-mobile-selectable-box" id="box-6069292187">
+	
+				<div class="box">
+					
+	<div class="table-container">
+		<table class="table" width="100%" border="0">
+			
+			
+				
+				<tr>
+					
+					<td style="width: 100%">
+						
+							
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="tbl1table-select-1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="tbl1table-select-1"><img style="vertical-align: middle" src="/assets/images/ui/tables/prestamos.svg" alt="">&nbsp;<strong>PRÉSTAMO 36 cuotas</strong></label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+						
+					</td>
+					
+				</tr>
+			
+
+		</table>
+	</div>
+
+
+	
+
+					<div>
+						<div class="dropdown-card">
+						
+
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-1262155799">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-1262155799">
+          
+    </label>
+    <div class="dropdown-target">
+        
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						
+    </div>
+
+						</div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2"><strong>Monto a pagar</strong></div>
+								<div class="col-1-2 text-right"><div class="input-wrapper text"><input id="" type="text" class="input-elem" value="$2308,50" required=""></div></div>
+							</li>
+
+
+						</ul>
 					</div>
+				</div>
+				<div class="box">
+					
+	<div class="table-container">
+		<table class="table" width="100%" border="0">
+			
+			
+				
+				<tr>
+					
+					<td style="width: 100%">
+						
+							
+
+	
+
+
+	<div class="input-wrapper checkbox">
+		<input id="tbl2table-select-1" type="checkbox" class="input-elem visually-hidden" required>
+		
+			<div class="input-fake-checkbox">
+				<span class="input-caret"></span>
+			</div>
+			
+				<label for="tbl2table-select-1"><img style="vertical-align: middle" src="/assets/images/ui/tables/prestamos.svg" alt="">&nbsp;<strong>PRÉSTAMO 36 cuotas</strong></label>
+			
+		
+		<div class="input-error-icon" role="alert"></div>
+		<div class="input-error-popup" role="alert">Required</div>
+	</div>
+
+						
+					</td>
+					
+				</tr>
+			
+
+		</table>
+	</div>
+
+
+	
+
+					<div>
+						<div class="dropdown-card">
+						
+
+    <input aria-hidden="true" type="checkbox" class="dropdown-trigger" id="dropdown-trigger-dropdown-2106414246">
+    <label class="dropdown-title" for="dropdown-trigger-dropdown-2106414246">
+          
+    </label>
+    <div class="dropdown-target">
+        
+							<ul>
+								<li class="flex-row">
+									<div class="col-1-2">Monto adeudo</div>
+									<div class="col-1-2 text-right">$2308,50</div>	
+								</li>
+								<li class="flex-row">
+									<div class="col-1-2">Pago mínimo</div>
+									<div class="col-1-2 text-right">$3200</div>
+								</li>
+							</ul>
+
+						
+    </div>
+
+						</div>
+						<ul>
+							<li class="flex-row">
+								<div class="col-1-2"><strong>Monto a pagar</strong></div>
+								<div class="col-1-2 text-right"><div class="input-wrapper text error"><input id="" type="text" class="input-elem" value="$2308,50" required=""></div></div>
+							</li>
+
+
+						</ul>
+					</div>
+				</div>
+        	
+</div>
+<script>
+	;(() => {
+		const container = document.querySelector('#box-6069292187')
+		const boxes = container.querySelectorAll('.box')
+
+		boxes.forEach((box, i) => {
+			if (i === 0) {
+				box.classList.add('active')
+			}
+			box.addEventListener('click', () => {
+				boxes.forEach((box) => {
+					box.classList.remove('active')
+				})
+				box.classList.add('active')
+			})
+		})
+	})();
+</script>
+
+		</div>
+		<div class="flex-column col-1-3 full-width-mobile">
+			<div class="flex-column row-container">
+				<div class="box flex-row justify-between">
+					<span class="text-uppercase">monto final</span>
+					<br>
+					<span><strong>$0,00</strong></span>
 				</div>
 			</div>
-			<div class="flex-column col-1-3">
-				<div class="box prom-text relative">
-					<p>Diseñamos un plan de pago especialmente para vos ;)</p>
-					<div class="text-right">
-						<button class="btn secondary">Ver plan</button>
-					</div>
-				</div>
-				<div>
-					<h2>Promesas de pago</h2>
-					<div class="box promises-table">
-						
-	<div class="table-container">
-		<table class="table selectable" width="100%" border="0">
-			
-			
-				
-				<tr class="">
-					
-					<td class="">
-						
-							
-								<div class="flex-row flex-center"><div class="date-box"><span class="month">Abr</span><span class="number">12</span></div><div class="item-label">$17,900</div></div>
-							
-						
-					</td>
-					
-					<td class="text-right">
-						
-							
-								<a href="/pagar.html"><button class="btn">Pagar</button></a>
-							
-						
-					</td>
-					
-				</tr>
-			
-				
-				<tr class="">
-					
-					<td class="">
-						
-							
-								<div class="flex-row flex-center"><div class="date-box"><span class="month">Dic</span><span class="number">31</span></div><div class="item-label">$37,670</div></div>
-							
-						
-					</td>
-					
-					<td class="text-right">
-						
-							
-								<a href="/pagar.html"><button class="btn">Pagar</button></a>
-							
-						
-					</td>
-					
-				</tr>
-			
-				
-				<tr class="disabled">
-					
-					<td class="">
-						
-							
-								<div class="flex-row flex-center"><div class="date-box"><span class="month">Jul</span><span class="number">05</span></div><div class="item-label">$12,500</div></div>
-							
-						
-					</td>
-					
-					<td class="text-right">
-						
-							
-								<div class="status-label"><span class="bullet red"></span>VENCIDA</div>
-							
-						
-					</td>
-					
-				</tr>
-			
-
-		</table>
-	</div>
-
-
-	
-
-						<hr>
-						<div class="wide-link">
-							<a href="/prometer.html">Generar una promesa</a>
-						</div>
-					</div>
-				</div>
-				<div class="">
-					<h2>Planes de pago</h2>
-					<div class="box">
-						
-	<div class="table-container">
-		<table class="table selectable" width="100%" border="0">
-			
-			
-				
-				<tr class="">
-					
-					<td class="col-3-5">
-						
-							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/refinanciacion.svg" alt="">&nbsp;<div class="flex-column text-small text-uppercase"><div class="text-semi">TC VISA 5400</div><div>Refinanciación 12</div></div>
-							
-						
-					</td>
-					
-					<td class="col-2-5 text-right">
-						
-							
-								<div class="status-label"><span class="bullet yellow"></span>EN ESPERA</div>
-							
-						
-					</td>
-					
-				</tr>
-			
-				
-				<tr class="">
-					
-					<td class="col-3-5">
-						
-							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/refinanciacion.svg" alt="">&nbsp;<div class="flex-column text-small text-uppercase"><div class="text-semi">Préstamo personal</div><div>Acuerdo verbal</div></div>
-							
-						
-					</td>
-					
-					<td class="col-2-5 text-right">
-						
-							
-								<div class="status-label"><span class="bullet yellow"></span>EN ESPERA</div>
-							
-						
-					</td>
-					
-				</tr>
-			
-				
-				<tr class="disabled">
-					
-					<td class="col-3-5">
-						
-							
-								<img style="float: left; vertical-align: middle" src="/assets/images/ui/tables/refinanciacion.svg" alt="">&nbsp;<div class="flex-column text-small text-uppercase"><div class="text-semi">TC MASTER 2431</div><div>Plan 12 cuotas</div></div>
-							
-						
-					</td>
-					
-					<td class="col-2-5 text-right">
-						
-							
-								<div class="status-label"><span class="bullet green"></span>APROBADO</div>
-							
-						
-					</td>
-					
-				</tr>
-			
-
-		</table>
-	</div>
-
-
-	
-
-						<hr>
-						<div class="wide-link">
-							<a href="/pagar.html">Generar un plan</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="">
-					<h2>Promesas de pago</h2>
-					<div class="box">
-						<div class="text-center">
-							<img src="/assets/images/sections/home/promesas.svg" alt="">
-							<p>¡Aún no hay promesas por aquí!</p>
-						</div>
-						<hr>
-						<div class="wide-link">
-							<a href="/pagar.html">Generar una promesa</a>
-						</div>
-					</div>
-				</div>
+			<div>
+				<a href="/planes_1.html" class="btn">Elegir plan</a>
 			</div>
 		</div>
 	</div>
 </section>
-
-<script>
-	const overlay = document.querySelector('#home-sidebar')
-
-	document.querySelectorAll('#products-table tr').forEach((tr) => {
-		tr.addEventListener('click', () => {
-			overlay.classList.add('active')
-		})
-	})
-
-	overlay.querySelector('.close-btn').addEventListener('click', () => {
-		overlay.classList.remove('active')
-	})
-
-</script>
 
 					</div>
 				</div>
 			</div>
 
 			<script>
-				document.querySelectorAll('.main-navigation .navigation-item')[0].classList.add('active')
+				document.querySelectorAll('.main-navigation .navigation-item')[5].classList.add('active')
 			</script>
 		</body>
 	</html>
+
