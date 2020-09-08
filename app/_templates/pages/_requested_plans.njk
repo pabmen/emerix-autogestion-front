@@ -1,0 +1,64 @@
+{% from "../components/_forms.njk" import select %}
+{% from "../components/_tables.njk" import table %}
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_title.njk" import title %}
+
+{% set logs = {
+		"class": "selectable plans-table",
+		"colsClasses": ["flex-column full-width"],
+		"header": [
+			"Acuerdo",
+			"Estado",
+			"Venc. Anticipo",
+			"Monto anticipo",
+			"Cuotas"
+		],
+		"data": [
+			["<div class='table-data flex-row full-width'><div class='col-3-6'>Acuerdo verbal</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet green'></span></div>Implementado</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"],
+			["<div class='table-data flex-row full-width'><div class='col-3-6'>Refinanciación 12 cuotas</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet red'></span></div>Vencido</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"],
+			["<div class='table-data flex-row full-width'><div class='col-3-6'>Acuerdo verbal</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet yellow'></span></div>Firma Requerida</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"],
+			["<div class='table-data flex-row full-width'><div class='col-3-6'>Acuerdo verbal</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet green'></span></div>Implementado</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"]
+		],
+		"expanded_data": [
+			["<div class='overview flex-column full-width'><div class='flex-row full-width flex-column-on-mobile'><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda total</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda al generar el acuerdo</strong></li><li class='col-1-2 text-right-mobile'>$2306,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda a refinanciar</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Quita</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul></div><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='full-width'><strong class='text-violet'>Productos incluidos</strong></li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC VISA 5400</li><li class='col-1-2 text-right'>$19450,87</li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC MASTER 2200</li><li class='col-1-2 text-right'>$44434,55</li></ul></div></div><div class='flex-row full-width flex-end last-row'><div><a href='#' class='text-violet trigger-popup'>Ver detalle del plan y cuotas</a></div><div><button class='btn secondary active'>firmar acuerdo</button></div></div></div>"],
+			["<div class='overview flex-column full-width'><div class='flex-row full-width flex-column-on-mobile'><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda total</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda al generar el acuerdo</strong></li><li class='col-1-2 text-right-mobile'>$2306,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda a refinanciar</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Quita</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul></div><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='full-width'><strong class='text-violet'>Productos incluidos</strong></li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC VISA 5400</li><li class='col-1-2 text-right'>$19450,87</li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC MASTER 2200</li><li class='col-1-2 text-right'>$44434,55</li></ul></div></div><div class='flex-row full-width flex-end last-row'><div><a href='#' class='text-violet trigger-popup'>Ver detalle del plan y cuotas</a></div><div><button class='btn secondary active'>firmar acuerdo</button></div></div></div>"],
+			["<div class='overview flex-column full-width'><div class='flex-row full-width flex-column-on-mobile'><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda total</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda al generar el acuerdo</strong></li><li class='col-1-2 text-right-mobile'>$2306,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda a refinanciar</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Quita</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul></div><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='full-width'><strong class='text-violet'>Productos incluidos</strong></li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC VISA 5400</li><li class='col-1-2 text-right'>$19450,87</li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC MASTER 2200</li><li class='col-1-2 text-right'>$44434,55</li></ul></div></div><div class='flex-row full-width flex-end last-row'><div><a href='#' class='text-violet trigger-popup'>Ver detalle del plan y cuotas</a></div><div><button class='btn secondary active'>firmar acuerdo</button></div></div></div>"],
+			["<div class='overview flex-column full-width'><div class='flex-row full-width flex-column-on-mobile'><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda total</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda al generar el acuerdo</strong></li><li class='col-1-2 text-right-mobile'>$2306,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda a refinanciar</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Quita</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul></div><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='full-width'><strong class='text-violet'>Productos incluidos</strong></li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC VISA 5400</li><li class='col-1-2 text-right'>$19450,87</li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC MASTER 2200</li><li class='col-1-2 text-right'>$44434,55</li></ul></div></div><div class='flex-row full-width flex-end last-row'><div><a href='#' class='text-violet trigger-popup'>Ver detalle del plan y cuotas</a></div><div><button class='btn secondary active'>firmar acuerdo</button></div></div></div>"]
+		]
+	}
+%}
+
+<section class="page-plans">
+	{{ header({
+		section: 'Planes pedidos'
+	}) }}
+
+	<div class="restrict-width">
+		{{ title({
+			title: 'Consultá los planes de pago que pediste',
+			subtitle: '<span></span>Podés ver el detalle de cuotas y pagar si aún están vigente.'
+		}) }}
+		<div class="site-select">
+			{{ select({
+				'id': 'requested_select',
+				'items': ['Último año', '6 meses', '1 mes']
+			}) }}
+		</div>
+
+
+		<div class="box box-table-container">
+			{{ table(logs) }}
+		</div>
+	</div>
+</section>
+
+<script>
+	const TRs = document.querySelectorAll('.plans-table tr:not(.table-header)')
+
+	TRs.forEach((tr) => {
+		tr.addEventListener('click', () => {
+			TRs.forEach((outsideTRs) => {outsideTRs.classList.remove('active')})
+			tr.classList.add('active')
+		})
+	})
+</script>

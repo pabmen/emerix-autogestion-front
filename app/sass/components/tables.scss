@@ -78,6 +78,7 @@
 				position: relative;
 
 				@media all and (min-width: $tabletWidth + 1) {
+					&.active,
 					&:hover {
 						background-color: $smoke;
 						font-weight: 500;

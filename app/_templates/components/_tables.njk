@@ -43,6 +43,10 @@
 								{{ column | safe }}
 							{% endif %}
 						{% endif %}
+
+						{% if content.expanded_data %}
+							{{ content.expanded_data[loop.index - 1] }}
+						{% endif %}
 					</td>
 					{% endfor %}
 				</tr>
@@ -50,31 +54,4 @@
 
 		</table>
 	</div>
-
-
-	{#<div class="mobile-only flex-column flex-grow table-container">
-		{% for row in content.data %}
-		{% set outeridx = loop %}
-		<table class="box table flex-row {{content.class}}">
-			{% for column in row %}
-				<tr {% if loop.first %} class="table-header"{% endif %}>
-					<td>
-						{% if loop.first and options.specialType == 'checkbox' %}
-						{{ input({
-							'type': 'checkbox',
-							'id': options.idPrepend + 'table-select-m' + outeridx.index,
-							'label': column
-						}) }}
-						{% else %}
-							{% if loop.first == false %}
-								<p><strong>{{ content.header[(loop.index - 1)] }}</strong></p>
-							{% endif %}
-							<p>{{ column }}</p>
-						{% endif %}
-					</td>
-				</tr>
-			{% endfor %}
-		</table>
-		{% endfor %}
-	</div>}#}
 {% endmacro %}

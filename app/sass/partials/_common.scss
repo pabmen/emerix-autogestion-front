@@ -77,6 +77,12 @@ svg {
 	text-align: right;
 }
 
+@media all and (max-width: $tabletWidth) {
+	.text-right-mobile {
+		text-align: right;
+	}
+}
+
 .text-center {
 	text-align: center;
 }
@@ -130,6 +136,10 @@ svg {
 
 .flex-column.flex-end {
 	align-items: flex-end;
+}
+
+.no-wrap {
+	white-space: nowrap;
 }
 
 .hidden {
