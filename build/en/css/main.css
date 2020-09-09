@@ -2320,6 +2320,7 @@ html.no-scroll body {
   .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled).active, .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover {
     background-color: #fbfbfb;
     font-weight: 500;
+    cursor: pointer;
   }
   .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled).active .item-label, .emerix-page .table-container .table.selectable tr:not(.table-header):not(.disabled):hover .item-label {
     font-weight: 500;
@@ -3853,6 +3854,81 @@ html.no-scroll body {
   align-items: center;
 }
 
+.emerix-page .page-plans .plans-table .table-data > div:nth-child(1) {
+  width: 30%;
+}
+
+.emerix-page .page-plans .plans-table .table-data > div:nth-child(2) {
+  width: 26%;
+}
+
+.emerix-page .page-plans .plans-table .table-data > div:nth-child(3) {
+  width: 18%;
+  text-align: center;
+}
+
+.emerix-page .page-plans .plans-table .table-data > div:nth-child(4) {
+  width: 18%;
+  text-align: right;
+}
+
+.emerix-page .page-plans .plans-table .table-data > div:nth-child(5) {
+  width: 8%;
+}
+
+.emerix-page .page-plans .plans-table td:nth-child(1) {
+  width: 22%;
+}
+
+.emerix-page .page-plans .plans-table td:nth-child(2) {
+  width: 20%;
+}
+
+.emerix-page .page-plans .plans-table td:nth-child(3) {
+  width: 10%;
+}
+
+.emerix-page .page-plans .plans-table td:nth-child(4) {
+  width: 10%;
+}
+
+.emerix-page .page-plans .plans-table td:nth-child(5) {
+  width: 1%;
+}
+
+.emerix-page .page-plans .plans-table .table-header td {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.emerix-page .page-plans .plans-table .table-header td:nth-child(1) {
+  width: 22%;
+}
+
+.emerix-page .page-plans .plans-table .table-header td:nth-child(2) {
+  width: 20%;
+}
+
+.emerix-page .page-plans .plans-table .table-header td:nth-child(3) {
+  width: 10%;
+  align-items: center;
+}
+
+.emerix-page .page-plans .plans-table .table-header td:nth-child(4) {
+  width: 10%;
+  align-items: flex-end;
+}
+
+.emerix-page .page-plans .plans-table .table-header td:nth-child(5) {
+  width: 1%;
+  align-items: flex-end;
+}
+
+.emerix-page .page-plans .plans-table :not(.table-header) td {
+  flex-direction: column;
+  width: 100%;
+}
+
 .emerix-page .page-plans .site-select {
   width: 100%;
   display: flex;
@@ -3916,6 +3992,61 @@ html.no-scroll body {
   padding: 0 1rem;
   font-weight: 500;
   letter-spacing: .5px;
+}
+
+.emerix-page .plans-dialog {
+  max-width: 44.5rem;
+  width: 44.5rem;
+  padding: 0;
+}
+
+.emerix-page .plans-dialog .plans-dialog-content {
+  padding: 0;
+}
+
+.emerix-page .plans-dialog h3 {
+  font-size: 1.125rem;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .plans-dialog h3 {
+    margin-top: 0;
+  }
+}
+
+.emerix-page .plans-dialog h3 img {
+  vertical-align: middle;
+  margin-right: .5rem;
+}
+
+.emerix-page .plans-dialog .btn {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.emerix-page .plans-dialog .table-container .table {
+  padding: 0 1.5rem;
+}
+
+.emerix-page .plans-dialog .table-container .table td {
+  height: 2.5rem;
+}
+
+.emerix-page .plans-dialog .table-container .table td:first-child {
+  width: 10%;
+}
+
+.emerix-page .plans-dialog .table-container .table tr {
+  padding: 0;
+}
+
+.emerix-page .plans-dialog .table-container .table tr:not(:last-child) {
+  border-bottom: 1px solid #c1c1c1;
+}
+
+.emerix-page .plans-dialog .table-container .table .table-header {
+  display: flex;
 }
 
 .emerix-page .page-promises .input-wrapper.huge.price {

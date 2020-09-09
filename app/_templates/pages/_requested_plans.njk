@@ -2,10 +2,11 @@
 {% from "../components/_tables.njk" import table %}
 {% from "../structure/_header.njk" import header %}
 {% from "../structure/_title.njk" import title %}
+{% from "../components/_dialogs.njk" import dialog %}
 
 {% set logs = {
 		"class": "selectable plans-table",
-		"colsClasses": ["flex-column full-width"],
+		"colsClasses": [""],
 		"header": [
 			"Acuerdo",
 			"Estado",
@@ -14,10 +15,10 @@
 			"Cuotas"
 		],
 		"data": [
-			["<div class='table-data flex-row full-width'><div class='col-3-6'>Acuerdo verbal</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet green'></span></div>Implementado</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"],
-			["<div class='table-data flex-row full-width'><div class='col-3-6'>Refinanciación 12 cuotas</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet red'></span></div>Vencido</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"],
-			["<div class='table-data flex-row full-width'><div class='col-3-6'>Acuerdo verbal</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet yellow'></span></div>Firma Requerida</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"],
-			["<div class='table-data flex-row full-width'><div class='col-3-6'>Acuerdo verbal</div><div class='col-2-6 text-left no-wrap'><div class='status-label'><span class='bullet green'></span></div>Implementado</div><div class='col-2-6 text-right'>12/10/20</div><div class='col-2-6 text-right'>$19450,87</div><div class='col-1-6 text-right'>12</div></div>"]
+			["<div class='table-data flex-row full-width'><div>Acuerdo verbal</div><div class='text-left no-wrap'><div class='status-label'><span class='bullet green'></span></div>Implementado</div><div>12/10/20</div><div>$19450,87</div><div class='text-right'>12</div></div>"],
+			["<div class='table-data flex-row full-width'><div>Refinanciación 12 cuotas</div><div class='text-left no-wrap'><div class='status-label'><span class='bullet red'></span></div>Vencido</div><div>12/10/20</div><div>$19450,87</div><div class='text-right'>12</div></div>"],
+			["<div class='table-data flex-row full-width'><div>Acuerdo verbal</div><div class='text-left no-wrap'><div class='status-label'><span class='bullet yellow'></span></div>Firma Requerida</div><div>12/10/20</div><div>$19450,87</div><div class='text-right'>12</div></div>"],
+			["<div class='table-data flex-row full-width'><div>Acuerdo verbal</div><div class='text-left no-wrap'><div class='status-label'><span class='bullet green'></span></div>Implementado</div><div>12/10/20</div><div>$19450,87</div><div class='text-right'>12</div></div>"]
 		],
 		"expanded_data": [
 			["<div class='overview flex-column full-width'><div class='flex-row full-width flex-column-on-mobile'><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda total</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda al generar el acuerdo</strong></li><li class='col-1-2 text-right-mobile'>$2306,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Deuda a refinanciar</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul><ul class='full-width flex-row'><li class='col-1-2'><strong class='text-violet'>Quita</strong></li><li class='col-1-2 text-right-mobile'>$2308,50</li></ul></div><div class='col-1-2 text-small full-width-mobile'><ul class='full-width flex-row'><li class='full-width'><strong class='text-violet'>Productos incluidos</strong></li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC VISA 5400</li><li class='col-1-2 text-right'>$19450,87</li></ul><ul class='full-width flex-row'><li class='col-1-2'>TC MASTER 2200</li><li class='col-1-2 text-right'>$44434,55</li></ul></div></div><div class='flex-row full-width flex-end last-row'><div><a href='#' class='text-violet trigger-popup'>Ver detalle del plan y cuotas</a></div><div><button class='btn secondary active'>firmar acuerdo</button></div></div></div>"],
@@ -52,13 +53,34 @@
 	</div>
 </section>
 
+{{ dialog({
+	"id": "plans-dialog",
+	"class": "plans-dialog",
+	"content": "<div class='billing-title'><h3><img src='/assets/images/ui/tables/prestamos.svg' alt=''>Acuerdo verbal</h3></div><div class='table-container row-container'><table class='table' width='100%'><tr class='table-header'><td class='col-1-5 text-center'>N° Cuota</td><td class='col-1-5 text-center'>Capital</td><td class='col-1-5 text-center'>Interés</td><td class='col-1-5 text-center'>Cargos Adm.</td><td class='col-1-5 text-center'>Valor cuota</td></tr><tr><td class='col-1-5 text-center'>1</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>2</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>3</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>4</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>5</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>6</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'>7</td><td class='col-1-5 text-center'>$14350,87</td><td class='col-1-5 text-center'>$19450,87</td><td class='col-1-5 text-center'>$200,00</td><td class='col-1-5 text-center'>$19450,87</td></tr><tr><td class='col-1-5 text-center'></td><td class='col-1-5 text-center'></td><td class='col-1-5 text-center'></td><td class='col-1-5 text-center'><strong>Total</strong></td><td class='col-1-5 text-center'><strong>$19222,00</strong></td></tr></table></div><a class='btn secondary active' href='/planes_pedidos.html'>Firmar acuerdo</a>"
+}) }}
+
+
 <script>
 	const TRs = document.querySelectorAll('.plans-table tr:not(.table-header)')
+	const popupTriggers = document.querySelectorAll('.plans-table .trigger-popup')
+	const popup = document.querySelector('#plans-dialog')
 
 	TRs.forEach((tr) => {
 		tr.addEventListener('click', () => {
 			TRs.forEach((outsideTRs) => {outsideTRs.classList.remove('active')})
 			tr.classList.add('active')
 		})
+	})
+
+	popupTriggers.forEach((trigger) => {
+		trigger.addEventListener('click', (e) => {
+			e.preventDefault()
+			popup.classList.add('active')
+		})
+	})
+
+
+	popup.querySelector('.close-btn').addEventListener('click', () => {
+		popup.classList.remove('active')
 	})
 </script>
