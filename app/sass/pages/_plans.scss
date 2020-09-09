@@ -3,24 +3,44 @@
 		.table-data {
 			> div:nth-child(1) {
 				width: 30%;
+
+				@media all and (max-width: $tabletWidth) {
+					width: 60%;
+				}
 			}
 
 			> div:nth-child(2) {
 				width: 26%;
+
+				@media all and (max-width: $tabletWidth) {
+					width: 40%;
+				}
 			}
 
 			> div:nth-child(3) {
 				width: 18%;
 				text-align: center;
+
+				@media all and (max-width: $tabletWidth) {
+					display: none;
+				}
 			}
 
 			> div:nth-child(4) {
 				width: 18%;
 				text-align: right;
+
+				@media all and (max-width: $tabletWidth) {
+					display: none;
+				}
 			}
 
 			> div:nth-child(5) {
 				width: 8%;
+
+				@media all and (max-width: $tabletWidth) {
+					display: none;
+				}
 			}
 		}
 
@@ -116,6 +136,12 @@
 			padding: 1rem 0;
 			max-height: 100vh;
 			opacity: 1;
+
+			@media all and (max-width: $mobileWidth) {
+				padding-top: 0;
+				margin-top: -.5rem;
+			}
+
 		}
 	}
 
@@ -131,6 +157,12 @@
 			margin-bottom: .5rem;
 
 			font-weight: normal;
+		}
+
+		@media all and (max-width: $tabletWidth) {
+			strong:not(.added) {
+				font-weight: normal;
+			}
 		}
 	}
 
