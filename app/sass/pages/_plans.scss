@@ -155,6 +155,66 @@
 }
 
 
+.page-plans {
+
+	.box-table-container {
+		@media all and (max-width: $tabletWidth) {
+			box-shadow: none;
+			padding: 0;
+			margin: .5rem;
+			border: 0;
+			background: transparent;
+		}
+
+		@media all and (max-width: $tabletWidth) {
+			tr {
+				background-color: $white;
+				border: 1px solid transparentize($silver, .85);
+				padding: $box-padding;
+				margin: 1rem 0;
+				border-radius: $box-radius;
+				box-shadow: .25rem .5rem 1rem transparentize($black, .9);
+				border-top-left-radius: 2px;
+				border-bottom-left-radius: 2px;
+				border-left: 4px solid $violet;
+				position: relative;
+			}
+		}
+	}
+
+	.logs-table {
+		@media all and (max-width: $tabletWidth) {
+			.col-1-4.text-right {
+				margin-right: 1rem;
+			}
+
+			.download-icn {
+				position: absolute;
+				top: 50%;
+				right: .5rem;
+				transform: translateY(-50%);
+				width: 1rem;
+			}
+		}
+
+		@media all and (min-width: $tabletWidth + 1) {
+			.download-icn {
+				display: none;
+			}
+
+			tr {
+				&:hover {
+					.download-icn {
+						display: inline;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
 .plans-dialog {
 	max-width: 44.5rem;
 	width: 44.5rem;

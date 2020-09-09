@@ -3994,6 +3994,54 @@ html.no-scroll body {
   letter-spacing: .5px;
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .page-plans .box-table-container {
+    box-shadow: none;
+    padding: 0;
+    margin: .5rem;
+    border: 0;
+    background: transparent;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-plans .box-table-container tr {
+    background-color: #fff;
+    border: 1px solid rgba(152, 152, 152, 0.15);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0.25rem 0.5rem 1rem rgba(60, 60, 59, 0.1);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-left: 4px solid #8569b4;
+    position: relative;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-plans .logs-table .col-1-4.text-right {
+    margin-right: 1rem;
+  }
+  .emerix-page .page-plans .logs-table .download-icn {
+    position: absolute;
+    top: 50%;
+    right: .5rem;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 1rem;
+  }
+}
+
+@media all and (min-width: 1025px) {
+  .emerix-page .page-plans .logs-table .download-icn {
+    display: none;
+  }
+  .emerix-page .page-plans .logs-table tr:hover .download-icn {
+    display: inline;
+  }
+}
+
 .emerix-page .plans-dialog {
   max-width: 44.5rem;
   width: 44.5rem;
