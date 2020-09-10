@@ -26,6 +26,20 @@
 		right: .4rem;
 	}
 
+	&.billings-home .dropdown-title::after {
+		top: -3rem;
+	}
+
+	&.billings-home .special-mobile-selectable-box {
+		.box {
+			padding-bottom: 0;
+		}
+
+		.dropdown-target {
+			margin-top: -1rem;
+		}
+	}
+
 	.card-dropdown-target {
 		background-color: $darksmoke;
 		border-radius: $std-radius;
@@ -77,6 +91,14 @@
 	}
 
 	@media all and (max-width: $tabletWidth) {
+		.table-container {
+			label {
+				img {
+					width: 1.5rem;
+				}
+			}
+		}
+
 		.btn + .btn {
 			margin-left: 0;
 			margin-top: 1rem;
@@ -127,7 +149,7 @@
 		}
 
 		.dropdown-target {
-			max-height: none;
+			//max-height: none;
 		}
 
 		.card-global-wrapper {

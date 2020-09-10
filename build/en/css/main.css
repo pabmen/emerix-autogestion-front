@@ -2898,6 +2898,18 @@ html.no-scroll body {
   right: .4rem;
 }
 
+.emerix-page .page-billings.billings-home .dropdown-title::after {
+  top: -3rem;
+}
+
+.emerix-page .page-billings.billings-home .special-mobile-selectable-box .box, .emerix-page .page-billings.billings-home .special-mobile-selectable-box .input-wrapper.select2.active ul, .emerix-page .input-wrapper.select2.active .page-billings.billings-home .special-mobile-selectable-box ul, .emerix-page .page-billings.billings-home .special-mobile-selectable-box .overlay .dialog-container, .emerix-page .overlay .page-billings.billings-home .special-mobile-selectable-box .dialog-container, .emerix-page .page-billings.billings-home .special-mobile-selectable-box .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-home .special-mobile-selectable-box ul {
+  padding-bottom: 0;
+}
+
+.emerix-page .page-billings.billings-home .special-mobile-selectable-box .dropdown-target {
+  margin-top: -1rem;
+}
+
 .emerix-page .page-billings .card-dropdown-target {
   background-color: #F7F7F7;
   border-radius: 4px;
@@ -2947,6 +2959,9 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
+  .emerix-page .page-billings .table-container label img {
+    width: 1.5rem;
+  }
   .emerix-page .page-billings .btn + .btn {
     margin-left: 0;
     margin-top: 1rem;
@@ -2985,9 +3000,6 @@ html.no-scroll body {
   .emerix-page .page-billings .card-dropdown-container {
     margin-left: 0;
     margin-right: 0;
-  }
-  .emerix-page .page-billings .dropdown-target {
-    max-height: none;
   }
   .emerix-page .page-billings .card-global-wrapper {
     position: absolute;
@@ -3974,6 +3986,11 @@ html.no-scroll body {
   background-color: transparent;
 }
 
+.emerix-page .page-plans .site-select .input-wrapper:not(.active) ul li:first-child:hover {
+  background-color: transparent;
+  color: #3C3C3B;
+}
+
 .emerix-page .page-plans .site-select .input-wrapper:after {
   right: .5rem;
 }
@@ -4021,6 +4038,22 @@ html.no-scroll body {
 .emerix-page .page-plans .last-row {
   margin-top: 1rem;
   align-items: center;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-plans .last-row {
+    flex-direction: column;
+  }
+  .emerix-page .page-plans .last-row div + div {
+    margin-top: 1rem;
+    width: 100%;
+  }
+  .emerix-page .page-plans .last-row div + div button.btn {
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
 }
 
 .emerix-page .page-plans .last-row a {
@@ -4085,24 +4118,37 @@ html.no-scroll body {
   }
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .overlay .plans-dialog {
+    width: calc(100vw - 2rem);
+  }
+}
+
 .emerix-page .plans-dialog {
   max-width: 44.5rem;
   width: 44.5rem;
   padding: 0;
+  max-height: calc(100% - 2rem);
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .plans-dialog {
+    width: calc(100vw - 2rem);
+  }
 }
 
 .emerix-page .plans-dialog .plans-dialog-content {
   padding: 0;
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 7rem);
+  margin-top: 1rem;
 }
 
 .emerix-page .plans-dialog h3 {
   font-size: 1.125rem;
-}
-
-@media all and (max-width: 1024px) {
-  .emerix-page .plans-dialog h3 {
-    margin-top: 0;
-  }
+  margin-top: 0;
 }
 
 .emerix-page .plans-dialog h3 img {
@@ -4120,8 +4166,20 @@ html.no-scroll body {
   padding: 0 1.5rem;
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .plans-dialog .table-container .table {
+    padding: 0 1rem;
+  }
+}
+
 .emerix-page .plans-dialog .table-container .table td {
   height: 2.5rem;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .plans-dialog .table-container .table td {
+    font-size: 10px;
+  }
 }
 
 .emerix-page .plans-dialog .table-container .table td:first-child {

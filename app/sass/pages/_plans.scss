@@ -111,9 +111,14 @@
 		.input-wrapper {
 			width: 8rem;
 			margin-right: 0rem;
-
+			
 			&:not(.active) ul {
 				background-color: transparent;
+
+				li:first-child:hover {
+					background-color: transparent;
+					color: $black
+				}
 			}
 
 			&:after {
@@ -169,6 +174,22 @@
 	.last-row {
 		margin-top: 1rem;
 		align-items: center;
+
+		@media all and (max-width: $tabletWidth) {
+			flex-direction: column;
+
+			div + div {
+				margin-top: 1rem;
+				width: 100%;
+				
+				button.btn {
+					width: 100%;
+					display: block;
+					font-size: 1rem;
+					line-height: 2rem;
+				}
+			}
+		}
 		
 		a {
 			color: $violet;
@@ -246,22 +267,37 @@
 
 }
 
+.overlay {
+	.plans-dialog {
+			@media all and (max-width: $tabletWidth) {
+				width: calc(100vw - 2rem);
+			}
+	}
+}
+
 
 .plans-dialog {
 	max-width: 44.5rem;
 	width: 44.5rem;
 	padding: 0;
+	max-height: calc(100% - 2rem);
+
+	@media all and (max-width: $tabletWidth) {
+		width: calc(100vw - 2rem);
+	}
 
 	.plans-dialog-content {
 		padding: 0;
+		overflow: hidden;
+		overflow-y: hidden;
+		overflow-y: auto;
+		max-height: calc(100vh - 7rem);
+		margin-top: 1rem;
 	}
 
 	h3 {
 		font-size: 1.125rem;
-
-		@media all and (max-width: $tabletWidth) {
-			margin-top: 0;
-		}
+		margin-top: 0;
 
 		img {
 			vertical-align: middle;
@@ -280,8 +316,16 @@
 		.table {
 			padding: 0 1.5rem;
 
+			@media all and (max-width: $tabletWidth) {
+				padding: 0 1rem;
+			}
+
 			td {
 				height: 2.5rem;
+
+				@media all and (max-width: $tabletWidth) {
+					font-size: 10px;
+				}
 
 				&:first-child {
 					width: 10%;
