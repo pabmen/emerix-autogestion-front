@@ -275,7 +275,6 @@
 	}
 }
 
-
 .plans-dialog {
 	max-width: 44.5rem;
 	width: 44.5rem;
@@ -286,13 +285,16 @@
 		width: calc(100vw - 2rem);
 	}
 
+
+
 	.plans-dialog-content {
 		padding: 0;
 		overflow: hidden;
 		overflow-y: hidden;
 		overflow-y: auto;
-		max-height: calc(100vh - 7rem);
+		max-height: calc(100vh - 10rem);
 		margin-top: 1rem;
+
 	}
 
 	h3 {
