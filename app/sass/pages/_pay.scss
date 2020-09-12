@@ -119,6 +119,18 @@
 		}
 	}
 
+	&.pay_4 {
+		@media all and (max-width: $tabletWidth) {
+			.box.col-1-2.full-width-mobile {
+				margin-bottom: 0;
+			}
+
+			.table-container .table td {
+				min-height: 32px;
+			}
+		}
+	}
+
 	&.pay_5 {
 		.selectable-box {
 			flex-wrap: wrap;

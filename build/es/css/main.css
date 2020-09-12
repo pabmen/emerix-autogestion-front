@@ -2017,8 +2017,7 @@ html.no-scroll body {
   display: block;
 }
 
-.emerix-page .main-navigation .navigation-item > .item:before {
-  content: "";
+.emerix-page .main-navigation .navigation-item > .item .nav-icon {
   display: block;
   position: absolute;
   top: 50%;
@@ -2027,9 +2026,10 @@ html.no-scroll body {
   height: 1rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background-image: var(--icon);
-  background-size: contain;
-  background-repeat: no-repeat;
+}
+
+.emerix-page .main-navigation .navigation-item > .item .nav-icon svg:not(.avoid-fill-none) {
+  fill: none;
 }
 
 .emerix-page .main-navigation .navigation-item .dropdown-title {
@@ -3762,6 +3762,15 @@ html.no-scroll body {
   }
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .page-pay.pay_4 .box.col-1-2.full-width-mobile, .emerix-page .page-pay.pay_4 .input-wrapper.select2.active ul.col-1-2.full-width-mobile, .emerix-page .input-wrapper.select2.active .page-pay.pay_4 ul.col-1-2.full-width-mobile, .emerix-page .page-pay.pay_4 .overlay .col-1-2.full-width-mobile.dialog-container, .emerix-page .overlay .page-pay.pay_4 .col-1-2.full-width-mobile.dialog-container, .emerix-page .page-pay.pay_4 .topbar .notifications-menu .dropdown-target ul.col-1-2.full-width-mobile, .emerix-page .topbar .notifications-menu .dropdown-target .page-pay.pay_4 ul.col-1-2.full-width-mobile {
+    margin-bottom: 0;
+  }
+  .emerix-page .page-pay.pay_4 .table-container .table td {
+    min-height: 32px;
+  }
+}
+
 .emerix-page .page-pay.pay_5 .selectable-box {
   flex-wrap: wrap;
 }
@@ -4065,7 +4074,7 @@ html.no-scroll body {
 
 .emerix-page .page-plans .last-row .btn {
   font-size: .85rem;
-  padding: 0 1rem;
+  padding: 0.25rem 1rem;
   font-weight: 500;
   letter-spacing: .5px;
 }

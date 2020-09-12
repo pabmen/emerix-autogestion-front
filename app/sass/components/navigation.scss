@@ -59,8 +59,8 @@
 		
 		& > .item {
 			display: block;
-			&:before {
-				content: "";
+
+			.nav-icon {
 				display: block;
 				position: absolute;
 				top: 50%;
@@ -68,9 +68,10 @@
 				width: 1rem;
 				height: 1rem;
 				transform: translateY(-50%);
-				background-image: var(--icon);
-				background-size: contain;
-				background-repeat: no-repeat;
+
+				svg:not(.avoid-fill-none) {
+					fill: none;
+				}
 			}
 		}
 
