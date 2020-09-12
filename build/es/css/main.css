@@ -2241,6 +2241,12 @@ html.no-scroll body {
   color: #3C3C3B;
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .success img {
+    max-width: 70%;
+  }
+}
+
 .emerix-page .box .table-container, .emerix-page .input-wrapper.select2.active ul .table-container, .emerix-page .overlay .dialog-container .table-container, .emerix-page .topbar .notifications-menu .dropdown-target ul .table-container {
   width: calc(100% + 3rem);
   margin-left: -1.5rem;

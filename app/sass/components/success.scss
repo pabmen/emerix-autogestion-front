@@ -14,4 +14,10 @@
             color: $black;
         }
     }
+
+    @media all and (max-width: $tabletWidth) {
+        img {
+            max-width: 70%;
+        }
+    }
 }
