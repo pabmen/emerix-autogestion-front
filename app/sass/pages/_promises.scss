@@ -5,6 +5,32 @@
 		margin-bottom: 0;
 	}
 
+	@media all and (max-width: $tabletWidth) {
+
+		label img {
+			width: 1.5rem;
+		}
+
+		.selector-icon {
+			width: 25%;
+			min-width: 3.5rem;
+			margin-right: 1rem;
+		}
+
+		.col-container+ .box {
+			margin-top: -1rem;
+		}
+
+		.col-container .box {
+			margin-bottom: 1rem;
+		}
+
+		.input-wrapper {
+			margin-bottom: 0;
+		}
+	}
+
+
 	&.promises_1 {
 		@media all and (max-width: $tabletWidth) {
 			.col-3-6 {

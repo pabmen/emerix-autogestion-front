@@ -4239,6 +4239,26 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
+  .emerix-page .page-promises label img {
+    width: 1.5rem;
+  }
+  .emerix-page .page-promises .selector-icon {
+    width: 25%;
+    min-width: 3.5rem;
+    margin-right: 1rem;
+  }
+  .emerix-page .page-promises .col-container + .box, .emerix-page .page-promises .input-wrapper.select2.active .col-container + ul, .emerix-page .input-wrapper.select2.active .page-promises .col-container + ul, .emerix-page .page-promises .overlay .col-container + .dialog-container, .emerix-page .overlay .page-promises .col-container + .dialog-container, .emerix-page .page-promises .topbar .notifications-menu .dropdown-target .col-container + ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises .col-container + ul {
+    margin-top: -1rem;
+  }
+  .emerix-page .page-promises .col-container .box, .emerix-page .page-promises .col-container .input-wrapper.select2.active ul, .emerix-page .input-wrapper.select2.active .page-promises .col-container ul, .emerix-page .page-promises .col-container .overlay .dialog-container, .emerix-page .overlay .page-promises .col-container .dialog-container, .emerix-page .page-promises .col-container .topbar .notifications-menu .dropdown-target ul, .emerix-page .topbar .notifications-menu .dropdown-target .page-promises .col-container ul {
+    margin-bottom: 1rem;
+  }
+  .emerix-page .page-promises .input-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+@media all and (max-width: 1024px) {
   .emerix-page .page-promises.promises_1 .col-3-6 {
     width: 100%;
   }
