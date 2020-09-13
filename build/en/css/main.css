@@ -1569,6 +1569,7 @@ html.no-scroll body {
 }
 
 .emerix-page .dropdown-target {
+  display: none;
   max-height: 0;
   overflow: hidden;
   transition: all 0.35s ease;
@@ -1726,6 +1727,14 @@ html.no-scroll body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  max-height: calc(100% - 2rem);
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .overlay .dialog-container {
+    border-radius: 0;
+    width: 100vw;
+  }
 }
 
 .emerix-page .col-1-6 {
@@ -3295,9 +3304,6 @@ html.no-scroll body {
   .emerix-page .page-login .login-content {
     height: calc(100% - 2rem);
   }
-  .emerix-page .overlay .dialog-container {
-    width: calc(100vw - 4rem);
-  }
   .emerix-page .overlay .login-dialog:not(.dialog-content) {
     margin: 0;
     top: 50%;
@@ -3316,7 +3322,7 @@ html.no-scroll body {
   .emerix-page .overlay .login-dialog:not(.dialog-content) h2 {
     color: #3C3C3B;
   }
-  .emerix-page .overlay .dialog-content {
+  .emerix-page .overlay .login-dialog.dialog-content {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
@@ -3460,8 +3466,27 @@ html.no-scroll body {
   }
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .page-home .products-table td {
+    min-height: 32px;
+  }
+  .emerix-page .page-home .products-table td img {
+    max-width: 1.5rem;
+  }
+}
+
 .emerix-page .page-home .promises-table a {
   text-decoration: none;
+}
+
+.emerix-page .page-home .promises-table tr {
+  position: relative;
+}
+
+.emerix-page .page-home .promises-table td.text-right {
+  position: absolute;
+  top: 0;
+  right: 1rem;
 }
 
 @media all and (min-width: 1025px) {
@@ -3474,6 +3499,8 @@ html.no-scroll body {
   align-items: flex-start;
   margin-top: 12px;
   margin-bottom: 12px;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .emerix-page .page-home .promises-table .table.selectable .align-start .align-self-start {
@@ -3488,6 +3515,13 @@ html.no-scroll body {
 
 .emerix-page .page-home .promises-table .table.selectable label {
   margin-top: 12px;
+  width: 5.5rem;
+}
+
+@media all and (max-width: 1024px) {
+  .emerix-page .page-home .promises-table .table.selectable label {
+    width: 5rem;
+  }
 }
 
 .emerix-page .page-home .promises-table .table.selectable .dropdown-target {
@@ -4133,23 +4167,10 @@ html.no-scroll body {
   }
 }
 
-@media all and (max-width: 1024px) {
-  .emerix-page .overlay .plans-dialog {
-    width: calc(100vw - 2rem);
-  }
-}
-
 .emerix-page .plans-dialog {
   max-width: 44.5rem;
   width: 44.5rem;
   padding: 0;
-  max-height: calc(100% - 2rem);
-}
-
-@media all and (max-width: 1024px) {
-  .emerix-page .plans-dialog {
-    width: calc(100vw - 2rem);
-  }
 }
 
 .emerix-page .plans-dialog .plans-dialog-content {

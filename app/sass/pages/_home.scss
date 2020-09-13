@@ -83,9 +83,31 @@
 		}
 	}
 
+	.products-table {
+		@media all and (max-width: $tabletWidth) {
+			td {
+				min-height: 32px;
+
+				img {
+					max-width: 1.5rem;
+				}
+			}
+		}
+	}
+
 	.promises-table {
 		a {
 			text-decoration: none;
+		}
+
+		tr {
+			position: relative;
+		}
+
+		td.text-right {
+			position: absolute;
+			top: 0;
+			right: 1rem;
 		}
 
 		@media all and (min-width: $tabletWidth + 1) {
@@ -100,6 +122,8 @@
 					align-items: flex-start;
 					margin-top: 12px;
 					margin-bottom: 12px;
+					width: 100%;
+					justify-content: flex-start;
 				}
 				
 				.align-self-start {
@@ -113,6 +137,11 @@
 
 			label {
 				margin-top: 12px;
+				width: 5.5rem;
+
+				@media all and (max-width: $tabletWidth) {
+					width: 5rem;
+				}
 			}
 
 			.dropdown-target {

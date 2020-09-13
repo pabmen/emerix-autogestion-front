@@ -15,6 +15,7 @@
 }
 
 .dropdown-target {
+    display: none;
     max-height: 0;
     overflow: hidden;
     transition: all $transition-normal;

@@ -267,25 +267,10 @@
 
 }
 
-.overlay {
-	.plans-dialog {
-			@media all and (max-width: $tabletWidth) {
-				width: calc(100vw - 2rem);
-			}
-	}
-}
-
 .plans-dialog {
 	max-width: 44.5rem;
 	width: 44.5rem;
 	padding: 0;
-	max-height: calc(100% - 2rem);
-
-	@media all and (max-width: $tabletWidth) {
-		width: calc(100vw - 2rem);
-	}
-
-
 
 	.plans-dialog-content {
 		padding: 0;

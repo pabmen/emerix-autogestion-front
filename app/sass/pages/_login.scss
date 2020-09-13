@@ -228,11 +228,6 @@
 
 
 	.overlay {
-		.dialog-container {
-			width: calc(100vw - 4rem);
-
-		}
-
 		.login-dialog:not(.dialog-content) {
 			margin: 0;
 			top: 50%;
@@ -253,14 +248,9 @@
 			h2 {
 				color: $black;
 			}
-
-			&.login-dialog-2,
-			&.login-dialog-3 {
-
-			}
 		}
 
-		.dialog-content {
+		.login-dialog.dialog-content {
 			padding-top: 3rem;
 			padding-bottom: 3rem;
 		}
