@@ -1,5 +1,145 @@
 .page-logs {
 
+	.active {
+		.overview {
+			padding: 1rem 0;
+			max-height: 100vh;
+			opacity: 1;
+
+			@media all and (max-width: $mobileWidth) {
+				padding-top: 0;
+				margin-top: -.5rem;
+			}
+
+		}
+	}
+
+	.overview {
+		width: 100%;
+		//display: none;
+
+		max-height: 0;
+		opacity: 0;
+		transition: all $transition-fast;
+
+		li {
+			margin-bottom: .5rem;
+
+			font-weight: normal;
+		}
+
+		@media all and (max-width: $tabletWidth) {
+			strong:not(.added) {
+				font-weight: normal;
+			}
+		}
+	}
+
+	.logs-table {
+		.table-header {
+			td {
+				align-items: center;
+				justify-content: flex-start;
+				flex-direction: row;
+			}
+
+			td:nth-child(1) {
+				width: 25%;
+			}
+
+			td:nth-child(2) {
+				width: 25%;
+			}
+
+			td:nth-child(3) {
+				width: 25%;
+				justify-content: center;
+			}
+
+			td:nth-child(4) {
+				width: 25%;
+				justify-content: center;
+			}
+		}
+
+		.table-data {
+			height: 64px;
+			align-items: center;
+
+			> div:nth-child(1) {
+				width: 30%;
+
+				@media all and (max-width: $tabletWidth) {
+					width: 60%;
+				}
+			}
+
+			> div:nth-child(2) {
+				width: 26%;
+
+				@media all and (max-width: $tabletWidth) {
+					display: none;
+				}
+			}
+			
+			> div:nth-child(3) {
+				width: 18%;
+				text-align: center;
+				
+				@media all and (max-width: $tabletWidth) {
+					display: none;
+				}
+			}
+			
+			> div:nth-child(4) {
+				width: 18%;
+				text-align: right;
+				
+				@media all and (max-width: $tabletWidth) {
+					width: 40%;
+				}
+			}
+		}
+
+		.last-row {
+			margin-top: 1rem;
+			align-items: center;
+			position: absolute;
+			bottom: 1.5rem;
+			right: 1.5rem;
+
+			@media all and (max-width: $tabletWidth) {
+				flex-direction: column;
+
+				div+div {
+					margin-top: 1rem;
+					width: 100%;
+
+					button.btn {
+						width: 100%;
+						display: block;
+						font-size: 1rem;
+						line-height: 2rem;
+					}
+				}
+			}
+
+			a {
+				color: $violet;
+				margin-right: 1rem;
+				font-size: .85rem;
+				text-decoration: none;
+			}
+
+			.btn {
+				font-size: .85rem;
+				padding: 0.25rem 1rem;
+				font-weight: 500;
+				letter-spacing: .5px;
+			}
+		}
+	}
+
 	.box-table-container {
 		@media all and (max-width: $tabletWidth) {
 			box-shadow: none;
