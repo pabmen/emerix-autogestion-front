@@ -3024,6 +3024,7 @@ html.no-scroll body {
     top: 0;
     right: 0;
     text-align: right;
+    width: 100%;
   }
   .emerix-page .page-billings .card-dropdown {
     pointer-events: none;
