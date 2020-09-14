@@ -3056,6 +3056,15 @@ html.no-scroll body {
   margin-right: .5rem;
 }
 
+.emerix-page .billing-dialog .billing-dialog-content {
+  padding: 0;
+  overflow: hidden;
+  overflow-y: hidden;
+  overflow-y: auto;
+  max-height: calc(100vh - 6rem);
+  margin-top: 1rem;
+}
+
 .emerix-page .billing-dialog .btn {
   width: 100%;
   text-align: center;
@@ -4178,7 +4187,7 @@ html.no-scroll body {
   overflow: hidden;
   overflow-y: hidden;
   overflow-y: auto;
-  max-height: calc(100vh - 10rem);
+  max-height: calc(100vh - 6rem);
   margin-top: 1rem;
 }
 

@@ -193,6 +193,15 @@
 		}
 	}
 
+	.billing-dialog-content {
+		padding: 0;
+		overflow: hidden;
+		overflow-y: hidden;
+		overflow-y: auto;
+		max-height: calc(100vh - 6rem);
+		margin-top: 1rem;
+	}
+
 
 	.btn {
 		width: 100%;
