@@ -2938,6 +2938,28 @@ html.no-scroll body {
   }
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .page-billings.billings-2 .flex-row.col-container.box, .emerix-page .page-billings.billings-2 .input-wrapper.select2.active ul.flex-row.col-container, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 ul.flex-row.col-container, .emerix-page .page-billings.billings-2 .overlay .flex-row.col-container.dialog-container, .emerix-page .overlay .page-billings.billings-2 .flex-row.col-container.dialog-container, .emerix-page .page-billings.billings-2 .topbar .notifications-menu .dropdown-target ul.flex-row.col-container, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 ul.flex-row.col-container {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .emerix-page .page-billings.billings-2 .flex-row.col-container.box .text-xlarge, .emerix-page .page-billings.billings-2 .input-wrapper.select2.active ul.flex-row.col-container .text-xlarge, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 ul.flex-row.col-container .text-xlarge, .emerix-page .page-billings.billings-2 .overlay .flex-row.col-container.dialog-container .text-xlarge, .emerix-page .overlay .page-billings.billings-2 .flex-row.col-container.dialog-container .text-xlarge, .emerix-page .page-billings.billings-2 .topbar .notifications-menu .dropdown-target ul.flex-row.col-container .text-xlarge, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 ul.flex-row.col-container .text-xlarge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+  }
+  .emerix-page .page-billings.billings-2 .flex-row.col-container.box + .flex-row.col-container.box, .emerix-page .page-billings.billings-2 .input-wrapper.select2.active ul.flex-row.col-container + .flex-row.col-container.box, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 ul.flex-row.col-container + .flex-row.col-container.box, .emerix-page .page-billings.billings-2 .overlay .flex-row.col-container.dialog-container + .flex-row.col-container.box, .emerix-page .overlay .page-billings.billings-2 .flex-row.col-container.dialog-container + .flex-row.col-container.box, .emerix-page .page-billings.billings-2 .topbar .notifications-menu .dropdown-target ul.flex-row.col-container + .flex-row.col-container.box, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 ul.flex-row.col-container + .flex-row.col-container.box, .emerix-page .page-billings.billings-2 .input-wrapper.select2.active .flex-row.col-container.box + ul.flex-row.col-container, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 .flex-row.col-container.box + ul.flex-row.col-container, .emerix-page .page-billings.billings-2 .input-wrapper.select2.active ul.flex-row.col-container + ul.flex-row.col-container, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 ul.flex-row.col-container + ul.flex-row.col-container, .emerix-page .page-billings.billings-2 .overlay .input-wrapper.select2.active .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 .overlay .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .overlay .page-billings.billings-2 .input-wrapper.select2.active .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .input-wrapper.select2.active .overlay .page-billings.billings-2 .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .page-billings.billings-2 .overlay .flex-row.col-container.box + .flex-row.col-container.dialog-container, .emerix-page .overlay .page-billings.billings-2 .flex-row.col-container.box + .flex-row.col-container.dialog-container, .emerix-page .page-billings.billings-2 .input-wrapper.select2.active .overlay ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .overlay .page-billings.billings-2 .input-wrapper.select2.active ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 .overlay ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .overlay .input-wrapper.select2.active .page-billings.billings-2 ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .page-billings.billings-2 .overlay .flex-row.col-container.dialog-container + .flex-row.col-container.dialog-container, .emerix-page .overlay .page-billings.billings-2 .flex-row.col-container.dialog-container + .flex-row.col-container.dialog-container, .emerix-page .page-billings.billings-2 .topbar .notifications-menu .dropdown-target .overlay ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .overlay .page-billings.billings-2 .topbar .notifications-menu .dropdown-target ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 .overlay ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .overlay .topbar .notifications-menu .dropdown-target .page-billings.billings-2 ul.flex-row.col-container + .flex-row.col-container.dialog-container, .emerix-page .page-billings.billings-2 .topbar .notifications-menu .dropdown-target .flex-row.col-container.box + ul.flex-row.col-container, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 .flex-row.col-container.box + ul.flex-row.col-container, .emerix-page .page-billings.billings-2 .overlay .topbar .notifications-menu .dropdown-target .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 .overlay .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .overlay .page-billings.billings-2 .topbar .notifications-menu .dropdown-target .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .topbar .notifications-menu .dropdown-target .overlay .page-billings.billings-2 .flex-row.col-container.dialog-container + ul.flex-row.col-container, .emerix-page .page-billings.billings-2 .topbar .notifications-menu .dropdown-target ul.flex-row.col-container + ul.flex-row.col-container, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 ul.flex-row.col-container + ul.flex-row.col-container {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    top: -.25rem;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
 .emerix-page .page-billings .card-dropdown-target {
   background-color: #F7F7F7;
   border-radius: 4px;
@@ -3012,6 +3034,9 @@ html.no-scroll body {
     display: flex;
     flex-direction: row;
     margin-bottom: 0;
+  }
+  .emerix-page .page-billings .data-field:last-of-type {
+    margin-bottom: 1rem;
   }
   .emerix-page .page-billings .data-field div {
     width: 50%;
