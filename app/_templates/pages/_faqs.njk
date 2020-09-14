@@ -38,3 +38,11 @@
     </div>
 
 </section>
+
+<script>
+    document.querySelector('#faqs_search').addEventListener('keypress', (e) => {
+        if (e.keyCode === 13) {
+            document.querySelector('#faqs_search').parentElement.classList.add('filled')
+        }
+    })
+</script>

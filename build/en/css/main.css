@@ -1168,7 +1168,7 @@ html.no-scroll body {
   margin-top: -2px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .emerix-page .input-wrapper input[type=date],
@@ -3101,6 +3101,10 @@ html.no-scroll body {
 
 .emerix-page .page-faqs .input-wrapper {
   margin-bottom: 0;
+}
+
+.emerix-page .page-faqs .input-wrapper.search.filled:after {
+  background-image: url("/assets/images/ui/close-btn.svg");
 }
 
 .emerix-page .page-faqs .accordion-title a {

@@ -1,6 +1,10 @@
 .page-faqs {
 	.input-wrapper {
 		margin-bottom: 0;
+
+		&.search.filled:after {
+			background-image: url("/assets/images/ui/close-btn.svg");
+		}
 	}
 
 	.accordion-title a {
@@ -11,4 +15,6 @@
 	.accordion-content {
 		padding-top: 1rem;
 	}
+
+
 }
