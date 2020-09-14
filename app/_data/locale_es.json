@@ -103,7 +103,7 @@
 					"id": "login-0",
 					"class": "login-dialog login-dialog-1",
 					"title": "",
-					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1 class='text-large'>¡Lo sentimos!, no tenemos registro de tu teléfono móvil.</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog-2.svg' alt=''></div><div class='text-center'><h1 class='text-large'>¡Lo sentimos!, no tenemos registro de tu teléfono móvil.</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
 				},
 				{
 					"id": "login-1",
@@ -115,7 +115,7 @@
 					"id": "login-2",
 					"class": "login-dialog login-dialog-3",
 					"title": "",
-					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog.svg' alt=''></div><div class='text-center'><h1 class='text-large'>¡Hay un error con la clave de acceso instatáneo!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
+					"content": "<div class='flex-column flex-center'><div><img src='/assets/images/ui/dialogs/login-dialog-1.svg' alt=''></div><div class='text-center'><h1 class='text-large'>¡Hay un error con la clave de acceso instatáneo!</h1><p>Por favor, comunicate al 0800 333 0000 para solucionarlo y poder ingresar.</p></div></div>"
 				},
 				{
 					"id": "login-tyc",
