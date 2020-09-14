@@ -2929,6 +2929,15 @@ html.no-scroll body {
   margin-top: -1rem;
 }
 
+@media all and (min-width: 1025px) {
+  .emerix-page .page-billings.billings-1 .col-container > .full-width-mobile.box:not(:first-child), .emerix-page .page-billings.billings-1 .input-wrapper.select2.active .col-container > ul.full-width-mobile:not(:first-child), .emerix-page .input-wrapper.select2.active .page-billings.billings-1 .col-container > ul.full-width-mobile:not(:first-child), .emerix-page .page-billings.billings-1 .overlay .col-container > .full-width-mobile.dialog-container:not(:first-child), .emerix-page .overlay .page-billings.billings-1 .col-container > .full-width-mobile.dialog-container:not(:first-child), .emerix-page .page-billings.billings-1 .topbar .notifications-menu .dropdown-target .col-container > ul.full-width-mobile:not(:first-child), .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-1 .col-container > ul.full-width-mobile:not(:first-child) {
+    margin: 0 1rem;
+  }
+  .emerix-page .page-billings.billings-1 .dropdown-target {
+    overflow: visible;
+  }
+}
+
 .emerix-page .page-billings .card-dropdown-target {
   background-color: #F7F7F7;
   border-radius: 4px;
@@ -2977,6 +2986,12 @@ html.no-scroll body {
   display: block;
 }
 
+@media all and (min-width: 1025px) {
+  .emerix-page .page-billings .card-global-wrapper {
+    display: none;
+  }
+}
+
 @media all and (max-width: 1024px) {
   .emerix-page .page-billings .table-container label img {
     width: 1.5rem;
@@ -3019,6 +3034,9 @@ html.no-scroll body {
   .emerix-page .page-billings .card-dropdown-container {
     margin-left: 0;
     margin-right: 0;
+  }
+  .emerix-page .page-billings .dropdown-target {
+    display: block;
   }
   .emerix-page .page-billings .card-global-wrapper {
     position: absolute;

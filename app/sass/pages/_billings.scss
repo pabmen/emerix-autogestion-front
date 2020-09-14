@@ -40,6 +40,18 @@
 		}
 	}
 
+	&.billings-1 {
+		@media all and (min-width: $tabletWidth + 1) {
+			.col-container > .full-width-mobile.box:not(:first-child) {
+				margin: 0 1rem;
+			}
+			
+			.dropdown-target {
+				overflow: visible;
+			}
+		}
+	}
+
 	.card-dropdown-target {
 		background-color: $darksmoke;
 		border-radius: $std-radius;
@@ -88,6 +100,12 @@
 		text-decoration: none;
 		text-align: center;
 		display: block;
+	}
+
+	@media all and (min-width: $tabletWidth + 1) {
+		.card-global-wrapper {
+			display: none;
+		}
 	}
 
 	@media all and (max-width: $tabletWidth) {
@@ -149,6 +167,7 @@
 		}
 
 		.dropdown-target {
+			display: block;
 			//max-height: none;
 		}
 
