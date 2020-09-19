@@ -365,4 +365,10 @@
 			document.querySelector('#billing-dialog-0').classList.add('active')
 		})
 	})
+
+	document.querySelectorAll(".page-billings [type=checkbox]").forEach((checkbox) => {
+		if (window.innerWidth > 1024) {
+			checkbox.checked = true
+		}
+	})
 </script>

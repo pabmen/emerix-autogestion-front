@@ -83,7 +83,8 @@
 		}
 	}
 
-	.products-table {
+	.products-table,
+	.plans-table {
 		@media all and (max-width: $tabletWidth) {
 			td {
 				min-height: 32px;
@@ -158,6 +159,11 @@
 					@media all and (max-width: $tabletWidth) {
 						padding: .25rem 0;
 						margin-bottom: 0;
+
+						&:before {
+							content: "•";
+							margin-right: .5rem;
+						}
 					}
 				}
 			}
