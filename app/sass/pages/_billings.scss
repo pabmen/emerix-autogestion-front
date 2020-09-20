@@ -50,6 +50,12 @@
 				overflow: visible;
 			}
 		}
+
+		@media all and (max-width: $tabletWidth ) {
+			.dropdown-target {
+				display: block;
+			}
+		}
 	}
 
 	&.billings-2 {

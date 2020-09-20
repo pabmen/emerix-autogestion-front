@@ -2939,6 +2939,12 @@ html.no-scroll body {
 }
 
 @media all and (max-width: 1024px) {
+  .emerix-page .page-billings.billings-1 .dropdown-target {
+    display: block;
+  }
+}
+
+@media all and (max-width: 1024px) {
   .emerix-page .page-billings.billings-2 .flex-row.col-container.box, .emerix-page .page-billings.billings-2 .input-wrapper.select2.active ul.flex-row.col-container, .emerix-page .input-wrapper.select2.active .page-billings.billings-2 ul.flex-row.col-container, .emerix-page .page-billings.billings-2 .overlay .flex-row.col-container.dialog-container, .emerix-page .overlay .page-billings.billings-2 .flex-row.col-container.dialog-container, .emerix-page .page-billings.billings-2 .topbar .notifications-menu .dropdown-target ul.flex-row.col-container, .emerix-page .topbar .notifications-menu .dropdown-target .page-billings.billings-2 ul.flex-row.col-container {
     margin-bottom: 0;
     padding-bottom: 0;
