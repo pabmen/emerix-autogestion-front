@@ -3075,6 +3075,9 @@ html.no-scroll body {
     top: 1rem;
     right: 1rem;
   }
+  .emerix-page .page-billings .special-mobile-selectable-box .input-wrapper {
+    margin-top: -0.45rem;
+  }
   .emerix-page .page-billings input:not(:checked) + .card-global-wrapper + .dropdown-target {
     max-height: 2rem;
   }

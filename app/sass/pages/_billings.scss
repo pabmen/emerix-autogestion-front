@@ -219,6 +219,10 @@
 
 		}
 
+		.special-mobile-selectable-box .input-wrapper {
+			margin-top: -0.45rem;
+		}
+
 		input:not(:checked) + .card-global-wrapper + .dropdown-target {
 			max-height: 2rem;
 		}
