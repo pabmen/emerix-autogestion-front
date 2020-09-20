@@ -35,6 +35,14 @@
 		}
 	}
 
+	&.promises-logs {
+		.logs-table {
+			.last-row {
+				position: static;
+			}
+		}
+	}
+
 	.logs-table {
 		.table-header {
 			td {

@@ -2254,6 +2254,10 @@ html.no-scroll body {
   color: #3C3C3B;
 }
 
+.emerix-page .success img {
+  max-width: 250px;
+}
+
 @media all and (max-width: 1024px) {
   .emerix-page .success img {
     max-width: 70%;
@@ -2685,6 +2689,7 @@ html.no-scroll body {
   right: 0;
   min-width: 18.750rem;
   background-color: #fbfbfb;
+  border-radius: 5px;
 }
 
 .emerix-page .topbar .notifications-menu .dropdown-target ul {
@@ -2936,6 +2941,9 @@ html.no-scroll body {
   .emerix-page .page-billings.billings-1 .dropdown-target {
     overflow: visible;
   }
+  .emerix-page .page-billings.billings-1 .dropdown-target .btn {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 1024px) {
@@ -3101,6 +3109,14 @@ html.no-scroll body {
   padding: 0;
 }
 
+@media all and (max-width: 1024px) {
+  .emerix-page .dialog-container.billing-dialog {
+    max-height: 100vh;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
 .emerix-page .billing-dialog {
   max-width: 44.5rem;
   width: 44.5rem;
@@ -3127,8 +3143,9 @@ html.no-scroll body {
   overflow: hidden;
   overflow-y: hidden;
   overflow-y: auto;
-  max-height: calc(100vh - 6rem);
+  max-height: calc(100vh - 2rem);
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .emerix-page .billing-dialog .btn {
@@ -3142,7 +3159,8 @@ html.no-scroll body {
 }
 
 .emerix-page .billing-dialog .table-container .table td {
-  height: 2.5rem;
+  height: 42px;
+  min-height: 42px;
 }
 
 .emerix-page .billing-dialog .table-container .table td:first-child {
@@ -3436,6 +3454,10 @@ html.no-scroll body {
   .emerix-page .page-logs .overview strong:not(.added) {
     font-weight: normal;
   }
+}
+
+.emerix-page .page-logs.promises-logs .logs-table .last-row {
+  position: static;
 }
 
 .emerix-page .page-logs .logs-table .table-header td {

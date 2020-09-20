@@ -1,7 +1,11 @@
 {% macro success(options)%}
     <div class="success flex-column flex-center text-center restrict-width">
         <h2 class="title">{{ options.title | safe }}</h2>
-        <img src="/assets/images/ui/common/success.svg" alt="Success image">
+        {% if options.image %}
+            <img src="/assets/images/ui/common/{{ options.image }}.svg" alt="Success image">
+        {% else %}
+            <img src="/assets/images/ui/common/success.svg" alt="Success image">
+        {% endif %}
         <p class="subtitle">{{ options.subtitle | safe }}</p>
     </div>
 {% endmacro %}

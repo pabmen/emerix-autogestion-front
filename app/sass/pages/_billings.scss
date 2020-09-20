@@ -48,6 +48,10 @@
 
 			.dropdown-target {
 				overflow: visible;
+
+				.btn {
+					width: 100%;
+				}
 			}
 		}
 
@@ -239,6 +243,12 @@
 
 .dialog-container.billing-dialog {
 	padding: 0;
+
+	@media all and (max-width: $tabletWidth) {
+		max-height: 100vh;
+		height: 100vh;
+		border-radius: 0;
+	}
 }
 
 .billing-dialog {
@@ -264,8 +274,9 @@
 		overflow: hidden;
 		overflow-y: hidden;
 		overflow-y: auto;
-		max-height: calc(100vh - 6rem);
+		max-height: calc(100vh - 2rem);
 		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
 
@@ -280,7 +291,8 @@
 			padding: 0 1.5rem;
 
 			td {
-				height: 2.5rem;
+				height: 42px;
+				min-height: 42px;
 
 				&:first-child {
 					width: 10%;
