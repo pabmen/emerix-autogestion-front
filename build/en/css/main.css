@@ -3062,9 +3062,17 @@ html.no-scroll body {
     margin-right: 0;
   }
   .emerix-page .page-billings .dropdown-target {
-    display: block;
     max-height: none;
   }
+}
+
+@media all and (max-width: 1024px) and (min-width: 1025px) {
+  .emerix-page .page-billings .dropdown-target {
+    display: block;
+  }
+}
+
+@media all and (max-width: 1024px) {
   .emerix-page .page-billings .card-global-wrapper {
     position: absolute;
     top: 0;

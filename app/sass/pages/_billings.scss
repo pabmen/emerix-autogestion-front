@@ -202,7 +202,9 @@
 		}
 
 		.dropdown-target {
-			display: block;
+			@media all and (min-width: $tabletWidth + 1) {
+				display: block;
+			}
 			max-height: none;
 		}
 
