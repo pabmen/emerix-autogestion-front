@@ -1,0 +1,18 @@
+{% from "../structure/_header.njk" import header %}
+{% from "../structure/_success.njk" import success %}
+{% from "../components/_breadcrumbs.njk" import breadcrumb %}
+
+<section class="page-pay pay-success">
+	{{ header({
+		link: {
+            text: 'volver a Inicio',
+            href: '/index.html'
+        }
+	}) }}
+
+    {{ success({
+        title: '¡El pago se realizó con éxito!',
+        subtitle: 'Ingresando a la opción <a href="#">Actividad</a> podés acceder a los comprobantes de pago.',
+        image: 'planes_pedidos-html-01'
+    }) }}
+</section>
